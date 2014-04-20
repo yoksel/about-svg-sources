@@ -16,6 +16,11 @@
         line-height: 1.3;
         color: #222;
         }
+    pre {
+        float: right;
+        width: 60%;
+        margin-top: 1em;
+        }    
     &__view {
         float: left;   
         width: 35%;
@@ -121,4 +126,17 @@
     width: 150px;
     height: 150px;
     background: url(/assets/img/svg/yes-no.svg#yes);
-    }        
+    }       
+/* Demo Masks
+------------------------- */             
+.demo--masks {
+    .demo__code {
+        height: 170px;
+        }  
+    }
+#clipping-text {
+  font: bold italic 5em/1 Georgia;
+  } 
+#fo-text {
+  font: bold italic .4em/1 Georgia
+  }

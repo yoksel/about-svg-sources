@@ -387,7 +387,7 @@ width="180" height="45" x="5" y="5"
         <h2>Редакторы</h2>
 <ul>
   <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - лучший. 599 руб./месяц в составе подписки на Creative Cloud</li>
-  <li><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный и не очень удобный</li>
+  <li><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный, не очень удобный</li>
   <li><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99, довольно удобный.</li>
 </ul>
     </div></section>
@@ -399,13 +399,13 @@ width="180" height="45" x="5" y="5"
           <a href="http://iconmelon.com/">iconmelon.com</a> - цветные иконки, вставка через <code>use</code>
           <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
         </li>
-        <li>
+        <li class="next">
           <a href="http://icomoon.io/app/#/select">icomoon.io</a> - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
-          <a href="assets/img/preview/icomoon.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
+          <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
         </li>
-        <li>
+        <li class="next">
           <a href="http://www.flaticon.com/">flaticon.com</a> - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
-          <a href="assets/img/preview/flaticon.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
+          <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
         </li>
       </ul>
 
@@ -429,10 +429,10 @@ width="180" height="45" x="5" y="5"
         <h2>Все способы</h2>
         <ul>
           <li>Embed/object/iframe</li>
-          <li>Img</li>
-          <li>Css backgrounds</li>
-          <li>Inline SVG</li>
-          <li>Font</li>
+          <li class="next">Img</li>
+          <li class="next">Css backgrounds</li>
+          <li class="next">Inline SVG</li>
+          <li class="next">Font</li>
         </ul>
     </div></section>
 
@@ -440,8 +440,8 @@ width="180" height="45" x="5" y="5"
         <h2>Какой лучше?</h2>
         <ul>
           <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
-          <li><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
-          <li><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами</li>
+          <li class="next"><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
+          <li class="next"><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами</li>
         </ul>
     </div></section>
         
@@ -512,14 +512,97 @@ width="180" height="45" x="5" y="5"
 
   <section class="slide"><div>
       <h2>SVG-маски: clip-path</h2>
-      <div class="demo demo--fill js-demo">
-          <textarea class="demo__code"><svg width="200" height="190">
+      <div class="demo demo--masks js-demo">
+          <textarea class="demo__code"><svg width="280" height="190">
     <g clip-path="url(#clipping-star)"> 
-      <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300"></image>
+      <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_L.jpg" width="332" height="500"></image>
+    </g>  
+</svg></textarea>
+      </div>
+      <p>демо обычная маска/текстовая</p>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-маски: clip-path</h2>
+      <pre>
+        <code>&lt;clippath id="clipping-star"></code>
+        <code>  &lt;polygon points="98.499..." /></code>
+        <code>&lt;/clippath></code>
+      </pre>
+
+      <pre>
+        <code>&lt;clippath id="clipping-text"></code>
+        <code>  &lt;text x="0" y=".88em">Text&lt;/text></code>
+        <code>&lt;/clippath></code>
+      </pre>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-маски: clip-path</h2>
+      <pre>
+        <code>&lt;g clip-path="url(#clipping-star)"></code>
+        <code>  ...</code>
+        <code>&lt;/g></code>
+      </pre>
+
+      <pre>
+        <code>g {</code>
+        <code>  clip-path: url(#clipping-star);</code>
+        <code>}</code>
+      </pre>
+
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-маски: mask</h2>
+      <div class="demo demo--mask js-demo">
+          <textarea class="demo__code"><svg width="200" height="300">
+    <g mask="url(#masking)">  
+        <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300"></image>
     </g>  
 </svg></textarea>
       </div>
   </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-маски: mask</h2>
+      <div class="demo demo--mask js-demo">
+          <textarea class="demo__code"><svg width="200" height="300">
+    <g mask="url(#masking-soft)">  
+        <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300"></image>
+    </g>  
+</svg></textarea>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-маски: mask</h2>
+      <div class="demo demo--mask js-demo">
+          <textarea class="demo__code"><svg width="200" height="300">
+    <g mask="url(#masking-lum)">
+      <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"></rect>
+    </g>  
+</svg></textarea>
+      </div>
+  </div></section>
+
+
+  <section class="slide"><div>
+      <h2>SVG-маски: mask</h2>
+      <pre>
+        <code>&lt;g mask="url(#masking)"></code>
+        <code>  ...</code>
+        <code>&lt;/g></code>
+      </pre>
+
+      <pre>
+        <code>g {</code>
+        <code>  mask: url(#masking);</code>
+        <code>}</code>
+      </pre>
+      
+  </div></section>
+  
 
   <section class="slide"><div>
       <h2>Оформление SVG</h2>
