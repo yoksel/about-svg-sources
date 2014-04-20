@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+    <defs>
+        <filter id="fl-shadow" filterUnits="userSpaceOnUse" x="0" y="0"
+              width="300" height="300">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+        <feOffset in="blur" dx="1" dy="1" result="offsetBlr" />
+        <feFlood flood-color="rgba(0,0,0,.6)"/>
+        <feComposite operator="in" in2="offsetBlr" result="colBlur"/>
+        <feMerge>
+          <feMergeNode in="colBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <!--        -->
+      <filter id="fl-striped-shadow">
+        <!--<feGaussianBlur stdDeviation="0" in="SourceAlpha" />-->
+        <feOffset dx="1" dy="2" in="SourceGraphic" result="offset"/>
+        <feFlood flood-color="#F2385A"/>
+        <feComposite operator="in" in2="offset" result="res"/>
+        
+        <feOffset dx="2" dy="4" in="SourceGraphic" result="offset2"/>
+        <feFlood flood-color="#F5A503"/>
+        <feComposite operator="in" in2="offset2" result="res2"/>
+        
+        <feOffset dx="3" dy="6" in="SourceGraphic" result="offset3"/>
+        <feFlood flood-color="#E9F1DF"/>
+        <feComposite operator="in" in2="offset3" result="res3"/>
+        
+        <feOffset dx="4" dy="8" in="SourceGraphic" result="offset4"/>
+        <feFlood flood-color="#4AD9D9"/>
+        <feComposite operator="in" in2="offset4" result="res4"/>
+        
+        <feOffset dx="5" dy="10" in="SourceGraphic" result="offset5"/>
+        <feFlood flood-color="#36B1BF"/>
+        <feComposite operator="in" in2="offset5" result="res5"/>
+        
+        <feMerge>
+          <feMergeNode in="res5"/>
+          <feMergeNode in="res4"/>
+          <feMergeNode in="res3"/>
+          <feMergeNode in="res2"/>
+          <feMergeNode in="res"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+
+    </defs>
+</svg>    

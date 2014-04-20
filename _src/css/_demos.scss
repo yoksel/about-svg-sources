@@ -1,0 +1,125 @@
+/* Common
+------------------------- */
+.demo {
+    margin-bottom: $base-size;
+    &:after {
+        @include clear
+        }
+    &__code {
+        float: right;
+        height: 7.4em;
+        width: 60%;
+        padding: 10px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        font-size: $base-size * .6;
+        line-height: 1.3;
+        color: #222;
+        }
+    &__view {
+        float: left;   
+        width: 35%;
+        svg {
+            display: block;
+            margin: 0 auto;
+            border: 1px dashed #CCC;
+            }
+        }    
+    }
+   
+.demo--fill {
+    .demo__view {
+        width: 250px;
+        height: 310px;
+        }
+    text {
+        font: bold italic 60px/1 Georgia;
+        }      
+    .demo__code {
+        height: 310px;
+        }        
+    }
+/* G
+------------------------- */    
+.demo--g {
+    .demo__view {
+        width: 250px;
+        height: 150px;
+        }
+    .demo__code {
+        height: 255px;
+        }        
+    }    
+/* Use
+------------------------- */    
+.demo--use {
+    .demo__view {
+        width: 250px;
+        height: 180px;
+        }
+    .demo__code {
+        height: 310px;
+        }        
+    }        
+/* Demo pattern
+------------------------- */    
+.demo--pattern {
+    .demo__view {
+        width: 250px;
+        height: 250px;
+        }
+    .demo__code {
+        height: 310px;
+        }        
+    }  
+/* Demo transform
+------------------------- */        
+.demo--transform {
+    .demo__view {
+        width: 200px;
+        height: 150px;
+        }
+    .demo__code {
+        height: 120px;
+        }        
+    }  
+    
+/* Demo stacks
+------------------------- */        
+.demo--stacks {
+    .demo__view {
+        width: 200px;
+        height: 200px;
+        }
+    text {
+        font: 90px/1 Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+        fill: #FFF;
+        }  
+    .hidden {
+        display: none;
+        }      
+    .demo__code {
+        height: 190px;
+        }        
+    }      
+.list--stacks-demo .text {
+    font-style: italic;
+    }    
+    .list--stacks-demo LI {
+        display: inline-block;
+        margin-right: 3em;
+        vertical-align: top;
+        text-indent: 0 !important;
+        color: #999;
+        B {
+            color: #000;
+        }
+        &:before {
+            content: none !important;
+            }
+        }
+.test-stacks {
+    width: 150px;
+    height: 150px;
+    background: url(/assets/img/yes-no.svg#yes);
+    }        

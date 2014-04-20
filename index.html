@@ -1,176 +1,671 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=792, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/shower-bright/styles/screen.css">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="list">
-	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
-	</header>
-	<section class="slide cover" id="Cover"><div>
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#Cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#Cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#Cover p a {
-					color:#FFF;
-					}
-		</style>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Shower Key Features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>All modern browsers are supported</li>
-			<li>Slide themes are separated from engine</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Plain Text on Your Slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>All Kind of Lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Even Tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</div></section>
-	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-		</style>
-	</div></section>
-	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</div></section>
-	<section class="slide shout" id="SeeMore"><div>
-		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
-		<style>
-			#Picture h2 {
-				color:#FFF;
-				}
-			#SeeMore h2 {
-				font-size:100px
-				}
-			#SeeMore img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</div></section>
-	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
-	<div class="progress"><div></div></div>
-	<script src="node_modules/shower-core/shower.min.js"></script>
-	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
+  <div class="hidden-svg-defs">
+    <div id="svg-filters"></div>
+    <div id="svg-fills"></div>
+    <div id="svg-images"></div>
+  </div>
+
+  <header class="caption">
+    <h1>Позвольте представить: SVG</h1>
+    <p>@yoksel</p>
+  </header>
+  <section class="slide cover" id="Cover"><div>
+    <h2>Позвольте представить:</h2>
+    <svg id="cover-text">
+          <text x="1.7%" y="96%" class="cover-text__stroke">SVG</text>
+          <text x="0" y="93%" class="cover-text__fill">SVG</text>  
+      </svg>
+  </div></section>
+  <section class="slide"><div>
+
+    <div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+
+          <h2>Stylegiude (H2)</h2>
+          <!-- <h1>H1 текст</h1> -->
+          <!-- <h2>H2 текст</h2> -->
+          <h3>H3 текст</h3>
+          <h4>H4 текст</h4>
+          <p>самый разный текст, обычный преобычный</p>
+          
+      </div></section>
+
+  <section class="slide"><div>
+
+          <h2>Что такое SVG?</h2>
+          <p><b>Scalable Vector Graphics</b> - формат векторных изображений, основанный на XML.</p>
+
+      </div></section>
+
+  <section class="slide"><div>
+
+      <h2 class="free-fly">Преимущества формата</h2>
+     
+
+  </div></section>    
+  <section class="slide"><div>
+          <ul>
+        <li>изображения масштабируются без потери качества</li>
+        <li>не теряют резкости на ретине</li>
+        <li>файл можно открыть в текстовом редакторе и увидеть человекопонятный код</li>
+        <li>SVG можно не только нарисовать, но и написать</li>
+        <li>SVG-файл - это исходник</li>
+        <li>можно создавать реиспользуемые компоненты</li>
+        <li>внутри файла могут находиться CSS и JavaScript</li>
+      </ul>
+
+      <!-- MQ,
+        машина с клоунами 
+        смартфоны -->
+  </div></section>
+
+  <section class="slide"><div>
+
+          <h2>1 SVG-спрайт в 4-х размерах</h2>
+          <!-- begin wrapper--icons-16-64 -->
+          <div class="wrapper wrapper--icons-16-64">
+        <ul class="icons icons-size--16" data-size="16">
+          <li class="icon icon--heart"></li>
+          <li class="icon icon--cloud"></li>
+          <li class="icon icon--star"></li>
+          <li class="icon icon--airplane"></li>
+          <li class="icon icon--speaker"></li>
+          <li class="icon icon--flask"></li>
+        </ul>
+
+        <ul class="icons icons-size--32" data-size="32">
+          <li class="icon icon--heart"></li>
+          <li class="icon icon--cloud"></li>
+          <li class="icon icon--star"></li>
+          <li class="icon icon--airplane"></li>
+          <li class="icon icon--speaker"></li>
+          <li class="icon icon--flask"></li>
+        </ul>
+
+        <ul class="icons icons-size--48" data-size="48">
+          <li class="icon icon--heart"></li>
+          <li class="icon icon--cloud"></li>
+          <li class="icon icon--star"></li>
+          <li class="icon icon--airplane"></li>
+          <li class="icon icon--speaker"></li>
+          <li class="icon icon--flask"></li>
+        </ul>
+
+        <ul class="icons icons-size--64" data-size="64">
+          <li class="icon icon--heart"></li>
+          <li class="icon icon--cloud"></li>
+          <li class="icon icon--star"></li>
+          <li class="icon icon--airplane"></li>
+          <li class="icon icon--speaker"></li>
+          <li class="icon icon--flask"></li>
+        </ul>
+       </div> 
+       <!-- end wrapper--icons-16-64 -->
+      </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Пишем SVG</h2>
+  </div></section>        
+
+  <section class="slide"><div>
+        <h2>Простые фигуры: &lt;rect></h2>
+        <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="230" height="140">
+    <rect x="5" y="5" width="220" height="130" 
+          fill="skyblue" stroke="steelblue" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+
+    <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="230" height="140">
+    <rect x="5" y="5" width="220" height="130" rx="20" 
+          fill="yellowgreen" stroke="green" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+    </div></section> 
+
+  <section class="slide"><div>
+        <h2>Простые фигуры: &lt;circle>, &lt;ellipse></h2>
+        <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="140" height="140">
+     <circle r="65" cx="70" cy="70" 
+             fill="orangered" stroke="crimson" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+
+    <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="230" height="140">
+     <ellipse rx="110" ry="60" cx="115" cy="70" 
+              fill="gold" stroke="orange" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Простые фигуры: &lt;polygon></h2>
+        <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="230" height="140">
+    <polygon points="5,135 115,5 225,135" 
+             fill="violet" stroke="purple" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+
+    <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="140" height="130">
+    <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"        
+             fill="turquoise" stroke="lightseagreen" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+    </div></section> 
+
+    <section class="slide"><div>
+        <h2>Простые фигуры: &lt;line></h2>
+        <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="230" height="140">
+    <line x1="220" y1="10" x2="20" y2="130" 
+           stroke="violet" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+
+    <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="260" height="140">
+    <polyline points="5,135 30,5 55,135 80,5, 105,135 130,5, 155,135 180,5, 205,135 230,5, 255,135" 
+                fill="none" stroke="orangered" stroke-width="5" />
+</svg>
+      </textarea>
+    </div>
+    </div></section>    
+
+    <section class="slide"><div>
+        <h2>&lt;Path></h2>
+        <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="200" height="140">
+  <path stroke="orange" stroke-width="3" fill="gold"
+        d="M 100,10 L 180,130
+           L 20,130 z"/>
+</svg>
+      </textarea>
+    </div>
+
+    <div class="demo js-demo">
+      <textarea class="demo__code"><svg width="200" height="140">
+  <path stroke="purple" stroke-width="3" fill="violet" 
+      d="M 20 10 
+         A20,31 0 0,0 170,10"></path>
+</svg>
+      </textarea>
+    </div>
+    </div></section>
+  
+  <section class="slide"><div>
+        <h2>Обводки и заливки: fill</h2>
+        
+        <div class="demo demo--fill js-demo">
+          <textarea class="demo__code"><svg viewbox="0 0 140 205" id="fill-capabs"><polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"        
+     fill="turquoise" stroke="lightseagreen" stroke-width="5" />
+     <text x="0" y="95%">Text</text>    
+</svg>
+          </textarea>
+      </div>
+    </div></section>
+
+  <section class="slide"><div>
+      <h2>Группировка: &lt;g></h2>
+      <div class="demo demo--g js-demo">
+          <textarea class="demo__code"><svg  viewbox="0 0 190 100">
+  <g id="circles--warm">
+    <circle fill="crimson" r="20" cx="25" cy="25"/>
+    <circle fill="red" r="20" cx="70" cy="25"/>
+    <circle fill="orange" r="20" cx="115" cy="25"/>
+    <circle fill="gold" r="20" cx="160" cy="25"/>
+  </g>
+  <g id="circles--cold">
+    <circle fill="yellowgreen" r="20" cx="25" cy="75"/>
+    <circle fill="skyblue" r="20" cx="70" cy="75"/>
+    <circle fill="steelblue" r="20" cx="115" cy="75"/>
+    <circle fill="darkviolet" r="20" cx="160" cy="75"/>
+  </g>
+</svg></textarea>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Переиспользование: &lt;use></h2>
+      <div class="demo demo--use js-demo">
+          <textarea class="demo__code"><svg viewbox="0 0 190 150">
+  <g id="rects--use">
+    <rect fill="gold" width="40" height="40" x="4" y="4"/>
+    <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
+    <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
+    <rect width="40" height="40" x="142" y="4" id="square--use"/>
+  </g>
+
+  <use xlink:href="#rects--use" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+
+  <use xlink:href="#square--use" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="1"/>
+  </svg>
+</textarea>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Переиспользование: &lt;defs></h2>
+      <div class="demo demo--use js-demo">
+          <textarea class="demo__code"><svg viewbox="0 0 190 150">
+  <defs>
+    <g id="rects--defs">
+      <rect fill="gold" width="40" height="40" x="4" y="4"/>
+      <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
+      <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
+      <rect width="40" height="40" x="142" y="4" id="square--defs"/>
+    </g>
+  </defs>
+
+  <use xlink:href="#rects--defs" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+
+  <use xlink:href="#square--defs" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="1"/>
+</svg>
+</textarea>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Переиспользование: &lt;symbol></h2>
+      <div class="demo demo--use js-demo">
+          <textarea class="demo__code"><svg viewbox="0 0 190 150">
+  <defs>
+    <symbol id="rects--symbol">
+      <rect fill="gold" width="40" height="40" x="4" y="4"/>
+      <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
+      <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
+      <rect width="40" height="40" x="142" y="4" id="square--symbol"/>
+    </symbol>
+  </defs>
+  
+  <use xlink:href="#rects--symbol" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+
+  <use xlink:href="#square--symbol" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="1"/>
+</svg>
+</textarea>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Переиспользование: &lt;pattern></h2>
+      <div class="demo demo--pattern js-demo">
+          <textarea class="demo__code"><svg viewbox="0 0 190 190">
+  <defs>
+    <pattern id="p--squares" viewbox="0 0 175 40"
+width="180" height="45" x="5" y="5"
+             patternUnits="userSpaceOnUse">
+      <rect fill="gold" width="40" height="40" x="0" y="0"/>
+      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"/>
+      <rect fill="skyblue" width="40" height="40" x="90" y="0"/>
+      <rect fill="orangered" width="40" height="40" x="135" y="0"/>
+    </patern>
+  </defs>
+  
+  <rect fill="url(#p--squares)" width="180" height="180" x="5" y="5"/>
+</svg></textarea>
+      </div> демо: текст, градиент, картинка
+  </div></section>
+  
+
+    <section class="slide"><div>
+        <h2>Трансформации: translate, scale</h2>
+        <div class="demo demo--transform js-demo">
+            <textarea class="demo__code"><svg viewbox="0 0 300 200">
+              <rect x="10" y="5" width="200" height="120" fill="hsla(120,100%,50%,.2)"></rect>
+              <rect x="5" y="5" width="200" height="120" fill="hsla(50,100%,50%,.6)" transform="translate(70, 70)"></rect>
+            </svg></textarea>
+        </div>
+        <div class="demo demo--transform js-demo">
+            <textarea class="demo__code"><svg viewbox="0 0 200 130">
+              <rect x="5" y="5" width="120" height="120" fill="hsla(120,100%,50%,.2)"></rect>
+              <rect x="5" y="5" width="120" height="120" fill="hsla(50,100%,50%,.6)" transform="scale(1.5, .5)"></rect>
+            </svg></textarea>
+        </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Трансформации: rotate, skew</h2>
+        <div class="demo demo--transform js-demo">
+            <textarea class="demo__code"><svg viewbox="0 0 200 200">
+  <rect x="25" y="25" width="150" height="150" fill="hsla(120,100%,50%,.2)"></rect>
+  <rect x="25" y="25" width="150" height="150" fill="hsla(50,100%,50%,.6)" transform="rotate(45 100 100)"></rect>
+</svg>
+          </textarea>
+        </div>
+        <div class="demo demo--transform js-demo">
+            <textarea class="demo__code"><svg viewbox="0 0 200 200">
+  <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
+  <rect transform="skewY(5)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
+</svg>
+          </textarea>
+        </div>
+    </div></section> 
+
+    <section class="slide"><div>
+        <h2>Трансформации: matrix</h2>
+        <div class="demo demo--transform js-demo">
+            <textarea class="demo__code"><svg class="svg" width="200" height="200">
+  <rect x="25" y="25" width="150" height="150" 
+           fill="hsla(120,100%,50%,.2)"></rect>
+  <rect x="25" y="25" width="150" height="150" 
+           fill="hsla(50,100%,50%,.6)" 
+           transform="matrix(.3 0 0 .95 55 25)"></rect>
+</svg>
+          </textarea>
+        </div>
+    </div></section>    
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Рисуем SVG</h2>
+  </div></section>        
+
+    <section class="slide"><div>
+        <h2>Редакторы</h2>
+<ul>
+  <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - лучший. 599 руб./месяц в составе подписки на Creative Cloud</li>
+  <li><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный и не очень удобный</li>
+  <li><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99, довольно удобный.</li>
+</ul>
+    </div></section>
+
+  <section class="slide"><div>
+      <h2>Сайты с SVG-графикой</h2>
+      <ul>
+        <li>
+          <a href="http://iconmelon.com/">iconmelon.com</a> - цветные иконки, вставка через <code>use</code>
+          <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 124 124"><use xlink:href="#logo" width="124" height="124"/></svg></a>
+        </li>
+        <li>
+          <a href="http://icomoon.io/app/#/select">icomoon.io</a> - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
+        </li>
+        <li>
+          <a href="http://www.flaticon.com/">flaticon.com</a> - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
+        </li>
+      </ul>
+
+  </div></section>    
+
+  <section class="slide"><div>
+    <h2>Оптимизация</h2>
+
+    <ul>
+      <li><a href="http://petercollingridge.appspot.com/svg-optimiser">petercollingridge.appspot.com/svg-optimiser</a></li>
+      <li><a href="https://github.com/svg/svgo">github.com/svg/svgo</a></li>
+      <li><a href="https://github.com/sindresorhus/grunt-svgmin">github.com/sindresorhus/grunt-svgmin</a></li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Способы вставки</h2>
+  </div></section>        
+
+    <section class="slide"><div>
+        <h2>Все способы</h2>
+        <ul>
+          <li>Embed/object/iframe</li>
+          <li>Img</li>
+          <li>Css backgrounds</li>
+          <li>Inline SVG</li>
+          <li>Font</li>
+        </ul>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2>Какой лучше?</h2>
+        <ul>
+  <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
+  <li><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
+  <li><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами</li>
+</ul>
+    </div></section>
+        
+
+  <section class="slide"><div>
+      <h2>SVG-стеки</h2>
+      <p>Начало истории: <a href="simurai.com/blog/2012/04/02/svg-stacks/">SVG Stacks</a></p>
+
+      <div class="demo demo--stacks js-demo">
+          <textarea class="demo__code"><svg viewBox="0 0 200 200">
+  <g id="no">
+    <rect fill="#FF4646" width="200" height="200" rx="8"></rect>
+    <text x="28" y="130">No.</text>
+  </g>
+  <g id="yes" class="hidden">
+    <rect fill="#a2d529" width="200" height="200" rx="8"></rect>
+    <text x="18" y="130">Yes!</text>
+  </g>
+</svg>
+        </textarea>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-стеки: CSS</h2>
+      <pre>
+        <code>.hidden { display: none; }</code>
+        <code class="next">:target { display: block; }</code>
+      </pre> 
+      <ul class="list--stacks-demo">
+        <li class="next">
+          <div class="text">/assets/img/yes-no.svg</div>
+          <iframe src="/assets/img/svg/yes-no.svg" width="150px" height="150px"></iframe>
+        </li>
+        <li class="next">  
+          <div class="text">/assets/img/yes-no.svg<b>#yes</b></div>    
+          <iframe src="/assets/img/svg/yes-no.svg#yes" width="150px" height="150px"></iframe>
+        </li>    
+      </ul>  
+      
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-стеки: пробуем</h2>
+      <ul class="list--stacks-demo">
+        <li>
+          <div class="text">Iframe</div>
+          <iframe src="/assets/img/svg/yes-no.svg#yes" width="150px" height="150px"></iframe>
+        </li>
+        <li class="next">  
+          <div class="text">Background-image</div>    
+          <div class="test-stacks"></div>
+        </li>    
+      </ul>  
+      
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-стеки: поддержка</h2>
+      
+      <ul>
+        <li>вставка через <code>embed</code> и <code>iframe</code> работает во всех браузерах;</li>
+        <li class="next">вставка через <code>img</code> и <code>background-image</code> работает в IE9+, Firefox и старой Опере, и совсем не работает в вебкитах.</li>
+        <li class="next">:(</li>
+      </ul>
+
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>SVG-маски</h2>
+      <p></p>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Оформление SVG</h2>
+      <p></p>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Размеры</h2>
+      <p>viewbox</p>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Анимация</h2>
+      <p></p>
+  </div></section>
+
+
+
+
+
+  <section class="slide"><div>
+    <h2>Shower Key Features</h2>
+    <ol>
+      <li>Built on HTML, CSS and vanilla JavaScript</li>
+      <li>All modern browsers are supported</li>
+      <li>Slide themes are separated from engine</li>
+      <li>Fully keyboard accessible</li>
+      <li>Printable to PDF</li>
+    </ol>
+    <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Plain Text on Your Slides</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+  </div></section>
+  <section class="slide"><div>
+    <h2>All Kind of Lists</h2>
+    <ol>
+      <li>Simple lists are marked with bullets</li>
+      <li>Ordered lists begin with a number</li>
+      <li>You can even nest lists one inside another
+        <ul>
+          <li>Or mix their types</li>
+          <li>But do not go too far</li>
+          <li>Otherwise audience will be bored</li>
+        </ul>
+      </li>
+      <li>Look, seven rows exactly!</li>
+    </ol>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Serious Citations</h2>
+    <figure>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+      </blockquote>
+      <figcaption>Marcus Tullius Cicero</figcaption>
+    </figure>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Code Samples</h2>
+    <pre>
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <code>&lt;html lang="en"&gt;</code>
+      <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+      <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+      <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+      <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+      <code><mark>&lt;/head&gt;</mark></code>
+    </pre>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Even Tables</h2>
+    <table>
+    <tr>
+      <th scope="col">Locavore</th>
+      <th>Umami</th>
+      <th>Helvetica</th>
+      <th>Vegan</th>
+    </tr>
+    <tr>
+      <th scope="row">Fingerstache</th>
+      <td>Kale</td>
+      <td>Chips</td>
+      <td>Keytar</td>
+    </tr>
+    <tr>
+      <th scope="row">Sriracha</th>
+      <td>Gluten-free</td>
+      <td>Ennui</td>
+      <td>Keffiyeh</td>
+    </tr>
+    <tr>
+      <th scope="row">Thundercats</th>
+      <td>Jean</td>
+      <td>Shorts</td>
+      <td>Biodiesel</td>
+    </tr>
+    <tr>
+      <th scope="row">Terry</th>
+      <td>Richardson</td>
+      <td>Swag</td>
+      <td>Blog</td>
+    </tr>
+    </table>
+    <p>It’s good to have information organized.</p>
+  </div></section>
+  <section class="slide cover" id="Picture"><div>
+    <h2>Pictures</h2>
+    <img src="pictures/picture.jpg" alt="">
+    <style>
+      #Picture h2 {
+        color:#FFF;
+        }
+    </style>
+  </div></section>
+  <section class="slide shout"><div>
+    <h2>You can even shout this way</h2>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Inner Navigation</h2>
+    <ol>
+      <li>Lets you reveal list items one by one</li>
+      <li class="next">To keep some key points</li>
+      <li class="next">In secret from audience</li>
+      <li class="next">But it will work only once</li>
+      <li class="next">Nobody wants to see the same joke twice</li>
+    </ol>
+  </div></section>
+  <section class="slide shout" id="SeeMore"><div>
+    <h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
+    <style>
+      #Picture h2 {
+        color:#FFF;
+        }
+      #SeeMore h2 {
+        font-size:100px
+        }
+      #SeeMore img {
+        width:0.72em;
+        height:0.72em;
+        }
+    </style>
+  </div></section>
+  <!-- <p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p> -->
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="node_modules/shower-core/shower.min.js"></script>
+  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+  <!-- Copyright © 2014 yoksel. -->
 </body>
 </html>

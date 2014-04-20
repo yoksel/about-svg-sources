@@ -1,0 +1,41 @@
+$font-headers: "Ubuntu Condensed",sans-serif;
+
+.slide H1, 
+.slide H2, 
+.slide H3, 
+.slide H4, 
+.slide H5 {
+    font-family: "Ubuntu Condensed",sans-serif;
+    line-height: 1;    
+    font-weight: normal;
+}
+
+$map-headers: (h2: 2.4, h3: 2.3, h4: 1.7, h5: 1.2);
+
+@mixin headers {
+    @each $header in map-keys($map-headers) {/* map-keys($map-headers) */
+        $header-fsize: $base-size * map-get($map-headers, $header);    
+        .slide #{$header} {
+            margin: 0 0 58px;
+            font-size: #{$header-fsize};
+            }
+    }
+}
+
+@include headers;
+
+.slide H2 + H3 {
+    margin-top: -30px;
+    color: #BBB;
+    }
+
+
+.slide .free-fly {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font: 90px/1 'Ubuntu Condensed', sans-serif;
+    transform: translateY(-50%);
+    }  

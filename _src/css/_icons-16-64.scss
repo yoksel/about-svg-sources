@@ -1,0 +1,64 @@
+.wrapper--icons-16-64 {
+  width: 580px;
+  margin: 0;
+  
+    .icons {
+      margin-bottom: 1.2rem;
+      line-height: 1;
+      }
+      .icons:before {
+        content: attr(data-size);
+        display: inline-block;
+        width: 72px;
+        line-height: 1.5em;
+        margin: 0 .5rem 0 0;
+        vertical-align: middle;
+        text-align: right;
+        font-family: Georgia, serif;
+        color: tomato;
+        }
+
+    .icons-size--16 {
+      font-size: 16px;
+      }
+    .icons-size--32 {
+      font-size: 32px;
+      }
+    .icons-size--48 {
+      font-size: 48px;
+      }
+    .icons-size--64 {
+      font-size: 64px;
+      }
+
+    .icon {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background: url() 0 0 no-repeat;
+      background-image: url(http://yoksel.github.io/assets/img/sprites-icomoon/sprites.png); /* IE 8 */
+      background-image: url(http://yoksel.github.io/assets/img/sprites-icomoon/sprites.svg), none; /* Modern browsers */
+      background-size: auto 100%;
+      vertical-align: middle;
+      list-style: none;
+      &:before {
+        content: none;
+        }
+      }
+
+    .icon--cloud {
+      background-position: -1.5em 0;
+      }
+    .icon--star {
+      background-position: -3em 0;
+      }
+    .icon--airplane {
+      background-position: -4.5em 0;
+      }
+    .icon--speaker {
+      background-position: -6em 0;
+      }
+    .icon--flask {
+      background-position: -7.5em 0;
+      }
+}  

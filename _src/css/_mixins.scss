@@ -1,0 +1,17 @@
+$base-size: 24px;
+$trans-dur: .3s;
+
+@mixin clear {
+    content: "";
+    display: table;
+    width: 100%;
+    }  
+
+@mixin posabs {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    }
