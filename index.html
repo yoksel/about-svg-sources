@@ -13,6 +13,7 @@
   <div class="hidden-svg-defs">
     <div id="svg-filters"></div>
     <div id="svg-fills"></div>
+    <div id="svg-masks"></div>
     <div id="svg-images"></div>
   </div>
 
@@ -396,13 +397,15 @@ width="180" height="45" x="5" y="5"
       <ul>
         <li>
           <a href="http://iconmelon.com/">iconmelon.com</a> - цветные иконки, вставка через <code>use</code>
-          <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 124 124"><use xlink:href="#logo" width="124" height="124"/></svg></a>
+          <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
         </li>
         <li>
           <a href="http://icomoon.io/app/#/select">icomoon.io</a> - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
+          <a href="assets/img/preview/icomoon.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
         </li>
         <li>
           <a href="http://www.flaticon.com/">flaticon.com</a> - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
+          <a href="assets/img/preview/flaticon.png" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a>
         </li>
       </ul>
 
@@ -436,10 +439,10 @@ width="180" height="45" x="5" y="5"
     <section class="slide"><div>
         <h2>Какой лучше?</h2>
         <ul>
-  <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
-  <li><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
-  <li><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами</li>
-</ul>
+          <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
+          <li><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
+          <li><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами</li>
+        </ul>
     </div></section>
         
 
@@ -502,14 +505,20 @@ width="180" height="45" x="5" y="5"
       <ul>
         <li>вставка через <code>embed</code> и <code>iframe</code> работает во всех браузерах;</li>
         <li class="next">вставка через <code>img</code> и <code>background-image</code> работает в IE9+, Firefox и старой Опере, и совсем не работает в вебкитах.</li>
-        <li class="next">:(</li>
+        <li class="next">: (</li>
       </ul>
 
   </div></section>
 
   <section class="slide"><div>
-      <h2>SVG-маски</h2>
-      <p></p>
+      <h2>SVG-маски: clip-path</h2>
+      <div class="demo demo--fill js-demo">
+          <textarea class="demo__code"><svg width="200" height="190">
+    <g clip-path="url(#clipping-star)"> 
+      <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300"></image>
+    </g>  
+</svg></textarea>
+      </div>
   </div></section>
 
   <section class="slide"><div>

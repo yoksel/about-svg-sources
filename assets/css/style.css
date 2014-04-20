@@ -53,7 +53,8 @@
 /* SVG
 ------------------------- */
 svg {
-  border: 1px solid #dddddd;
+  /*border: 1px dotted crimson;*/
+  vertical-align: top;
 }
 
 .hidden-svg-defs {
@@ -124,9 +125,10 @@ svg {
 ------------------------- */
 .img-preview {
   display: inline-block;
-  width: 150px;
-  height: 150px;
-  fill: red;
+  width: 24px;
+  height: 24px;
+  text-indent: 0;
+  vertical-align: middle;
 }
 
 .popup {
@@ -143,7 +145,7 @@ svg {
   cursor: pointer;
 }
 .popup IMG {
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
 }
 .popup:before {
   content: "\2573";
@@ -414,5 +416,5 @@ svg {
 .test-stacks {
   width: 150px;
   height: 150px;
-  background: url(/assets/img/yes-no.svg#yes);
+  background: url(/assets/img/svg/yes-no.svg#yes);
 }

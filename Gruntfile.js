@@ -1,8 +1,8 @@
 'use strict';
-/**
- * Grunt module
- */
+
 module.exports = function (grunt) {
+
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
 
@@ -43,6 +43,14 @@ module.exports = function (grunt) {
               ' * Author: <%= pkg.author %>\n' +
               ' * Version: <%= pkg.version %>\n' +
               ' */\n'
+    },
+
+    bump: {
+      options: {
+        files: ['package.json', 'bower.json'],
+        commitFiles: ['package.json', 'bower.json'],
+        pushTo: 'origin'
+      }
     },
 
     /**
@@ -109,7 +117,7 @@ module.exports = function (grunt) {
     options: {},
     default : {
       files: {
-        'assets/img/svg-lib.svg': ['_src/img/svg-lib/*.svg'],
+        'assets/img/svg/svg-lib.svg': ['_src/img/svg-lib/*.svg'],
       },
     },
   },
@@ -128,8 +136,8 @@ module.exports = function (grunt) {
         dist: {                        // Target
             files: [{                // Dictionary of files
                 expand: true,        // Enable dynamic expansion.
-                cwd: '_src/img',        // Src matches are relative to this path.
-                src: ['**/*.svg'],    // Actual pattern(s) to match.
+                cwd: 'assets/img',        // Src matches are relative to this path.
+                src: ['svg-lib.svg'],    // Actual pattern(s) to match.  src: ['**/*.svg'],
                 dest: 'assets/img',        // Destination path prefix.
                 ext: '.svg'        // Dest filepaths will have this extension.
                 // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
@@ -148,21 +156,6 @@ module.exports = function (grunt) {
     }, 
 
     /**
-     * JSHint
-     * https://github.com/gruntjs/grunt-contrib-jshint
-     * Manage the options inside .jshintrc file
-     */
-    jshint: {
-      files: [
-        //'src/js/*.js',
-        'assets/js/script.js'
-      ],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
-
-    /**
      * https://npmjs.org/package/grunt-contrib-watch
      * Now with livereload
      */
@@ -175,7 +168,7 @@ module.exports = function (grunt) {
         },
       },
       js: {
-        files: '<%= project.js_res %>22{,*/}*.{js}',
+        files: '<%= project.js_res %>{,*/}*.{js}',
         tasks: ['jshint'],
         options: {
           livereload: 35740,
@@ -202,29 +195,19 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-svgstore');
-  grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-
   /**
    * Default task
    * Run `grunt` on the command line
    */
+  // grunt.registerTask('default', ['bump']);
+
   grunt.registerTask('default', [
     // 'svgstore',
     // 'svgmin',
     // 'imagemin',
     'connect',
     'open',
-    'watch',
-    'jshint'
+    'watch'
     ]);
 
   grunt.registerTask('svg', [

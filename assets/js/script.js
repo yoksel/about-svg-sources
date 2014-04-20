@@ -7,6 +7,9 @@ $( "#svg-filters" ).load( "assets/img/svg/filters.svg", function() {
 $( "#svg-fills" ).load( "assets/img/svg/fills.svg", function() {
   console.log( "Fills were loaded." );
 });
+$( "#svg-masks" ).load( "assets/img/svg/masks.svg", function() {
+  console.log( "Masks were loaded." );
+});
 $( "#svg-images" ).load( "assets/img/svg/svg-lib.svg", function() {
   console.log( "Images were loaded." );
 });
