@@ -1,3 +1,15 @@
+$textarea-width: 63%;
+
+@mixin demo-list {
+    display: inline-block;
+    margin-right: 2em;
+    vertical-align: top;
+    text-indent: 0 !important;
+    &:before {
+            content: none !important;
+            }
+    }
+
 /* Common
 ------------------------- */
 .demo {
@@ -7,9 +19,9 @@
         }
     &__code {
         float: right;
+        display: inline-block;
         height: 7.4em;
-        width: 60%;
-        padding: 10px;
+        width: $textarea-width;
         border: 1px solid #CCC;
         border-radius: 5px;
         font-size: $base-size * .6;
@@ -18,19 +30,75 @@
         }
     pre {
         float: right;
-        width: 60%;
+        width: 65%;
         margin-top: 1em;
         }    
     &__view {
         float: left;   
         width: 35%;
+        
         svg {
             display: block;
             margin: 0 auto;
-            border: 1px dashed #CCC;
+            border: 1px solid #EEE;
             }
         }    
     } 
+/* Demo Switch
+------------------------- */        
+.demo-switch {
+    float: right;
+    width: $textarea-width;
+    /*border: 1px solid;*/
+    margin-top: 1em;
+    font-size: .6em;
+    line-height: 1.4;
+        DL {
+        display: inline-block;
+        /*width: 25%;*/
+        margin-right: 1em;
+            DT,
+            DD {
+                padding: .2em 1.5em .2em 2em;
+                }
+            DT {
+                margin-bottom: .5em;
+                font-weight: bold;
+                }
+            DD {
+                position: relative;
+                margin: .3em 0;
+                border-radius: 10px;
+                cursor: pointer;
+                &:nth-child(2n) {
+                    background: #EEE;
+                    }    
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: .5em;
+                    width: .9em;
+                    height: .9em;
+                    margin: auto;
+                    border: 3px solid rgba(0,0,0,.1);
+                    border-radius: 50%;
+                    }    
+                &:hover:before {
+                    border: 3px solid rgba(0,0,0,.2);
+                    }    
+                    
+                } 
+                .switch--checked:before {
+                    background: radial-gradient( at center, #333 40%, rgba(0,0,0,0) 50%) no-repeat;
+                    border: 3px solid rgba(0,0,0,.1);
+                    }
+        }
+    }
+/* Demo Fill
+------------------------- */    
 .demo--fill {
     .demo__view {
         width: 250px;
@@ -40,10 +108,23 @@
         font: bold italic 60px/1 Georgia;
         }      
     .demo__code {
-        height: 310px;
+        height: 150px;
         }        
     }
-/* G
+
+.list--columns LI {
+    @include demo-list;
+    text-align: center;
+    /*border: 1px solid;*/
+    B {
+        display: block;
+        font-size: .8em;
+        }
+    }   
+.demo--dasharray {
+    height: 300px;
+}    
+/* Demo G
 ------------------------- */    
 .demo--g {
     .demo__view {
@@ -54,7 +135,7 @@
         height: 255px;
         }        
     }    
-/* Use
+/* Demo Use
 ------------------------- */    
 .demo--use {
     .demo__view {
@@ -110,16 +191,10 @@
     font-style: italic;
     }    
     .list--stacks-demo LI {
-        display: inline-block;
-        margin-right: 3em;
-        vertical-align: top;
-        text-indent: 0 !important;
+        @include demo-list;
         color: #999;
         B {
             color: #000;
-        }
-        &:before {
-            content: none !important;
             }
         }
 .test-stacks {

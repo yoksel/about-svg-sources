@@ -24,24 +24,12 @@
   <section class="slide cover" id="Cover"><div>
     <h2>Позвольте представить:</h2>
     <svg id="cover-text">
-          <text x="1.7%" y="96%" class="cover-text__stroke">SVG</text>
+          <!-- <text x="1.2%" y="94%" class="cover-text__stroke">SVG</text> -->
           <text x="0" y="93%" class="cover-text__fill">SVG</text>  
       </svg>
   </div></section>
-  <section class="slide"><div>
 
-    <div id="resizable" class="ui-widget-content">
-  <h3 class="ui-widget-header">Resizable</h3>
-</div>
 
-          <h2>Stylegiude (H2)</h2>
-          <!-- <h1>H1 текст</h1> -->
-          <!-- <h2>H2 текст</h2> -->
-          <h3>H3 текст</h3>
-          <h4>H4 текст</h4>
-          <p>самый разный текст, обычный преобычный</p>
-          
-      </div></section>
 
   <section class="slide"><div>
 
@@ -218,15 +206,83 @@
     </div></section>
   
   <section class="slide"><div>
-        <h2>Обводки и заливки: fill</h2>
-        
+        <h2>Обводки и заливки: fill, stroke</h2>
         <div class="demo demo--fill js-demo">
-          <textarea class="demo__code"><svg viewbox="0 0 140 205" id="fill-capabs"><polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"        
-     fill="turquoise" stroke="lightseagreen" stroke-width="5" />
-     <text x="0" y="95%">Text</text>    
-</svg>
-          </textarea>
+          <textarea class="demo__code"><svg viewbox='0 0 140 205'>
+  <g fill="url(#pt-wood)" stroke="url(#gr-hot-cold)">
+    <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" 
+    stroke-width="5" transform="translate(0,5)"></polygon>
+    <text x="0" y="95%" stroke-width="2">Text</text>    
+  </g>
+</svg></textarea>
+          <div class="demo-switch">
+            <dl data-attr="fill">
+              <dt>Fill:</dt>
+              <dd data-val="none">None</dd>
+              <dd data-val="orangered">Color</dd>
+              <dd data-val="url(#gr-hot-cold)">Gradient</dd>
+              <dd data-val="url(#pt-wood)" class="switch--checked">Pattern</dd>
+            </dl>
+            <dl data-attr="stroke">
+              <dt>Stroke:</dt>
+              <dd data-val="none">None</dd>
+              <dd data-val="lightseagreen">Color</dd>
+              <dd data-val="url(#gr-hot-cold)" class="switch--checked">Gradient</dd>
+              <dd data-val="url(#pt-wood)">Pattern</dd>
+            </dl>
+          </div>
       </div>
+    </div></section>
+
+  <section class="slide"><div>
+          <h2>Обводки и заливки: fill</h2>
+          <ul class="list--columns">
+            <li><b>fill-rule</b>
+              <svg width="200" height="200">
+      <path stroke="orange" stroke-width="5" 
+                fill="gold" fill-rule="evenodd" 
+                d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
+</svg></li>
+          <li><b>fill-opacity</b>
+            <svg width="200" height="200">
+    <rect width="100" height="100" x="20" y="20" 
+              fill="crimson" fill-opacity=".5"/>
+    <rect width="100" height="100" x="50" y="50" 
+              fill="hsl(50, 100%, 50%)" fill-opacity=".4"/>
+    <rect width="100" height="100" x="80" y="80" 
+              fill="url(#pt-wood)" fill-opacity=".5"/>
+</svg></li>
+          </ul>
+      </div></section> 
+
+  <section class="slide"><div>
+    <h2>Обводки и заливки: stroke</h2>
+    
+    <ul class="list--columns">
+      <li><b>Stroke-width</b>
+      <svg width="200" height="200"><rect width="160" height="160" x="20" y="20" fill="none" stroke="yellowgreen" stroke-width="10%"></rect><rect width="100" height="100" x="50" y="50" fill="none" stroke="gold" stroke-width="5"></rect></svg></li>
+      <li><b>Stroke-linecap</b>
+      <svg width="200" height="205"><symbol id="s-path-guide"><circle r="3" cx="30" cy="15"></circle><circle r="3" cx="170" cy="15"></circle><path d="M 30 15 170 15" stroke-width="2"></path></symbol><symbol id="s-path"><path d="M 30 15 170 15" stroke-width="30"></path></symbol><use xlink:href="#s-path" stroke="orangered" y="20" stroke-linecap="butt"></use><use xlink:href="#s-path" stroke="olivedrab" y="85" stroke-linecap="round"></use><use xlink:href="#s-path" stroke="steelblue" y="150" stroke-linecap="square"></use><g class="guides"><use xlink:href="#s-path-guide" y="20" stroke="orange" fill="orange"></use><use xlink:href="#s-path-guide" y="85" stroke="yellowgreen" fill="yellowgreen"></use><use xlink:href="#s-path-guide" y="150" stroke="skyblue" fill="skyblue"></use></g></svg></li>
+      <li><b>Stroke-linejoin</b>
+      <svg width="215" height="300"><symbol id="s-corner-guide"><circle r="3" cx="50" cy="100"></circle><circle r="3" cx="164" cy="100"></circle><path d="M 30 50 h 80 v 80" stroke-width="2" fill="none" transform="rotate(-45 100 50)"></path></symbol><symbol id="s-corner"><path d="M 30 50 h 80 v 80" stroke-width="30" fill="none" transform="rotate(-45 100 50)"></path></symbol><use xlink:href="#s-corner" stroke="orangered" y="0" stroke-linejoin="miter"></use><use xlink:href="#s-corner" stroke="olivedrab" y="80" stroke-linejoin="round"></use><use xlink:href="#s-corner" stroke="steelblue" y="160" stroke-linejoin="bevel"></use><g class="guides"> <use xlink:href="#s-corner-guide" y="0" stroke="orange" fill="orange"></use> <use xlink:href="#s-corner-guide" y="80" stroke="yellowgreen" fill="yellowgreen"></use><use xlink:href="#s-corner-guide" y="160" stroke="skyblue" fill="skyblue"></use></g></svg></li>
+    </ul>
+    
+  </div></section>  
+
+  <section class="slide"><div>
+        <h2>Обводки и заливки: stroke</h2>
+        <b>stroke-dasharray</b>
+        <svg viewbox="0 0 500 160" class="demo--dasharray"><path d="M 20 20 h 500" stroke="purple" stroke-width="1" stroke-dasharray="1"></path><path d="M 20 40 h 500" stroke="mediumspringgreen" stroke-width="15" stroke-dasharray="1 3"></path><path d="M 20 60 h 500" stroke="orangered" stroke-width="1" stroke-dasharray="5%"></path><path d="M 20 80 h 500" stroke="green" stroke-width="1" stroke-dasharray="1 5"></path><path d="M 20 100 h 500" stroke="steelblue" stroke-width="1" stroke-dasharray="2 7 6"></path> <path d="M 20 120 h 500" stroke="orange" stroke-width="5" stroke-dasharray="5"></path> <path d="M 20 140 h 500" stroke="mediumseagreen" stroke-width="1" stroke-dasharray="12% 5%"></path></svg>
+    </div></section>
+
+  <section class="slide"><div>
+        <h2>Обводки и заливки: stroke</h2>
+        <ul class="list--columns">
+          <li><b>stroke-dashoffset</b>
+          <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15" stroke-dasharray="25% 110%" transform="rotate(72 135 135)"><circle r="115" cx="135" cy="135" stroke="crimson"></circle><circle r="115" cx="135" cy="135" stroke="orangered" stroke-dashoffset="25%"></circle><circle r="115" cx="135" cy="135" stroke="gold" stroke-dashoffset="50%"></circle></g></svg></li>
+          <li><b>stroke-opacity</b>
+            <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15"><circle r="40" cx="60" cy="60" stroke="gold" stroke-opacity=".7"></circle><circle r="70" cx="120" cy="120" stroke="yellowgreen" stroke-opacity=".5" stroke-width="25"></circle><circle r="60" cx="180" cy="180" stroke="skyblue" stroke-opacity=".25"></circle></g></svg></li>
+        </ul>
     </div></section>
 
   <section class="slide"><div>
@@ -368,7 +424,7 @@ width="180" height="45" x="5" y="5"
     <section class="slide"><div>
         <h2>Трансформации: matrix</h2>
         <div class="demo demo--transform js-demo">
-            <textarea class="demo__code"><svg class="svg" width="200" height="200">
+            <textarea class="demo__code"><svg width="200" height="200">
   <rect x="25" y="25" width="150" height="150" 
            fill="hsla(120,100%,50%,.2)"></rect>
   <rect x="25" y="25" width="150" height="150" 
@@ -383,14 +439,14 @@ width="180" height="45" x="5" y="5"
       <h2 class="free-fly">Рисуем SVG</h2>
   </div></section>        
 
-    <section class="slide"><div>
-        <h2>Редакторы</h2>
-<ul>
-  <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - лучший. 599 руб./месяц в составе подписки на Creative Cloud</li>
-  <li><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный, не очень удобный</li>
-  <li><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99, довольно удобный.</li>
-</ul>
-    </div></section>
+  <section class="slide"><div>
+      <h2>Редакторы</h2>
+      <ul>
+        <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - 599 руб./месяц в составе подписки на Creative Cloud</li>
+        <li><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99</li>
+        <li><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный</li>
+      </ul>
+  </div></section>
 
   <section class="slide"><div>
       <h2>Сайты с SVG-графикой</h2>
@@ -604,6 +660,7 @@ width="180" height="45" x="5" y="5"
   </div></section>
   
 
+
   <section class="slide"><div>
       <h2>Оформление SVG</h2>
       <p></p>
@@ -621,6 +678,20 @@ width="180" height="45" x="5" y="5"
 
 
 
+  <section class="slide"><div>
+
+    <div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+
+          <h2>Stylegiude (H2)</h2>
+          <!-- <h1>H1 текст</h1> -->
+          <!-- <h2>H2 текст</h2> -->
+          <h3>H3 текст</h3>
+          <h4>H4 текст</h4>
+          <p>самый разный текст, обычный преобычный</p>
+          
+      </div></section>
 
 
   <section class="slide"><div>

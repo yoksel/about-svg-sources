@@ -1,22 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
  <linearGradient id="gr-rainbow-stripes" x1="0" y1="0" x2="100%" y2="0%"> 
-          <stop offset="0%" stop-color="crimson" /><stop offset="10%" stop-color="purple" />
-          <stop offset="10%" stop-color="red" /><stop offset="20%" stop-color="crimson" />
-          <stop offset="20%" stop-color="orangered" /><stop offset="30%" stop-color="red" />
-          <stop offset="30%" stop-color="orange" /><stop offset="40%" stop-color="orangered" />
-          <stop offset="40%" stop-color="gold" /><stop offset="50%" stop-color="orange" />
-          <stop offset="50%" stop-color="yellowgreen" /><stop offset="60%" stop-color="gold" />
-          <stop offset="60%" stop-color="green" /><stop offset="70%" stop-color="yellowgreen" />
-          <stop offset="70%" stop-color="steelblue" /><stop offset="80%" stop-color="skyblue" />
-          <stop offset="80%" stop-color="mediumpurple" /><stop offset="90%" stop-color="steelblue" />
-          <stop offset="90%" stop-color="purple" /><stop offset="100%" stop-color="mediumpurple" />
-        </linearGradient>
-      
-        <pattern id="pt-rainbow-stripes" 
-                 patternUnits="userSpaceOnUse"
-                 width="200" height="200" 
-                 viewbox="0 0 200 200">
-          <rect width="200" height="200"
-                  fill="url(#gr-rainbow-stripes)"/>
-        </pattern>
+    <stop offset="0%" stop-color="crimson" /><stop offset="10%" stop-color="purple" />
+    <stop offset="10%" stop-color="red" /><stop offset="20%" stop-color="crimson" />
+    <stop offset="20%" stop-color="orangered" /><stop offset="30%" stop-color="red" />
+    <stop offset="30%" stop-color="orange" /><stop offset="40%" stop-color="orangered" />
+    <stop offset="40%" stop-color="gold" /><stop offset="50%" stop-color="orange" />
+    <stop offset="50%" stop-color="yellowgreen" /><stop offset="60%" stop-color="gold" />
+    <stop offset="60%" stop-color="green" /><stop offset="70%" stop-color="yellowgreen" />
+    <stop offset="70%" stop-color="steelblue" /><stop offset="80%" stop-color="skyblue" />
+    <stop offset="80%" stop-color="mediumpurple" /><stop offset="90%" stop-color="steelblue" />
+    <stop offset="90%" stop-color="purple" /><stop offset="100%" stop-color="mediumpurple" />
+  </linearGradient>
+
+  <linearGradient id="gr-hot-cold" x1="0" y1="0" x2="40" y2="40"
+                    gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+      <stop stop-color="#F2385A" offset="0"/>
+      <stop stop-color="#F2385A" offset="20%"/>
+      <stop stop-color="#F5A503" offset="20%"/>
+      <stop stop-color="#F5A503" offset="40%"/>
+      <stop stop-color="#E9F1DF" offset="40%"/>  
+      <stop stop-color="#E9F1DF" offset="60%"/>  
+      <stop stop-color="#4AD9D9" offset="60%"/>  
+      <stop stop-color="#4AD9D9" offset="80%"/>  
+      <stop stop-color="#36B1BF" offset="80%"/>  
+      <stop stop-color="#36B1BF" offset="100%"/>  
+  </linearGradient>
+
+  <pattern id="pt-rainbow-stripes" 
+           patternUnits="userSpaceOnUse"
+           width="200" height="200" 
+           viewbox="0 0 200 200">
+    <rect width="200" height="200"
+            fill="url(#gr-rainbow-stripes)"/>
+  </pattern>
+
+  <pattern id="pt-wood" width="400" height="400"
+             patternUnits="userSpaceOnUse">
+      <image xlink:href="http://img-fotki.yandex.ru/get/6447/5091629.86/0_74298_17a84446_XL.jpg" width="400" height="400">
+    </pattern>
+
 </svg>  

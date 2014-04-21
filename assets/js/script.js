@@ -14,6 +14,9 @@ $( "#svg-images" ).load( "assets/img/svg/svg-lib.svg", function() {
   console.log( "Images were loaded." );
 });
 
+
+var curSlideClass = ".slide.active";
+
 // Resize div
 // -------------------------------
 $(function() {
@@ -38,6 +41,28 @@ $(".demo__code").each ( function(){
     });
 
 });
+
+// Show shapes
+// -------------------------------
+var switchCheckedClass = "switch--checked";
+$(".demo-switch dd").each( function(){
+    $(this).click( function(){
+        $("." + switchCheckedClass, $(this).parent()).removeClass(switchCheckedClass);
+        $(this).addClass( switchCheckedClass );
+
+        var changeAttr = $(this).parent().attr("data-attr");
+        var changeVal = $(this).attr("data-val");
+
+        var svgGroup = $(curSlideClass).find("g");
+        svgGroup.attr(changeAttr,changeVal);
+        
+        var svg = $(curSlideClass).find("svg");    
+        var viewbox = svg.attr("viewbox");
+        var svg_content = svg.html();
+        var demo_code = $(curSlideClass).find(".demo__code");
+        demo_code.val("<svg viewbox='0 0 140 205'>" + svg_content + "</svg>");
+        });
+    });
 
 // Popup Images
 // -------------------------------
