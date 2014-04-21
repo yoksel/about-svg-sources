@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .slide H1,
 .slide H2,
 .slide H3,
@@ -411,9 +412,32 @@ svg {
 }
 
 .demo--dasharray {
-  height: 300px;
+  height: 320px;
 }
 
+.demo--stroke-anim {
+  height: 320px;
+}
+.demo--stroke-anim path {
+  fill: none;
+  stroke: url(#gr-hot-cold-soft);
+  stroke-width: 2;
+  stroke-dasharray: 550 0;
+  -webkit-animation: dasharray 5s infinite alternate;
+  animation: dasharray 5s infinite alternate;
+}
+
+@-webkit-keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 500;
+  }
+}
+
+@keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 500;
+  }
+}
 /* Demo G
 ------------------------- */
 .demo--g .demo__view {
@@ -437,11 +461,14 @@ svg {
 /* Demo pattern
 ------------------------- */
 .demo--pattern .demo__view {
-  width: 250px;
+  /*width: 250px;*/
   height: 250px;
 }
 .demo--pattern .demo__code {
-  height: 310px;
+  height: 250px;
+}
+.demo--pattern DD {
+  display: inline-block;
 }
 
 /* Demo transform

@@ -122,8 +122,27 @@ $textarea-width: 63%;
         }
     }   
 .demo--dasharray {
-    height: 300px;
-}    
+    height: 320px;
+    }  
+
+.demo--stroke-anim {
+    height: 320px;
+    
+    path {
+      fill: none;
+      stroke: url(#gr-hot-cold-soft);
+      stroke-width: 2;
+      stroke-dasharray: 550 0;
+      animation: dasharray 5s infinite alternate;
+      }
+
+}
+@keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 500;
+  }
+}
+  
 /* Demo G
 ------------------------- */    
 .demo--g {
@@ -150,12 +169,15 @@ $textarea-width: 63%;
 ------------------------- */    
 .demo--pattern {
     .demo__view {
-        width: 250px;
+        /*width: 250px;*/
         height: 250px;
         }
     .demo__code {
-        height: 310px;
-        }        
+        height: 250px;
+        }  
+    DD {
+        display: inline-block;
+        }          
     }  
 /* Demo transform
 ------------------------- */        

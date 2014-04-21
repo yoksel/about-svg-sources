@@ -56,11 +56,17 @@ $(".demo-switch dd").each( function(){
         var svgGroup = $(curSlideClass).find("g");
         svgGroup.attr(changeAttr,changeVal);
         
-        var svg = $(curSlideClass).find("svg");    
-        var viewbox = svg.attr("viewbox");
+        var svg = $(curSlideClass).find("svg");   
+        var test = document.querySelector(".active svg");
+
+        console.log(test) ;
+        // console.log(svg);
+        // console.log($(".active").attr("class"));
+        var viewbox = svg.attr("viewBox");
+        console.log(viewbox);
         var svg_content = svg.html();
         var demo_code = $(curSlideClass).find(".demo__code");
-        demo_code.val("<svg viewbox='0 0 140 205'>" + svg_content + "</svg>");
+        demo_code.val("<svg viewbox='" + viewbox + "'>" + svg_content + "</svg>");
         });
     });
 
