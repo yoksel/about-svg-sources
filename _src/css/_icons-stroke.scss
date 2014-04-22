@@ -1,0 +1,66 @@
+BODY {
+  font-size: 10px;
+  background: #EEE;
+  }
+
+.wrapper {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  }
+.icons {
+  margin-bottom: 1.5em;
+  }
+.icon {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  width: 7.5em;
+  height: 7.5em;
+  margin: 0 .7em;
+  transition: .2s;
+  fill: none;
+  }
+
+.icons--stroke .icon {
+  stroke: rgba(0, 0, 0, .5);
+  stroke-width: 2;
+    &:hover {
+      stroke: skyblue; 
+    }
+  }
+
+
+.icons--dasharray .icon {
+  stroke: rgba(0, 0, 0, .5);
+  stroke-width: 2;
+  stroke-dasharray: 10 5;
+  fill: rgba(0, 0, 0, .1);
+  &:hover {
+    stroke-dasharray: 10 0;
+    }
+  }
+
+.icons--dasharray-anim .icon {
+  stroke: rgba(0, 0, 0, .5);
+  stroke-width: 2;
+  stroke-dasharray: 300 0;
+  stroke-dashoffset: 1000;
+  animation: dasharray 7s infinite alternate;
+  }
+
+@keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 300;
+  }
+}
+
+.icons--gradient .icon {
+  stroke-width: 3;
+  stroke: url(#stripes);
+  }
+
+.icons--gradient2 .icon {
+  stroke-width: 3;
+  stroke: url(#stripes2);
+  }

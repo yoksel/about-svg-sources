@@ -308,15 +308,14 @@ svg {
 .demo__view {
   float: left;
   width: 35%;
+  /*border: 2px solid;*/
 }
 .demo__view svg {
   display: block;
   margin: 0 auto;
   border: 1px solid #EEE;
 }
-.demo__code {
-  border-right: 1px solid;
-  height: 134.37216px;
+.demo__textfield {
   width: 100%;
   border: 1px solid #CCC;
   border-radius: 5px;
@@ -324,10 +323,20 @@ svg {
   line-height: 1.3;
   color: #222;
 }
+.demo__code {
+  height: 134.37216px;
+}
 .demo pre {
   float: right;
   width: 65%;
   margin-top: 1em;
+}
+.demo B {
+  display: inline-block;
+  font: bold .8em/1 Arial !important;
+  /*
+  vertical-align: top !important;
+  /*background: gold;*/
 }
 
 /* Demo Rect
@@ -339,7 +348,7 @@ svg {
 /* Demo Switch
 ------------------------- */
 .demo-switch {
-  margin-top: 1em;
+  /*margin-top: 1em;*/
   font-size: .6em;
   line-height: 1.4;
 }
@@ -421,6 +430,11 @@ svg {
   font-size: .8em;
 }
 
+#pt-text {
+  font: italic .5em/1 Georgia;
+  color: #000;
+}
+
 .demo--dasharray {
   height: 320px;
 }
@@ -451,7 +465,6 @@ svg {
 /* Demo G
 ------------------------- */
 .demo--g .demo__view {
-  /* width: 250px;*/
   height: 150px;
 }
 .demo--g .demo__code {
@@ -461,7 +474,6 @@ svg {
 /* Demo Use
 ------------------------- */
 .demo--use .demo__view {
-  width: 250px;
   height: 180px;
 }
 .demo--use .demo__code {
@@ -471,7 +483,6 @@ svg {
 /* Demo Defs
 ------------------------- */
 .demo--defs .demo__view {
-  width: 250px;
   height: 180px;
 }
 .demo--defs .demo__code {
@@ -481,7 +492,6 @@ svg {
 /* Demo Symbol
 ------------------------- */
 .demo--symbol .demo__view {
-  width: 250px;
   height: 180px;
 }
 .demo--symbol .demo__code {
@@ -496,21 +506,21 @@ svg {
           }  */
 }
 .demo--pattern .demo__view {
-  width: 190px;
-  height: 190px;
+  /*width: 190px;*/
+  height: 200px;
 }
 .demo--pattern .demo__code {
-  height: 290.5344px;
+  height: 308.6928px;
 }
 
 /* Demo transform
 ------------------------- */
 .demo--transform .demo__view {
-  width: 200px;
+  /*width: 200px;*/
   height: 150px;
 }
 .demo--transform .demo__code {
-  height: 120px;
+  height: 145.2672px;
 }
 
 /* Demo stacks
@@ -556,8 +566,11 @@ svg {
 
 /* Demo Masks
 ------------------------- */
-.demo--masks .demo__code {
-  height: 170px;
+.demo--mask .demo__code {
+  height: 127.1088px;
+}
+.demo--mask .demo__codepart {
+  height: 90.792px;
 }
 
 #clipping-text {
@@ -566,4 +579,174 @@ svg {
 
 #fo-text {
   font: bold italic 0.4em/1 Georgia;
+}
+
+@font-face {
+  font-family: 'svg-dec';
+  src: url("http://yoksel.github.io/assets/fonts/icomoon-svg-dec/svg-dec.eot?-824yne");
+  src: url("http://yoksel.github.io/assets/fonts/icomoon-svg-dec/svg-dec.eot?#iefix-824yne") format("embedded-opentype"), url("data:application/octet-stream;base64, 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") format("woff"), url("http://yoksel.github.io/assets/fonts/icomoon-svg-dec/svg-dec.ttf?-824yne") format("truetype"), url("http://yoksel.github.io/assets/fonts/icomoon-svg-dec/svg-dec.svg?-824yne#svg-font-fullsize") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper--iconfont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 144px;
+  text-align: center;
+  color: #333;
+}
+
+.iconfont__icon {
+  display: inline-block;
+  width: 144px;
+  height: 144px;
+  margin: 0 .2em;
+  font-family: 'svg-dec';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-size: 144px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.iconfont__icon:before {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.icon-cool:before {
+  text-shadow: 1px 1px white, 2px 2px white, 3px 3px #333;
+  content: "\e602";
+}
+
+.icon-cool:hover {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon-cool:hover:before {
+  color: crimson;
+}
+
+.icon-alarm:before {
+  content: "\e600";
+  color: #AAA;
+  text-shadow: 0 0 3px #AAA, 0 0 5px #AAA, 0 0 7px #AAA;
+}
+
+.icon-alarm:hover:before {
+  color: orangered;
+  text-shadow: 0 0 0 transparent;
+}
+
+.icon-bubbles:before {
+  content: "\e601";
+  text-shadow: 5px 3px 0 rgba(0, 0, 0, 0.1);
+  color: lightskyblue;
+}
+
+.icon-bubbles:hover:before {
+  text-shadow: -5px -3px 0 rgba(0, 0, 0, 0.1);
+  color: deepskyblue;
+}
+
+.icon-heart {
+  overflow: hidden;
+  background: hotpink;
+  text-shadow: 0px 0px 0 mediumvioletred,1px 1px 0 mediumvioletred,2px 2px 0 mediumvioletred,3px 3px 0 mediumvioletred,4px 4px 0 mediumvioletred,5px 5px 0 mediumvioletred,6px 6px 0 mediumvioletred,7px 7px 0 mediumvioletred,8px 8px 0 mediumvioletred,9px 9px 0 mediumvioletred,10px 10px 0 mediumvioletred,11px 11px 0 mediumvioletred,12px 12px 0 mediumvioletred,13px 13px 0 mediumvioletred,14px 14px 0 mediumvioletred,15px 15px 0 mediumvioletred,16px 16px 0 mediumvioletred,17px 17px 0 mediumvioletred,18px 18px 0 mediumvioletred,19px 19px 0 mediumvioletred,20px 20px 0 mediumvioletred,21px 21px 0 mediumvioletred,22px 22px 0 mediumvioletred,23px 23px 0 mediumvioletred,24px 24px 0 mediumvioletred,25px 25px 0 mediumvioletred,26px 26px 0 mediumvioletred,27px 27px 0 mediumvioletred,28px 28px 0 mediumvioletred,29px 29px 0 mediumvioletred,30px 30px 0 mediumvioletred,31px 31px 0 mediumvioletred,32px 32px 0 mediumvioletred,33px 33px 0 mediumvioletred,34px 34px 0 mediumvioletred,35px 35px 0 mediumvioletred,36px 36px 0 mediumvioletred,37px 37px 0 mediumvioletred,38px 38px 0 mediumvioletred,39px 39px 0 mediumvioletred,40px 40px 0 mediumvioletred,41px 41px 0 mediumvioletred,42px 42px 0 mediumvioletred,43px 43px 0 mediumvioletred,45px 45px 0 transparent;
+  border-radius: .2em;
+  font-size: 4.8em;
+  line-height: 1.35em;
+  color: #FFF;
+}
+
+.icon-heart:hover {
+  text-shadow: 0px 0px 0 mediumvioletred,-1px 1px 0 mediumvioletred,-2px 2px 0 mediumvioletred,-3px 3px 0 mediumvioletred,-4px 4px 0 mediumvioletred,-5px 5px 0 mediumvioletred,-6px 6px 0 mediumvioletred,-7px 7px 0 mediumvioletred,-8px 8px 0 mediumvioletred,-9px 9px 0 mediumvioletred,-10px 10px 0 mediumvioletred,-11px 11px 0 mediumvioletred,-12px 12px 0 mediumvioletred,-13px 13px 0 mediumvioletred,-14px 14px 0 mediumvioletred,-15px 15px 0 mediumvioletred,-16px 16px 0 mediumvioletred,-17px 17px 0 mediumvioletred,-18px 18px 0 mediumvioletred,-19px 19px 0 mediumvioletred,-20px 20px 0 mediumvioletred,-21px 21px 0 mediumvioletred,-22px 22px 0 mediumvioletred,-23px 23px 0 mediumvioletred,-24px 24px 0 mediumvioletred,-25px 25px 0 mediumvioletred,-26px 26px 0 mediumvioletred,-27px 27px 0 mediumvioletred,-28px 28px 0 mediumvioletred,-29px 29px 0 mediumvioletred,-30px 30px 0 mediumvioletred,-31px 31px 0 mediumvioletred,-32px 32px 0 mediumvioletred,-33px 33px 0 mediumvioletred,-34px 34px 0 mediumvioletred,-35px 35px 0 mediumvioletred,-36px 36px 0 mediumvioletred,-37px 37px 0 mediumvioletred,-38px 38px 0 mediumvioletred,-39px 39px 0 mediumvioletred,-40px 40px 0 mediumvioletred,-41px 41px 0 mediumvioletred,-42px 42px 0 mediumvioletred,-43px 43px 0 mediumvioletred,45px 45px 0 transparent;
+}
+
+.icon-heart:before {
+  content: "\68";
+}
+
+BODY {
+  font-size: 10px;
+  background: #EEE;
+}
+
+.wrapper {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.icons {
+  margin-bottom: 1.5em;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  width: 7.5em;
+  height: 7.5em;
+  margin: 0 .7em;
+  -webkit-transition: .2s;
+  transition: .2s;
+  fill: none;
+}
+
+.icons--stroke .icon {
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 2;
+}
+.icons--stroke .icon:hover {
+  stroke: skyblue;
+}
+
+.icons--dasharray .icon {
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 2;
+  stroke-dasharray: 10 5;
+  fill: rgba(0, 0, 0, 0.1);
+}
+.icons--dasharray .icon:hover {
+  stroke-dasharray: 10 0;
+}
+
+.icons--dasharray-anim .icon {
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 2;
+  stroke-dasharray: 300 0;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dasharray 7s infinite alternate;
+  animation: dasharray 7s infinite alternate;
+}
+
+@keyframes dasharray {
+  100% {
+    stroke-dasharray: 0 300;
+  }
+}
+.icons--gradient .icon {
+  stroke-width: 3;
+  stroke: url(#stripes);
+}
+
+.icons--gradient2 .icon {
+  stroke-width: 3;
+  stroke: url(#stripes2);
 }
