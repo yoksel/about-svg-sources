@@ -56,17 +56,12 @@ $(".demo-switch dd").each( function(){
         var svgGroup = $(curSlideClass).find("g");
         svgGroup.attr(changeAttr,changeVal);
         
-        var svg = $(curSlideClass).find("svg");   
-        var test = document.querySelector(".active svg");
-
-        console.log(test) ;
-        // console.log(svg);
-        // console.log($(".active").attr("class"));
-        var viewbox = svg.attr("viewBox");
-        console.log(viewbox);
-        var svg_content = svg.html();
-        var demo_code = $(curSlideClass).find(".demo__code");
-        demo_code.val("<svg viewbox='" + viewbox + "'>" + svg_content + "</svg>");
+        var svgElem = $(curSlideClass).find("svg");   
+        var svgElem_n = document.querySelector(".active svg");
+        var svgViewbox = svgElem_n.getAttribute("viewBox"); //svg.attr("viewBox");
+        var svgContent = svgElem.html();
+        var demoCode = $(curSlideClass).find(".demo__code");
+        demoCode.val("<svg viewbox='" + svgViewbox + "'>" + svgContent + "</svg>");
         });
     });
 
