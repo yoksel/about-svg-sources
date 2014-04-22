@@ -33,6 +33,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     &__content {
         float: right;
         width: $textarea-width;
+        line-height: 1;
         } 
     &__view {
     float: left;   
@@ -64,10 +65,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     B {
         display: inline-block;
         font: bold .8em/1 Arial !important;
-        /*
-        vertical-align: top !important;
-        /*background: gold;*/
-        }    
+        }
+        &__textfield + B {
+            margin: 1em 0 .5em;
+            }    
     
     } 
 /* Demo Rect

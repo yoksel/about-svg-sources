@@ -1,28 +1,39 @@
-BODY {
-  font-size: 10px;
-  background: #EEE;
-  }
-
-.wrapper {
-  width: 500px;
-  margin: 30px auto;
+.wrapper--icons-stroke,
+.wrapper--icons-filters {
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+  height: 6.5em;
+  margin: auto;
   text-align: center;
-  }
-.icons {
-  margin-bottom: 1.5em;
-  }
-.icon {
-  display: inline-block;
-  position: relative;
-  top: 0;
-  width: 7.5em;
-  height: 7.5em;
-  margin: 0 .7em;
-  transition: .2s;
+  
+  .icons {
+    margin-bottom: 1.5em;
+    }
+  .icon {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    width: 7em;
+    height: 7em;
+    margin: 0 .5em;
+    text-indent: 0;
+    transition: .2s;
+    
+    use {
+      transform: scale(.85) translate(.2em, .2em);
+      }
+
+    &:before {
+      content: none
+      }
+    }
+}
+.wrapper--icons-stroke {
   fill: none;
   }
 
-.icons--stroke .icon {
+.icon--stroke {
   stroke: rgba(0, 0, 0, .5);
   stroke-width: 2;
     &:hover {
@@ -30,8 +41,7 @@ BODY {
     }
   }
 
-
-.icons--dasharray .icon {
+.icon--dasharray {
   stroke: rgba(0, 0, 0, .5);
   stroke-width: 2;
   stroke-dasharray: 10 5;
@@ -41,26 +51,33 @@ BODY {
     }
   }
 
-.icons--dasharray-anim .icon {
-  stroke: rgba(0, 0, 0, .5);
-  stroke-width: 2;
-  stroke-dasharray: 300 0;
-  stroke-dashoffset: 1000;
-  animation: dasharray 7s infinite alternate;
-  }
-
-@keyframes dasharray {
-  100% {
-    stroke-dasharray: 0 300;
-  }
-}
-
-.icons--gradient .icon {
+.icon--gradient {
   stroke-width: 3;
-  stroke: url(#stripes);
+  stroke: url(#gr-hot-cold-soft);
   }
 
-.icons--gradient2 .icon {
+.icon--gradient2 {
   stroke-width: 3;
-  stroke: url(#stripes2);
+  stroke: url(#gr-gray-transp);
   }
+
+.icon--blur {
+  fill: url(#gr-hot-cold);
+  filter: url(#fl-blur);
+  }
+.icon--shadow {
+  fill: url(#gr-hot-cold);
+  filter: url(#fl-shadow);
+  }  
+.icon--multystrokes {
+  position: relative;
+  text-indent: -1em !important;
+  fill: none;
+  stroke: #FFF;
+  stroke-width: 3;
+  filter: url(#fl-striped-shadow);
+  }
+.icon--innershadow {
+  fill: url(#gr-hot-cold);
+  filter: url(#fl-inner-shadow);
+  }  

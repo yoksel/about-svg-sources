@@ -16,7 +16,7 @@ svg {
 /* Slides
 ------------------------- */ 
 .slide {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     &>DIV {
         padding-top: 90px;
         }
@@ -56,10 +56,14 @@ svg {
         }
         .cover-text__fill {
             fill: url(#pt-rainbow-stripes);    
+            filter: url(#fl-shadow);
+            
             }
         .cover-text__stroke {
-            stroke: url(#pt-rainbow-stripes);    
-            stroke-width: 5;
+            /*stroke: url(#pt-rainbow-stripes);    
+            stroke-width: 5;*/
+            /*stroke: #FFF;*/
+            /*stroke-width: 2;*/
             /*stroke-dasharray: 1;*/
             }    
 /* Popup
@@ -101,6 +105,16 @@ svg {
             color: #FFF;
             }                
     }    
+
+.bg--gray-wood {
+    background: #444 url(http://img-fotki.yandex.ru/get/4131/5091629.86/0_7429e_65318a7d_L.jpg);
+    H2 {
+        color: #FFF;   
+        }
+    }
+.bg--concrete {
+    background: #DDD url(http://img-fotki.yandex.ru/get/9496/5091629.9d/0_81614_110cd32b_orig);
+    }
 
 @import '_resize';   
 @import '_icons-16-64';

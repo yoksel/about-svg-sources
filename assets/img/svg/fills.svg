@@ -32,6 +32,11 @@
       <stop stop-color="hsl(200,100%,60%)" offset="100%"/>  
   </linearGradient>
 
+  <linearGradient id="gr-gray-transp" x1="0" y1="0" x2="0" y2="100%">
+      <stop stop-color="rgba(0,0,0,.2)" class="color-1"/>
+      <stop stop-color="rgba(0,0,0,.02)" offset="90" class="color-2"/>
+  </linearGradient>
+
   <!--  -->
 
   <pattern id="pt-rainbow-stripes" width="200" height="200"
