@@ -187,11 +187,7 @@ module.exports = function (grunt) {
       dev : {
         path: 'http://localhost:9001/',
         // app: 'Firefox'
-      },
-      // file : {
-      //   path : '/etc/hosts',
-      //   app: 'Sublime Text 2'
-      // }
+      }
     }
   });
 
@@ -202,9 +198,11 @@ module.exports = function (grunt) {
   // grunt.registerTask('default', ['bump']);
 
   grunt.registerTask('default', [
-    // 'svgstore',
-    // 'svgmin',
-    // 'imagemin',
+    'connect',
+    'open'
+    ]);
+
+  grunt.registerTask('dev', [
     'connect',
     'open',
     'watch'
