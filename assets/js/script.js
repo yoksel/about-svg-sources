@@ -23,26 +23,31 @@ $(function() {
     $( ".resizable" ).resizable();
   });
 
-// Show shapes
+// Show Shapes
 // -------------------------------
 var showShapeClass = "demo__view";
 
-$(".demo__code").each ( function(){
-    var shape_code = $(this).val();
-    $( "<div class='" + showShapeClass + "'>" + shape_code + "</div>" ).insertBefore( this );
 
-    $(this).change ( function(){
-        $(this).prev("." + showShapeClass).html( $(this).val() );  
+$(".demo").each ( function(){
+    var svgCode = $(this).find(".demo__code");
+    var shape_code = svgCode.val();
+    
+    var demoContent = $(this).find(".demo__content");    
+    var svgViewCode = "<div class='" + showShapeClass + "'>" + shape_code + "</div>";
+    var svgView = $(svgViewCode).insertBefore($(demoContent));
+
+    $(svgCode).change ( function(){
+        $(svgView).html( $(this).val() ); 
     });
     
-    $(this).bind('keydown keyup', function(event){
+    svgCode.bind('keydown keyup', function(event){
         event.stopPropagation();
-        $(this).prev("." + showShapeClass).html( $(this).val() );  
+        $(svgView).html( $(this).val() ); 
     });
 
 });
 
-// Show shapes
+// Show Demos
 // -------------------------------
 var switchCheckedClass = "switch--checked";
 $(".demo-switch dd").each( function(){
@@ -62,6 +67,9 @@ $(".demo-switch dd").each( function(){
         var svgContent = svgElem.html();
         var demoCode = $(curSlideClass).find(".demo__code");
         demoCode.val("<svg viewbox='" + svgViewbox + "'>" + svgContent + "</svg>");
+        // console.log("demoCode");
+        // console.log(demoCode);
+        // demoCode.val("2233");
         });
     });
 

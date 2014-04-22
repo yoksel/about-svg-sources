@@ -55,7 +55,8 @@
   <section class="slide"><div>
           <ul>
         <li>изображения масштабируются без потери качества</li>
-        <li>не теряют резкости на ретине</li>
+        <li>не теряют резкости на ретине
+          <a href="assets/img/preview/retina.jpg" class="img-preview"><svg viewbox="0 0 24 24"><use xlink:href="#image"/></svg></a></li>
         <li>файл можно открыть в текстовом редакторе и увидеть человекопонятный код</li>
         <li>SVG можно не только нарисовать, но и написать</li>
         <li>SVG-файл - это исходник</li>
@@ -118,104 +119,119 @@
 
   <section class="slide"><div>
         <h2>Простые фигуры: &lt;rect></h2>
-        <div class="demo js-demo">
-      <textarea class="demo__code"><svg width="230" height="140">
-    <rect x="5" y="5" width="220" height="130" 
-          fill="skyblue" stroke="steelblue" stroke-width="5" />
-</svg>
-      </textarea>
-    </div>
+        <div class="demo demo--rect js-demo">
+          <div class="demo__content">
+            <textarea class="demo__code"><svg width="230" height="140">
+            <rect x="5" y="5" width="220" height="130" 
+                  fill="skyblue" stroke="steelblue" stroke-width="5" />
+          </svg>
+                </textarea>
+        </div></div>
 
-    <div class="demo js-demo">
-      <textarea class="demo__code"><svg width="230" height="140">
-    <rect x="5" y="5" width="220" height="130" rx="20" 
-          fill="yellowgreen" stroke="green" stroke-width="5" />
-</svg>
-      </textarea>
-    </div>
+    <div class="demo demo--rect js-demo">
+      <div class="demo__content">
+        <textarea class="demo__code"><svg width="230" height="140">
+      <rect x="5" y="5" width="220" height="130" rx="20" 
+            fill="yellowgreen" stroke="green" stroke-width="5" />
+  </svg>
+          </textarea>
+        </div>
+      </div>  
     </div></section> 
 
   <section class="slide"><div>
         <h2>Простые фигуры: &lt;circle>, &lt;ellipse></h2>
-        <div class="demo js-demo">
-      <textarea class="demo__code"><svg width="140" height="140">
-     <circle r="65" cx="70" cy="70" 
-             fill="orangered" stroke="crimson" stroke-width="5" />
-</svg>
-      </textarea>
+        <div class="demo demo--circle js-demo">
+          <div class="demo__content">
+          <textarea class="demo__code"><svg width="140" height="140">
+         <circle r="65" cx="70" cy="70" 
+                 fill="orangered" stroke="crimson" stroke-width="5" />
+    </svg>
+          </textarea>
+        </div>
     </div>
 
-    <div class="demo js-demo">
+    <div class="demo demo--ellipse js-demo">
+      <div class="demo__content">
       <textarea class="demo__code"><svg width="230" height="140">
      <ellipse rx="110" ry="60" cx="115" cy="70" 
               fill="gold" stroke="orange" stroke-width="5" />
 </svg>
       </textarea>
-    </div>
+    </div></div>
     </div></section>
 
     <section class="slide"><div>
         <h2>Простые фигуры: &lt;polygon></h2>
         <div class="demo js-demo">
+          <div class="demo__content">
       <textarea class="demo__code"><svg width="230" height="140">
     <polygon points="5,135 115,5 225,135" 
              fill="violet" stroke="purple" stroke-width="5" />
 </svg>
       </textarea>
-    </div>
+    </div></div>
 
     <div class="demo js-demo">
+      <div class="demo__content">
       <textarea class="demo__code"><svg width="140" height="130">
     <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"        
              fill="turquoise" stroke="lightseagreen" stroke-width="5" />
 </svg>
       </textarea>
-    </div>
+    </div></div>
+
     </div></section> 
 
     <section class="slide"><div>
         <h2>Простые фигуры: &lt;line></h2>
         <div class="demo js-demo">
+          <div class="demo__content">
       <textarea class="demo__code"><svg width="230" height="140">
     <line x1="220" y1="10" x2="20" y2="130" 
            stroke="violet" stroke-width="5" />
 </svg>
       </textarea>
     </div>
+    </div>
 
     <div class="demo js-demo">
+      <div class="demo__content">
       <textarea class="demo__code"><svg width="260" height="140">
     <polyline points="5,135 30,5 55,135 80,5, 105,135 130,5, 155,135 180,5, 205,135 230,5, 255,135" 
                 fill="none" stroke="orangered" stroke-width="5" />
 </svg>
       </textarea>
-    </div>
+    </div></div>
     </div></section>    
 
     <section class="slide"><div>
         <h2>&lt;Path></h2>
         <div class="demo js-demo">
+          <div class="demo__content">
       <textarea class="demo__code"><svg width="200" height="140">
   <path stroke="orange" stroke-width="3" fill="gold"
         d="M 100,10 L 180,130
            L 20,130 z"/>
 </svg>
       </textarea>
-    </div>
+    </div></div>
 
     <div class="demo js-demo">
+      <div class="demo__content">
       <textarea class="demo__code"><svg width="200" height="140">
   <path stroke="purple" stroke-width="3" fill="violet" 
       d="M 20 10 
          A20,31 0 0,0 170,10"></path>
 </svg>
       </textarea>
-    </div>
+    </div></div>
     </div></section>
   
   <section class="slide"><div>
         <h2>Обводки и заливки: fill, stroke</h2>
         <div class="demo demo--fill js-demo">
+          <div class="demo__content">
           <textarea class="demo__code"><svg viewbox='0 0 140 205'>
   <g fill="url(#pt-wood)" stroke="url(#gr-hot-cold)">
     <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" 
@@ -239,7 +255,7 @@
               <dd data-val="url(#pt-wood)">Pattern</dd>
             </dl>
           </div>
-      </div>
+      </div></div>
     </div></section>
 
   <section class="slide"><div>
@@ -312,6 +328,7 @@
   <section class="slide"><div>
       <h2>Группировка: &lt;g></h2>
       <div class="demo demo--g js-demo">
+        <div class="demo__content">
           <textarea class="demo__code"><svg  viewbox="0 0 190 100">
   <g id="circles--warm">
     <circle fill="crimson" r="20" cx="25" cy="25"/>
@@ -326,13 +343,14 @@
     <circle fill="darkviolet" r="20" cx="160" cy="75"/>
   </g>
 </svg></textarea>
-      </div>
+      </div></div>
   </div></section>
 
   <section class="slide"><div>
       <h2>Переиспользование: &lt;use></h2>
       <div class="demo demo--use js-demo">
-          <textarea class="demo__code"><svg viewbox="0 0 190 150">
+        <div class="demo__content">
+          <textarea class="demo__code"><svg viewbox="0 0 190 153">
   <g id="rects--use">
     <rect fill="gold" width="40" height="40" x="4" y="4"/>
     <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
@@ -340,18 +358,21 @@
     <rect width="40" height="40" x="142" y="4" id="square--use"/>
   </g>
 
-  <use xlink:href="#rects--use" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+  <use xlink:href="#rects--use" x="0" y="50" 
+           fill="none" stroke="steelblue" stroke-width="3"/>
 
-  <use xlink:href="#square--use" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="1"/>
+  <use xlink:href="#square--use" x="-46" y="100" 
+           fill="tomato" stroke="crimson" stroke-width="8"/>
   </svg>
 </textarea>
-      </div>
+      </div></div>
   </div></section>
 
   <section class="slide"><div>
       <h2>Переиспользование: &lt;defs></h2>
-      <div class="demo demo--use js-demo">
-          <textarea class="demo__code"><svg viewbox="0 0 190 150">
+      <div class="demo demo--defs js-demo">
+        <div class="demo__content">
+          <textarea class="demo__code"><svg viewbox="0 0 190 153">
   <defs>
     <g id="rects--defs">
       <rect fill="gold" width="40" height="40" x="4" y="4"/>
@@ -363,16 +384,17 @@
 
   <use xlink:href="#rects--defs" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
 
-  <use xlink:href="#square--defs" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="1"/>
+  <use xlink:href="#square--defs" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
 </svg>
 </textarea>
-      </div>
+      </div></div>
   </div></section>
 
   <section class="slide"><div>
       <h2>Переиспользование: &lt;symbol></h2>
-      <div class="demo demo--use js-demo">
-          <textarea class="demo__code"><svg viewbox="0 0 190 150">
+      <div class="demo demo--symbol js-demo">
+        <div class="demo__content">
+          <textarea class="demo__code"><svg viewbox="0 0 190 153">
   <defs>
     <symbol id="rects--symbol">
       <rect fill="gold" width="40" height="40" x="4" y="4"/>
@@ -384,36 +406,38 @@
   
   <use xlink:href="#rects--symbol" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
 
-  <use xlink:href="#square--symbol" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="1"/>
+  <use xlink:href="#square--symbol" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
 </svg>
 </textarea>
-      </div>
+      </div></div>
   </div></section>
 
   <section class="slide"><div>
       <h2>Переиспользование: &lt;pattern></h2>
       <div class="demo demo--pattern js-demo">
-          <textarea class="demo__code"><svg viewbox="0 0 190 190">
+        <div class="demo__content">
+          <textarea class="demo__code"><svg viewbox='0 0 190 190'>
   <defs>
-    <pattern id="pt--squares" viewbox="0 0 175 40"
-width="180" height="45" x="5" y="5"
-             patternUnits="userSpaceOnUse">
-      <rect fill="gold" width="40" height="40" x="0" y="0"/>
-      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"/>
-      <rect fill="skyblue" width="40" height="40" x="90" y="0"/>
-      <rect fill="orangered" width="40" height="40" x="135" y="0"/></patern>
+    <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="7" y="5" patternUnits="userSpaceOnUse">
+      <rect fill="gold" width="40" height="40" x="0" y="0"></rect>
+      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"></rect>
+      <rect fill="skyblue" width="40" height="40" x="90" y="0"></rect>
+      <rect fill="orangered" width="40" height="40" x="135" y="0"></rect>
+    </pattern>
   </defs>
-  <g fill="url(#pt--squares)"><rect width="180" height="180" x="5" y="5"/></g>  
+  <g fill="url(#pt--squares)">
+    <rect width="180" height="180" x="5" y="5"></rect>
+  </g>  
 </svg>
         </textarea>
-        <div class="demo-switch">
+        <div class="demo-switch demo-switch--horizontal">
             <dl data-attr="fill">
-              <dd data-val="url(#pt--squares)" class="switch--checked">Shapes</dd>
+              <dd data-val="url(#pt--squares)">Shapes</dd>
               <dd data-val="url(#pt-rainbow-stripes)">Gradient</dd>
               <dd data-val="url(#pt-wood)">Image</dd>
             </dl>
           </div>
-      </div>
+      </div></div>
 
   </div></section>
   
@@ -421,49 +445,56 @@ width="180" height="45" x="5" y="5"
     <section class="slide"><div>
         <h2>Трансформации: translate, scale</h2>
         <div class="demo demo--transform js-demo">
+          <div class="demo__content">
             <textarea class="demo__code"><svg viewbox="0 0 300 200">
               <rect x="10" y="5" width="200" height="120" fill="hsla(120,100%,50%,.2)"></rect>
               <rect x="5" y="5" width="200" height="120" fill="hsla(50,100%,50%,.6)" transform="translate(70, 70)"></rect>
             </svg></textarea>
+            </div>
         </div>
         <div class="demo demo--transform js-demo">
+          <div class="demo__content">
             <textarea class="demo__code"><svg viewbox="0 0 200 130">
               <rect x="5" y="5" width="120" height="120" fill="hsla(120,100%,50%,.2)"></rect>
               <rect x="5" y="5" width="120" height="120" fill="hsla(50,100%,50%,.6)" transform="scale(1.5, .5)"></rect>
             </svg></textarea>
-        </div>
+        </div></div>
     </div></section>
 
     <section class="slide"><div>
         <h2>Трансформации: rotate, skew</h2>
         <div class="demo demo--transform js-demo">
+          <div class="demo__content">
             <textarea class="demo__code"><svg viewbox="0 0 200 200">
   <rect x="25" y="25" width="150" height="150" fill="hsla(120,100%,50%,.2)"></rect>
   <rect x="25" y="25" width="150" height="150" fill="hsla(50,100%,50%,.6)" transform="rotate(45 100 100)"></rect>
 </svg>
           </textarea>
-        </div>
+        </div></div>
+
         <div class="demo demo--transform js-demo">
+          <div class="demo__content">
             <textarea class="demo__code"><svg viewbox="0 0 200 200">
-  <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
-  <rect transform="skewY(5)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
-</svg>
+              <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
+              <rect transform="skewY(5)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
+            </svg>
           </textarea>
-        </div>
+        </div></div>
     </div></section> 
 
     <section class="slide"><div>
         <h2>Трансформации: matrix</h2>
         <div class="demo demo--transform js-demo">
+          <div class="demo__content">
             <textarea class="demo__code"><svg width="200" height="200">
-  <rect x="25" y="25" width="150" height="150" 
-           fill="hsla(120,100%,50%,.2)"></rect>
-  <rect x="25" y="25" width="150" height="150" 
-           fill="hsla(50,100%,50%,.6)" 
-           transform="matrix(.3 0 0 .95 55 25)"></rect>
-</svg>
+              <rect x="25" y="25" width="150" height="150" 
+                       fill="hsla(120,100%,50%,.2)"></rect>
+              <rect x="25" y="25" width="150" height="150" 
+                       fill="hsla(50,100%,50%,.6)" 
+                       transform="matrix(.3 0 0 .95 55 25)"></rect>
+            </svg>
           </textarea>
-        </div>
+        </div></div>
     </div></section>    
 
   <section class="slide"><div>
@@ -596,12 +627,13 @@ width="180" height="45" x="5" y="5"
   <section class="slide"><div>
       <h2>SVG-маски: clip-path</h2>
       <div class="demo demo--masks js-demo">
+        <div class="demo__content">
           <textarea class="demo__code"><svg width="280" height="190">
     <g clip-path="url(#clipping-star)"> 
       <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_L.jpg" width="332" height="500"></image>
     </g>  
 </svg></textarea>
-      </div>
+      </div></div>
       <p>демо обычная маска/текстовая</p>
   </div></section>
 
@@ -639,34 +671,37 @@ width="180" height="45" x="5" y="5"
   <section class="slide"><div>
       <h2>SVG-маски: mask</h2>
       <div class="demo demo--mask js-demo">
+        <div class="demo__content">
           <textarea class="demo__code"><svg width="200" height="300">
     <g mask="url(#masking)">  
         <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300"></image>
     </g>  
 </svg></textarea>
-      </div>
+      </div></div>
   </div></section>
 
   <section class="slide"><div>
       <h2>SVG-маски: mask</h2>
       <div class="demo demo--mask js-demo">
+        <div class="demo__content">
           <textarea class="demo__code"><svg width="200" height="300">
     <g mask="url(#masking-soft)">  
         <image xlink:href="http://img-fotki.yandex.ru/get/5607/5091629.6b/0_612e6_b9039c0d_M.jpg" width="200" height="300"></image>
     </g>  
 </svg></textarea>
-      </div>
+      </div></div>
   </div></section>
 
   <section class="slide"><div>
       <h2>SVG-маски: mask</h2>
       <div class="demo demo--mask js-demo">
+        <div class="demo__content">
           <textarea class="demo__code"><svg width="200" height="300">
     <g mask="url(#masking-lum)">
       <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"></rect>
     </g>  
 </svg></textarea>
-      </div>
+      </div></div>
   </div></section>
 
 
