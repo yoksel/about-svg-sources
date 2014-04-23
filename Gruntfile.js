@@ -179,13 +179,20 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          port: 9001
+          // base: './',
+          port: 9001,
+          open: {
+            target: 'http://localhost:9001', // target url to open
+          // appName: 'Chrome'
+          }
         }
       }
     },
+
     open : {
       dev : {
         path: 'http://localhost:9001/',
+
         // app: 'Firefox'
       }
     }
@@ -198,11 +205,15 @@ module.exports = function (grunt) {
   // grunt.registerTask('default', ['bump']);
 
   grunt.registerTask('default', [
-    'connect',
-    'open',
+    'connect:server:livereload:open',
     'watch'
     ]);
-  
+
+  grunt.registerTask('dev', [
+    'connect:server:livereload:open',
+    'watch'
+    ]);
+
   grunt.registerTask('svg', [
     'svgstore',
     'svgmin'
