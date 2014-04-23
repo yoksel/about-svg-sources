@@ -199,15 +199,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'connect',
-    'open'
-    ]);
-
-  grunt.registerTask('dev', [
-    'connect',
     'open',
     'watch'
     ]);
-
+  
   grunt.registerTask('svg', [
     'svgstore',
     'svgmin'
