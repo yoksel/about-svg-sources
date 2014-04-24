@@ -71,7 +71,7 @@ svg {
 .img-preview {
     display: inline-block;
     width: 24px;
-    height: 24px;
+    height: 22px;
     text-indent: 0;
     vertical-align: middle;
     }            
@@ -107,13 +107,20 @@ svg {
     }    
 
 .bg--gray-wood {
-    background: #444 url(http://img-fotki.yandex.ru/get/4131/5091629.86/0_7429e_65318a7d_L.jpg);
+    background: #444 url(/assets/img/parts/dark-wood.jpg);
     H2 {
         color: #FFF;   
         }
     }
 .bg--concrete {
-    background: #DDD url(http://img-fotki.yandex.ru/get/9496/5091629.9d/0_81614_110cd32b_orig);
+    background: #DDD url(/assets/img/parts/concrete.png);
+    }
+.bg--dark-triangles {
+    /*background: #222 url(/assets/img/parts/triangles.png);*/
+    background: #050505 url(/assets/img/parts/swirl.png);
+    H2 {
+        color: #FFF;   
+        }
     }
 
 @import '_resize';   

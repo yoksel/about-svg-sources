@@ -165,9 +165,12 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 .demo--dasharray {
     height: 320px;
-    }  
+    } 
+    
+/* Demo stroke-dasharray Animation
+------------------------- */ 
 
-.demo--stroke-anim {
+.demo--stroke-dasharr-anim {
     height: 320px;
     
     path {
@@ -177,10 +180,36 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
       stroke-dasharray: 550 0;
       animation: dasharray 5s infinite alternate;
       }
-}
+    }
 @keyframes dasharray {
   100% {
     stroke-dasharray: 0 500;
+  }
+}
+
+/* Demo stroke-dasharray + stroke-offset Animation
+------------------------------------------------- */ 
+.demo--stroke-dashofset-anim {
+    height: 320px;
+    
+    .g-circles circle {
+      transform-origin: 120px 120px;
+      transform: rotate(0);
+    }
+    .g-circles circle {
+      animation: rotation 4s infinite alternate;
+    }
+
+    @for $i from 2 through 15 {
+      .g-circles circle:nth-child(#{$i}){
+        animation-delay: #{$i/4}s;
+      }
+    }
+    }
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
   }
 }
   
