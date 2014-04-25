@@ -13,6 +13,24 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     background-size: 100% $textarea-oneline*2;
     }    
 
+@mixin highlight-lines( $lines ) {
+    $color: palegoldenrod;
+    $gradients: null;
+    $hl-begin: null;
+    $hl-end: null;
+    
+    @each $line in $lines {
+        width: $line;
+        $hl-begin: $textarea-oneline * $line;
+        $hl-end: $textarea-oneline * ($line + 1);
+
+        $gradients: append($gradients, linear-gradient(transparent 1em,
+                $color 1em, $color 2em, transparent 2em), comma);
+        }
+    background: $gradients;
+    background-position: 0 .6em;
+}
+
 @mixin demo-list {
     display: inline-block;
     margin-right: 2em;
@@ -22,6 +40,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             content: none !important;
             }
     }
+
 
 /* Common
 ------------------------- */
@@ -158,6 +177,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         font-size: .8em;
         }
     } 
+
 #pt-text {
   font: italic .5em/1 Georgia;
   color: #000;
@@ -166,7 +186,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 .demo--dasharray {
     height: 320px;
     } 
-    
+
 /* Demo stroke-dasharray Animation
 ------------------------- */ 
 
@@ -220,7 +240,9 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         height: 150px;
         }
     .demo__code {
+        $demo-code-lines: 2, 5;
         @include textarea-height (14);
+        @include highlight-lines($demo-code-lines);
         }        
     }    
 /* Demo Use

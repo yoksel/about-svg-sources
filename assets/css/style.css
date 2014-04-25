@@ -584,6 +584,12 @@ svg {
 }
 .demo--g .demo__code {
   height: 254.2176px;
+  width: 2;
+  width: 5;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1em, palegoldenrod), color-stop(2em, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1em, palegoldenrod), color-stop(2em, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em), -webkit-linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em);
+  background: linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em), linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em);
+  background-position: 0 .6em;
 }
 
 /* Demo Use
