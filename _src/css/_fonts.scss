@@ -5,6 +5,8 @@ $font-headers: "Ubuntu Condensed",sans-serif;
 .slide H3, 
 .slide H4, 
 .slide H5 {
+    position: relative;
+    z-index: 2;
     font-family: "Ubuntu Condensed",sans-serif;
     line-height: 1;    
     font-weight: normal;
@@ -38,4 +40,13 @@ $map-headers: (h2: 2.4, h3: 2.3, h4: 1.7, h5: 1.2);
     text-align: center;
     font: 90px/1 'Ubuntu Condensed', sans-serif;
     transform: translateY(-50%);
+
+    .tooltip {
+        position: absolute;
+        left: 0;
+        bottom: -1.9em;
+        width: 100%;
+        font-size: 30px;
+        color: #555
+        }
     }  

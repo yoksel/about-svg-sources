@@ -1,5 +1,5 @@
 $textarea-width: 60%;
-$textarea-fontsize: $base-size * .6;
+$textarea-fontsize: $base-size * .9;
 $textarea-lineheight: 1.3;
 
 $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
@@ -43,9 +43,22 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             }
     }
 
+/* Common
+------------------------- */
+.list--columns LI {
+    @include demo-list;
+    text-align: center;
+    /*border: 1px solid;*/
+    B {
+        display: block;
+        font-size: .8em;
+        }
+    }
+
+/* Cat
+------------------------- */
 .preview--cat {
     display: table-cell;
-    border: 1px solid;
     width: 864px;
     height: 440px;
     text-align: center;
@@ -55,10 +68,41 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         width: auto;
         }
     }
-
-/* Common
+/* Demo Filling
 ------------------------- */
-.demo {
+.slide--fillingdemo {
+    PRE {
+        position: relative;
+        z-index: 2;
+        padding: .5em;
+        background: #FFF;
+        /*font-size: 1.4em;*/
+        }
+    .lower-level {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: 27%;
+        font-size: 90px;
+        }
+    .demo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        }
+    }
+    .slide--strokewidth PRE {
+        width: 60%;
+        margin: 21.5% auto 0;
+        }
+
+/* Demo Live
+------------------------- */
+.demo--live {
     margin-bottom: $base-size;
     &:after {
         @include clear;
@@ -75,7 +119,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     
     svg {
         display: block;
-        margin: 0 auto;
+        /*margin: 0 auto;*/
         border: 1px solid #EEE;
         }
     }   
@@ -101,8 +145,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
         &__textfield + B {
             margin: 1em 0 .5em;
-            }    
-    
+            }        
     } 
 /* Demo Rect
 ------------------------- */        
@@ -168,7 +211,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 /* Demo Fill
-------------------------- */    
+------------------------- */
 .demo--fill {
     .demo__view {
         /*width: 250px;*/
@@ -182,15 +225,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }        
     }
 
-.list--columns LI {
-    @include demo-list;
-    text-align: center;
-    /*border: 1px solid;*/
-    B {
-        display: block;
-        font-size: .8em;
-        }
-    } 
 
 #pt-text {
   font: italic .5em/1 Georgia;
@@ -365,15 +399,4 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
   font: bold italic .4em/1 Georgia
   }
 
-.resizable--cat {
-    position: relative;
-    max-height: 450px;
-    border: 1px solid green;
-    padding: 0 3em 0 0;
-    IFRAME {
-        height: 100%;
-        width: 100%;
-        border: 3px solid orange;
-        }
-    }
 

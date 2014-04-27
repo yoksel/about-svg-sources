@@ -28,7 +28,7 @@ svg {
         }
     }
 /* Cover
-------------------------- */     
+------------------------- */
 #Cover {
     text-align: center;
     }
@@ -111,7 +111,16 @@ svg {
             color: #FFF;
             }                
     }    
-
+/* Backgrounds
+------------------------- */ 
+    
+.bg--dark {
+    background: #000;
+    H2 {
+        color: #FFF;   
+        }
+    }
+    
 .bg--gray-wood {
     background: #444 url(/assets/img/parts/dark-wood.jpg);
     H2 {
@@ -128,6 +137,19 @@ svg {
         color: #FFF;   
         }
     }
+
+/* Columns
+------------------------- */
+.column {
+    width: 49%;
+    &--left {
+        float: left;
+        }
+    &--right {
+        float: right;
+        }
+    }
+
 
 @import '_resize';   
 @import '_icons-16-64';

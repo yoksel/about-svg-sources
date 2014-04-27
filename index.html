@@ -23,7 +23,7 @@
     <p>@yoksel</p>
   </header>
 
-  <section class="slide bg--gray-wood" id="Cover"><div>
+  <section class="slide bg--dark" id="Cover"><div>
     <h2>Позвольте представить:</h2>
     <svg id="cover-text">
           <text x="0" y="93%" class="cover-text__stroke">SVG</text>
@@ -41,7 +41,7 @@
       <p><b>Scalable Vector Graphics</b> - формат векторных изображений, основанный на XML.</p>
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
       <h2 class="free-fly">Преимущества формата</h2>
   </div></section>
 
@@ -62,7 +62,7 @@
         смартфоны -->
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Масштабируемость</h2>
   </div></section>
 
@@ -108,7 +108,7 @@
      <!-- end wrapper--icons-16-64 -->
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Media Queries</h2>
   </div></section>
 
@@ -137,31 +137,45 @@
   </div></section>
 
   <section class="slide"><div>
-    (mq в svg)
-      скрины демо с котом
-      http://codepen.io/yoksel/full/JIkGd
-      
+    <div class="free-fly"><a href="./assets/demo/cat2.svg">Поиграть с котом</a>
+      <span class="tooltip">(изменяйте размер окна браузера)</span>
+    </div>
+  </div></section>
+
+   <section class="slide bg--dark"><div>
+      <h2 class="free-fly">&laquo;Машина с клоунами&raquo;</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>???</h2>
+    <p></p>
+  </div></section>
+  <section class="slide"><div>
+    <div class="free-fly"><a href="./assets/demo/clown-car/index.html">Демо</a></div>
   </div></section>
 
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
       <h2 class="free-fly">Пишем SVG</h2>
   </div></section>
 
   <section class="slide"><div>
-        <h2>&lt;rect></h2>
-        <div class="demo demo--rect js-demo">
-          <div class="demo__content">
-            <textarea class="demo__textfield demo__code"><svg width="230" height="140">
-            <rect x="5" y="5" width="220" height="130" 
-                  fill="skyblue" stroke="steelblue" stroke-width="5" />
-          </svg>
-                </textarea>
-        </div></div>
-
-    <div class="demo demo--rect js-demo">
+    <h2>&lt;rect></h2>
+    <div class="demo demo--rect demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="230" height="140">
+        <rect x="5" y="5" width="220" height="130" 
+              fill="skyblue" stroke="steelblue" stroke-width="5" />
+      </svg>
+            </textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+
+    <div class="demo demo--rect demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg>
       <rect x="5" y="5" width="220" height="130" rx="20" 
             fill="yellowgreen" stroke="green" stroke-width="5" />
   </svg>
@@ -172,7 +186,7 @@
 
   <section class="slide"><div>
         <h2>&lt;circle>, &lt;ellipse></h2>
-        <div class="demo demo--circle js-demo">
+        <div class="demo demo--circle demo--live">
           <div class="demo__content">
           <textarea class="demo__textfield demo__code"><svg width="140" height="140">
          <circle r="65" cx="70" cy="70" 
@@ -182,7 +196,7 @@
         </div>
     </div>
 
-    <div class="demo demo--ellipse js-demo">
+    <div class="demo demo--ellipse demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="230" height="140">
      <ellipse rx="110" ry="60" cx="115" cy="70" 
@@ -194,7 +208,7 @@
 
   <section class="slide"><div>
         <h2>&lt;polygon></h2>
-        <div class="demo js-demo">
+        <div class="demo demo--live">
           <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="230" height="140">
     <polygon points="5,135 115,5 225,135" 
@@ -203,7 +217,7 @@
       </textarea>
     </div></div>
 
-    <div class="demo js-demo">
+    <div class="demo demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="140" height="130">
     <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"        
@@ -215,8 +229,8 @@
   </div></section>
 
   <section class="slide"><div>
-        <h2>&lt;line>, &lt;polyline></h2>
-        <div class="demo js-demo">
+        <h2>&lt;line></h2>
+        <div class="demo demo--live">
           <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="230" height="140">
     <line x1="220" y1="10" x2="20" y2="130" 
@@ -225,8 +239,11 @@
       </textarea>
     </div>
     </div>
+  </div></section>
 
-    <div class="demo js-demo">
+  <section class="slide"><div>
+    <h2>&lt;polyline></h2>
+    <div class="demo demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="260" height="140">
     <polyline points="5,135 30,5 55,135 80,5, 105,135 130,5, 155,135 180,5, 205,135 230,5, 255,135" 
@@ -237,71 +254,157 @@
   </div></section>
 
   <section class="slide"><div>
-        <h2>&lt;Path></h2>
-        <div class="demo js-demo">
-          <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg width="200" height="140">
+      <h2>&lt;Path></h2>
+      <div class="demo demo--live">
+        <div class="demo__content">
+          <textarea class="demo__textfield demo__code"><svg width="200" height="140">
   <path stroke="orange" stroke-width="3" fill="gold"
         d="M 100,10 L 180,130
            L 20,130 z"/>
-</svg>
+  </svg>
       </textarea>
     </div></div>
 
-    <div class="demo js-demo">
+    <div class="demo demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="200" height="140">
   <path stroke="purple" stroke-width="3" fill="violet" 
       d="M 20 10 
          A20,31 0 0,0 170,10"></path>
-</svg>
+  </svg>
       </textarea>
     </div></div>
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
       <h2 class="free-fly">Обводки и заливки</h2>
-  </div></section>
-  
-  <section class="slide"><div>
-          <h2>fill</h2>
-          <ul class="list--columns">
-            <li><b>fill</b>
-              <svg width="200" height="200">
-      <rect width="150" height="150" x="0" y="0" 
-              fill="skyblue"/>
-      <rect width="150" height="150" x="50" y="50" 
-              fill="url(#gr-hot-cold-soft)"/>
-</svg></li>
-            <li><b>fill-rule !код!!</b>
-              <svg width="200" height="200">
-      <path stroke="orange" stroke-width="5" 
-                fill="gold" fill-rule="evenodd" 
-                d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
-</svg></li>
-          <li><b>fill-opacity</b>
-            <svg width="200" height="200">
-    <rect width="100" height="100" x="20" y="20" 
-              fill="crimson" fill-opacity=".5"/>
-    <rect width="100" height="100" x="50" y="50" 
-              fill="hsl(50, 100%, 50%)" fill-opacity=".4"/>
-    <rect width="100" height="100" x="80" y="80" 
-              fill="url(#pt-wood)" fill-opacity=".5"/>
-</svg></li>
-          </ul>
   </div></section>
 
   <section class="slide"><div>
-      <h2>Gradient</h2>
-      <p>код, пример</p>
+      <h2 class="free-fly">Заливки</h2>
+  </div></section>
+  
+  <section class="slide slide--fillingdemo"><div>
+    <pre><code>fill="hsl(50, 100%, 50%)"</code></pre>
+
+    <div class="demo">
+      <svg>
+        <rect width="100%" height="100%" fill="hsl(50, 100%, 50%)"></rect>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <pre><code>fill="url(#gr-hot-cold-soft)"</code></pre>
+
+    <div class="demo">
+      <svg>
+        <rect width="100%" height="100%" fill="url(#gr-hot-cold-soft)"></rect>
+      </svg>
+    </div>
+  </div></section>
+  
+  <section class="slide slide--fillingdemo"><div>
+    <pre><code>fill="url(#pt-wood)"</code></pre>
+
+    <div class="demo">
+      <svg>
+        <rect width="100%" height="100%" fill="url(#pt-wood)"></rect>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <pre><code>fill-opacity=".5"</code></pre>
+    
+    <h2 class="lower-level">Всё видно!</h2>
+
+    <div class="demo">
+      <svg>
+        <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)" fill-opacity=".7"></rect>
+        <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)" fill-opacity=".7"></rect>
+        <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)" fill-opacity=".7"></rect>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="column column--left">
+      <pre><code>fill-rule="nonzero"</code></pre>
+      <svg width="300" height="300" viewbox="0 0 200 200">
+        <path stroke="orange" stroke-width="5" 
+                  fill="gold" fill-rule="nonzero" 
+                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
+        </svg>
+    </div>
+    <div class="column column--right">
+      <pre><code>fill-rule="evenodd"</code></pre>
+      <svg width="300" height="300" viewbox="0 0 200 200">
+        <path stroke="orange" stroke-width="5" 
+                  fill="gold" fill-rule="evenodd" 
+                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
+        </svg>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Градиенты</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <pre><code>&lt;linearGradient id="gr-simple" 
+      x1="0" y1="0" x2="100%" y2="50%">
+      &lt;stop stop-color="hsl(350,100%,45%)" offset="0"/>
+      &lt;stop stop-color="hsl(45,100%,75%)" offset="50%"/>
+      &lt;stop stop-color="hsl(200,100%,40%)" offset="100%"/>  
+  &lt;/linearGradient></code></pre>
+
+    <div class="demo">
+      <svg>
+        <rect width="100%" height="100%" fill="url(#gr-simple)"></rect>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <pre><code>&lt;linearGradient id="gr-simple-stripes" 
+      x1="0" y1="0" x2="30%" y2="30%" 
+      gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+      &lt;stop stop-color="hsl(350,100%,45%)" offset="0"/>
+      &lt;stop stop-color="hsl(350,100%,45%)" offset="33%"/>
+      &lt;stop stop-color="hsl(50,100%,70%)" offset="33%"/>
+      &lt;stop stop-color="hsl(50,100%,70%)" offset="66%"/>
+      &lt;stop stop-color="hsl(200,100%,40%)" offset="66%%"/>  
+      &lt;stop stop-color="hsl(200,100%,40%)" offset="100%"/>  
+  &lt;/linearGradient></code></pre>
+
+    <div class="demo">
+      <svg>
+        <rect width="100%" height="100%" fill="url(#gr-simple-stripes)"></rect>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo slide--strokewidth"><div>
+    <pre><code>stroke="crimson"</code>
+<code>stroke-width="5"</code></pre>
+
+    <div class="demo">
+      <svg>
+        <g transform="translate(20, 30) scale(1, .92)">
+          <rect width="90%" height="90%" x="3%" y="3%" fill="none" stroke="yellowgreen" stroke-width="5%"></rect>
+          <rect width="80%" height="64.5%" x="8%" y="16%" fill="none" stroke="gold" stroke-width="2%"></rect>
+          <rect width="72%" height="45%" x="12%" y="26%" fill="none" stroke="crimson" stroke-width="5"></rect>
+        </g>
+      </svg>
+    </div>  
   </div></section>
 
   <section class="slide"><div>
     <h2>stroke</h2>
     
     <ul class="list--columns">
-      <li><b>stroke-width</b>
-      <svg width="200" height="200"><rect width="160" height="160" x="20" y="20" fill="none" stroke="yellowgreen" stroke-width="10%"></rect><rect width="100" height="100" x="50" y="50" fill="none" stroke="gold" stroke-width="5"></rect></svg></li>
+      <li></li>
       <li><b>stroke-linecap</b>
       <svg width="200" height="205"><symbol id="s-path-guide"><circle r="3" cx="30" cy="15"></circle><circle r="3" cx="170" cy="15"></circle><path d="M 30 15 170 15" stroke-width="2"></path></symbol><symbol id="s-path"><path d="M 30 15 170 15" stroke-width="30"></path></symbol><use xlink:href="#s-path" stroke="orangered" y="20" stroke-linecap="butt"></use><use xlink:href="#s-path" stroke="olivedrab" y="85" stroke-linecap="round"></use><use xlink:href="#s-path" stroke="steelblue" y="150" stroke-linecap="square"></use><g class="guides"><use xlink:href="#s-path-guide" y="20" stroke="orange" fill="orange"></use><use xlink:href="#s-path-guide" y="85" stroke="yellowgreen" fill="yellowgreen"></use><use xlink:href="#s-path-guide" y="150" stroke="skyblue" fill="skyblue"></use></g></svg></li>
       <li><b>stroke-linejoin</b>
@@ -333,7 +436,7 @@
     </ul>
   </div></section>
 
-  <section class="slide bg--concrete"><div>
+  <section class="slide bg--dark"><div>
     <h2>Анимация stroke</h2>
     код!!! цвета
     <div class="demo--stroke-dasharr-anim">
@@ -371,13 +474,16 @@
     </div>
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Группировка и&nbsp;переиспользование</h2>
+  </div></section>
+  
+  <section class="slide"><div>
+    <h2 class="free-fly">&lt;g></h2>
   </div></section>
 
   <section class="slide"><div>
-    <h2>&lt;g></h2>
-    <div class="demo demo--g js-demo">
+    <div class="demo demo--g demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg  viewbox="0 0 190 100">
 <g id="circles--warm">
@@ -398,7 +504,7 @@
 
   <section class="slide"><div>
       <h2>&lt;use></h2>
-      <div class="demo demo--use js-demo">
+      <div class="demo demo--use demo--live">
         <div class="demo__content">
           <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
   <g id="rects--use">
@@ -420,7 +526,7 @@
 
   <section class="slide"><div>
     <h2>&lt;defs></h2>
-    <div class="demo demo--defs js-demo">
+    <div class="demo demo--defs demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
 <defs>
@@ -442,7 +548,7 @@
 
   <section class="slide"><div>
     <h2>&lt;symbol></h2>
-    <div class="demo demo--symbol js-demo">
+    <div class="demo demo--symbol demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
 <defs>
@@ -464,7 +570,7 @@
 
   <section class="slide"><div>
     <h2>&lt;pattern></h2>
-    <div class="demo demo--pattern js-demo">
+    <div class="demo demo--pattern demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox='0 0 280 200'>
           <defs>
@@ -490,13 +596,13 @@
     </div></div>
   </div></section>
   
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
       <h2 class="free-fly">Трансформации</h2>
   </div></section>
 
   <section class="slide"><div>
     <h2>translate, scale</h2>
-    <div class="demo demo--transform js-demo">
+    <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 300 200">
           <rect x="10" y="5" width="200" height="120" fill="hsla(120,100%,50%,.2)"></rect>
@@ -504,7 +610,7 @@
         </svg></textarea>
         </div>
     </div>
-    <div class="demo demo--transform js-demo">
+    <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 130">
           <rect x="5" y="5" width="120" height="120" fill="hsla(120,100%,50%,.2)"></rect>
@@ -515,7 +621,7 @@
 
   <section class="slide"><div>
     <h2>rotate, skew</h2>
-    <div class="demo demo--transform js-demo">
+    <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
 <rect x="25" y="25" width="150" height="150" fill="hsla(120,100%,50%,.2)"></rect>
@@ -524,7 +630,7 @@
       </textarea>
     </div></div>
 
-    <div class="demo demo--transform js-demo">
+    <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
           <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
@@ -536,7 +642,7 @@
 
   <section class="slide"><div>
     <h2>matrix</h2>
-    <div class="demo demo--transform js-demo">
+    <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
           <rect x="25" y="25" width="150" height="150" 
@@ -549,7 +655,7 @@
     </div></div>
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Рисуем SVG</h2>
   </div></section>
 
@@ -594,7 +700,7 @@
     </ul>
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Способы вставки</h2>
   </div></section>
  
@@ -624,7 +730,7 @@
     <h2>SVG-стеки</h2>
     <p>Начало истории: <a href="simurai.com/blog/2012/04/02/svg-stacks/">SVG Stacks</a></p>
 
-    <div class="demo demo--stacks js-demo">
+    <div class="demo demo--stacks demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewBox="0 0 200 200">
   <g id="no">
@@ -685,14 +791,14 @@
 
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Маски</h2>
   </div></section>
 
   <section class="slide"><div>
     <h2>&lt;clip-path></h2>
     <p>+ animation!</p>
-    <div class="demo demo--masks js-demo">
+    <div class="demo demo--masks demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="280" height="190">
   <g clip-path="url(#clipping-star)">
@@ -744,7 +850,7 @@
 
   <section class="slide"><div>
     <h2>&lt;mask></h2>
-    <div class="demo demo--mask js-demo">
+    <div class="demo demo--mask demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="200" height="300">
   <g mask="url(#masking)">
@@ -764,7 +870,7 @@
 
   <section class="slide"><div>
     <h2>&lt;mask></h2>
-    <div class="demo demo--mask js-demo">
+    <div class="demo demo--mask demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="200" height="300">
   <g mask="url(#masking-soft)">
@@ -781,7 +887,7 @@
 
   <section class="slide"><div>
     <h2>&lt;mask></h2>
-    <div class="demo demo--mask js-demo">
+    <div class="demo demo--mask demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="200" height="300">
   <g mask="url(#masking-lum)">
@@ -813,7 +919,7 @@
       
   </div></section>
   
-<section class="slide bg--gray-wood"><div>
+<section class="slide bg--dark"><div>
     <h2 class="free-fly">Оформление SVG</h2>
   </div></section>
 
@@ -829,7 +935,7 @@
 
   <section class="slide"><div>
     <h2>Используем SVG: fill, stroke</h2>
-    <div class="demo demo--fill js-demo">
+    <div class="demo demo--fill demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg viewbox='0 0 140 205'>
 <g fill="url(#pt-wood)" stroke="url(#gr-hot-cold)">
@@ -898,7 +1004,7 @@ stroke-width="5" transform="translate(0,5)"></polygon>
 
   </div></section>
 
-  <section class="slide bg--gray-wood"><div>
+  <section class="slide bg--dark"><div>
     <h2>Фильтры</h2>
     <p>Проблема фильтров (скрин с телефона)</p>
     <div class="wrapper wrapper--icons-filters">
