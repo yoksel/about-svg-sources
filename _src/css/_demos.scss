@@ -239,7 +239,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 ------------------------- */ 
 
 .demo--stroke-dasharr-anim {
-    height: 320px;
+    /*height: 320px;*/
     
     path {
       fill: none;
@@ -258,7 +258,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 /* Demo stroke-dasharray + stroke-offset Animation
 ------------------------------------------------- */ 
 .demo--stroke-dashofset-anim {
-    height: 320px;
+    /*height: 320px;*/
     
     .g-circles circle {
       transform-origin: 120px 120px;

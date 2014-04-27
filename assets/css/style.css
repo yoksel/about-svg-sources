@@ -554,7 +554,7 @@ svg {
 /* Demo stroke-dasharray Animation
 ------------------------- */
 .demo--stroke-dasharr-anim {
-  height: 320px;
+  /*height: 320px;*/
 }
 .demo--stroke-dasharr-anim path {
   fill: none;
@@ -579,7 +579,7 @@ svg {
 /* Demo stroke-dasharray + stroke-offset Animation
 ------------------------------------------------- */
 .demo--stroke-dashofset-anim {
-  height: 320px;
+  /*height: 320px;*/
 }
 .demo--stroke-dashofset-anim .g-circles circle {
   -webkit-transform-origin: 120px 120px;
