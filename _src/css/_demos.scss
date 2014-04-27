@@ -43,6 +43,18 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             }
     }
 
+.preview--cat {
+    display: table-cell;
+    border: 1px solid;
+    width: 864px;
+    height: 440px;
+    text-align: center;
+    vertical-align: middle;
+    IMG {
+        max-height: 100%;
+        width: auto;
+        }
+    }
 
 /* Common
 ------------------------- */

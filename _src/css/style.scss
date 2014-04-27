@@ -17,7 +17,6 @@ svg {
 /* Slides
 ------------------------- */ 
 .slide {
-    border: 1px solid red;
     &>DIV {
         top: 0;
         right: 0;
@@ -25,10 +24,7 @@ svg {
         left: 0;
         width: auto;
         height: auto;
-        /*padding-top: 90px;*/
-        /*padding: 100px 96px 0 128px;*/
         padding: 80px 80px 120px;
-        border: 2px solid gold;
         }
     }
 /* Cover
