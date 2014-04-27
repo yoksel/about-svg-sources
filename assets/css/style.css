@@ -61,15 +61,25 @@ svg {
   position: absolute;
   width: 0;
   height: 0;
+  overflow: hidden;
 }
 
 /* Slides
 ------------------------- */
 .slide {
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
 .slide > DIV {
-  padding-top: 90px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  /*padding-top: 90px;*/
+  /*padding: 100px 96px 0 128px;*/
+  padding: 80px 80px 120px;
+  border: 2px solid gold;
 }
 
 /* Cover
@@ -247,23 +257,26 @@ svg {
 
 /* Examples
 ---------------------- */
-.resizable--car {
+.resizable--car,
+.resizable--cat {
   min-height: 35px;
   max-height: 310px;
   min-width: 35px;
   max-width: 100%;
 }
 
+/*16px*/
 .wrapper--icons-16-64 {
-  width: 580px;
+  /*width: 580px;*/
   margin: 0;
 }
 .wrapper--icons-16-64 .icons {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
   line-height: 1;
+  text-align: center;
 }
 .wrapper--icons-16-64 .icons:before {
-  content: attr(data-size);
+  /*content: attr(data-size);*/
   display: inline-block;
   width: 72px;
   line-height: 1.5em;
@@ -274,23 +287,24 @@ svg {
   color: tomato;
 }
 .wrapper--icons-16-64 .icons-size--16 {
-  font-size: 16px;
+  font-size: 1.32em;
 }
 .wrapper--icons-16-64 .icons-size--32 {
-  font-size: 32px;
+  font-size: 2.64em;
 }
 .wrapper--icons-16-64 .icons-size--48 {
-  font-size: 48px;
+  font-size: 3.96em;
 }
 .wrapper--icons-16-64 .icons-size--64 {
-  font-size: 64px;
+  font-size: 5.28em;
 }
 .wrapper--icons-16-64 .icon {
   display: inline-block;
-  width: 1em;
+  width: 1.32em;
   height: 1em;
+  margin: 0 -.1em;
   background: url() 0 0 no-repeat;
-  background-image: url(/assets/img/svg/sprite-showsizes.svg);
+  background-image: url(../../assets/img/svg/sprite-showsizes.svg);
   -webkit-background-size: auto 100%;
   background-size: auto 100%;
   vertical-align: middle;
@@ -300,6 +314,7 @@ svg {
   content: none;
 }
 .wrapper--icons-16-64 .icon--cloud {
+  display: none;
   background-position: -1.5em 0;
 }
 .wrapper--icons-16-64 .icon--star {
@@ -309,10 +324,10 @@ svg {
   background-position: -4.5em 0;
 }
 .wrapper--icons-16-64 .icon--speaker {
-  background-position: -6em 0;
+  background-position: -5.95em 0;
 }
 .wrapper--icons-16-64 .icon--flask {
-  background-position: -7.5em 0;
+  background-position: -7.45em 0;
 }
 
 /* Common
@@ -584,12 +599,10 @@ svg {
 }
 .demo--g .demo__code {
   height: 254.2176px;
-  width: 2;
-  width: 5;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1em, palegoldenrod), color-stop(2em, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(1em, palegoldenrod), color-stop(2em, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em), -webkit-linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em);
-  background: linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em), linear-gradient(transparent 1em, palegoldenrod 1em, palegoldenrod 2em, transparent 2em);
-  background-position: 0 .6em;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(18.1584px, palegoldenrod), color-stop(36.3168px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(127.1088px, palegoldenrod), color-stop(145.2672px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 18.1584px, palegoldenrod 18.1584px, palegoldenrod 36.3168px, transparent 36.3168px), -webkit-linear-gradient(transparent 127.1088px, palegoldenrod 127.1088px, palegoldenrod 145.2672px, transparent 145.2672px);
+  background: linear-gradient(transparent 18.1584px, palegoldenrod 18.1584px, palegoldenrod 36.3168px, transparent 36.3168px), linear-gradient(transparent 127.1088px, palegoldenrod 127.1088px, palegoldenrod 145.2672px, transparent 145.2672px);
+  background-position: 0 .2em;
 }
 
 /* Demo Use
@@ -682,7 +695,7 @@ svg {
 .test-stacks {
   width: 150px;
   height: 150px;
-  background: url(/assets/img/svg/yes-no.svg#yes);
+  background: url(../../assets/img/svg/yes-no.svg#yes);
 }
 
 /* Demo Masks
@@ -700,6 +713,18 @@ svg {
 
 #fo-text {
   font: bold italic 0.4em/1 Georgia;
+}
+
+.resizable--cat {
+  position: relative;
+  max-height: 450px;
+  border: 1px solid green;
+  padding: 0 3em 0 0;
+}
+.resizable--cat IFRAME {
+  height: 100%;
+  width: 100%;
+  border: 3px solid orange;
 }
 
 @font-face {

@@ -56,7 +56,8 @@ $resize-icon-size: 35px;
 
 /* Examples
 ---------------------- */  
-.resizable--car {
+.resizable--car,
+.resizable--cat {
   min-height: $resize-icon-size;
   max-height: 310px;
   min-width: $resize-icon-size;

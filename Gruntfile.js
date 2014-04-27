@@ -88,62 +88,38 @@ module.exports = function (grunt) {
       dist: {
         options: {},
         src: '<%= project.css_src %>/style.unprefixed.css',
-        dest: '<%= project.css_src %>/style.prefixed.css'
+        dest: '<%= project.css_res %>/style.css'
       },
     },
 
-    /**
-     * Clean files and folders
-     * https://github.com/gruntjs/grunt-contrib-clean
-     * Remove generated files for clean deploy
-     */
-    clean: {
-      dev: [
-        '_src/css/style.prefixed.css',
-        '_src/css/style.unprefixed.css'
-      ],
-      build: [
-        '_site/Gemfile',
-        '_site/Gemfile.lock',
-        '_site/Gruntfile.js',
-        '_site/package.json',
-        '_site/node_modules',
-        '_src/css/style.prefixed.css',
-        '_src/css/style.unprefixed.css'
-      ]
-    },
-
-  svgstore: {
-    options: {},
-    default : {
-      files: {
-        'assets/img/svg/svg-lib.svg': ['_src/img/svg-lib/*.svg'],
-      },
-    },
-  },
-
-    svgmin: {                        
-        options: {                   
-            plugins: [{
-                removeViewBox: false
-            }]
+    svgstore: {
+      options: {},
+      default : {
+        files: {
+          'assets/img/svg/svg-lib.svg': ['_src/img/svg-lib/*.svg'],
         },
-        // dist: {                      
-        //     files: {                 
-        //         '_src/img/star2.svg': '_src/img/star.svg'        // 'destination': 'source'
-        //     }
-        // }
-        dist: {                        // Target
+      },
+    },
+
+    svgmin: {
+        options: {
+            plugins: [
+              { removeViewBox: false },
+              { removeUselessStrokeAndFill: false }
+            ]
+        },
+        dist: {
             files: [{                // Dictionary of files
                 expand: true,        // Enable dynamic expansion.
-                cwd: 'assets/img',        // Src matches are relative to this path.
-                src: ['svg-lib.svg'],    // Actual pattern(s) to match.  src: ['**/*.svg'],
-                dest: 'assets/img',        // Destination path prefix.
+                cwd: 'assets/img/svg',        // Src matches are relative to this path.
+                src: ['svg-lib.svg','cat.svg'],    // Actual pattern(s) to match.  src: ['**/*.svg'],
+                dest: 'assets/img/svg',        // Destination path prefix.
                 ext: '.svg'        // Dest filepaths will have this extension.
                 // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
             }]
         }
     },  
+
     imagemin: {
       dynamic: {   
         files: [{
@@ -162,7 +138,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: '<%= project.css_src %>{,*/}*.{scss,sass}',
-        tasks: ['sass:dev', 'autoprefixer', 'clean:dev'],
+        tasks: ['sass:dev', 'autoprefixer'],
         options: {
           livereload: 35740,
         },
@@ -174,6 +150,35 @@ module.exports = function (grunt) {
           livereload: 35740,
         },
       },
+    },
+
+    /**
+     * https://github.com/alanshaw/grunt-include-replace
+     * Include files for build version
+     */
+    includereplace: {
+        your_target: {
+          options: {
+            // Task-specific options go here.
+          },
+          // Files to perform replacements and includes with
+          src: 'index.html',
+          // Destination directory to copy files to
+          dest: 'build/index.html'
+        }
+      },
+
+    copy: {
+      main: {
+        files: [
+          
+          // includes files within path and its sub-directories
+          {expand: true, src: ['assets/**'], dest: 'build/'},
+          {expand: true, src: ['node_modules/shower-core/**'], dest: 'build/'},
+          {expand: true, src: ['node_modules/shower-bright/**'], dest: 'build/'},
+          // {expand: true, src: ['index.html'], dest: 'build/'}
+        ]
+      }
     },
 
     connect: {
@@ -209,21 +214,21 @@ module.exports = function (grunt) {
     'watch'
     ]);
 
-  grunt.registerTask('dev', [
-    'connect:server:livereload:open',
-    'watch'
-    ]);
+  // grunt.registerTask('build', [
+  //   'copy',
+  //   'includereplace'
+  //   ]);
 
   grunt.registerTask('svg', [
-    'svgstore',
-    'svgmin'
+    'svgstore'
+    // 'svgmin' 
     ]);
 
   grunt.registerTask('build', [
     'sass:dist',
     'autoprefixer:dist',
-    'clean:build'
+    'copy',
+    'includereplace'
     ]);
-
 
 };

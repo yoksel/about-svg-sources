@@ -1,13 +1,16 @@
+$iconsize-unit: 1.32em;  /*16px*/
+
 .wrapper--icons-16-64 {
-  width: 580px;
+  /*width: 580px;*/
   margin: 0;
   
     .icons {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.6rem;
       line-height: 1;
+      text-align: center;
       }
       .icons:before {
-        content: attr(data-size);
+        /*content: attr(data-size);*/
         display: inline-block;
         width: 72px;
         line-height: 1.5em;
@@ -19,24 +22,25 @@
         }
 
     .icons-size--16 {
-      font-size: 16px;
+      font-size: $iconsize-unit;
       }
     .icons-size--32 {
-      font-size: 32px;
+      font-size: $iconsize-unit*2;
       }
     .icons-size--48 {
-      font-size: 48px;
+      font-size: $iconsize-unit*3;
       }
     .icons-size--64 {
-      font-size: 64px;
+      font-size: $iconsize-unit*4;
       }
 
     .icon {
       display: inline-block;
-      width: 1em;
+      width: $iconsize-unit;
       height: 1em;
+      margin: 0 -.1em;
       background: url() 0 0 no-repeat;
-      background-image: url(/assets/img/svg/sprite-showsizes.svg);
+      background-image: url(../../assets/img/svg/sprite-showsizes.svg);
       background-size: auto 100%;
       vertical-align: middle;
       list-style: none;
@@ -46,6 +50,7 @@
       }
 
     .icon--cloud {
+      display: none;
       background-position: -1.5em 0;
       }
     .icon--star {
@@ -55,9 +60,9 @@
       background-position: -4.5em 0;
       }
     .icon--speaker {
-      background-position: -6em 0;
+      background-position: -5.95em 0;
       }
     .icon--flask {
-      background-position: -7.5em 0;
+      background-position: -7.45em 0;
       }
 }  

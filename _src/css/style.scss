@@ -12,13 +12,23 @@ svg {
     position: absolute;
     width: 0;
     height: 0;
+    overflow: hidden;
     }
 /* Slides
 ------------------------- */ 
 .slide {
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     &>DIV {
-        padding-top: 90px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        /*padding-top: 90px;*/
+        /*padding: 100px 96px 0 128px;*/
+        padding: 80px 80px 120px;
+        border: 2px solid gold;
         }
     }
 /* Cover

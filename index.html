@@ -10,99 +10,115 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="list">
+
   <div class="hidden-svg-defs">
-    <div id="svg-filters"></div>
-    <div id="svg-fills"></div>
-    <div id="svg-masks"></div>
-    <div id="svg-images"></div>
+    <div id="svg-filters">@@include('./assets/img/svg/filters.svg');</div>
+    <div id="svg-fills">@@include('./assets/img/svg/fills.svg');</div>
+    <div id="svg-masks">@@include('./assets/img/svg/masks.svg');</div>
+    <div id="svg-images">@@include('./assets/img/svg/svg-lib.svg');</div>
   </div>
 
   <header class="caption">
     <h1>Позвольте представить: SVG</h1>
     <p>@yoksel</p>
   </header>
+
   <section class="slide bg--gray-wood" id="Cover"><div>
     <h2>Позвольте представить:</h2>
     <svg id="cover-text">
           <text x="0" y="93%" class="cover-text__stroke">SVG</text>
-          <text x="0" y="93%" class="cover-text__fill">SVG</text>  
+          <text x="0" y="93%" class="cover-text__fill">SVG</text>
       </svg>
-      <!-- check accessibility of resouces -->
+      <!-- 
+      о чем это
+      в конце будет ссылка на демо
+       -->
   </div></section>
 
   <section class="slide"><div>
-          <h2>Что такое SVG?</h2>
-          <p><b>Scalable Vector Graphics</b> - формат векторных изображений, основанный на XML.</p>
-
-      </div></section>
+      <h2>Что такое SVG?</h2>
+      загрузить ШРИФТ!!!
+      <p><b>Scalable Vector Graphics</b> - формат векторных изображений, основанный на XML.</p>
+  </div></section>
 
   <section class="slide bg--gray-wood"><div>
       <h2 class="free-fly">Преимущества формата</h2>
-  </div></section>    
+  </div></section>
+
   <section class="slide"><div>
-          <ul>
-        <li>изображения масштабируются без потери качества</li>
-        <li>не теряют резкости на ретине
-          <a href="assets/img/preview/retina.jpg" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
-        <li>файл можно открыть в текстовом редакторе и увидеть человекопонятный код</li>
-        <li>SVG можно не только нарисовать, но и написать</li>
-        <li>SVG-файл - это исходник</li>
-        <li>можно создавать реиспользуемые компоненты</li>
-        <li>внутри файла могут находиться CSS и JavaScript</li>
-      </ul>
+    <ul>
+      <li>Масштабируется</li>
+      <li>Четкий на ретине
+        <a href="assets/img/preview/retina.jpg" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
+      <li>Человекопонятный код</li>
+      <li>Можно написать руками</li> <!-- хорошо для экспериментов -->
+      <li>Исходник</li>
+      <li>Переиспользуемые компоненты</li>
+      <li>Внутри - CSS и JavaScript</li>
+    </ul>
 
       <!-- MQ,
         машина с клоунами 
         смартфоны -->
   </div></section>
 
+  <section class="slide bg--gray-wood"><div>
+    <h2 class="free-fly">Масштабируемость</h2>
+  </div></section>
+
   <section class="slide"><div>
+    <!-- begin wrapper--icons-16-64 -->
+    <div class="wrapper wrapper--icons-16-64">
+      <ul class="icons icons-size--16" data-size="16">
+        <li class="icon icon--heart"></li>
+        <li class="icon icon--cloud"></li>
+        <li class="icon icon--star"></li>
+        <li class="icon icon--airplane"></li>
+        <li class="icon icon--speaker"></li>
+        <li class="icon icon--flask"></li>
+      </ul>
 
-          <h2>1 SVG-спрайт в 4-х размерах</h2>
-          <!-- begin wrapper--icons-16-64 -->
-          <div class="wrapper wrapper--icons-16-64">
-        <ul class="icons icons-size--16" data-size="16">
-          <li class="icon icon--heart"></li>
-          <li class="icon icon--cloud"></li>
-          <li class="icon icon--star"></li>
-          <li class="icon icon--airplane"></li>
-          <li class="icon icon--speaker"></li>
-          <li class="icon icon--flask"></li>
-        </ul>
+      <ul class="icons icons-size--32" data-size="32">
+        <li class="icon icon--heart"></li>
+        <li class="icon icon--cloud"></li>
+        <li class="icon icon--star"></li>
+        <li class="icon icon--airplane"></li>
+        <li class="icon icon--speaker"></li>
+        <li class="icon icon--flask"></li>
+      </ul>
 
-        <ul class="icons icons-size--32" data-size="32">
-          <li class="icon icon--heart"></li>
-          <li class="icon icon--cloud"></li>
-          <li class="icon icon--star"></li>
-          <li class="icon icon--airplane"></li>
-          <li class="icon icon--speaker"></li>
-          <li class="icon icon--flask"></li>
-        </ul>
+      <ul class="icons icons-size--48" data-size="48">
+        <li class="icon icon--heart"></li>
+        <li class="icon icon--cloud"></li>
+        <li class="icon icon--star"></li>
+        <li class="icon icon--airplane"></li>
+        <li class="icon icon--speaker"></li>
+        <li class="icon icon--flask"></li>
+      </ul>
 
-        <ul class="icons icons-size--48" data-size="48">
-          <li class="icon icon--heart"></li>
-          <li class="icon icon--cloud"></li>
-          <li class="icon icon--star"></li>
-          <li class="icon icon--airplane"></li>
-          <li class="icon icon--speaker"></li>
-          <li class="icon icon--flask"></li>
-        </ul>
+      <ul class="icons icons-size--64" data-size="64">
+        <li class="icon icon--heart"></li>
+        <li class="icon icon--cloud"></li>
+        <li class="icon icon--star"></li>
+        <li class="icon icon--airplane"></li>
+        <li class="icon icon--speaker"></li>
+        <li class="icon icon--flask"></li>
+      </ul>
+     </div> 
+     <!-- end wrapper--icons-16-64 -->
+  </div></section>
 
-        <ul class="icons icons-size--64" data-size="64">
-          <li class="icon icon--heart"></li>
-          <li class="icon icon--cloud"></li>
-          <li class="icon icon--star"></li>
-          <li class="icon icon--airplane"></li>
-          <li class="icon icon--speaker"></li>
-          <li class="icon icon--flask"></li>
-        </ul>
-       </div> 
-       <!-- end wrapper--icons-16-64 -->
-      </div></section>
+  <section class="slide"><div>
+    (mq в svg)
+      скрины демо с котом
+      http://codepen.io/yoksel/full/JIkGd
+      
+  </div></section>
+
 
   <section class="slide bg--gray-wood"><div>
       <h2 class="free-fly">Пишем SVG</h2>
-  </div></section>        
+  </div></section>
 
   <section class="slide"><div>
         <h2>&lt;rect></h2>
@@ -123,8 +139,8 @@
   </svg>
           </textarea>
         </div>
-      </div>  
-    </div></section> 
+      </div>
+  </div></section>
 
   <section class="slide"><div>
         <h2>&lt;circle>, &lt;ellipse></h2>
@@ -146,9 +162,9 @@
 </svg>
       </textarea>
     </div></div>
-    </div></section>
+  </div></section>
 
-    <section class="slide"><div>
+  <section class="slide"><div>
         <h2>&lt;polygon></h2>
         <div class="demo js-demo">
           <div class="demo__content">
@@ -168,10 +184,10 @@
       </textarea>
     </div></div>
 
-    </div></section> 
+  </div></section>
 
-    <section class="slide"><div>
-        <h2>&lt;line></h2>
+  <section class="slide"><div>
+        <h2>&lt;line>, &lt;polyline></h2>
         <div class="demo js-demo">
           <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg width="230" height="140">
@@ -190,9 +206,9 @@
 </svg>
       </textarea>
     </div></div>
-    </div></section>    
+  </div></section>
 
-    <section class="slide"><div>
+  <section class="slide"><div>
         <h2>&lt;Path></h2>
         <div class="demo js-demo">
           <div class="demo__content">
@@ -213,11 +229,11 @@
 </svg>
       </textarea>
     </div></div>
-    </div></section>
+  </div></section>
 
   <section class="slide bg--gray-wood"><div>
       <h2 class="free-fly">Обводки и заливки</h2>
-  </div></section>   
+  </div></section>
   
   <section class="slide"><div>
           <h2>fill</h2>
@@ -229,7 +245,7 @@
       <rect width="150" height="150" x="50" y="50" 
               fill="url(#gr-hot-cold-soft)"/>
 </svg></li>
-            <li><b>fill-rule</b>
+            <li><b>fill-rule !код!!</b>
               <svg width="200" height="200">
       <path stroke="orange" stroke-width="5" 
                 fill="gold" fill-rule="evenodd" 
@@ -245,7 +261,12 @@
               fill="url(#pt-wood)" fill-opacity=".5"/>
 </svg></li>
           </ul>
-      </div></section> 
+  </div></section>
+
+  <section class="slide"><div>
+      <h2>Gradient</h2>
+      <p>код, пример</p>
+  </div></section>
 
   <section class="slide"><div>
     <h2>stroke</h2>
@@ -259,7 +280,7 @@
       <svg width="215" height="300"><symbol id="s-corner-guide"><circle r="3" cx="50" cy="100"></circle><circle r="3" cx="164" cy="100"></circle><path d="M 30 50 h 80 v 80" stroke-width="2" fill="none" transform="rotate(-45 100 50)"></path></symbol><symbol id="s-corner"><path d="M 30 50 h 80 v 80" stroke-width="30" fill="none" transform="rotate(-45 100 50)"></path></symbol><use xlink:href="#s-corner" stroke="orangered" y="0" stroke-linejoin="miter"></use><use xlink:href="#s-corner" stroke="olivedrab" y="80" stroke-linejoin="round"></use><use xlink:href="#s-corner" stroke="steelblue" y="160" stroke-linejoin="bevel"></use><g class="guides"> <use xlink:href="#s-corner-guide" y="0" stroke="orange" fill="orange"></use> <use xlink:href="#s-corner-guide" y="80" stroke="yellowgreen" fill="yellowgreen"></use><use xlink:href="#s-corner-guide" y="160" stroke="skyblue" fill="skyblue"></use></g></svg></li>
     </ul>
     
-  </div></section>  
+  </div></section>
 
   <section class="slide"><div>
         <h2>stroke</h2>
@@ -272,77 +293,79 @@
           <path d="M 0 100 h 500" stroke="steelblue" stroke-width="1" stroke-dasharray="2 7 6"></path> 
           <path d="M 0 120 h 500" stroke="orange" stroke-width="5" stroke-dasharray="5"></path> 
           <path d="M 0 140 h 500" stroke="mediumseagreen" stroke-width="1" stroke-dasharray="12% 5%"></path></svg>
-    </div></section>
+  </div></section>
 
   <section class="slide"><div>
-        <h2>stroke</h2>
-        <ul class="list--columns">
-          <li><b>stroke-dashoffset</b>
-          <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15" stroke-dasharray="25% 110%" transform="rotate(72 135 135)"><circle r="115" cx="135" cy="135" stroke="crimson"></circle><circle r="115" cx="135" cy="135" stroke="orangered" stroke-dashoffset="25%"></circle><circle r="115" cx="135" cy="135" stroke="gold" stroke-dashoffset="50%"></circle></g></svg></li>
-          <li><b>stroke-opacity</b>
-            <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15"><circle r="40" cx="60" cy="60" stroke="gold" stroke-opacity=".7"></circle><circle r="70" cx="120" cy="120" stroke="yellowgreen" stroke-opacity=".5" stroke-width="25"></circle><circle r="60" cx="180" cy="180" stroke="skyblue" stroke-opacity=".25"></circle></g></svg></li>
-        </ul>
-    </div></section>
+    <h2>stroke</h2>
+    <ul class="list--columns">
+      <li><b>stroke-dashoffset</b>
+      <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15" stroke-dasharray="25% 110%" transform="rotate(72 135 135)"><circle r="115" cx="135" cy="135" stroke="crimson"></circle><circle r="115" cx="135" cy="135" stroke="orangered" stroke-dashoffset="25%"></circle><circle r="115" cx="135" cy="135" stroke="gold" stroke-dashoffset="50%"></circle></g></svg></li>
+      <li><b>stroke-opacity</b>
+        <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15"><circle r="40" cx="60" cy="60" stroke="gold" stroke-opacity=".7"></circle><circle r="70" cx="120" cy="120" stroke="yellowgreen" stroke-opacity=".5" stroke-width="25"></circle><circle r="60" cx="180" cy="180" stroke="skyblue" stroke-opacity=".25"></circle></g></svg></li>
+    </ul>
+  </div></section>
 
   <section class="slide bg--concrete"><div>
-        <h2>Анимация stroke</h2>
-        <div class="demo--stroke-dasharr-anim">
-          <svg viewBox="0 0 175 200">
-            <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137zM112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506zM56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825zM118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725zM6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831zM113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831zM71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25zM100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z" fill="#000000" transform="scale(.9) translate(9,9)"/>
-          </svg>
-        </div>
-    </div></section> 
+    <h2>Анимация stroke</h2>
+    код!!! цвета
+    <div class="demo--stroke-dasharr-anim">
+      <svg viewBox="0 0 175 200">
+        <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137zM112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506zM56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825zM118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725zM6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831zM113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831zM71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25zM100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z" fill="#000000" transform="scale(.9) translate(9,9)"/>
+      </svg>
+    </div>
+  </div></section>
 
     <section class="slide bg--dark-triangles"><div>
-          <h2>dasharray + dashoffset</h2>
-          <div class="demo--stroke-dashofset-anim">
-           <svg viewbox="0 0 240 240">
-              <g class="g-circles" fill="none" stroke-width="5" stroke-dasharray="8% 45%">
-                  <circle r="115" cx="120" cy="120" stroke="crimson" />
-                  <circle r="115" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
-                  <circle r="115" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
-                  <circle r="115" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
-                  <circle r="115" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
-                  <circle r="115" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
-                  <circle r="115" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
-              </g>
-              <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%" 
-              transform="translate(24 24) scale(.8)">
-                  <circle r="60" cx="120" cy="120" stroke="crimson" />
-                  <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
-                  <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
-                  <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
-                  <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
-                  <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
-                  <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
-              </g>
-          </svg>
-        </div>
-      </div></section>   
+      <h2>dasharray + dashoffset</h2>
+      код!!!
+      <div class="demo--stroke-dashofset-anim">
+       <svg viewbox="0 0 240 240">
+          <g class="g-circles" fill="none" stroke-width="5" stroke-dasharray="8% 45%">
+              <circle r="115" cx="120" cy="120" stroke="crimson" />
+              <circle r="115" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
+              <circle r="115" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
+              <circle r="115" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
+              <circle r="115" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
+              <circle r="115" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
+              <circle r="115" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
+          </g>
+          <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%" 
+          transform="translate(24 24) scale(.8)">
+              <circle r="60" cx="120" cy="120" stroke="crimson" />
+              <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
+              <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
+              <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
+              <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
+              <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
+              <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
+          </g>
+      </svg>
+    </div>
+  </div></section>
 
   <section class="slide bg--gray-wood"><div>
-      <h2 class="free-fly">Группировка и&nbsp;переиспользование</h2>
-  </div></section>          
+    <h2 class="free-fly">Группировка и&nbsp;переиспользование</h2>
+  </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;g></h2>
-      <div class="demo demo--g js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg  viewbox="0 0 190 100">
-  <g id="circles--warm">
-    <circle fill="crimson" r="20" cx="25" cy="25"/>
-    <circle fill="red" r="20" cx="70" cy="25"/>
-    <circle fill="orange" r="20" cx="115" cy="25"/>
-    <circle fill="gold" r="20" cx="160" cy="25"/>
-  </g>
-  <g id="circles--cold">
-    <circle fill="yellowgreen" r="20" cx="25" cy="75"/>
-    <circle fill="skyblue" r="20" cx="70" cy="75"/>
-    <circle fill="steelblue" r="20" cx="115" cy="75"/>
-    <circle fill="darkviolet" r="20" cx="160" cy="75"/>
-  </g>
+    <h2>&lt;g></h2>
+    <div class="demo demo--g js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg  viewbox="0 0 190 100">
+<g id="circles--warm">
+  <circle fill="crimson" r="20" cx="25" cy="25"/>
+  <circle fill="red" r="20" cx="70" cy="25"/>
+  <circle fill="orange" r="20" cx="115" cy="25"/>
+  <circle fill="gold" r="20" cx="160" cy="25"/>
+</g>
+<g id="circles--cold">
+  <circle fill="yellowgreen" r="20" cx="25" cy="75"/>
+  <circle fill="skyblue" r="20" cx="70" cy="75"/>
+  <circle fill="steelblue" r="20" cx="115" cy="75"/>
+  <circle fill="darkviolet" r="20" cx="160" cy="75"/>
+</g>
 </svg></textarea>
-      </div></div>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
@@ -368,168 +391,169 @@
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;defs></h2>
-      <div class="demo demo--defs js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
-  <defs>
-    <g id="rects--defs">
-      <rect fill="gold" width="40" height="40" x="4" y="4"/>
-      <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
-      <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
-      <rect width="40" height="40" x="142" y="4" id="square--defs"/>
-    </g>
-  </defs>
+    <h2>&lt;defs></h2>
+    <div class="demo demo--defs js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
+<defs>
+  <g id="rects--defs">
+    <rect fill="gold" width="40" height="40" x="4" y="4"/>
+    <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
+    <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
+    <rect width="40" height="40" x="142" y="4" id="square--defs"/>
+  </g>
+</defs>
 
-  <use xlink:href="#rects--defs" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+<use xlink:href="#rects--defs" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
 
-  <use xlink:href="#square--defs" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
+<use xlink:href="#square--defs" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
 </svg>
 </textarea>
-      </div></div>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;symbol></h2>
-      <div class="demo demo--symbol js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
-  <defs>
-    <symbol id="rects--symbol">
-      <rect fill="gold" width="40" height="40" x="4" y="4"/>
-      <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
-      <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
-      <rect width="40" height="40" x="142" y="4" id="square--symbol"/>
-    </symbol>
-  </defs>
-  
-  <use xlink:href="#rects--symbol" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+    <h2>&lt;symbol></h2>
+    <div class="demo demo--symbol js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
+<defs>
+  <symbol id="rects--symbol">
+    <rect fill="gold" width="40" height="40" x="4" y="4"/>
+    <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
+    <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
+    <rect width="40" height="40" x="142" y="4" id="square--symbol"/>
+  </symbol>
+</defs>
 
-  <use xlink:href="#square--symbol" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
+<use xlink:href="#rects--symbol" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
+
+<use xlink:href="#square--symbol" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
 </svg>
 </textarea>
-      </div></div>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;pattern></h2>
-      <div class="demo demo--pattern js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox='0 0 280 200'>
-            <defs>
-              <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="0" y="0" patternUnits="userSpaceOnUse">
-                <rect fill="gold" width="40" height="40" x="0" y="0"></rect>
-                <rect fill="yellowgreen" width="40" height="40" x="45" y="0"></rect>
-                <rect fill="skyblue" width="40" height="40" x="90" y="0"></rect>
-                <rect fill="orangered" width="40" height="40" x="135" y="0"></rect>
-              </pattern>
-            </defs>
-            <g fill="url(#pt--squares)">
-              <rect width="100%" height="200" x="0" y="0"></rect>
-            </g>  
-          </svg>
-        </textarea>
-        <div class="demo-switch demo-switch--horizontal">
-            <dl data-attr="fill">
-              <dd data-val="url(#pt--squares)" class="switch--checked">Shapes</dd>
-              <dd data-val="url(#pt-rainbow-stripes)">Gradient</dd>
-              <dd data-val="url(#pt-wood)">Image</dd>
-            </dl>
-          </div>
-      </div></div>
-
+    <h2>&lt;pattern></h2>
+    <div class="demo demo--pattern js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox='0 0 280 200'>
+          <defs>
+            <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="0" y="0" patternUnits="userSpaceOnUse">
+              <rect fill="gold" width="40" height="40" x="0" y="0"></rect>
+              <rect fill="yellowgreen" width="40" height="40" x="45" y="0"></rect>
+              <rect fill="skyblue" width="40" height="40" x="90" y="0"></rect>
+              <rect fill="orangered" width="40" height="40" x="135" y="0"></rect>
+            </pattern>
+          </defs>
+          <g fill="url(#pt--squares)">
+            <rect width="100%" height="200" x="0" y="0"></rect>
+          </g>
+        </svg>
+      </textarea>
+      <div class="demo-switch demo-switch--horizontal">
+          <dl data-attr="fill">
+            <dd data-val="url(#pt--squares)" class="switch--checked">Shapes</dd>
+            <dd data-val="url(#pt-rainbow-stripes)">Gradient</dd>
+            <dd data-val="url(#pt-wood)">Image</dd>
+          </dl>
+        </div>
+    </div></div>
   </div></section>
   
   <section class="slide bg--gray-wood"><div>
       <h2 class="free-fly">Трансформации</h2>
-  </div></section>        
-
-  <section class="slide"><div>
-        <h2>translate, scale</h2>
-        <div class="demo demo--transform js-demo">
-          <div class="demo__content">
-            <textarea class="demo__textfield demo__code"><svg viewbox="0 0 300 200">
-              <rect x="10" y="5" width="200" height="120" fill="hsla(120,100%,50%,.2)"></rect>
-              <rect x="5" y="5" width="200" height="120" fill="hsla(50,100%,50%,.6)" transform="translate(70, 70)"></rect>
-            </svg></textarea>
-            </div>
-        </div>
-        <div class="demo demo--transform js-demo">
-          <div class="demo__content">
-            <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 130">
-              <rect x="5" y="5" width="120" height="120" fill="hsla(120,100%,50%,.2)"></rect>
-              <rect x="5" y="5" width="120" height="120" fill="hsla(50,100%,50%,.6)" transform="scale(1.5, .5)"></rect>
-            </svg></textarea>
-        </div></div>
-    </div></section>
-
-    <section class="slide"><div>
-        <h2>rotate, skew</h2>
-        <div class="demo demo--transform js-demo">
-          <div class="demo__content">
-            <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
-  <rect x="25" y="25" width="150" height="150" fill="hsla(120,100%,50%,.2)"></rect>
-  <rect x="25" y="25" width="150" height="150" fill="hsla(50,100%,50%,.6)" transform="rotate(45 100 100)"></rect>
-</svg>
-          </textarea>
-        </div></div>
-
-        <div class="demo demo--transform js-demo">
-          <div class="demo__content">
-            <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
-              <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
-              <rect transform="skewY(5)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
-            </svg>
-          </textarea>
-        </div></div>
-    </div></section> 
-
-    <section class="slide"><div>
-        <h2>matrix</h2>
-        <div class="demo demo--transform js-demo">
-          <div class="demo__content">
-            <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
-              <rect x="25" y="25" width="150" height="150" 
-                       fill="hsla(120,100%,50%,.2)"></rect>
-              <rect x="25" y="25" width="150" height="150" 
-                       fill="hsla(50,100%,50%,.6)" 
-                       transform="matrix(.3 0 0 .95 55 25)"></rect>
-            </svg>
-          </textarea>
-        </div></div>
-    </div></section>    
-
-  <section class="slide bg--gray-wood"><div>
-      <h2 class="free-fly">Рисуем SVG</h2>
-  </div></section>        
-
-  <section class="slide"><div>
-      <h2>Редакторы</h2>
-      <ul>
-        <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - 599 руб./месяц в составе подписки на Creative Cloud</li>
-        <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99</li>
-        <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный</li>
-      </ul>
   </div></section>
 
   <section class="slide"><div>
-      <h2>Сайты с SVG-графикой</h2>
-      <ul>
-        <li>
-          <a href="http://iconmelon.com/">iconmelon.com</a> - цветные иконки, вставка через <code>use</code>
-          <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-        </li>
-        <li class="next">
-          <a href="http://icomoon.io/app/#/select">icomoon.io</a> - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
-          <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-        </li>
-        <li class="next">
-          <a href="http://www.flaticon.com/">flaticon.com</a> - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
-          <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-        </li>
-      </ul>
+    <h2>translate, scale</h2>
+    <div class="demo demo--transform js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 300 200">
+          <rect x="10" y="5" width="200" height="120" fill="hsla(120,100%,50%,.2)"></rect>
+          <rect x="5" y="5" width="200" height="120" fill="hsla(50,100%,50%,.6)" transform="translate(70, 70)"></rect>
+        </svg></textarea>
+        </div>
+    </div>
+    <div class="demo demo--transform js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 130">
+          <rect x="5" y="5" width="120" height="120" fill="hsla(120,100%,50%,.2)"></rect>
+          <rect x="5" y="5" width="120" height="120" fill="hsla(50,100%,50%,.6)" transform="scale(1.5, .5)"></rect>
+        </svg></textarea>
+    </div></div>
+  </div></section>
 
-  </div></section>    
+  <section class="slide"><div>
+    <h2>rotate, skew</h2>
+    <div class="demo demo--transform js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
+<rect x="25" y="25" width="150" height="150" fill="hsla(120,100%,50%,.2)"></rect>
+<rect x="25" y="25" width="150" height="150" fill="hsla(50,100%,50%,.6)" transform="rotate(45 100 100)"></rect>
+</svg>
+      </textarea>
+    </div></div>
+
+    <div class="demo demo--transform js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
+          <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
+          <rect transform="skewY(5)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
+        </svg>
+      </textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>matrix</h2>
+    <div class="demo demo--transform js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
+          <rect x="25" y="25" width="150" height="150" 
+                   fill="hsla(120,100%,50%,.2)"></rect>
+          <rect x="25" y="25" width="150" height="150" 
+                   fill="hsla(50,100%,50%,.6)" 
+                   transform="matrix(.3 0 0 .95 55 25)"></rect>
+        </svg>
+      </textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide bg--gray-wood"><div>
+    <h2 class="free-fly">Рисуем SVG</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Редакторы</h2>
+    <ul>
+      <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - 599 руб./месяц в составе подписки на Creative Cloud</li>
+      <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99</li>
+      <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный</li>
+      <li>+1</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Сайты с SVG-графикой</h2>
+    <ul>
+      <li>
+        <a href="http://iconmelon.com/">iconmelon.com</a> - монохромные и цветные иконки, вставка через <code>use</code>
+        <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+      <li class="next">
+        <a href="http://icomoon.io/app/#/select">icomoon.io</a> - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
+        <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+      <li class="next">
+        <a href="http://www.flaticon.com/">flaticon.com</a> - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
+        <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+      <li>+1</li>
+    </ul>
+
+  </div></section>
 
   <section class="slide"><div>
     <h2>Оптимизация</h2>
@@ -537,15 +561,17 @@
     <ul>
       <li><a href="http://petercollingridge.appspot.com/svg-optimiser">petercollingridge.appspot.com/svg-optimiser</a></li>
       <li class="next"><a href="https://github.com/svg/svgo">github.com/svg/svgo</a></li>
+      <li>+ gui</li>
       <li class="next"><a href="https://github.com/sindresorhus/grunt-svgmin">github.com/sindresorhus/grunt-svgmin</a></li>
     </ul>
   </div></section>
 
   <section class="slide bg--gray-wood"><div>
-      <h2 class="free-fly">Способы вставки</h2>
-  </div></section>  
-
+    <h2 class="free-fly">Способы вставки</h2>
+  </div></section>
+ 
   <section class="slide"><div>
+    <p>+ картинки с поддержкой браузерами!</p>
         <ul>
           <li>Embed/object/iframe</li>
           <li class="next">Img</li>
@@ -553,335 +579,342 @@
           <li class="next">Inline SVG</li>
           <li class="next">Font</li>
         </ul>
-    </div></section>
+  </div></section>
 
-    <section class="slide"><div>
-        <h2>Какой лучше?</h2>
-        <ul>
-          <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
-          <li class="next"><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
-          <li class="next"><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами</li>
-        </ul>
-    </div></section>
+  <section class="slide"><div>
+    <h2>Какой лучше?</h2>
+    <ul>
+      <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
+      <li class="next"><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
+      <li class="next"><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами 
+      <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
+    </ul>
+  </div></section>
         
 
   <section class="slide"><div>
-      <h2>SVG-стеки</h2>
-      <p>Начало истории: <a href="simurai.com/blog/2012/04/02/svg-stacks/">SVG Stacks</a></p>
+    <h2>SVG-стеки</h2>
+    <p>Начало истории: <a href="simurai.com/blog/2012/04/02/svg-stacks/">SVG Stacks</a></p>
 
-      <div class="demo demo--stacks js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 200 200">
+    <div class="demo demo--stacks js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 200 200">
   <g id="no">
-    <rect fill="#FF4646" width="200" height="200" rx="8"></rect>
-    <text x="28" y="130">No.</text>
+  <rect fill="#FF4646" width="200" height="200" rx="8"></rect>
+  <text x="28" y="130">No.</text>
   </g>
   <g id="yes" class="hidden">
-    <rect fill="#a2d529" width="200" height="200" rx="8"></rect>
-    <text x="18" y="130">Yes!</text>
+  <rect fill="#a2d529" width="200" height="200" rx="8"></rect>
+  <text x="18" y="130">Yes!</text>
   </g>
-</svg>
-        </textarea>
-      </div></div>
+  </svg>
+      </textarea>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2>SVG-стеки: CSS</h2>
-      <pre>
-        <code>.hidden { display: none; }</code>
-        <code class="next">:target { display: block; }</code>
-      </pre> 
-      <ul class="list--stacks-demo">
-        <li class="next">
-          <div class="text">/assets/img/yes-no.svg</div>
-          <iframe src="/assets/img/svg/yes-no.svg" width="150px" height="150px"></iframe>
-        </li>
-        <li class="next">  
-          <div class="text">/assets/img/yes-no.svg<b>#yes</b></div>    
-          <iframe src="/assets/img/svg/yes-no.svg#yes" width="150px" height="150px"></iframe>
-        </li>    
-      </ul>  
+    <h2>SVG-стеки: CSS</h2>
+    <pre>
+      <code>.hidden { display: none; }</code>
+      <code class="next">:target { display: block; }</code>
+    </pre> 
+    <p class="next">assets/img/yes-no.svg<b>#yes</b></p>
+    <ul class="list--stacks-demo">
+      <li class="next">
+        <div class="text">/assets/img/yes-no.svg</div>
+        <iframe src="./assets/img/svg/yes-no.svg" width="150px" height="150px"></iframe>
+      </li>
+      <li class="next">
+        <div class="text">/assets/img/yes-no.svg<b>#yes</b></div>  
+        <iframe src="./assets/img/svg/yes-no.svg#yes" width="150px" height="150px"></iframe>
+      </li>
+    </ul>
       
   </div></section>
 
   <section class="slide"><div>
-      <h2>SVG-стеки: пробуем</h2>
-      <ul class="list--stacks-demo">
-        <li>
-          <div class="text">Iframe</div>
-          <iframe src="/assets/img/svg/yes-no.svg#yes" width="150px" height="150px"></iframe>
-        </li>
-        <li class="next">  
-          <div class="text">Background-image</div>    
-          <div class="test-stacks"></div>
-        </li>    
-      </ul>  
-      
+    <h2>SVG-стеки: пробуем</h2>
+    <ul class="list--stacks-demo">
+      <li>
+        <div class="text">Iframe</div>
+        <iframe src="./assets/img/svg/yes-no.svg#yes" width="150px" height="150px"></iframe>
+      </li>
+      <li class="next">
+        <div class="text">Background-image</div>
+        <div class="test-stacks"></div>
+      </li>
+    </ul>
   </div></section>
 
   <section class="slide"><div>
-      <h2>SVG-стеки: поддержка</h2>
-      
-      <ul>
-        <li>вставка через <code>embed</code> и <code>iframe</code> работает во всех браузерах;</li>
-        <li class="next">вставка через <code>img</code> и <code>background-image</code> работает в IE9+, Firefox и старой Опере, и совсем не работает в вебкитах.</li>
-        <li class="next">: (</li>
-      </ul>
+    <h2>SVG-стеки: поддержка</h2>
+    
+    <ul>
+      <li>вставка через <code>embed</code> и <code>iframe</code> работает во всех браузерах;</li>
+      <li class="next">вставка через <code>img</code> и <code>background-image</code> работает в IE9+, Firefox и старой Опере, и совсем не работает в вебкитах.</li>
+      <li class="next">: (</li>
+    </ul>
 
   </div></section>
 
   <section class="slide bg--gray-wood"><div>
-      <h2 class="free-fly">Маски</h2>
-  </div></section> 
+    <h2 class="free-fly">Маски</h2>
+  </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;clip-path></h2>
-      <div class="demo demo--masks js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg width="280" height="190">
-    <g clip-path="url(#clipping-star)"> 
-      <image xlink:href="/assets/img/parts/wood.jpg" width="500" height="500"></image>
-    </g>  
+    <h2>&lt;clip-path></h2>
+    <p>+ animation!</p>
+    <div class="demo demo--masks js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg width="280" height="190">
+  <g clip-path="url(#clipping-star)">
+    <image xlink:href="./assets/img/parts/wood.jpg" width="500" height="500"></image>
+  </g>
 </svg></textarea>
 
-          <div class="demo-switch demo-switch--horizontal">
-            <dl data-attr="clip-path">
-              <dd data-val="url(#clipping-star)" class="switch--checked">Shape</dd>
-              <dd data-val="url(#clipping-text)">Text</dd>
-            </dl>
-          </div>
-      </div>
+    <div class="demo-switch demo-switch--horizontal">
+      <dl data-attr="clip-path">
+        <dd data-val="url(#clipping-star)" class="switch--checked">Shape</dd>
+        <dd data-val="url(#clipping-text)">Text</dd>
+      </dl>
+    </div>
+</div>
 
     </div>
-     
   </div></section>
 
   <section class="slide"><div>
-      <h2>Объявляем</h2>
-      <pre>
-        <code>&lt;clippath id="clipping-star"></code>
-        <code>  &lt;polygon points="98.499..." /></code>
-        <code>&lt;/clippath></code>
-      </pre>
+    <h2>Объявляем</h2>
+    <pre>
+      <code>&lt;clippath id="clipping-star"></code>
+      <code>&lt;polygon points="98.499..." /></code>
+      <code>&lt;/clippath></code>
+    </pre>
 
-      <pre>
-        <code>&lt;clippath id="clipping-text"></code>
-        <code>  &lt;text x="0" y=".88em">Text&lt;/text></code>
-        <code>&lt;/clippath></code>
-      </pre>
+    <pre>
+      <code>&lt;clippath id="clipping-text"></code>
+      <code>&lt;text x="0" y=".88em">Text&lt;/text></code>
+      <code>&lt;/clippath></code>
+    </pre>
   </div></section>
 
   <section class="slide"><div>
-      <h2>Используем</h2>
-      <pre>
-        <code>&lt;g clip-path="url(#clipping-star)"></code>
-        <code>  ...</code>
-        <code>&lt;/g></code>
-      </pre>
+    <h2>Используем</h2>
+    <pre>
+      <code>&lt;g clip-path="url(#clipping-star)"></code>
+      <code>...</code>
+      <code>&lt;/g></code>
+    </pre>
 
-      <pre>
-        <code>g {</code>
-        <code>  clip-path: url(#clipping-star);</code>
-        <code>}</code>
-      </pre>
+    <pre>
+      <code>g {</code>
+      <code>clip-path: url(#clipping-star);</code>
+      <code>}</code>
+    </pre>
 
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;mask></h2>
-      <div class="demo demo--mask js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-    <g mask="url(#masking)">  
-        <image xlink:href="/assets/img/parts/flower-m.jpg" width="200" height="300"></image>
-    </g>  
+    <h2>&lt;mask></h2>
+    <div class="demo demo--mask js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg width="200" height="300">
+  <g mask="url(#masking)">
+      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"></image>
+  </g>
 </svg></textarea>
-          <b>Маска</b>
-          <textarea class="demo__textfield demo__codepart"><mask id="masking" maskunits="objectBoundingBox" 
-            maskcontentunits="objectBoundingBox">
-          <rect y="0" width="1" height="1" fill="url(#gradient)" />
-          <circle cx="0" cy=".5" r=".3" fill="gray" />
-          <circle cx="1" cy=".5" r=".25" fill="white" />
-          ...
-        </mask></textarea>
-      </div></div>
+        <b>Маска</b>
+        <textarea class="demo__textfield demo__codepart"><mask id="masking" maskunits="objectBoundingBox" 
+          maskcontentunits="objectBoundingBox">
+        <rect y="0" width="1" height="1" fill="url(#gradient)" />
+        <circle cx="0" cy=".5" r=".3" fill="gray" />
+        <circle cx="1" cy=".5" r=".25" fill="white" />
+        ...
+      </mask></textarea>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;mask></h2>
-      <div class="demo demo--mask js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-    <g mask="url(#masking-soft)">  
-        <image xlink:href="/assets/img/parts/flower-m.jpg" width="200" height="300"></image>
-    </g>  
+    <h2>&lt;mask></h2>
+    <div class="demo demo--mask js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg width="200" height="300">
+  <g mask="url(#masking-soft)">
+      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"></image>
+  </g>
 </svg></textarea>
-          <b>Маска</b>
-          <textarea class="demo__textfield demo__codepart"><mask id="masking-soft" maskunits="objectBoundingBox" 
-                maskcontentunits="objectBoundingBox">
-          <rect y="0" width="1" height="1" fill="url(#r-gradient)" />
-        </mask></textarea>
-      </div></div>
+        <b>Маска</b>
+        <textarea class="demo__textfield demo__codepart"><mask id="masking-soft" maskunits="objectBoundingBox" 
+              maskcontentunits="objectBoundingBox">
+        <rect y="0" width="1" height="1" fill="url(#r-gradient)" />
+      </mask></textarea>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;mask></h2>
-      <div class="demo demo--mask js-demo">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-    <g mask="url(#masking-lum)">
-      <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"></rect>
-    </g>  
+    <h2>&lt;mask></h2>
+    <div class="demo demo--mask js-demo">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg width="200" height="300">
+  <g mask="url(#masking-lum)">
+    <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"></rect>
+  </g>
 </svg></textarea>
-          <b>Маска</b>
-          <textarea class="demo__textfield demo__codepart"><mask id="masking-lum" maskunits="objectBoundingBox" 
-            x="0" y="0">
-          <image xlink:href="/assets/img/parts/flower-m.jpg" width="200" height="300" />
-        </mask></textarea>
-      </div></div>
+        <b>Маска</b>
+        <textarea class="demo__textfield demo__codepart"><mask id="masking-lum" maskunits="objectBoundingBox" 
+          x="0" y="0">
+        <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300" />
+      </mask></textarea>
+    </div></div>
   </div></section>
 
 
   <section class="slide"><div>
-      <h2>Используем</h2>
-      <pre>
-        <code>&lt;g mask="url(#masking)"></code>
-        <code>  ...</code>
-        <code>&lt;/g></code>
-      </pre>
+    <h2>Используем</h2>
+    <pre>
+      <code>&lt;g mask="url(#masking)"></code>
+      <code>...</code>
+      <code>&lt;/g></code>
+    </pre>
 
-      <pre>
-        <code>g {</code>
-        <code>  mask: url(#masking);</code>
-        <code>}</code>
-      </pre>
+    <pre>
+      <code>g {</code>
+      <code>mask: url(#masking);</code>
+      <code>}</code>
+    </pre>
       
   </div></section>
   
 <section class="slide bg--gray-wood"><div>
-      <h2 class="free-fly">Оформление SVG</h2>
-  </div></section> 
-
-  <section class="slide"><div>
-      <h2>Используем шрифт</h2>
-      <div class="wrapper wrapper--iconfont"> 
-          <span class="iconfont__icon icon-alarm"></span> 
-          <span class="iconfont__icon icon-cool"></span> 
-          <span class="iconfont__icon icon-bubbles"></span>  
-          <span class="iconfont__icon icon-heart"></span>
-      </div>
+    <h2 class="free-fly">Оформление SVG</h2>
   </div></section>
 
   <section class="slide"><div>
-        <h2>Используем SVG: fill, stroke</h2>
-        <div class="demo demo--fill js-demo">
-          <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox='0 0 140 205'>
-  <g fill="url(#pt-wood)" stroke="url(#gr-hot-cold)">
-    <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" 
-    stroke-width="5" transform="translate(0,5)"></polygon>
-    <text x="0" y="95%" stroke-width="2">Text</text>    
-  </g>
+    <h2>Используем шрифт</h2>
+    <div class="wrapper wrapper--iconfont"> 
+        <span class="iconfont__icon icon-alarm"></span> 
+        <span class="iconfont__icon icon-cool"></span> 
+        <span class="iconfont__icon icon-bubbles"></span>
+        <span class="iconfont__icon icon-heart"></span>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Используем SVG: fill, stroke</h2>
+    <div class="demo demo--fill js-demo">
+      <div class="demo__content">
+      <textarea class="demo__textfield demo__code"><svg viewbox='0 0 140 205'>
+<g fill="url(#pt-wood)" stroke="url(#gr-hot-cold)">
+<polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" 
+stroke-width="5" transform="translate(0,5)"></polygon>
+<text x="0" y="95%" stroke-width="2">Text</text>  
+</g>
 </svg></textarea>
-          <div class="demo-switch">
-            <dl data-attr="fill">
-              <dt>Fill:</dt>
-              <dd data-val="none">None</dd>
-              <dd data-val="orangered">Color</dd>
-              <dd data-val="url(#gr-hot-cold)">Gradient</dd>
-              <dd data-val="url(#pt-wood)" class="switch--checked">Pattern</dd>
-              <dd data-val="url(#pt-text)">Text</dd>
-            </dl>
-            <dl data-attr="stroke">
-              <dt>Stroke:</dt>
-              <dd data-val="none">None</dd>
-              <dd data-val="lightseagreen">Color</dd>
-              <dd data-val="url(#gr-hot-cold)" class="switch--checked">Gradient</dd>
-              <dd data-val="url(#pt-wood)">Pattern</dd>
-              <dd data-val="url(#pt-text)">Text</dd>
-            </dl>
-          </div>
-      </div></div>
-    </div></section>
+      <div class="demo-switch">
+        <dl data-attr="fill">
+          <dt>Fill:</dt>
+          <dd data-val="none">None</dd>
+          <dd data-val="orangered">Color</dd>
+          <dd data-val="url(#gr-hot-cold)">Gradient</dd>
+          <dd data-val="url(#pt-wood)" class="switch--checked">Pattern</dd>
+          <dd data-val="url(#pt-text)">Text</dd>
+        </dl>
+        <dl data-attr="stroke">
+          <dt>Stroke:</dt>
+          <dd data-val="none">None</dd>
+          <dd data-val="lightseagreen">Color</dd>
+          <dd data-val="url(#gr-hot-cold)" class="switch--checked">Gradient</dd>
+          <dd data-val="url(#pt-wood)">Pattern</dd>
+          <dd data-val="url(#pt-text)">Text</dd>
+        </dl>
+      </div>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>сравнение масок</h2>
+    <p>с поддержкой</p>
+  </div></section>
 
   <section class="slide bg--concrete"><div>
-      <h2>Эффекты с обводками</h2>
+    <h2>Эффекты с обводками</h2>
       
-<div class="wrapper wrapper--icons-stroke">
-  <ul class="icons">
+    <div class="wrapper wrapper--icons-stroke">
+      <ul class="icons">
 
-    <li class="icon icon--stroke">  
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#home">
-      </svg>
-    </li>  
+        <li class="icon icon--stroke">
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#home">
+          </svg>
+        </li>
 
-    <li class="icon icon--dasharray">  
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#heart">
-      </svg>  
-    </li>  
+        <li class="icon icon--dasharray">
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#heart">
+          </svg>
+        </li>
 
-    <li class="icon icon--gradient"> 
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#cog">
-      </svg>  
-    </li>  
+        <li class="icon icon--gradient"> 
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#cog">
+          </svg>
+        </li>
 
-    <li class="icon icon--gradient2">  
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#camera">
-      </svg>  
-    </li>  
-  </ul>  
-</div> 
+        <li class="icon icon--gradient2">
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#camera">
+          </svg>
+        </li>
+      </ul>
+    </div> 
 
   </div></section>
 
   <section class="slide bg--gray-wood"><div>
-      <h2>Фильтры</h2>
-      
-<div class="wrapper wrapper--icons-filters">
-  <ul class="icons">
+    <h2>Фильтры</h2>
+    <p>Проблема фильтров (скрин с телефона)</p>
+    <div class="wrapper wrapper--icons-filters">
+      <ul class="icons">
 
-    <li class="icon icon--blur">  
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#home">
-      </svg>
-    </li>  
+        <li class="icon icon--blur">
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#home">
+          </svg>
+        </li>
 
-    <li class="icon icon--shadow">  
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#heart">
-      </svg>  
-    </li>  
+        <li class="icon icon--shadow">
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#heart">
+          </svg>
+        </li>
 
-    <li class="icon icon--multystrokes"> 
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#cog">
-      </svg>  
-    </li>  
+        <li class="icon icon--multystrokes"> 
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#cog">
+          </svg>
+        </li>
 
-    <li class="icon icon--innershadow">  
-      <svg viewbox="0 0 100 100">
-        <use xlink:href="#camera">
-      </svg>  
-    </li>  
-  </ul>  
-</div> 
+        <li class="icon icon--innershadow">
+          <svg viewbox="0 0 100 100">
+            <use xlink:href="#camera">
+          </svg>
+        </li>
+      </ul>
+    </div> 
 
   </div></section>
 
-  <!-- <section class="slide"><div>
-      <h2>Размеры</h2>
-      <p>viewbox</p>
+  <section class="slide"><div>
+    <h2>Размеры</h2>
+    <p>viewbox</p>
   </div></section>
+  <!-- 
 
   <section class="slide"><div>
       <h2>Анимация</h2>
       <p></p>
-  </div></section> -->
-
+  </div></section>
+-->
   <section class="slide"><div>
         <h2>To Do</h2>
         <ul>
@@ -890,21 +923,22 @@
           <li>дописать про viewbox и animation</li>
           <li>поправить демо с размерами</li>
         </ul>
-    </div></section>
+  </div></section>
 
   <section class="slide"><div>
-      <h2>Спасибо за внимание</h2>
+      <h2>Спасибо за внимание (I &hearts; SVG)</h2>
       
       <p>Тут ещё должна быть пара слайдов, а также разные ссылки куда копать дальше.</p>
 
       <ul>
-          <li><a href="http://css.yoksel.ru/">css.yoksel.ru</a></li>
+          <li><a href="http://css.yoksel.ru/"> больше про SVG на css.yoksel.ru</a></li>
           <li><a href="https://twitter.com/yoksel">@yoksel</a></li>
           <li><a href="http://codepen.io/yoksel/public/">codepen.io/yoksel/public</a></li>
         </ul>
 
       <p>Иконки: <a href="http://icomoon.io/">icomoon.io</a></p>
-      http://www.transparenttextures.com/
+      <p>http://www.transparenttextures.com/</p>
+      <p>QR-код</p>
       
   </div></section>
 
@@ -917,10 +951,10 @@
     -->
   <div class="progress"><div></div></div>
   <script src="node_modules/shower-core/shower.min.js"></script>
-  <script src="assets/js/jquery-2.1.0.min.js"></script>
-  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="./assets/js/jquery-2.1.0.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
 
-  <script src="assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
   <!-- Copyright © 2014 yoksel. -->
 </body>
 </html>
