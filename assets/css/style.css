@@ -428,30 +428,32 @@ svg {
   display: table;
   width: 100%;
 }
-.demo--live__content {
-  float: right;
-  width: 60%;
-  line-height: 1;
+.demo--live .demo__content {
+  /*float: right;*/
+  /*width: $textarea-width;*/
+  margin-top: 2em;
+  /*line-height: 1;*/
 }
-.demo--live__view {
-  float: left;
-  width: 35%;
+.demo--live .demo__view {
+  /*float: left;   
+  width: 35%;*/
   /*border: 2px solid;*/
 }
-.demo--live__view svg {
+.demo--live .demo__view svg {
   display: block;
-  /*margin: 0 auto;*/
+  margin: 0 auto;
   border: 1px solid #EEE;
 }
-.demo--live__textfield {
+.demo--live .demo__textfield {
   width: 100%;
   border: 1px solid #CCC;
   border-radius: 5px;
+  font-family: 'Anka Coder', monospace;
   font-size: 21.6px;
   line-height: 1.3;
   color: #222;
 }
-.demo--live__code {
+.demo--live .demo__code {
   height: 201.55824px;
 }
 .demo--live pre {
@@ -470,7 +472,7 @@ svg {
 /* Demo Rect
 ------------------------- */
 .demo--rect .demo__code {
-  /*@include textarea-height (7.4);*/
+  height: 149.8068px;
 }
 
 /* Demo Switch
