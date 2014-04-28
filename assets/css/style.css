@@ -465,14 +465,37 @@ svg {
   display: inline-block;
   font: bold .8em/1 Arial !important;
 }
-.demo--live__textfield + B {
-  margin: 1em 0 .5em;
-}
 
 /* Demo Rect
 ------------------------- */
 .demo--rect .demo__code {
   height: 149.8068px;
+}
+.demo--rect-1 .demo__textfield {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+.demo--rect-2 .demo__textfield {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background-position: 0 .2em;
+}
+.demo--rect-3 .demo__textfield {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background-position: 0 .2em;
+}
+
+.demo--circle .demo__code {
+  height: 149.8068px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
 }
 
 /* Demo Switch

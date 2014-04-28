@@ -145,15 +145,34 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         display: inline-block;
         font: bold .8em/1 Arial !important;
         }
-        &__textfield + B {
-            margin: 1em 0 .5em;
-            }        
     } 
 /* Demo Rect
 ------------------------- */        
 .demo--rect {
     .demo__code {
         @include textarea-height (5.5);
+        }
+    &-1 {
+        .demo__textfield {
+            @include highlight-lines(2);
+            }
+        }
+    &-2 {
+        .demo__textfield {
+            @include highlight-lines(4);
+            }
+        }
+    &-3 {
+        .demo__textfield {
+            @include highlight-lines(4);
+            }
+        }
+}
+
+.demo--circle {
+    .demo__code {
+        @include textarea-height (5.5);
+        @include highlight-lines(2);
         }
 }
 /* Demo Switch
