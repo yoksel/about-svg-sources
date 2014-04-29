@@ -415,7 +415,7 @@ svg {
 
 .slide--strokewidth PRE {
   width: 60%;
-  margin: 21.5% auto 0;
+  margin: 20.5% auto 0;
 }
 
 /* Demo Live
@@ -490,11 +490,47 @@ svg {
   background-position: 0 .2em;
 }
 
+/* Demo Circle
+------------------------- */
 .demo--circle .demo__code {
   height: 149.8068px;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+/* Demo Polygon
+------------------------- */
+.demo--polygon .demo__code {
+  height: 149.8068px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+.demo--polygon-star .demo__code {
+  height: 149.8068px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background-position: 0 .2em;
+}
+
+.demo--line .demo__code {
+  height: 149.8068px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+.demo--polyline .demo__code {
+  height: 149.8068px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background-position: 0 .2em;
 }
 
@@ -615,8 +651,8 @@ svg {
   transform: rotate(0);
 }
 .demo--stroke-dashofset-anim .g-circles circle {
-  -webkit-animation: rotation 4s infinite alternate;
-  animation: rotation 4s infinite alternate;
+  -webkit-animation: rotation 6s infinite alternate;
+  animation: rotation 6s infinite alternate;
 }
 .demo--stroke-dashofset-anim .g-circles circle:nth-child(2) {
   -webkit-animation-delay: 0.5s;
@@ -695,10 +731,10 @@ svg {
   height: 150px;
 }
 .demo--g .demo__code {
-  height: 381.3264px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(190.6632px, palegoldenrod), color-stop(217.9008px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 190.6632px, palegoldenrod 190.6632px, palegoldenrod 217.9008px, transparent 217.9008px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 190.6632px, palegoldenrod 190.6632px, palegoldenrod 217.9008px, transparent 217.9008px);
+  height: 231.5196px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
 }
 

@@ -97,7 +97,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
     .slide--strokewidth PRE {
         width: 60%;
-        margin: 21.5% auto 0;
+        margin: 20.5% auto 0;
         }
 
 /* Demo Live
@@ -146,8 +146,9 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         font: bold .8em/1 Arial !important;
         }
     } 
+
 /* Demo Rect
-------------------------- */        
+------------------------- */
 .demo--rect {
     .demo__code {
         @include textarea-height (5.5);
@@ -169,10 +170,44 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
 }
 
+/* Demo Circle
+------------------------- */
+        
 .demo--circle {
     .demo__code {
         @include textarea-height (5.5);
         @include highlight-lines(2);
+        }
+    }
+
+/* Demo Polygon
+------------------------- */
+.demo--polygon {
+    .demo__code {
+        @include textarea-height (5.5);
+        @include highlight-lines(2);
+        }
+    }
+
+.demo--polygon-star {
+    .demo__code {
+        $demo-code-lines: 2, 3;
+        @include textarea-height (5.5);
+        @include highlight-lines($demo-code-lines);
+        }
+    }
+
+.demo--line {
+    .demo__code {
+        @include textarea-height (5.5);
+        @include highlight-lines(2);
+        }
+}
+.demo--polyline {
+    .demo__code {
+        $demo-code-lines: 2, 3;
+        @include textarea-height (5.5);
+        @include highlight-lines($demo-code-lines);
         }
 }
 /* Demo Switch
@@ -250,7 +285,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 #pt-text {
   font: italic .5em/1 Georgia;
   color: #000;
-    }
+  }
 
 .demo--dasharray {
     height: 320px;
@@ -286,7 +321,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
       transform: rotate(0);
     }
     .g-circles circle {
-      animation: rotation 4s infinite alternate;
+      animation: rotation 6s infinite alternate;
     }
 
     @for $i from 2 through 15 {
@@ -309,8 +344,8 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         height: 150px;
         }
     .demo__code {
-        $demo-code-lines: 2, 8;
-        @include textarea-height (14);
+        $demo-code-lines: 2;
+        @include textarea-height (8.5);
         @include highlight-lines($demo-code-lines);
         }        
     }    
