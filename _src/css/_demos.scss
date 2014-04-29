@@ -147,6 +147,17 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
     } 
 
+.demo--stacks {
+    .demo__view {
+        float: left;   
+        width: 35%;
+        /*border: 2px solid;*/
+    }
+    .demo__content {
+        float: right;
+        width: $textarea-width;
+        } 
+}
 /* Demo Rect
 ------------------------- */
 .demo--rect {

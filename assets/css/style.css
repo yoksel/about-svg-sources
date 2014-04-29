@@ -4,7 +4,7 @@
 .slide H3,
 .slide H4,
 .slide H5 {
-  position: relative;
+  /*position: relative;*/
   z-index: 2;
   font-family: "Ubuntu Condensed",sans-serif;
   line-height: 1;
@@ -464,6 +464,16 @@ svg {
 .demo--live B {
   display: inline-block;
   font: bold .8em/1 Arial !important;
+}
+
+.demo--stacks .demo__view {
+  float: left;
+  width: 35%;
+  /*border: 2px solid;*/
+}
+.demo--stacks .demo__content {
+  float: right;
+  width: 60%;
 }
 
 /* Demo Rect

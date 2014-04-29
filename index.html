@@ -37,7 +37,6 @@
 
   <section class="slide"><div>
       <h2>Что такое SVG?</h2>
-      загрузить ШРИФТ!!!
       <p><b>Scalable Vector Graphics</b> - формат векторных изображений, основанный на XML.</p>
   </div></section>
 
@@ -437,21 +436,44 @@
   </div></section>
 
   <section class="slide"><div>
+<pre><code>stroke-linecap="butt"</code>
+<code>stroke-linecap="round"</code>
+<code>stroke-linecap="square"</code></pre>
+      <svg viewbox="0 0 200 205" width="600" height="305">
+        <symbol id="s-path-guide">
+          <circle r="3" cx="30" cy="15"></circle>
+          <circle r="3" cx="170" cy="15"></circle>
+          <path d="M 30 15 170 15" stroke-width="2"></path></symbol>
+        <symbol id="s-path"><path d="M 30 15 170 15" stroke-width="40"></path></symbol>
+
+        <use xlink:href="#s-path" stroke="orangered" y="20" stroke-linecap="butt"></use>
+        <use xlink:href="#s-path" stroke="olivedrab" y="85" stroke-linecap="round"></use>
+        <use xlink:href="#s-path" stroke="steelblue" y="150" stroke-linecap="square"></use>
+        <g class="guides">
+          <use xlink:href="#s-path-guide" y="20" stroke="orange" fill="orange"></use>
+          <use xlink:href="#s-path-guide" y="85" stroke="yellowgreen" fill="yellowgreen"></use>
+          <use xlink:href="#s-path-guide" y="150" stroke="skyblue" fill="skyblue"></use></g></svg>
+    </ul>
+    
+  </div></section>
+
+   <section class="slide"><div>
     <h2>stroke</h2>
     
     <ul class="list--columns">
-      <li></li>
-      <li><b>stroke-linecap</b>
-      <svg width="200" height="205"><symbol id="s-path-guide"><circle r="3" cx="30" cy="15"></circle><circle r="3" cx="170" cy="15"></circle><path d="M 30 15 170 15" stroke-width="2"></path></symbol><symbol id="s-path"><path d="M 30 15 170 15" stroke-width="30"></path></symbol><use xlink:href="#s-path" stroke="orangered" y="20" stroke-linecap="butt"></use><use xlink:href="#s-path" stroke="olivedrab" y="85" stroke-linecap="round"></use><use xlink:href="#s-path" stroke="steelblue" y="150" stroke-linecap="square"></use><g class="guides"><use xlink:href="#s-path-guide" y="20" stroke="orange" fill="orange"></use><use xlink:href="#s-path-guide" y="85" stroke="yellowgreen" fill="yellowgreen"></use><use xlink:href="#s-path-guide" y="150" stroke="skyblue" fill="skyblue"></use></g></svg></li>
+      
+      
       <li><b>stroke-linejoin</b>
       <svg width="215" height="300"><symbol id="s-corner-guide"><circle r="3" cx="50" cy="100"></circle><circle r="3" cx="164" cy="100"></circle><path d="M 30 50 h 80 v 80" stroke-width="2" fill="none" transform="rotate(-45 100 50)"></path></symbol><symbol id="s-corner"><path d="M 30 50 h 80 v 80" stroke-width="30" fill="none" transform="rotate(-45 100 50)"></path></symbol><use xlink:href="#s-corner" stroke="orangered" y="0" stroke-linejoin="miter"></use><use xlink:href="#s-corner" stroke="olivedrab" y="80" stroke-linejoin="round"></use><use xlink:href="#s-corner" stroke="steelblue" y="160" stroke-linejoin="bevel"></use><g class="guides"> <use xlink:href="#s-corner-guide" y="0" stroke="orange" fill="orange"></use> <use xlink:href="#s-corner-guide" y="80" stroke="yellowgreen" fill="yellowgreen"></use><use xlink:href="#s-corner-guide" y="160" stroke="skyblue" fill="skyblue"></use></g></svg></li>
     </ul>
     
   </div></section>
 
-  <section class="slide slide--fillingdemo"><div>
-        <h2>stroke</h2>
-        <b>stroke-dasharray</b>
+  <section class="slide"><div>
+        <pre><code>stroke-dasharray="1"
+stroke-dasharray="1 3"
+stroke-dasharray="2 7 6"</code></pre>
+
 
         <div class="demo">
           <svg viewbox="0 0 400 160" class="demo--dasharray">
@@ -477,7 +499,7 @@
 
   <section class="slide"><div>
       <h2 class="free-fly">Анимация stroke</h2>
-      <p>КОД!! dashoffset</p>
+      <p>добавить код, dashoffset</p>
   </div></section>
 
   <section class="slide"><div>
@@ -504,7 +526,7 @@
 
   <section class="slide"><div>
       <h2 class="free-fly">dasharray + dashoffset</h2>
-      <p>КОД!!</p>
+      <p>и сюда код</p>
   </div></section>
 
   <section class="slide slide--fillingdemo bg--dark"><div>
@@ -558,7 +580,10 @@
   </div></section>
 
   <section class="slide"><div>
-      <h2>&lt;use></h2>
+    <h2 class="free-fly">&lt;use></h2>
+  </div></section>
+
+  <section class="slide"><div>
       <div class="demo demo--use demo--live">
         <div class="demo__content">
           <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
@@ -580,7 +605,10 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2>&lt;defs></h2>
+    <h2 class="free-fly">&lt;defs></h2>
+  </div></section>
+
+  <section class="slide"><div>
     <div class="demo demo--defs demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
@@ -602,7 +630,10 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2>&lt;symbol></h2>
+    <h2 class="free-fly">&lt;symbol></h2>
+  </div></section>
+
+  <section class="slide"><div>
     <div class="demo demo--symbol demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
@@ -624,22 +655,25 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2>&lt;pattern></h2>
+    <h2 class="free-fly">&lt;pattern></h2>
+  </div></section>
+
+  <section class="slide"><div>
     <div class="demo demo--pattern demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox='0 0 280 200'>
-          <defs>
-            <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="0" y="0" patternUnits="userSpaceOnUse">
-              <rect fill="gold" width="40" height="40" x="0" y="0"></rect>
-              <rect fill="yellowgreen" width="40" height="40" x="45" y="0"></rect>
-              <rect fill="skyblue" width="40" height="40" x="90" y="0"></rect>
-              <rect fill="orangered" width="40" height="40" x="135" y="0"></rect>
-            </pattern>
-          </defs>
-          <g fill="url(#pt--squares)">
-            <rect width="100%" height="200" x="0" y="0"></rect>
-          </g>
-        </svg>
+        <textarea class="demo__textfield demo__code"><svg viewbox='0 0 100% 200'>
+  <defs>
+    <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="0" y="0" patternUnits="userSpaceOnUse">
+      <rect fill="gold" width="40" height="40" x="0" y="0"></rect>
+      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"></rect>
+      <rect fill="skyblue" width="40" height="40" x="90" y="0"></rect>
+      <rect fill="orangered" width="40" height="40" x="135" y="0"></rect>
+    </pattern>
+  </defs>
+  <g fill="url(#pt--squares)">
+    <rect width="100%" height="200" x="0" y="0"></rect>
+  </g>
+</svg>
       </textarea>
       <div class="demo-switch demo-switch--horizontal">
           <dl data-attr="fill">
@@ -685,7 +719,10 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2>rotate, skew</h2>
+      <h2 class="free-fly">rotate</h2>
+  </div></section>
+
+  <section class="slide"><div>
     <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
@@ -694,19 +731,30 @@
 </svg>
       </textarea>
     </div></div>
+ 
+  </div></section>
 
+   <section class="slide"><div>
+      <h2 class="free-fly">skew</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    
     <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
           <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
-          <rect transform="skewY(5)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
+          <rect transform="skewX(45)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
         </svg>
       </textarea>
     </div></div>
   </div></section>
 
   <section class="slide"><div>
-    <h2>matrix</h2>
+      <h2 class="free-fly">matrix</h2>
+  </div></section>
+
+  <section class="slide"><div>
     <div class="demo demo--transform demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
@@ -730,7 +778,7 @@
       <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - 599 руб./месяц в составе подписки на Creative Cloud</li>
       <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99</li>
       <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный</li>
-      <li>+1</li>
+      <li class="next"><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html</a> - КОММЕНТАРИЙ</li>
     </ul>
   </div></section>
 
@@ -749,7 +797,7 @@
         <a href="http://www.flaticon.com/">flaticon.com</a> - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
         <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
-      <li class="next"><a href="http://thenounproject.com/"></a></li>
+      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a> - КОММЕНТАРИЙ</li>
     </ul>
 
   </div></section>
@@ -782,9 +830,9 @@
   <section class="slide"><div>
     <h2>Какой лучше?</h2>
     <ul>
-      <li><b>инлайновый SVG</b> - для оформления внешними стилями  и&nbsp;управления через JS</li>
-      <li class="next"><b>SVG-спрайт</b> - если нет необходимости управления через внешний&nbsp;CSS</li>
-      <li class="next"><b>иконочный шрифт</b> - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами 
+      <li><b>инлайновый SVG</b><!--  - для оформления внешними стилями  и&nbsp;управления через JS --></li>
+      <li class="next"><b>SVG-спрайт</b><!--  - если нет необходимости управления через внешний&nbsp;CSS< --></li>
+      <li class="next"><b>иконочный шрифт</b><!--  - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами  -->
       <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
     </ul>
   </div></section>
@@ -1120,6 +1168,7 @@ stroke-width="5" transform="translate(0,5)"></polygon>
         <ul>
           <li>форматирование кода</li>
           <li>загрузить все картинки</li>
+          <li>и шрифт</li>
           <li>дописать про viewbox и animation</li>
           <li>поправить демо с размерами</li>
         </ul>
