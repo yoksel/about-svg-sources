@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 500 500">
+
  <linearGradient id="gr-rainbow-stripes" x1="0" y1="0" x2="100%" y2="0%"> 
     <stop offset="0%" stop-color="crimson" /><stop offset="10%" stop-color="purple" />
     <stop offset="10%" stop-color="red" /><stop offset="20%" stop-color="crimson" />
@@ -52,6 +53,49 @@
       <stop stop-color="rgba(0,0,0,.2)" class="color-1"/>
       <stop stop-color="rgba(0,0,0,.02)" offset="90" class="color-2"/>
   </linearGradient>
+
+  <!--  -->
+  
+  <radialGradient id="gr-radial-soft" 
+      cx="50%" cy="50%" r="70%">
+      <stop stop-color="hsl(200,100%,40%)" offset="0"/>    
+      <stop stop-color="hsl(45,100%,75%)" offset="50%"/>
+      <stop stop-color="hsl(350,100%,45%)" offset="100%"/>
+  </radialGradient>
+
+  <radialGradient id="gr-radial-soft-fxy" 
+      cx="50%" cy="50%" r="70%" fx="90%" fy="90%">
+      <stop stop-color="hsl(200,100%,40%)" offset="0"/>    
+      <stop stop-color="hsl(45,100%,75%)" offset="50%"/>
+      <stop stop-color="hsl(350,100%,45%)" offset="100%"/>
+  </radialGradient>
+
+  <radialGradient id="gr-radial-soft-repeat" 
+      cx="50%" cy="50%" r="20%" spreadMethod="repeat"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="hsl(200,100%,40%)" offset="0"/>    
+      <stop stop-color="hsl(45,100%,75%)" offset="50%"/>
+      <stop stop-color="hsl(350,100%,45%)" offset="100%"/>
+  </radialGradient>
+
+  
+  <radialGradient id="gr-radial-stripes" 
+      cx="50%" cy="50%" r="20%" spreadMethod="reflect">
+      <stop stop-color="hsl(200,100%,40%)" offset="25%"/>
+      <stop stop-color="hsl(45,100%,75%)" offset="27%"/>
+      <stop stop-color="hsl(45,100%,75%)" offset="70%"/>
+      <stop stop-color="hsl(350,100%,45%)" offset="72%"/>
+  </radialGradient>
+
+  <radialGradient id="gr-radial-stripes-repeat" 
+      cx="50%" cy="50%" r="10%" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+      <stop stop-color="hsl(200,100%,40%)" offset="0%"/>
+      <stop stop-color="hsl(200,100%,40%)" offset="25%"/>
+      <stop stop-color="hsl(45,100%,75%)" offset="27%"/>
+      <stop stop-color="hsl(45,100%,75%)" offset="70%"/>
+      <stop stop-color="hsl(350,100%,45%)" offset="72%"/>
+      <stop stop-color="hsl(350,100%,45%)" offset="98%"/>
+  </radialGradient>
 
   <!--  -->
 

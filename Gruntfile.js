@@ -140,16 +140,9 @@ module.exports = function (grunt) {
         files: '<%= project.css_src %>{,*/}*.{scss,sass}',
         tasks: ['sass:dev', 'autoprefixer'],
         options: {
-          livereload: 35740,
+          livereload: true,
         },
-      },
-      js: {
-        files: '<%= project.js_res %>{,*/}*.{js}',
-        tasks: ['jshint'],
-        options: {
-          livereload: 35740,
-        },
-      },
+      }
     },
 
     /**
@@ -210,7 +203,7 @@ module.exports = function (grunt) {
   // grunt.registerTask('default', ['bump']);
 
   grunt.registerTask('default', [
-    'connect:server:livereload:open',
+    'connect:server:open',
     'watch'
     ]);
 

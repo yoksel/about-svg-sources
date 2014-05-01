@@ -76,7 +76,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         z-index: 2;
         padding: .5em;
         background: #FFF;
-        /*font-size: 1.4em;*/
+        transition: .2s;
         }
     .lower-level {
         position: absolute;
@@ -93,6 +93,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         right: 0;
         bottom: 0;
         left: 0;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            /*border: 1px solid green;*/
         }
     }
     .slide--strokewidth PRE {
@@ -121,12 +126,12 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         svg {
             display: block;
             margin: 0 auto;
-            border: 1px solid #EEE;
+            border: 1px solid #555;
             }
         }   
     .demo__textfield {
         width: 100%;
-        border: 1px solid #CCC;
+        border: 1px solid #555;
         border-radius: 5px;
         font-family: 'Anka Coder', monospace;
         font-size: $textarea-fontsize;
@@ -134,7 +139,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         color: #222;
     }    
     .demo__code {
-        @include textarea-height (7.4);
+        @include textarea-height (5.5);
         }
     pre {
         float: right;
@@ -158,69 +163,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         width: $textarea-width;
         } 
 }
-/* Demo Rect
-------------------------- */
-.demo--rect {
-    .demo__code {
-        @include textarea-height (5.5);
-        }
-    &-1 {
-        .demo__textfield {
-            @include highlight-lines(2);
-            }
-        }
-    &-2 {
-        .demo__textfield {
-            @include highlight-lines(4);
-            }
-        }
-    &-3 {
-        .demo__textfield {
-            @include highlight-lines(4);
-            }
-        }
-}
 
-/* Demo Circle
-------------------------- */
-        
-.demo--circle {
-    .demo__code {
-        @include textarea-height (5.5);
-        @include highlight-lines(2);
-        }
-    }
-
-/* Demo Polygon
-------------------------- */
-.demo--polygon {
-    .demo__code {
-        @include textarea-height (5.5);
-        @include highlight-lines(2);
-        }
-    }
-
-.demo--polygon-star {
-    .demo__code {
-        $demo-code-lines: 2, 3;
-        @include textarea-height (5.5);
-        @include highlight-lines($demo-code-lines);
-        }
-    }
-
-.demo--line {
-    .demo__code {
-        @include textarea-height (5.5);
-        @include highlight-lines(2);
-        }
-}
-.demo--polyline {
-    .demo__code {
-        $demo-code-lines: 2, 3;
-        @include textarea-height (5.5);
-        @include highlight-lines($demo-code-lines);
-        }
-}
 /* Demo Switch
 ------------------------- */        
 .demo-switch {
@@ -277,6 +220,83 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             }
     }
 
+/* Demo Rect
+------------------------- */
+.demo--rect {
+    &-1 {
+        .demo__textfield {
+            @include highlight-lines(2);
+            }
+        }
+    &-2 {
+        .demo__textfield {
+            @include highlight-lines(4);
+            }
+        }
+    &-3 {
+        .demo__textfield {
+            @include highlight-lines(4);
+            }
+        }
+}
+
+/* Demo Circle
+------------------------- */
+        
+.demo--circle {
+    .demo__code {
+        @include highlight-lines(2);
+        }
+    }
+
+/* Demo Polygon
+------------------------- */
+.demo--polygon {
+    .demo__code {
+        @include highlight-lines(2);
+        }
+    }
+
+.demo--polygon-star {
+    .demo__code {
+        $demo-code-lines: 2, 3;
+        @include highlight-lines($demo-code-lines);
+        }
+    }
+/* Demo Lines
+------------------------- */
+.demo--line {
+    .demo__code {
+        @include highlight-lines(2);
+        }
+}
+.demo--polyline {
+    .demo__code {
+        $demo-code-lines: 2, 3;
+        @include highlight-lines($demo-code-lines);
+        }
+}
+
+.demo--path {
+    .demo__code {
+        $demo-code-lines: 2;
+        @include highlight-lines($demo-code-lines);
+        }
+}
+.demo--path-abs-rel {
+    .demo__code {
+        $demo-code-lines: 4;
+        @include highlight-lines($demo-code-lines);
+        }
+}
+
+.demo--path-circ {
+    .demo__code {
+        $demo-code-lines: 2, 3;
+        @include highlight-lines($demo-code-lines);
+        }
+}
+
 /* Demo Fill
 ------------------------- */
 .demo--fill {
@@ -292,7 +312,38 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }        
     }
 
-
+.demo--stroke-dec {
+    LI {
+        background: green;
+        }
+    PRE {
+        display: inline-block;
+        width: 322px;
+        margin-bottom: 0;
+        text-indent: 0;
+        }
+        svg {
+            background: orange;
+        }
+    }
+    .demo--linecap {
+        LI {
+            margin-bottom: 100px;
+            }
+            svg {
+                vertical-align: bottom;
+                }
+        }
+    .demo--linejoin {
+        LI {
+            margin-bottom: 50px;
+            }
+            svg {
+                margin-left: 20px;
+                vertical-align: middle;
+                }
+        }
+/* Переложить на место */
 #pt-text {
   font: italic .5em/1 Georgia;
   color: #000;

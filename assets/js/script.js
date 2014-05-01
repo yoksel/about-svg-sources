@@ -2,16 +2,19 @@
 // -------------------------------
 
 $( "#svg-filters" ).load( "/assets/img/svg/filters.svg", function() {
-  console.log( "Filters were loaded." );
+  // console.log( "Filters were loaded." );
 });
 $( "#svg-fills" ).load( "/assets/img/svg/fills.svg", function() {
-  console.log( "Fills were loaded." );
+  // console.log( "Fills were loaded." );
 });
 $( "#svg-masks" ).load( "/assets/img/svg/masks.svg", function() {
-  console.log( "Masks were loaded." );
+  // console.log( "Masks were loaded." );
+});
+$( "#svg-symbols" ).load( "/assets/img/svg/symbols.svg", function() {
+  // console.log( "Images were loaded." );
 });
 $( "#svg-images" ).load( "/assets/img/svg/svg-lib.svg", function() {
-  console.log( "Images were loaded." );
+  // console.log( "Images were loaded." );
 });
 
 

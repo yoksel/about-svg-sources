@@ -26,7 +26,25 @@ svg {
         height: auto;
         padding: 80px 80px 120px;
         }
+    &:after {
+        bottom: 30px;
+        }
     }
+.slide--imgcenter {
+    & > DIV {
+    padding: 0;
+    text-align: center;
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 640px;
+        vertical-align: middle;
+        }
+    }
+    IMG {
+        vertical-align: middle;
+    }
+}
 /* Cover
 ------------------------- */
 #Cover {
@@ -57,21 +75,16 @@ svg {
         width: 810px;
         height: 290px;
         font-family: 'Arial Black';
-        font-size: 15em;
+        font-size: 14.5em;
         letter-spacing: -0.05em;
         }
         .cover-text__fill {
-            fill: url(#pt-rainbow-stripes);    
-            filter: url(#fl-shadow);
-            
-            }
-        .cover-text__stroke {
-            /*stroke: url(#pt-rainbow-stripes);    
+            /*fill: url(..#pt-rainbow-stripes);*/
+            /*fill: url(/#gr-rainbow-stripes);*/
+            /*filter: url(/#fl-shadow);*/
+            /*stroke: orange;
             stroke-width: 5;*/
-            /*stroke: #FFF;*/
-            /*stroke-width: 2;*/
-            /*stroke-dasharray: 1;*/
-            }    
+            }
 /* Popup
 ------------------------- */ 
 .img-preview {

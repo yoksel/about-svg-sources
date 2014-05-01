@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="60">
+<defs>
+  <symbol id="s-path">
+    <path d="M 50,30 250,30" stroke-width="60"/>
+  </symbol>
+  
+  <symbol id="s-path-guide">
+    <g transform="translate(0,20)">
+    <circle r="9" cx="50" cy="10"/>
+    <circle r="9" cx="250" cy="10"/>
+    <path d="M 50,10 250 10" stroke-width="5"/>
+    </g>
+  </symbol>
+
+  <symbol id="s-corner">
+     <path d="M 0 50 h 80 v 80" stroke-width="60" fill="none" transform="rotate(-45 70 50)"/>
+      
+  </symbol>
+
+  <symbol id="s-corner-guide">
+    <g transform="rotate(-45 70 50)">
+        <circle r="9" cx="0" cy="50"/>
+        <circle r="9" cx="80" cy="130"/>
+        <path d="M 0 50 h 80 v 80" stroke-width="5" fill="none" />
+    </g>
+  </symbol>
+</defs>
+</svg>

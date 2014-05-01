@@ -85,6 +85,23 @@ svg {
   height: auto;
   padding: 80px 80px 120px;
 }
+.slide:after {
+  bottom: 30px;
+}
+
+.slide--imgcenter > DIV {
+  padding: 0;
+  text-align: center;
+}
+.slide--imgcenter > DIV:before {
+  content: "";
+  display: inline-block;
+  height: 640px;
+  vertical-align: middle;
+}
+.slide--imgcenter IMG {
+  vertical-align: middle;
+}
 
 /* Cover
 ------------------------- */
@@ -121,22 +138,16 @@ svg {
   width: 810px;
   height: 290px;
   font-family: 'Arial Black';
-  font-size: 15em;
+  font-size: 14.5em;
   letter-spacing: -0.05em;
 }
 
 .cover-text__fill {
-  fill: url(#pt-rainbow-stripes);
-  -webkit-filter: url(#fl-shadow);
-  filter: url(#fl-shadow);
-}
-
-.cover-text__stroke {
-  /*stroke: url(#pt-rainbow-stripes);    
+  /*fill: url(..#pt-rainbow-stripes);*/
+  /*fill: url(/#gr-rainbow-stripes);*/
+  /*filter: url(/#fl-shadow);*/
+  /*stroke: orange;
   stroke-width: 5;*/
-  /*stroke: #FFF;*/
-  /*stroke-width: 2;*/
-  /*stroke-dasharray: 1;*/
 }
 
 /* Popup
@@ -394,7 +405,8 @@ svg {
   z-index: 2;
   padding: .5em;
   background: #FFF;
-  /*font-size: 1.4em;*/
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 .slide--fillingdemo .lower-level {
   position: absolute;
@@ -411,6 +423,11 @@ svg {
   right: 0;
   bottom: 0;
   left: 0;
+}
+.slide--fillingdemo svg {
+  width: 100%;
+  height: 100%;
+  /*border: 1px solid green;*/
 }
 
 .slide--strokewidth PRE {
@@ -442,11 +459,11 @@ svg {
 .demo--live .demo__view svg {
   display: block;
   margin: 0 auto;
-  border: 1px solid #EEE;
+  border: 1px solid #555;
 }
 .demo--live .demo__textfield {
   width: 100%;
-  border: 1px solid #CCC;
+  border: 1px solid #555;
   border-radius: 5px;
   font-family: 'Anka Coder', monospace;
   font-size: 21.6px;
@@ -454,7 +471,7 @@ svg {
   color: #222;
 }
 .demo--live .demo__code {
-  height: 201.55824px;
+  height: 149.8068px;
 }
 .demo--live pre {
   float: right;
@@ -474,74 +491,6 @@ svg {
 .demo--stacks .demo__content {
   float: right;
   width: 60%;
-}
-
-/* Demo Rect
-------------------------- */
-.demo--rect .demo__code {
-  height: 149.8068px;
-}
-.demo--rect-1 .demo__textfield {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background-position: 0 .2em;
-}
-.demo--rect-2 .demo__textfield {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
-  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
-  background-position: 0 .2em;
-}
-.demo--rect-3 .demo__textfield {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
-  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
-  background-position: 0 .2em;
-}
-
-/* Demo Circle
-------------------------- */
-.demo--circle .demo__code {
-  height: 149.8068px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background-position: 0 .2em;
-}
-
-/* Demo Polygon
-------------------------- */
-.demo--polygon .demo__code {
-  height: 149.8068px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background-position: 0 .2em;
-}
-
-.demo--polygon-star .demo__code {
-  height: 149.8068px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
-  background-position: 0 .2em;
-}
-
-.demo--line .demo__code {
-  height: 149.8068px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
-  background-position: 0 .2em;
-}
-
-.demo--polyline .demo__code {
-  height: 149.8068px;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
-  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
-  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
-  background-position: 0 .2em;
 }
 
 /* Demo Switch
@@ -600,6 +549,89 @@ svg {
   background: none;
 }
 
+/* Demo Rect
+------------------------- */
+.demo--rect-1 .demo__textfield {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+.demo--rect-2 .demo__textfield {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background-position: 0 .2em;
+}
+.demo--rect-3 .demo__textfield {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background-position: 0 .2em;
+}
+
+/* Demo Circle
+------------------------- */
+.demo--circle .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+/* Demo Polygon
+------------------------- */
+.demo--polygon .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+.demo--polygon-star .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background-position: 0 .2em;
+}
+
+/* Demo Lines
+------------------------- */
+.demo--line .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+.demo--polyline .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background-position: 0 .2em;
+}
+
+.demo--path .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
+}
+
+.demo--path-abs-rel .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
+  background-position: 0 .2em;
+}
+
+.demo--path-circ .demo__code {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background-position: 0 .2em;
+}
+
 /* Demo Fill
 ------------------------- */
 .demo--fill .demo__view {
@@ -613,6 +645,35 @@ svg {
   height: 217.9008px;
 }
 
+.demo--stroke-dec LI {
+  background: green;
+}
+.demo--stroke-dec PRE {
+  display: inline-block;
+  width: 322px;
+  margin-bottom: 0;
+  text-indent: 0;
+}
+.demo--stroke-dec svg {
+  background: orange;
+}
+
+.demo--linecap LI {
+  margin-bottom: 100px;
+}
+.demo--linecap svg {
+  vertical-align: bottom;
+}
+
+.demo--linejoin LI {
+  margin-bottom: 50px;
+}
+.demo--linejoin svg {
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+/* Переложить на место */
 #pt-text {
   font: italic .5em/1 Georgia;
   color: #000;
