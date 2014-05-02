@@ -2,14 +2,20 @@
       <defs>
         <!-- Paths -->
         <clippath id="clipping-star">
-          <polygon id="Star-1" points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" />
+          <polygon points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" />
         </clippath>
         <!--  -->
         <clippath id="clipping-text">
           <text x="0" y=".88em">Text</text>
         </clippath>
+        <!--  -->
+        <clippath id="clip-rect-top" clipPathUnits="userSpaceOnUse">
+          <rect width="400" height="150" x="0" y="0"/>
+          <!-- <polygon id="Star-1" points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" /> -->
+        </clippath>
+
         <!-- Gradients -->
-        <lineargradient id="gradient" x1="0" y1="0" x2="110%" y2="0%">
+        <lineargradient id="mask-gradient" x1="0" y1="0" x2="110%" y2="0%">
           <stop stop-color="#fff" offset="0" /><stop stop-color="#fff" offset="10%" />
           <stop stop-color="#AAA" offset="10%" /><stop stop-color="#AAA" offset="20%" />
           <stop stop-color="#777" offset="20%" /><stop stop-color="#777" offset="30%" />
@@ -22,12 +28,12 @@
           <stop stop-color="#000" offset="90%" /><stop stop-color="#000" offset="100%" />
         </lineargradient>
         <!--  -->
-        <radialgradient id="r-gradient" cy="52%" fy="5.5%">
+        <radialgradient id="mask-radial-gradient" cy="52%" fy="5.5%">
           <stop stop-color="#FFF" offset="50%" />
           <stop stop-color="#000" offset="100%" />
         </radialgradient>
         <!--  -->
-        <lineargradient id="ymc-gradient" x1="0" y1="0" x2="100%" y2="0%">
+        <lineargradient id="mask-ymc-gradient" x1="0" y1="0" x2="100%" y2="0%">
           <stop stop-color="hsl(45,100%,65%)" offset="0" />
           <stop stop-color="hsl(45,100%,65%)" offset="32%" />
           <stop stop-color="hsl(320,100%,65%)" offset="32%" />
@@ -37,7 +43,7 @@
         </lineargradient>
         <!-- Masks -->
         <mask id="masking" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
-          <rect y="0" width="1" height="1" fill="url(#gradient)" />
+          <rect y="0" width="1" height="1" fill="url(#mask-gradient)" />
           <circle cx=".5" cy=".5" r=".42" fill="black" />
           <circle cx="0" cy=".5" r=".32" fill="black" />
           <circle cx="1" cy=".5" r=".32" fill="black" />
@@ -50,7 +56,7 @@
         </mask>
         <!--  -->
         <mask id="masking-soft" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
-          <rect y="0" width="1" height="1" fill="url(#r-gradient)" />
+          <rect y="0" width="1" height="1" fill="url(#mask-radial-gradient)" />
         </mask>
         <!--  -->
         <mask id="masking-lum" maskunits="objectBoundingBox" x="0" y="0">

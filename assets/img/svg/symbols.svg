@@ -1,28 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="60">
-<defs>
-  <symbol id="s-path">
-    <path d="M 50,30 250,30" stroke-width="60"/>
-  </symbol>
-  
-  <symbol id="s-path-guide">
-    <g transform="translate(0,20)">
-    <circle r="9" cx="50" cy="10"/>
-    <circle r="9" cx="250" cy="10"/>
-    <path d="M 50,10 250 10" stroke-width="5"/>
-    </g>
-  </symbol>
-
-  <symbol id="s-corner">
-     <path d="M 0 50 h 80 v 80" stroke-width="60" fill="none" transform="rotate(-45 70 50)"/>
+    <defs>
+      <symbol id="s-path">
+        <path d="M 50,30 250,30" stroke-width="60"/>
+      </symbol>
       
-  </symbol>
+      <symbol id="s-path-guide">
+        <g transform="translate(0,20)">
+        <circle r="9" cx="50" cy="10"/>
+        <circle r="9" cx="250" cy="10"/>
+        <path d="M 50,10 250 10" stroke-width="5"/>
+        </g>
+      </symbol>
 
-  <symbol id="s-corner-guide">
-    <g transform="rotate(-45 70 50)">
-        <circle r="9" cx="0" cy="50"/>
-        <circle r="9" cx="80" cy="130"/>
-        <path d="M 0 50 h 80 v 80" stroke-width="5" fill="none" />
-    </g>
-  </symbol>
-</defs>
+      <symbol id="s-corner">
+         <path d="M 0 50 h 80 v 80" stroke-width="60" fill="none" transform="rotate(-45 70 50)"/>
+      </symbol>
+
+      <symbol id="s-corner-guide">
+        <g transform="rotate(-45 70 50)">
+            <circle r="9" cx="0" cy="50"/>
+            <circle r="9" cx="80" cy="130"/>
+            <path d="M 0 50 h 80 v 80" stroke-width="5" fill="none" />
+        </g>
+      </symbol>
+
+      <symbol id="s-dasharray">
+          <path d="M 0,50 
+               Q100,0 200,50
+               300,100 400,50
+               500,0 600,50
+               700,100 800,50" fill="none"/>
+      </symbol>
+
+      <symbol id="s-dashoffset">
+          <circle r="100" cx="135" cy="135"></circle>
+      </symbol>
+
+      <symbol id="s-stroke-opacity">
+          <circle r="95" cx="150" cy="150"></circle>
+      </symbol>
+
+      <symbol id="s-transform-before">
+          <rect x="2" y="2" width="500" height="280" 
+            class="rect-transform-before"></rect>
+      </symbol>
+      <symbol id="s-transform-after">
+          <rect x="2" y="2" width="500" height="280" 
+            class="rect-transform-after"></rect>
+      </symbol>
+
+      <symbol id="s-star">
+        <polygon points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" />
+      </symbol>
+    </defs>
 </svg>

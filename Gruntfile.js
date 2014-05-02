@@ -80,11 +80,6 @@ module.exports = function (grunt) {
      * https://npmjs.org/package/grunt-autoprefixer
      */
     autoprefixer: {
-      dev: {
-        options: {},
-        src: '<%= project.css_src %>/style.unprefixed.css',
-        dest: '<%= project.css_res %>/style.css'
-      },
       dist: {
         options: {},
         src: '<%= project.css_src %>/style.unprefixed.css',
@@ -185,14 +180,6 @@ module.exports = function (grunt) {
           }
         }
       }
-    },
-
-    open : {
-      dev : {
-        path: 'http://localhost:9001/',
-
-        // app: 'Firefox'
-      }
     }
   });
 
@@ -219,7 +206,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'sass:dist',
-    'autoprefixer:dist',
+    'autoprefixer',
     'copy',
     'includereplace'
     ]);

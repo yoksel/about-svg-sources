@@ -572,7 +572,7 @@
           </svg>
           
         </li>
-        <li>
+        <li class="next">
           <pre><code>stroke-linecap="round"</code></pre>
           <svg width="300" height="60">
             <use xlink:href="#s-path" stroke="olivedrab"  stroke-linecap="round"/>
@@ -580,7 +580,7 @@
           </svg>
           
         </li>
-        <li>
+        <li class="next">
           <pre><code>stroke-linecap="square"</code></pre>
           <svg width="300" height="60">
             <use xlink:href="#s-path" stroke="steelblue" stroke-linecap="square"/>
@@ -600,14 +600,14 @@
             <use xlink:href="#s-corner-guide" y="0" stroke="orange" fill="orange"/> 
           </svg>
         </li>
-        <li>
+        <li class="next">
           <pre><code>stroke-linejoin="round"</code></pre>
           <svg width="155" height="120">
             <use xlink:href="#s-corner" stroke="olivedrab" stroke-linejoin="round"/>
             <use xlink:href="#s-corner-guide" y="0" stroke="yellowgreen" fill="yellowgreen"/>
           </svg>
         </li>
-        <li>
+        <li class="next">
           <pre><code>stroke-linecap="square"</code></pre>
           <svg width="155" height="120">
            <use xlink:href="#s-corner" stroke="steelblue" stroke-linejoin="bevel"/>
@@ -620,59 +620,94 @@
   </div></section>
 
   <section class="slide"><div>
-        <pre><code>stroke-dasharray="1"
-stroke-dasharray="1 3"
-stroke-dasharray="2 7 6"</code></pre>
-        <div class="demo">
-          <svg viewbox="0 0 400 160" class="demo--dasharray">
-            <path d="M 0 20 h 500" stroke="purple" stroke-width="1" stroke-dasharray="1"></path>
-            <path d="M 0 40 h 500" stroke="mediumspringgreen" stroke-width="15" stroke-dasharray="1 3"></path>
-            <path d="M 0 60 h 500" stroke="orangered" stroke-width="1" stroke-dasharray="5%"></path>
-            <path d="M 0 80 h 500" stroke="green" stroke-width="1" stroke-dasharray="1 5"></path>
-            <path d="M 0 100 h 500" stroke="steelblue" stroke-width="1" stroke-dasharray="2 7 6"></path> 
-            <path d="M 0 120 h 500" stroke="orange" stroke-width="5" stroke-dasharray="5"></path> 
-            <path d="M 0 140 h 500" stroke="mediumseagreen" stroke-width="1" stroke-dasharray="12% 5%"></path></svg>
+        <div class="demo demo--dasharray">
+          <ul>
+            <li>
+              <pre><code>stroke-dasharray="1%"</code></pre>
+              <svg width="800" height="100">
+                <use xlink:href="#s-dasharray"
+                stroke="purple" stroke-width="1%" stroke-dasharray="1%"/>
+              </svg>
+            </li>
+
+            <li class="next">
+              <pre><code>stroke-dasharray="2 5"</code></pre>
+              <svg width="800" height="100">
+                <use xlink:href="#s-dasharray"
+                stroke="steelblue" stroke-width="35" stroke-dasharray="2 5"/>
+              </svg>
+            </li>
+
+            <li class="next">
+              <pre><code>stroke-dasharray="80 20 5 20"</code></pre>
+              <svg width="800" height="100">
+                <use xlink:href="#s-dasharray"
+                stroke="orangered" stroke-width="10" stroke-dasharray="80 20 5 20"/>
+              </svg>
+            </li>
+          </ul>
         </div>    
   </div></section>
 
-  <section class="slide"><div>
-    <ul class="list--columns">
-      <li><b>stroke-dashoffset</b>
-      <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15" stroke-dasharray="25% 110%" transform="rotate(72 135 135)"><circle r="115" cx="135" cy="135" stroke="crimson"></circle><circle r="115" cx="135" cy="135" stroke="orangered" stroke-dashoffset="25%"></circle><circle r="115" cx="135" cy="135" stroke="gold" stroke-dashoffset="50%"></circle></g></svg></li>
-      <li></li>
-    </ul>
+  <section class="slide slide--fillingdemo"><div>
+      <div class="demo demo--dashoffset">
+        <pre class="dashoffset__pre-1"><code>stroke-dashoffset="-30%"</code></pre>
+        <pre class="dashoffset__pre-2"><code>stroke-dashoffset="-177"</code></pre>
+        <svg viewbox="0 0 270 270">
+          <g class="g-circles" fill="none" stroke-width="60" stroke-dasharray="26% 90%" transform="translate(20,10) scale(.85) rotate(70 135 135)">
+          <use xlink:href="#s-dashoffset" stroke="crimson"/>
+          <use xlink:href="#s-dashoffset" stroke="orangered" stroke-dashoffset="-33%"/>
+          <use xlink:href="#s-dashoffset" stroke="gold" stroke-dashoffset="-177"/>
+        </g></svg>
+      </div>
   </div></section>
 
-  <section class="slide"><div>
-    <b>stroke-opacity</b>
-        <svg width="270" height="270"><g class="g-circles" fill="none" stroke-width="15"><circle r="40" cx="60" cy="60" stroke="gold" stroke-opacity=".7"></circle><circle r="70" cx="120" cy="120" stroke="yellowgreen" stroke-opacity=".5" stroke-width="25"></circle><circle r="60" cx="180" cy="180" stroke="skyblue" stroke-opacity=".25"></circle></g></svg>
+  <section class="slide slide--fillingdemo"><div>
+      <div class="demo demo--stroke-opacity">
+        <pre class="dashoffset__pre-1"><code>stroke-opacity=".4"</code></pre>
+        <svg viewbox="0 0 700 500" style="border: 1px solid; ">
+          <g class="g-circles" fill="none" stroke-width="60">
+
+            <use xlink:href="#s-stroke-opacity" stroke="gold"
+            x="-6%" y="0" transform="scale(1.5)"
+            clip-path="url(#clip-rect-top)"/>
+            <use xlink:href="#s-stroke-opacity" stroke="gold" stroke-opacity=".4"
+            x="-6%" y="0" transform="scale(1.5)"/>
+
+            <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
+            <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" stroke-opacity=".4"
+            transform="scale(1.5)"/>
+
+            <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)"  transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
+            <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)" stroke-opacity=".4" transform="scale(1.5)"/>
+            </svg>
+      </div>
   </div></section>
 
   <section class="slide"><div>
       <h2 class="free-fly">Анимация stroke</h2>
-      <p>добавить код, dashoffset</p>
   </div></section>
-
-  <section class="slide"><div>
-    <pre><code>path {</code>
-      <code>  stroke-dasharray: 550 0;</code>
-      <code>  animation: dasharray 5s infinite alternate;</code>
-      <code>  }</code>
-<code>@keyframes dasharray {</code>
-  <code>  100% {</code>
-    <code>    stroke-dasharray: 0 500;</code>
-  <code>  }</code>
-<code>}</code>
-    </code></pre>
-  </div></section>
-
 
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--stroke-dasharr-anim">
       <svg viewBox="0 0 130 200">
-        <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137zM112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506zM56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825zM118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725zM6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831zM113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831zM71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25zM100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z" fill="#000000" transform="scale(.75) translate(0,20)"/>
+        <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137zM112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506zM56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825zM118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725zM6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831zM113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831zM71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25zM100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z" fill="#000000" transform="scale(.75) translate(0,20)"
+        stroke="url(#gr-hot-cold-soft)"/>
       </svg>
     </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre><code>path {</code>
+      <code>  stroke-dasharray: 530 0;</code>
+      <code>  animation: dasharray 8s infinite alternate;</code>
+      <code>  }</code>
+      <code>@keyframes dasharray {</code>
+        <code>  100% {</code>
+          <code>    stroke-dasharray: 0 530;</code>
+        <code>  }</code>
+      <code>}</code>
+    </pre>
   </div></section>
 
   <section class="slide"><div>
@@ -704,6 +739,22 @@ stroke-dasharray="2 7 6"</code></pre>
               <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
           </g>
         </g>  
+    </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--lights">
+      <!-- &#10041; -->
+      <svg>
+      <circle class="c-lights" r="45%" cx="50%" cy="50%"
+      stroke="url(#gr-radial-lights)" stroke-width="89%" stroke-dasharray="10%"/>
+      <g class="group--stars" transform="translate(410, 220)">
+        <use xlink:href="#s-star" fill="currentColor"/>
+        <use xlink:href="#s-star" fill="white"/>
+        <use xlink:href="#s-star" fill="currentColor"/>
+        <use xlink:href="#s-star" fill="white"/>
+      </g>
     </svg>
     </div>
   </div></section>
@@ -841,82 +892,59 @@ stroke-dasharray="2 7 6"</code></pre>
   </div></section>
 
   <section class="slide"><div>
-      <h2 class="free-fly">translate</h2>
+    <pre><code>transform="translate(200, 80)"</code></pre>
+    <div class="demo">
+      <svg width="700px" height="360px">
+        <use xlink:href="#s-transform-before"/>
+        <use xlink:href="#s-transform-after" 
+        fill="crimson" transform="translate(200, 80)"/>
+    </svg></div>
   </div></section>
 
   <section class="slide"><div>
-    <div class="demo demo--transform demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 300 200">
-          <rect x="10" y="5" width="200" height="120" fill="hsla(120,100%,50%,.2)"></rect>
-          <rect x="5" y="5" width="200" height="120" fill="hsla(50,100%,50%,.6)" transform="translate(70, 70)"></rect>
-        </svg></textarea>
-        </div>
-    </div>
+    <pre><code>transform="scale(.8, 1.3)"</code></pre>
+    <div class="demo">
+      <svg width="700px" height="360px">
+        <use xlink:href="#s-transform-before"/>
+        <use xlink:href="#s-transform-after" 
+        fill="orangered" transform="scale(.8, 1.3)"/>
+    </svg></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2 class="free-fly">scale</h2>
+    <pre><code>transform="rotate(9, 100, 100)"</code></pre>
+    <div class="demo">
+      <svg width="700px" height="360px">
+        <g transform="translate(42 15)">
+          <use xlink:href="#s-transform-before"/>
+          <use xlink:href="#s-transform-after" 
+          fill="gold" transform="rotate(9, 100, 100)"/>
+        </g>
+    </svg></div>
   </div></section>
 
   <section class="slide"><div>
-    <div class="demo demo--transform demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 130">
-          <rect x="5" y="5" width="120" height="120" fill="hsla(120,100%,50%,.2)"></rect>
-          <rect x="5" y="5" width="120" height="120" fill="hsla(50,100%,50%,.6)" transform="scale(1.5, .5)"></rect>
-        </svg></textarea>
-    </div></div>
+    <pre><code>transform="skewX(35)"</code></pre>
+    <div class="demo">
+      <svg width="700px" height="360px">
+        <g>
+          <use xlink:href="#s-transform-before"/>
+          <use xlink:href="#s-transform-after" 
+          fill="yellowgreen" transform="skewX(35)"/>
+        </g>
+    </svg></div>
   </div></section>
 
   <section class="slide"><div>
-      <h2 class="free-fly">rotate</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="demo demo--transform demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
-<rect x="25" y="25" width="150" height="150" fill="hsla(120,100%,50%,.2)"></rect>
-<rect x="25" y="25" width="150" height="150" fill="hsla(50,100%,50%,.6)" transform="rotate(45 100 100)"></rect>
-</svg>
-      </textarea>
-    </div></div>
- 
-  </div></section>
-
-   <section class="slide"><div>
-      <h2 class="free-fly">skew</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    
-    <div class="demo demo--transform demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
-          <rect fill="hsla(120,100%,50%,.2)" height="150" width="150" y="25" x="25"/>
-          <rect transform="skewX(45)" fill="hsla(50,100%,50%,.6)" height="150" width="150" y="25" x="25"/>
-        </svg>
-      </textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-      <h2 class="free-fly">matrix</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="demo demo--transform demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 200 200">
-          <rect x="25" y="25" width="150" height="150" 
-                   fill="hsla(120,100%,50%,.2)"></rect>
-          <rect x="25" y="25" width="150" height="150" 
-                   fill="hsla(50,100%,50%,.6)" 
-                   transform="matrix(.3 0 0 .95 55 25)"></rect>
-        </svg>
-      </textarea>
-    </div></div>
+    <pre><code>transform="matrix(.3 0 0 1.18 55 25)"</code></pre>
+    <div class="demo">
+      <svg width="700px" height="360px">
+        <g>
+          <use xlink:href="#s-transform-before"/>
+          <use xlink:href="#s-transform-after" 
+          fill="steelblue" transform="matrix(.3 0 0 1.18 55 25)"/>
+        </g>
+    </svg></div>
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -925,11 +953,12 @@ stroke-dasharray="2 7 6"</code></pre>
 
   <section class="slide"><div>
     <h2>Редакторы</h2>
+    <p>дополнить</p>
     <ul>
       <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - 599 руб./месяц в составе подписки на Creative Cloud</li>
       <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99</li>
+      <li class="next"><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">svg-edit.googlecode.com/.../svg-editor.html</a> - КОММЕНТАРИЙ</li>
       <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный</li>
-      <li class="next"><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html</a> - КОММЕНТАРИЙ</li>
     </ul>
   </div></section>
 
@@ -1332,6 +1361,8 @@ stroke-width="5" transform="translate(0,5)"></polygon>
           <li>дописать про viewbox и animation</li>
           <li>поправить демо с размерами</li>
           <li>добавить схлопывалку кода в полноэкранных демо</li>
+          <li>dashoffset?</li>
+          <li>матрица</li>
         </ul>
   </div></section>
 

@@ -314,16 +314,12 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 .demo--stroke-dec {
     LI {
-        background: green;
         }
     PRE {
         display: inline-block;
         width: 322px;
         margin-bottom: 0;
         text-indent: 0;
-        }
-        svg {
-            background: orange;
         }
     }
     .demo--linecap {
@@ -336,10 +332,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
     .demo--linejoin {
         LI {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             }
             svg {
-                margin-left: 20px;
+                margin-left: 30px;
                 vertical-align: middle;
                 }
         }
@@ -350,9 +346,45 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
   }
 
 .demo--dasharray {
-    height: 320px;
+    PRE {
+        display: inline-block;
+        margin-bottom: 0;
+        text-indent: 0;
+        }
+    LI {
+        margin-bottom: 25px;
+        }
     } 
 
+.demo--dashoffset{
+    PRE {
+        position: absolute;
+        background: transparent;
+        }
+        .dashoffset__pre-1 {
+            left: 54%;
+            top: 76px;
+            }
+        .dashoffset__pre-2 {
+            left: 60%;
+            top: 305px;
+            }
+    svg {
+        width: 65%;
+        }
+
+    }
+.demo--stroke-opacity {
+    PRE {
+        position: absolute;
+        top: 255px;
+        right: 0;
+        left: 0;
+        width: 304px;
+        margin: auto;
+        text-align: center;
+        }
+}
 /* Demo stroke-dasharray Animation
 ------------------------- */ 
 
@@ -361,15 +393,16 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     
     path {
       fill: none;
-      stroke: url(#gr-hot-cold-soft);
+      /*stroke: url(#gr-hot-cold-soft);*/
       stroke-width: 2;
-      stroke-dasharray: 550 0;
-      animation: dasharray 5s infinite alternate;
+      stroke-dasharray: 530;
+      
+      animation: dasharray 8s infinite alternate;
       }
     }
 @keyframes dasharray {
   100% {
-    stroke-dasharray: 0 500;
+    stroke-dasharray: 0 530;
   }
 }
 
@@ -398,7 +431,67 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     transform: rotate(360deg);
   }
 }
-  
+
+$trans-hor: 97px;
+$trans-vert: 96px;
+        
+.demo--lights{
+    background: steelblue;
+    color: steelblue;
+    }
+    .group--stars {
+        use {
+            transform-origin: $trans-hor $trans-vert;
+            animation:  starmove 2s infinite linear;
+            }
+        @for $item from 2 through 4 {
+            use:nth-child(#{$item}) {
+                transform: scale(1-($item/4.9));
+            }
+        }
+        }
+    .c-lights {
+        fill: none;
+        transform-origin: 512px 320px;
+        animation: rotation 20s infinite linear;
+        }
+
+@keyframes starmove {
+    $trans-min: .8;
+    $trans-max: 1.2;
+    
+    $trans-min-offset: .7;
+    $trans-max-offset: 1.3;
+    
+    0% {
+      transform-origin: $trans-hor*$trans-min $trans-vert*$trans-min;
+    }
+    12.5% {
+      transform-origin: $trans-hor $trans-vert*$trans-min-offset;
+    }
+    25% {
+      transform-origin: $trans-hor*$trans-max $trans-vert*$trans-min;
+    }
+    37.5% {
+      transform-origin: $trans-hor*$trans-max-offset $trans-vert;
+    }
+    50% {
+      transform-origin: $trans-hor*$trans-max $trans-vert*$trans-max;
+    }
+    65.5% {
+      transform-origin: $trans-hor $trans-vert*$trans-max-offset;
+    }
+    75% {
+      transform-origin: $trans-hor*$trans-min $trans-vert*$trans-max;
+    }
+    87.5% {
+      transform-origin: $trans-hor*$trans-min-offset $trans-vert;
+    }
+    100% {
+        transform-origin: $trans-hor*$trans-min $trans-vert*$trans-min;
+    }
+}
+
 /* Demo G
 ------------------------- */    
 .demo--g {
@@ -466,7 +559,16 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         @include textarea-height (8);
         }        
     }  
-    
+
+.rect-transform-before {
+    fill: none;
+    stroke: #777;
+    stroke-width: 1px;
+    stroke-dasharray: 10 5;
+    }
+.rect-transform-after {
+    fill-opacity: .7;
+    }    
 /* Demo stacks
 ------------------------- */        
 .demo--stacks {

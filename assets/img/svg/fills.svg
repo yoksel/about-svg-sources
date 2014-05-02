@@ -51,7 +51,7 @@
 
   <linearGradient id="gr-gray-transp" x1="0" y1="0" x2="0" y2="100%">
       <stop stop-color="rgba(0,0,0,.2)" class="color-1"/>
-      <stop stop-color="rgba(0,0,0,.02)" offset="90" class="color-2"/>
+      <stop stop-color="rgba(0,0,0,.2)" stroke-opacity="0" offset="90" class="color-2"/>
   </linearGradient>
 
   <!--  -->
@@ -61,6 +61,13 @@
       <stop stop-color="hsl(200,100%,40%)" offset="0"/>    
       <stop stop-color="hsl(45,100%,75%)" offset="50%"/>
       <stop stop-color="hsl(350,100%,45%)" offset="100%"/>
+  </radialGradient>
+
+  <radialGradient id="gr-radial-lights" 
+      cx="50%" cy="50%" r="70%">
+      <stop stop-color="white" offset="0%"
+        stop-opacity="1"/>
+      <stop stop-color="white" offset="100%" stop-opacity="0"/>
   </radialGradient>
 
   <radialGradient id="gr-radial-soft-fxy" 
