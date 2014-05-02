@@ -45,6 +45,19 @@ svg {
         vertical-align: middle;
     }
 }
+.slide--vlm {
+   & > DIV:before {
+        content: "";
+        display: inline-block;
+        height: 440px;
+        vertical-align: middle;
+        background: gold;
+        }
+    svg, span {
+        display: inline-block;
+        vertical-align: middle;
+        } 
+    }
 /* Cover
 ------------------------- */
 #Cover {
@@ -169,3 +182,4 @@ svg {
 @import '_demos';
 @import '_iconfont';
 @import '_icons-stroke';
+@import '_browsers';

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url(/assets/fonts/Ubuntu-Condensed/uc.woff) format('woff');
+}
+
 $font-headers: "Ubuntu Condensed",sans-serif;
 
 .slide H1, 
@@ -49,4 +56,10 @@ $map-headers: (h2: 2.4, h3: 2.3, h4: 1.7, h5: 1.2);
         font-size: 30px;
         color: #555
         }
-    }  
+    }
+
+.sign {
+    padding: 0 .5em;
+    vertical-align: middle;
+    font-size: 3em;
+    }

@@ -1,0 +1,42 @@
+.icon-chrome {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px 0px;
+  width: 64px;
+  height: 64px;
+}
+.icon-firefox {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px -64px;
+  width: 64px;
+  height: 64px;
+}
+.icon-ie-8 {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px -128px;
+  width: 64px;
+  height: 64px;
+}
+.icon-ie {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px -192px;
+  width: 64px;
+  height: 64px;
+}
+.icon-opera-12 {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px -256px;
+  width: 64px;
+  height: 64px;
+}
+.icon-opera {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px -320px;
+  width: 64px;
+  height: 64px;
+}
+.icon-safari {
+  background-image: url(../../assets/img/parts/sprite-browsers-64.png);
+  background-position: 0px -384px;
+  width: 64px;
+  height: 64px;
+}

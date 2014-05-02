@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), local("UbuntuCondensed-Regular"), url(/assets/fonts/Ubuntu-Condensed/uc.woff) format("woff");
+}
 .slide H1,
 .slide H2,
 .slide H3,
@@ -60,6 +66,12 @@
   color: #555555;
 }
 
+.sign {
+  padding: 0 .5em;
+  vertical-align: middle;
+  font-size: 3em;
+}
+
 /* SVG
 ------------------------- */
 svg {
@@ -100,6 +112,18 @@ svg {
   vertical-align: middle;
 }
 .slide--imgcenter IMG {
+  vertical-align: middle;
+}
+
+.slide--vlm > DIV:before {
+  content: "";
+  display: inline-block;
+  height: 440px;
+  vertical-align: middle;
+  background: gold;
+}
+.slide--vlm svg, .slide--vlm span {
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -822,16 +846,30 @@ svg {
   }
 }
 .demo--lights {
-  background: steelblue;
-  color: steelblue;
+  background: lightseagreen;
+  color: lightseagreen;
 }
 
-.group--stars use {
+.star--outline {
   -webkit-transform-origin: 97px 96px;
   -ms-transform-origin: 97px 96px;
   transform-origin: 97px 96px;
-  -webkit-animation: starmove 2s infinite linear;
-  animation: starmove 2s infinite linear;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 4;
+  -webkit-animation: stardashoffset 1s infinite linear;
+  animation: stardashoffset 1s infinite linear;
+}
+
+.group--stars use {
+  -webkit-transform-origin: 97px 72px;
+  -ms-transform-origin: 97px 72px;
+  transform-origin: 97px 72px;
+  /*animation:  starmove 3s infinite linear;*/
 }
 .group--stars use:nth-child(2) {
   -webkit-transform: scale(0.59184);
@@ -860,104 +898,114 @@ svg {
 
 @-webkit-keyframes starmove {
   0% {
-    -webkit-transform-origin: 77.6px 76.8px;
-    transform-origin: 77.6px 76.8px;
+    -webkit-transform-origin: 62.08px 76.8px;
+    transform-origin: 62.08px 76.8px;
   }
 
   12.5% {
-    -webkit-transform-origin: 97px 67.2px;
-    transform-origin: 97px 67.2px;
+    -webkit-transform-origin: 97px 63.84px;
+    transform-origin: 97px 63.84px;
   }
 
   25% {
-    -webkit-transform-origin: 116.4px 76.8px;
-    transform-origin: 116.4px 76.8px;
+    -webkit-transform-origin: 139.68px 76.8px;
+    transform-origin: 139.68px 76.8px;
   }
 
   37.5% {
-    -webkit-transform-origin: 126.1px 96px;
-    transform-origin: 126.1px 96px;
+    -webkit-transform-origin: 133.86px 96px;
+    transform-origin: 133.86px 96px;
   }
 
   50% {
-    -webkit-transform-origin: 116.4px 115.2px;
-    transform-origin: 116.4px 115.2px;
+    -webkit-transform-origin: 128.04px 120.96px;
+    transform-origin: 128.04px 120.96px;
   }
 
   65.5% {
-    -webkit-transform-origin: 97px 124.8px;
-    transform-origin: 97px 124.8px;
+    -webkit-transform-origin: 97px 137.28px;
+    transform-origin: 97px 137.28px;
   }
 
   75% {
-    -webkit-transform-origin: 77.6px 115.2px;
-    transform-origin: 77.6px 115.2px;
+    -webkit-transform-origin: 69.84px 120.96px;
+    transform-origin: 69.84px 120.96px;
   }
 
   87.5% {
-    -webkit-transform-origin: 67.9px 96px;
-    transform-origin: 67.9px 96px;
+    -webkit-transform-origin: 64.505px 96px;
+    transform-origin: 64.505px 96px;
   }
 
   100% {
-    -webkit-transform-origin: 77.6px 76.8px;
-    transform-origin: 77.6px 76.8px;
+    -webkit-transform-origin: 62.08px 76.8px;
+    transform-origin: 62.08px 76.8px;
   }
 }
 
 @keyframes starmove {
   0% {
-    -webkit-transform-origin: 77.6px 76.8px;
-    -ms-transform-origin: 77.6px 76.8px;
-    transform-origin: 77.6px 76.8px;
+    -webkit-transform-origin: 62.08px 76.8px;
+    -ms-transform-origin: 62.08px 76.8px;
+    transform-origin: 62.08px 76.8px;
   }
 
   12.5% {
-    -webkit-transform-origin: 97px 67.2px;
-    -ms-transform-origin: 97px 67.2px;
-    transform-origin: 97px 67.2px;
+    -webkit-transform-origin: 97px 63.84px;
+    -ms-transform-origin: 97px 63.84px;
+    transform-origin: 97px 63.84px;
   }
 
   25% {
-    -webkit-transform-origin: 116.4px 76.8px;
-    -ms-transform-origin: 116.4px 76.8px;
-    transform-origin: 116.4px 76.8px;
+    -webkit-transform-origin: 139.68px 76.8px;
+    -ms-transform-origin: 139.68px 76.8px;
+    transform-origin: 139.68px 76.8px;
   }
 
   37.5% {
-    -webkit-transform-origin: 126.1px 96px;
-    -ms-transform-origin: 126.1px 96px;
-    transform-origin: 126.1px 96px;
+    -webkit-transform-origin: 133.86px 96px;
+    -ms-transform-origin: 133.86px 96px;
+    transform-origin: 133.86px 96px;
   }
 
   50% {
-    -webkit-transform-origin: 116.4px 115.2px;
-    -ms-transform-origin: 116.4px 115.2px;
-    transform-origin: 116.4px 115.2px;
+    -webkit-transform-origin: 128.04px 120.96px;
+    -ms-transform-origin: 128.04px 120.96px;
+    transform-origin: 128.04px 120.96px;
   }
 
   65.5% {
-    -webkit-transform-origin: 97px 124.8px;
-    -ms-transform-origin: 97px 124.8px;
-    transform-origin: 97px 124.8px;
+    -webkit-transform-origin: 97px 137.28px;
+    -ms-transform-origin: 97px 137.28px;
+    transform-origin: 97px 137.28px;
   }
 
   75% {
-    -webkit-transform-origin: 77.6px 115.2px;
-    -ms-transform-origin: 77.6px 115.2px;
-    transform-origin: 77.6px 115.2px;
+    -webkit-transform-origin: 69.84px 120.96px;
+    -ms-transform-origin: 69.84px 120.96px;
+    transform-origin: 69.84px 120.96px;
   }
 
   87.5% {
-    -webkit-transform-origin: 67.9px 96px;
-    -ms-transform-origin: 67.9px 96px;
-    transform-origin: 67.9px 96px;
+    -webkit-transform-origin: 64.505px 96px;
+    -ms-transform-origin: 64.505px 96px;
+    transform-origin: 64.505px 96px;
   }
 
   100% {
-    -webkit-transform-origin: 77.6px 76.8px;
-    -ms-transform-origin: 77.6px 76.8px;
-    transform-origin: 77.6px 76.8px;
+    -webkit-transform-origin: 62.08px 76.8px;
+    -ms-transform-origin: 62.08px 76.8px;
+    transform-origin: 62.08px 76.8px;
+  }
+}
+@-webkit-keyframes stardashoffset {
+  100% {
+    stroke-dashoffset: -32;
+  }
+}
+@keyframes stardashoffset {
+  100% {
+    stroke-dashoffset: -32;
   }
 }
 /* Demo G
@@ -1290,3 +1338,107 @@ svg {
   -webkit-filter: url(#fl-inner-shadow);
   filter: url(#fl-inner-shadow);
 }
+
+/* Browsers
+------------------------------- */
+.list--support LI {
+  margin-bottom: 80px;
+}
+
+.browsers {
+  display: inline-block;
+  text-indent: 0;
+}
+.browsers DT {
+  display: inline-block;
+  width: 265px;
+  margin-right: 40px;
+}
+
+.browser {
+  display: inline-block;
+  width: 64px !important;
+  height: 64px !important;
+  margin-right: 20px;
+  background: url(/assets/img/parts/sprite-browsers-64.png) 0 0 no-repeat;
+  vertical-align: middle;
+}
+.browser:after {
+  display: inline-block;
+  margin: -.5em 0 0;
+  padding: 0 5px 0 3.3em;
+  vertical-align: top;
+  font-size: .75em;
+  line-height: 1.4;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.chrome {
+  background-position: 0 0;
+}
+
+.firefox {
+  background-position: 0 -64px;
+}
+
+.ie-8 {
+  background-position: 0 -128px;
+}
+.ie-8:after {
+  content: "8";
+  padding-left: 3.7em;
+}
+
+.ie-9 {
+  background-position: 0 -192px;
+}
+.ie-9:after {
+  content: "9+";
+  padding-left: 3.7em;
+}
+
+.opera-old {
+  background-position: 0 -256px;
+}
+
+.opera-12-mb-min:after {
+  content: "12, Mobile, Mini";
+}
+
+.opera-12:after {
+  content: "12";
+}
+
+.opera-min:after {
+  content: "Mini";
+}
+
+.opera-mob {
+  margin-right: 50px;
+}
+.opera-mob:after {
+  content: "Mobile";
+}
+
+.opera-13 {
+  background-position: 0 -320px;
+}
+.opera-13:after {
+  content: "13+";
+}
+
+.safari {
+  background-position: 0 -384px;
+}
+
+/*.ie8:before {
+  background-position: -90px 0;
+  }*/
+/*
+.opera-mob:before {
+  background-position: -150px 0;
+  }
+.opera-mini:before {
+  background-position: -150px 0;
+  }*/

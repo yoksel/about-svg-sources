@@ -126,6 +126,14 @@ module.exports = function (grunt) {
       }
     }, 
 
+    sprite:{
+      all: {
+        src: '_src/img/browsers-64/*.png',
+        destImg: 'assets/img/parts/sprite-browsers-64.png',
+        destCSS: '_src/css/browsers-sprite.css'
+      }
+    },
+
     /**
      * https://npmjs.org/package/grunt-contrib-watch
      * Now with livereload
