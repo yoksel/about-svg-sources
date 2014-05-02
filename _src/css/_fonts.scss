@@ -7,15 +7,15 @@
 
 $font-headers: "Ubuntu Condensed",sans-serif;
 
-.slide H1, 
-.slide H2, 
-.slide H3, 
-.slide H4, 
+.slide H1,
+.slide H2,
+.slide H3,
+.slide H4,
 .slide H5 {
     /*position: relative;*/
     z-index: 2;
     font-family: "Ubuntu Condensed",sans-serif;
-    line-height: 1;    
+    line-height: 1;
     font-weight: normal;
 }
 
@@ -23,9 +23,9 @@ $map-headers: (h2: 2.4, h3: 2.3, h4: 1.7, h5: 1.2);
 
 @mixin headers {
     @each $header in map-keys($map-headers) {/* map-keys($map-headers) */
-        $header-fsize: $base-size * map-get($map-headers, $header);    
+        $header-fsize: $base-size * map-get($map-headers, $header);
         .slide #{$header} {
-            margin: 0 0 58px;
+            margin: 0 0 $header-fsize/2;
             font-size: #{$header-fsize};
             }
     }

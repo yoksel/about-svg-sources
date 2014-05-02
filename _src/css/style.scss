@@ -58,6 +58,20 @@ svg {
         vertical-align: middle;
         } 
     }
+
+.table-cell {
+    display: table-cell;
+    width: 864px;
+    height: 440px;
+    vertical-align: middle;
+    text-align: center;
+    svg, span {
+        display: inline-block;
+        vertical-align: middle;
+        margin: .5em 0;
+        }
+    }
+
 /* Cover
 ------------------------- */
 #Cover {

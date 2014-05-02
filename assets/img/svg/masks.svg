@@ -1,12 +1,12 @@
 <svg>
       <defs>
         <!-- Paths -->
-        <clippath id="clipping-star">
+        <clippath id="clip-star">
           <polygon points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" />
         </clippath>
         <!--  -->
-        <clippath id="clipping-text">
-          <text x="0" y=".88em">Text</text>
+        <clippath id="clip-text">
+          <text x="0" y=".88em" class="clip-text">Text</text>
         </clippath>
         <!--  -->
         <clippath id="clip-rect-top" clipPathUnits="userSpaceOnUse">

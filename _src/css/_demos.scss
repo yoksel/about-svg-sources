@@ -11,14 +11,14 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 @mixin textarea-bg {
     background: linear-gradient(white $textarea-oneline, #EEE $textarea-oneline) repeat;
     background-size: 100% $textarea-oneline*2;
-    }    
+    }
 
 @mixin highlight-lines( $lines ) {
     $color: palegoldenrod;
     $gradients: null;
     $hl-begin: null;
     $hl-end: null;
-    
+
     @each $line in $lines {
         $line: $line - 1;
         $hl-begin: $textarea-oneline * $line;
@@ -26,7 +26,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
         $gradients: append($gradients, linear-gradient(
                 transparent $hl-begin,
-                $color $hl-begin, $color $hl-end, 
+                $color $hl-begin, $color $hl-end,
                 transparent $hl-end), comma);
         }
     background: $gradients;
@@ -117,18 +117,18 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         /*width: $textarea-width;*/
         margin-top: 2em;
         /*line-height: 1;*/
-        } 
+        }
     .demo__view {
-        /*float: left;   
+        /*float: left;
         width: 35%;*/
         /*border: 2px solid;*/
-        
+
         svg {
             display: block;
             margin: 0 auto;
             border: 1px solid #555;
             }
-        }   
+        }
     .demo__textfield {
         width: 100%;
         border: 1px solid #555;
@@ -137,7 +137,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         font-size: $textarea-fontsize;
         line-height: $textarea-lineheight;
         color: #222;
-    }    
+    }
     .demo__code {
         @include textarea-height (5.5);
         }
@@ -145,27 +145,27 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         float: right;
         width: 65%;
         margin-top: 1em;
-        }    
+        }
     B {
         display: inline-block;
         font: bold .8em/1 Arial !important;
         }
-    } 
+    }
 
 .demo--stacks {
     .demo__view {
-        float: left;   
+        float: left;
         width: 35%;
         /*border: 2px solid;*/
     }
     .demo__content {
         float: right;
         width: $textarea-width;
-        } 
+        }
 }
 
 /* Demo Switch
-------------------------- */        
+------------------------- */
 .demo-switch {
     /*margin-top: 1em;*/
     font-size: .6em;
@@ -188,7 +188,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
                 cursor: pointer;
                 &:nth-child(2n) {
                     background: #EEE;
-                    }    
+                    }
                 &:before {
                     content: "";
                     display: inline-block;
@@ -201,12 +201,12 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
                     margin: auto;
                     border: 3px solid rgba(0,0,0,.1);
                     border-radius: 50%;
-                    }    
+                    }
                 &:hover:before {
                     border: 3px solid rgba(0,0,0,.2);
-                    }    
-                    
-                } 
+                    }
+
+                }
                 .switch--checked:before {
                     background: radial-gradient( at center, #333 40%, rgba(0,0,0,0) 50%) no-repeat;
                     border: 3px solid rgba(0,0,0,.1);
@@ -216,7 +216,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             display: inline-block;
             &:nth-child(2n) {
                 background: none;
-                } 
+                }
             }
     }
 
@@ -242,7 +242,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Demo Circle
 ------------------------- */
-        
+
 .demo--circle {
     .demo__code {
         @include highlight-lines(2);
@@ -306,10 +306,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
     text {
         font: bold italic 60px/1 Georgia;
-        }      
+        }
     .demo__code {
         @include textarea-height (8);
-        }        
+        }
     }
 
 .demo--stroke-dec {
@@ -354,7 +354,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     LI {
         margin-bottom: 25px;
         }
-    } 
+    }
 
 .demo--dashoffset{
     PRE {
@@ -386,17 +386,17 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
 }
 /* Demo stroke-dasharray Animation
-------------------------- */ 
+------------------------- */
 
 .demo--stroke-dasharr-anim {
     /*height: 320px;*/
-    
+
     path {
       fill: none;
       /*stroke: url(#gr-hot-cold-soft);*/
       stroke-width: 2;
       stroke-dasharray: 530;
-      
+
       animation: dasharray 8s infinite alternate;
       }
     }
@@ -407,10 +407,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 }
 
 /* Demo stroke-dasharray + stroke-offset Animation
-------------------------------------------------- */ 
+------------------------------------------------- */
 .demo--stroke-dashofset-anim {
     /*height: 320px;*/
-    
+
     .g-circles circle {
       transform-origin: 120px 120px;
       transform: rotate(0);
@@ -435,7 +435,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 $trans-hor: 97px;
 $trans-vert: 96px;
 $lights-color: lightseagreen;
-        
+
 .demo--lights{
     background: $lights-color;
     color: $lights-color;
@@ -469,10 +469,10 @@ $lights-color: lightseagreen;
 @keyframes starmove {
     $trans-min: .8;
     $trans-max: 1.2;
-  
+
     $trans-min-offset: .7;
     $trans-max-offset: 1.3;
-    
+
     0% {
       transform-origin: $trans-hor*$trans-min*.8 $trans-vert*$trans-min;
     }
@@ -508,7 +508,7 @@ $lights-color: lightseagreen;
         }
 }
 /* Demo G
-------------------------- */    
+------------------------- */
 .demo--g {
     .demo__view {
         height: 150px;
@@ -517,40 +517,40 @@ $lights-color: lightseagreen;
         $demo-code-lines: 2;
         @include textarea-height (8.5);
         @include highlight-lines($demo-code-lines);
-        }        
-    }    
+        }
+    }
 /* Demo Use
-------------------------- */    
+------------------------- */
 .demo--use {
     .demo__view {
         height: 180px;
         }
     .demo__code {
         @include textarea-height (14);
-        }        
-    }  
+        }
+    }
 /* Demo Defs
-------------------------- */    
+------------------------- */
 .demo--defs {
     .demo__view {
         height: 180px;
         }
     .demo__code {
         @include textarea-height (16);
-        }        
-    } 
+        }
+    }
 /* Demo Symbol
-------------------------- */    
+------------------------- */
 .demo--symbol {
     .demo__view {
         height: 180px;
         }
     .demo__code {
         @include textarea-height (16);
-        }        
-    }      
+        }
+    }
 /* Demo pattern
-------------------------- */    
+------------------------- */
 .demo--pattern {
     .demo__view {
         /*width: 190px;*/
@@ -558,13 +558,13 @@ $lights-color: lightseagreen;
         }
     .demo__code {
         @include textarea-height (17);
-        }  
+        }
 /*    DD {
         display: inline-block;
-        }  */        
-    }  
+        }  */
+    }
 /* Demo transform
-------------------------- */        
+------------------------- */
 .demo--transform {
     .demo__view {
         /*width: 200px;*/
@@ -572,8 +572,8 @@ $lights-color: lightseagreen;
         }
     .demo__code {
         @include textarea-height (8);
-        }        
-    }  
+        }
+    }
 
 .rect-transform-before {
     fill: none;
@@ -583,9 +583,9 @@ $lights-color: lightseagreen;
     }
 .rect-transform-after {
     fill-opacity: .7;
-    }    
+    }
 /* Demo stacks
-------------------------- */        
+------------------------- */
 .demo--stacks {
     .demo__view {
         width: 200px;
@@ -594,17 +594,17 @@ $lights-color: lightseagreen;
     text {
         font: 90px/1 Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
         fill: #FFF;
-        }  
+        }
     .hidden {
         display: none;
-        }      
+        }
     .demo__code {
         height: 190px;
-        }        
-    }      
+        }
+    }
 .list--stacks-demo .text {
     font-style: italic;
-    }    
+    }
     .list--stacks-demo LI {
         @include demo-list;
         color: #999;
@@ -613,23 +613,23 @@ $lights-color: lightseagreen;
             }
         }
 .test-stacks {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background: url(../../assets/img/svg/yes-no.svg#yes);
-    }       
+    }
 /* Demo Masks
-------------------------- */             
+------------------------- */
 .demo--mask {
     .demo__code {
         @include textarea-height (7);
-        }  
+        }
     .demo__codepart {
         @include textarea-height (5);
         }
     }
-#clipping-text {
-  font: bold italic 5em/1 Georgia;
-  } 
+.clip-text {
+  font: bold italic 6.5em/1 Georgia;
+  }
 #fo-text {
   font: bold italic .4em/1 Georgia
   }

@@ -19,25 +19,25 @@
 
 /* map-keys($map-headers) */
 .slide h2 {
-  margin: 0 0 58px;
+  margin: 0 0 28.8px;
   font-size: 57.6px;
 }
 
 /* map-keys($map-headers) */
 .slide h3 {
-  margin: 0 0 58px;
+  margin: 0 0 27.6px;
   font-size: 55.2px;
 }
 
 /* map-keys($map-headers) */
 .slide h4 {
-  margin: 0 0 58px;
+  margin: 0 0 20.4px;
   font-size: 40.8px;
 }
 
 /* map-keys($map-headers) */
 .slide h5 {
-  margin: 0 0 58px;
+  margin: 0 0 14.4px;
   font-size: 28.8px;
 }
 
@@ -125,6 +125,19 @@ svg {
 .slide--vlm svg, .slide--vlm span {
   display: inline-block;
   vertical-align: middle;
+}
+
+.table-cell {
+  display: table-cell;
+  width: 864px;
+  height: 440px;
+  vertical-align: middle;
+  text-align: center;
+}
+.table-cell svg, .table-cell span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: .5em 0;
 }
 
 /* Cover
@@ -476,7 +489,7 @@ svg {
   /*line-height: 1;*/
 }
 .demo--live .demo__view {
-  /*float: left;   
+  /*float: left;
   width: 35%;*/
   /*border: 2px solid;*/
 }
@@ -1120,8 +1133,8 @@ svg {
 }
 
 .test-stacks {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   background: url(../../assets/img/svg/yes-no.svg#yes);
 }
 
@@ -1134,8 +1147,8 @@ svg {
   height: 136.188px;
 }
 
-#clipping-text {
-  font: bold italic 5em/1 Georgia;
+.clip-text {
+  font: bold italic 6.5em/1 Georgia;
 }
 
 #fo-text {
