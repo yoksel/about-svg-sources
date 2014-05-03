@@ -1,9 +1,10 @@
 /* Browsers
 ------------------------------- */
 .list--support,
+.list--problems,
 .list--support-stacks {
   LI {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     }
   }
 
@@ -16,11 +17,19 @@
     margin-right: 40px;
   }
 }
+
+.list--problems {
+  DT {
+    width: 200px;
+    }
+  }
+
 .list--support-stacks {
   DT {
     width: 327px;
     }
 }
+
 
 $browser-size: 64px;
 

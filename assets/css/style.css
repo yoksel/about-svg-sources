@@ -140,6 +140,14 @@ svg {
   margin: .5em 0;
 }
 
+.slide--heart .table-cell {
+  font: 5.5em/1 'Ubuntu Condensed', sans-serif;
+}
+.slide--heart svg {
+  margin: 0 .1em;
+  vertical-align: middle;
+}
+
 PRE {
   position: relative;
 }
@@ -1223,6 +1231,31 @@ PRE:before {
   font: bold italic 0.4em/1 Georgia;
 }
 
+.path-heart {
+  /*transform-origin: 150px 130px;*/
+  -webkit-transform-origin: 87px 90px;
+  /*transform-origin: 150px 130px;*/
+  -ms-transform-origin: 87px 90px;
+  /*transform-origin: 150px 130px;*/
+  transform-origin: 87px 90px;
+  -webkit-animation: scale .7s infinite;
+  animation: scale .7s infinite;
+}
+
+@-webkit-keyframes scale {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes scale {
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
 @font-face {
   font-family: 'svg-dec';
   src: url("/assets/fonts/icomoon-svg-dec/svg-dec.eot?-824yne");
@@ -1423,8 +1456,9 @@ PRE:before {
 /* Browsers
 ------------------------------- */
 .list--support LI,
+.list--problems LI,
 .list--support-stacks LI {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .browsers {
@@ -1435,6 +1469,10 @@ PRE:before {
   display: inline-block;
   width: 265px;
   margin-right: 40px;
+}
+
+.list--problems DT {
+  width: 200px;
 }
 
 .list--support-stacks DT {

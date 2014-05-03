@@ -683,4 +683,14 @@ $group-use-texta-height: 11.5;
   font: bold italic .4em/1 Georgia
   }
 
+.path-heart {
+    /*transform-origin: 150px 130px;*/
+    transform-origin: 87px 90px;
+    animation: scale .7s infinite;
+    }
 
+@keyframes scale {
+    50% {
+        transform: scale(.8);
+        }
+    }

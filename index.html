@@ -1023,8 +1023,6 @@
   </div></section>
 
   <section class="slide"><div>
-    <p>Сделать более ясной поддержку основных способов</p>
-
     <ul class="list--support">
       <li>
         <dl class="browsers">
@@ -1049,12 +1047,40 @@
         </dl>
       </li>
     </ul>
-
     <!-- &mdash;  svg-use, font. It supports SVG in sprites and base64, but resizes images bad.
 
       Mobile &mdash; svg-use, font.
       Mini &mdash; no support.
       -->
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+    <h2 class="free-fly">Проблемные места</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <ul class="list--problems">
+      <li>
+        <dl class="browsers">
+          <dt>Font</dt>
+          <dd class="browser chrome"></dd>
+          <dd class="browser opera-old opera-min"></dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="browsers">
+          <dt>Css backgrounds</dt>
+          <dd class="browser opera-old opera-12"></dd>
+          <dd class="browser opera-old opera-min"></dd>
+        </dl>
+      </li>
+      <li>
+        <dl class="browsers">
+          <dt>Inline SVG</dt>
+          <dd class="browser opera-old opera-min"></dd>
+        </dl>
+      </li>
+    </ul>
   </div></section>
 
   <section class="slide"><div>
@@ -1218,9 +1244,16 @@
     <pre class="pre--css"><code>clip-path: url(#clip-text);</code></pre>
   </div></section>
 
-  <section class="slide"><div>
-    <h2>anim path</h2>
-    <p></p>
+  <section class="slide slide--heart"><div>
+    <div class="table-cell">
+      I
+      <svg width="193" height="190">
+        <g clip-path="url(#clip-heart)">
+          <use xlink:href="#s-mosaic-colored"/>
+        </g>
+      </svg>
+      SVG
+    </div>
   </div></section>
 
   <section class="slide"><div>
