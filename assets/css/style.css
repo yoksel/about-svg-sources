@@ -140,6 +140,27 @@ svg {
   margin: .5em 0;
 }
 
+PRE {
+  position: relative;
+}
+PRE:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 15px;
+  border-radius: 10px;
+}
+
+.pre--css:before {
+  content: "CSS";
+  background: #f2e18c;
+}
+
+.pre--svg:before {
+  content: "SVG";
+  background: #d6ec93;
+}
+
 /* Cover
 ------------------------- */
 #Cover {
@@ -520,16 +541,18 @@ svg {
   font: bold .8em/1 Arial !important;
 }
 
-.demo--stacks .demo__view {
-  float: left;
-  width: 35%;
-  /*border: 2px solid;*/
-}
-.demo--stacks .demo__content {
-  float: right;
-  width: 60%;
-}
-
+/*
+.demo--stacks {
+    .demo__view {
+        float: left;
+        width: 35%;
+        border: 2px solid;
+    }
+    .demo__content {
+        float: right;
+        width: $textarea-width;
+        }
+}*/
 /* Demo Switch
 ------------------------- */
 .demo-switch {
@@ -752,7 +775,6 @@ svg {
 }
 .demo--stroke-dasharr-anim path {
   fill: none;
-  /*stroke: url(#gr-hot-cold-soft);*/
   stroke-width: 2;
   stroke-dasharray: 530;
   -webkit-animation: dasharray 8s infinite alternate;
@@ -772,6 +794,11 @@ svg {
 }
 /* Demo stroke-dasharray + stroke-offset Animation
 ------------------------------------------------- */
+.pre--demo-dashoffset code:nth-child(2),
+.pre--demo-dashoffset code:nth-child(4) {
+  background: palegoldenrod;
+}
+
 .demo--stroke-dashofset-anim {
   /*height: 320px;*/
 }
@@ -779,11 +806,6 @@ svg {
   -webkit-transform-origin: 120px 120px;
   -ms-transform-origin: 120px 120px;
   transform-origin: 120px 120px;
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
-}
-.demo--stroke-dashofset-anim .g-circles circle {
   -webkit-animation: rotation 6s infinite alternate;
   animation: rotation 6s infinite alternate;
 }
@@ -1099,6 +1121,11 @@ svg {
 
 /* Demo stacks
 ------------------------- */
+.pre--stacks code:nth-child(2),
+.pre--stacks code:nth-child(6) {
+  background: palegoldenrod;
+}
+
 .demo--stacks .demo__view {
   width: 200px;
   height: 200px;
@@ -1114,27 +1141,41 @@ svg {
   height: 190px;
 }
 
-.list--stacks-demo .text {
-  font-style: italic;
+.slide--stacks-demo {
+  /*text-align: center;*/
 }
 
+.list--stacks-demo {
+  display: inline-block;
+  margin-bottom: 0 !important;
+}
 .list--stacks-demo LI {
   display: inline-block;
-  margin-right: 2em;
+  margin-right: 0;
   vertical-align: top;
   text-indent: 0 !important;
+  min-width: 290px;
+  text-align: left;
   color: #999;
 }
 .list--stacks-demo LI:before {
   content: none !important;
 }
-.list--stacks-demo LI B {
+.list--stacks-demo LI:nth-child(1) {
+  margin-right: 100px;
+}
+.list--stacks-demo .text {
+  white-space: nowrap;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.list--stacks-demo B {
   color: #000;
 }
 
-.test-stacks {
-  width: 200px;
-  height: 200px;
+.bg--test-stacks {
+  width: 250px;
+  height: 250px;
   background: url(../../assets/img/svg/yes-no.svg#yes);
 }
 
@@ -1354,7 +1395,8 @@ svg {
 
 /* Browsers
 ------------------------------- */
-.list--support LI {
+.list--support LI,
+.list--support-stacks LI {
   margin-bottom: 80px;
 }
 
@@ -1366,6 +1408,10 @@ svg {
   display: inline-block;
   width: 265px;
   margin-right: 40px;
+}
+
+.list--support-stacks DT {
+  width: 327px;
 }
 
 .browser {
@@ -1385,6 +1431,14 @@ svg {
   line-height: 1.4;
   font-weight: bold;
   white-space: nowrap;
+}
+
+.list--support-stacks .browser {
+  margin-right: 11px;
+}
+
+.no-support {
+  opacity: .2;
 }
 
 .chrome {
@@ -1438,7 +1492,7 @@ svg {
   background-position: 0 -320px;
 }
 .opera-13:after {
-  content: "13+";
+  content: "13";
 }
 
 .safari {

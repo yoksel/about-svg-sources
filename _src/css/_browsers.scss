@@ -1,6 +1,7 @@
 /* Browsers
 ------------------------------- */
-.list--support {
+.list--support,
+.list--support-stacks {
   LI {
     margin-bottom: 80px;
     }
@@ -13,7 +14,12 @@
     display: inline-block;
     width: 265px;
     margin-right: 40px;
-  } 
+  }
+}
+.list--support-stacks {
+  DT {
+    width: 327px;
+    }
 }
 
 $browser-size: 64px;
@@ -36,6 +42,12 @@ $browser-size: 64px;
     white-space: nowrap;
     }
   }
+  .list--support-stacks .browser {
+    margin-right: 11px;
+    }
+  .no-support {
+    opacity: .2;
+    }
 
 .chrome {
   background-position: 0 0;
@@ -48,7 +60,7 @@ $browser-size: 64px;
   &:after {
     content: "8";
     padding-left: 3.7em;
-    
+
     }
   }
 .ie-9 {
@@ -70,12 +82,12 @@ $browser-size: 64px;
   &:after {
     content: "12";
     }
-  }  
+  }
 .opera-min {
   &:after {
     content: "Mini";
     }
-  }  
+  }
 .opera-mob {
   margin-right: 50px;
   &:after {
@@ -85,7 +97,7 @@ $browser-size: 64px;
 .opera-13 {
   background-position: 0 -#{$browser-size*5};
   &:after {
-    content: "13+";
+    content: "13";
     }
   }
 .safari {
@@ -94,7 +106,7 @@ $browser-size: 64px;
 
 /*.ie8:before {
   background-position: -90px 0;
-  }*/  
+  }*/
 /*
 .opera-mob:before {
   background-position: -150px 0;

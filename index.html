@@ -162,7 +162,6 @@
     <div class="free-fly"><a href="./assets/demo/clown-car/index.html">Демо</a></div>
   </div></section>
 
-
   <section class="slide bg--dark"><div>
       <h2 class="free-fly">Пишем SVG</h2>
   </div></section>
@@ -377,7 +376,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="hsl(50, 100%, 50%)"></rect>
+        <rect width="100%" height="100%" fill="hsl(50, 100%, 50%)"/>
       </svg>
     </div>
   </div></section>
@@ -387,7 +386,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-hot-cold-soft)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-hot-cold-soft)"/>
       </svg>
     </div>
   </div></section>
@@ -397,7 +396,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"></rect>
+        <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
       </svg>
     </div>
   </div></section>
@@ -409,9 +408,9 @@
 
     <div class="demo">
       <svg>
-        <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)" fill-opacity=".7"></rect>
-        <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)" fill-opacity=".7"></rect>
-        <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)" fill-opacity=".7"></rect>
+        <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)" fill-opacity=".7"/>
+        <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)" fill-opacity=".7"/>
+        <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)" fill-opacity=".7"/>
       </svg>
     </div>
   </div></section>
@@ -449,7 +448,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-simple)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-simple)"/>
       </svg>
     </div>
   </div></section>
@@ -468,7 +467,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-simple-stripes)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-simple-stripes)"/>
       </svg>
     </div>
   </div></section>
@@ -483,7 +482,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-radial-soft)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-radial-soft)"/>
       </svg>
     </div>
   </div></section>
@@ -502,7 +501,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-radial-stripes-repeat)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-radial-stripes-repeat)"/>
       </svg>
     </div>
   </div></section>
@@ -515,7 +514,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-radial-soft-fxy)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-radial-soft-fxy)"/>
       </svg>
     </div>
   </div></section>
@@ -528,7 +527,7 @@
 
     <div class="demo">
       <svg>
-        <rect width="100%" height="100%" fill="url(#gr-radial-soft-repeat)"></rect>
+        <rect width="100%" height="100%" fill="url(#gr-radial-soft-repeat)"/>
       </svg>
     </div>
   </div></section>
@@ -546,15 +545,15 @@
   </div></section>
 
   <section class="slide slide--fillingdemo slide--strokewidth"><div>
-    <pre><code>stroke="crimson"</code>
-<code>stroke-width="5"</code></pre>
+    <pre><code>stroke: crimson;</code>
+<code>stroke-width: 5;</code></pre>
 
     <div class="demo">
       <svg>
         <g transform="translate(20, 30) scale(1, .92)">
-          <rect width="90%" height="90%" x="3%" y="3%" fill="none" stroke="yellowgreen" stroke-width="5%"></rect>
-          <rect width="80%" height="64.5%" x="8%" y="16%" fill="none" stroke="gold" stroke-width="2%"></rect>
-          <rect width="72%" height="45%" x="12%" y="26%" fill="none" stroke="crimson" stroke-width="5"></rect>
+          <rect width="90%" height="90%" x="3%" y="3%" fill="none" stroke="yellowgreen" stroke-width="5%"/>
+          <rect width="80%" height="64.5%" x="8%" y="16%" fill="none" stroke="gold" stroke-width="2%"/>
+          <rect width="72%" height="45%" x="12%" y="26%" fill="none" stroke="crimson" stroke-width="5"/>
         </g>
       </svg>
     </div>
@@ -696,7 +695,8 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre><code>path {</code>
+    <pre class="pre--css"><code>path {</code>
+      <code>  stroke-width: 2;</code>
       <code>  stroke-dasharray: 530 0;</code>
       <code>  animation: dasharray 8s infinite alternate;</code>
       <code>  }</code>
@@ -710,7 +710,6 @@
 
   <section class="slide"><div>
       <h2 class="free-fly">dasharray + dashoffset</h2>
-      <p>и сюда код</p>
   </div></section>
 
   <section class="slide slide--fillingdemo bg--dark"><div>
@@ -729,7 +728,7 @@
           <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
           transform="translate(24 24) scale(.8)">
               <circle r="60" cx="120" cy="120" stroke="crimson" />
-              <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
+              <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%"/>
               <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
               <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
               <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
@@ -739,6 +738,16 @@
         </g>
     </svg>
     </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre class="pre--svg pre--demo-dashoffset"><code>&lt;g class="g-circles" fill="none" stroke-width="120" </code>
+      <code>    stroke-dasharray="8% 45%"></code>
+      <code>    &lt;circle r="60" cx="120" cy="120" stroke="yellowgreen"</code>
+      <code>         stroke-dashoffset="32%" /></code>
+      <code>    ...</code>
+      <code>&lt;/g></code>
+    </pre>
   </div></section>
 
   <section class="slide slide--fillingdemo"><div>
@@ -867,14 +876,14 @@
         <textarea class="demo__textfield demo__code"><svg viewbox='0 0 100% 200'>
   <defs>
     <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="0" y="0" patternUnits="userSpaceOnUse">
-      <rect fill="gold" width="40" height="40" x="0" y="0"></rect>
-      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"></rect>
-      <rect fill="skyblue" width="40" height="40" x="90" y="0"></rect>
-      <rect fill="orangered" width="40" height="40" x="135" y="0"></rect>
+      <rect fill="gold" width="40" height="40" x="0" y="0"/>
+      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"/>
+      <rect fill="skyblue" width="40" height="40" x="90" y="0"/>
+      <rect fill="orangered" width="40" height="40" x="135" y="0"/>
     </pattern>
   </defs>
   <g fill="url(#pt--squares)">
-    <rect width="100%" height="200" x="0" y="0"></rect>
+    <rect width="100%" height="200" x="0" y="0"/>
   </g>
 </svg>
       </textarea>
@@ -1017,6 +1026,7 @@
   </div></section>
 
   <section class="slide"><div>
+    <p>Сделать более ясной поддержку основных способов</p>
 
     <ul class="list--support">
       <li>
@@ -1064,58 +1074,52 @@
     <h2 class="free-fly">SVG-стеки</h2>
   </div></section>
 
-  <section class="slide"><div>
-    <p>Начало истории: <a href="simurai.com/blog/2012/04/02/svg-stacks/">SVG Stacks</a></p>
+  <!-- <section class="slide"><div>
+    <div class="free-fly"><a href="http://simurai.com/blog/2012/04/02/svg-stacks/">Начало истории</a></div>
+  </div></section> -->
 
-    <div class="demo demo--stacks demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 200 200">
-          <g id="no">
-          <rect fill="#FF4646" width="200" height="200" rx="8"></rect>
-          <text x="28" y="130">No.</text>
-          </g>
-          <g id="yes" class="hidden">
-          <rect fill="#a2d529" width="200" height="200" rx="8"></rect>
-          <text x="18" y="130">Yes!</text>
-          </g>
-          </svg>
-        </textarea>
-      </div>
-    </div>
+  <section class="slide"><div>
+    <pre class="pre--svg pre--stacks"><code>&lt;svg viewBox="0 0 200 200"></code>
+    <code>  &lt;g id="no"></code>
+    <code>    &lt;rect fill="#FF4646" width="200" height="200" rx="8"/></code>
+    <code>      &lt;text x="28" y="130">No.&lt;/text></code>
+    <code>  &lt;/g></code>
+    <code>  &lt;g id="yes" class="hidden"></code>
+    <code>    &lt;rect fill="#a2d529" width="200" height="200" rx="8"/></code>
+    <code>      &lt;text x="18" y="130">Yes!&lt;/text></code>
+    <code>  &lt;/g></code>
+    <code>&lt;/svg></code></pre>
   </div></section>
 
   <section class="slide"><div>
-    <h2>CSS</h2>
-    <pre><code>.hidden { display: none; }</code>
+    <pre class="pre--css"><code>.hidden { display: none; }</code>
       <code class="next">:target { display: block; }</code></pre>
-
-
   </div></section>
 
-  <section class="slide"><div>
-    <h2>Ожидаемый результат</h2>
+  <section class="slide slide--stacks-demo"><div>
+    <h2>Ожидания</h2>
     <ul class="list--stacks-demo">
       <li>
         <div class="text">/assets/img/yes-no.svg</div>
-        <iframe src="./assets/img/svg/yes-no.svg" width="200px" height="200px"></iframe>
+        <iframe src="./assets/img/svg/yes-no.svg" width="250px" height="250px"></iframe>
       </li>
       <li class="next">
         <div class="text">/assets/img/yes-no.svg<b>#yes</b></div>
-        <iframe src="./assets/img/svg/yes-no.svg#yes" width="200px" height="200px"></iframe>
+        <iframe src="./assets/img/svg/yes-no.svg#yes" width="250px" height="250px"></iframe>
       </li>
     </ul>
   </div></section>
 
-  <section class="slide"><div>
-    <h2>Пробуем</h2>
+  <section class="slide slide--stacks-demo"><div>
+    <h2>Реальность</h2>
     <ul class="list--stacks-demo">
       <li>
         <div class="text">Iframe</div>
-        <iframe src="./assets/img/svg/yes-no.svg#yes" width="200px" height="200px"></iframe>
+        <iframe src="./assets/img/svg/yes-no.svg#yes" width="250px" height="250px"></iframe>
       </li>
       <li class="next">
         <div class="text">Background-image</div>
-        <div class="test-stacks"></div>
+        <div class="bg--test-stacks"></div>
       </li>
     </ul>
   </div></section>
@@ -1123,9 +1127,29 @@
   <section class="slide"><div>
     <h2>Поддержка</h2>
 
-    <ul>
-      <li>вставка через <code>embed</code> и <code>iframe</code> работает во всех браузерах;</li>
-      <li class="next">вставка через <code>img</code> и <code>background-image</code> работает в IE9+, Firefox и старой Опере, и совсем не работает в вебкитах. - TODO: заменить текст иконками</li>
+    <ul class="list--support-stacks">
+      <li>
+        <dl class="browsers">
+          <dt><code>embed</code> и <code>iframe</code>:</dt>
+          <dd class="browser chrome"></dd>
+          <dd class="browser firefox"></dd>
+          <dd class="browser opera-13"></dd>
+          <dd class="browser safari"></dd>
+          <dd class="browser ie-9"></dd>
+          <dd class="browser opera-old"></dd>
+        </dl>
+      </li>
+      <li class="next">
+        <dl class="browsers">
+          <dt><code>img</code> и <code>background-image</code>:</dt>
+          <dd class="browser chrome no-support"></dd>
+          <dd class="browser firefox"></dd>
+          <dd class="browser opera-13 no-support"></dd>
+          <dd class="browser safari no-support"></dd>
+          <dd class="browser ie-9"></dd>
+          <dd class="browser opera-old"></dd>
+        </dl>
+        </li>
       <li class="next">: (</li>
     </ul>
 
@@ -1160,12 +1184,12 @@
   </div></section>
 
   <section class="slide"><div>
-    <h4>SVG</h4>
-    <pre><code>&lt;clippath id="clip-star"></code>
+    <pre class="pre--svg"><code>&lt;clippath id="clip-star"></code>
       <code>  &lt;polygon points="98.499..." /></code>
       <code>&lt;/clippath></code></pre>
-    <h4>CSS</h4>
-    <pre><code> clip-path: url(#clip-star);</code></pre>
+
+
+    <pre class="pre--css"><code> clip-path: url(#clip-star);</code></pre>
   </div></section>
 
   <section class="slide"><div>
@@ -1185,16 +1209,16 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre><code>&lt;clippath id="clip-text"></code>
-      <code>  &lt;text x="0" y=".88em" class="clip-text">Text&lt;/text></code>
-      <code>&lt;/clippath></code></pre>
+    <pre class="pre--svg"><code>&lt;clippath id="clip-text"></code>
+    <code>  &lt;text x="0" y=".88em" class="clip-text">Text&lt;/text></code>
+    <code>&lt;/clippath></code></pre>
 
-    <pre><code>.clip-text {</code>
+    <pre class="pre--css"><code>.clip-text {</code>
     <code>  font: bold italic 6.5em/1 Georgia;</code>
     <code>  }</code>
     </pre>
 
-    <pre><code> clip-path="url(#clip-text)"</code></pre>
+    <pre class="pre--css"><code> clip-path: url(#clip-text);</code></pre>
   </div></section>
 
   <section class="slide"><div>
@@ -1248,7 +1272,7 @@
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="200" height="300">
   <g mask="url(#masking-lum)">
-    <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"></rect>
+    <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"/>
   </g>
 </svg></textarea>
 

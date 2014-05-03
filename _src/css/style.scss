@@ -2,10 +2,10 @@
 @import '_fonts';
 
 /* SVG
-------------------------- */ 
+------------------------- */
 svg {
     /*border: 1px dotted crimson;*/
-    vertical-align: top;   
+    vertical-align: top;
     }
 
 .hidden-svg-defs {
@@ -15,7 +15,7 @@ svg {
     overflow: hidden;
     }
 /* Slides
-------------------------- */ 
+------------------------- */
 .slide {
     &>DIV {
         top: 0;
@@ -56,7 +56,7 @@ svg {
     svg, span {
         display: inline-block;
         vertical-align: middle;
-        } 
+        }
     }
 
 .table-cell {
@@ -72,6 +72,32 @@ svg {
         }
     }
 
+PRE {
+    position: relative;
+    &:before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 15px;
+        border-radius: 10px;
+    }
+}
+
+$css-code-color: hsl(50, 80%, 75%);
+$svg-code-color: hsl(75, 70%, 75%);
+
+.pre--css {
+    &:before {
+        content: "CSS";
+        background: $css-code-color;
+    }
+}
+.pre--svg {
+    &:before {
+        content: "SVG";
+        background: $svg-code-color;
+    }
+}
 /* Cover
 ------------------------- */
 #Cover {
@@ -96,7 +122,7 @@ svg {
       }
     .slide.cover svg {
         position: relative;
-        }    
+        }
     #cover-text {
         margin-top: 50px;
         width: 810px;
@@ -113,23 +139,23 @@ svg {
             stroke-width: 5;*/
             }
 /* Popup
-------------------------- */ 
+------------------------- */
 .img-preview {
     display: inline-block;
     width: 24px;
     height: 22px;
     text-indent: 0;
     vertical-align: middle;
-    }            
+    }
 .popup {
     @include posabs;
     border: 35px solid #FFF;
     box-shadow: 0 0 80px rgba(0,0,0,.3),
                 0 0 50px 300px rgba(0,0,0,.3),
                 0 0 50px 300px rgba(255,255,255,.5);
-    text-indent: 0;   
-    cursor: pointer;                 
-    
+    text-indent: 0;
+    cursor: pointer;
+
     IMG {
         /*border: 1px solid orange;*/
         }
@@ -146,25 +172,25 @@ svg {
             border-radius: 50%;
             box-shadow: 0 0 .3em rgba(0,0,0,.2);
             text-align: center;
-            line-height: 1.5;    
+            line-height: 1.5;
             font-size: 1em;
             color: #FFF;
-            }                
-    }    
+            }
+    }
 /* Backgrounds
-------------------------- */ 
-    
+------------------------- */
+
 .bg--dark {
     background: #000;
     H2 {
-        color: #FFF;   
+        color: #FFF;
         }
     }
-    
+
 .bg--gray-wood {
     background: #444 url(/assets/img/parts/dark-wood.jpg);
     H2 {
-        color: #FFF;   
+        color: #FFF;
         }
     }
 .bg--concrete {
@@ -174,7 +200,7 @@ svg {
     /*background: #222 url(/assets/img/parts/triangles.png);*/
     background: #050505 url(/assets/img/parts/swirl.png);
     H2 {
-        color: #FFF;   
+        color: #FFF;
         }
     }
 
@@ -191,7 +217,7 @@ svg {
     }
 
 
-@import '_resize';   
+@import '_resize';
 @import '_icons-16-64';
 @import '_demos';
 @import '_iconfont';
