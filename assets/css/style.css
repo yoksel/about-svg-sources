@@ -151,14 +151,15 @@ PRE:before {
   border-radius: 10px;
 }
 
+/*hsl(50, 80%, 75%)*/
 .pre--css:before {
   content: "CSS";
-  background: #f2e18c;
+  background: #cde87d;
 }
 
 .pre--svg:before {
   content: "SVG";
-  background: #d6ec93;
+  background: #93ddec;
 }
 
 /* Cover
@@ -727,12 +728,6 @@ PRE:before {
   vertical-align: middle;
 }
 
-/* Переложить на место */
-#pt-text {
-  font: italic .5em/1 Georgia;
-  color: #000;
-}
-
 .demo--dasharray PRE {
   display: inline-block;
   margin-bottom: 0;
@@ -770,6 +765,11 @@ PRE:before {
 
 /* Demo stroke-dasharray Animation
 ------------------------- */
+.pre--demo-dasharray code:nth-child(3),
+.pre--demo-dasharray code:nth-child(8) {
+  background: palegoldenrod;
+}
+
 .demo--stroke-dasharr-anim {
   /*height: 320px;*/
 }
@@ -1046,10 +1046,10 @@ PRE:before {
 /* Demo G
 ------------------------- */
 .demo--g .demo__view {
-  height: 150px;
+  height: 210px;
 }
 .demo--g .demo__code {
-  height: 231.5196px;
+  height: 204.282px;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
@@ -1059,43 +1059,70 @@ PRE:before {
 /* Demo Use
 ------------------------- */
 .demo--use .demo__view {
-  height: 180px;
+  height: 155px;
 }
 .demo--use .demo__code {
-  height: 381.3264px;
+  height: 285.9948px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(163.4256px, palegoldenrod), color-stop(190.6632px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(190.6632px, palegoldenrod), color-stop(217.9008px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 163.4256px, palegoldenrod 163.4256px, palegoldenrod 190.6632px, transparent 190.6632px), -webkit-linear-gradient(transparent 190.6632px, palegoldenrod 190.6632px, palegoldenrod 217.9008px, transparent 217.9008px);
+  background: linear-gradient(transparent 163.4256px, palegoldenrod 163.4256px, palegoldenrod 190.6632px, transparent 190.6632px), linear-gradient(transparent 190.6632px, palegoldenrod 190.6632px, palegoldenrod 217.9008px, transparent 217.9008px);
+  background-position: 0 .2em;
 }
 
 /* Demo Defs
 ------------------------- */
 .demo--defs .demo__view {
-  height: 180px;
+  height: 120px;
 }
 .demo--defs .demo__code {
-  height: 435.8016px;
+  height: 313.2324px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
+  background-position: 0 .2em;
 }
 
 /* Demo Symbol
 ------------------------- */
 .demo--symbol .demo__view {
-  height: 180px;
+  height: 120px;
 }
 .demo--symbol .demo__code {
-  height: 435.8016px;
+  height: 313.2324px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background: linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
+  background-position: 0 .2em;
 }
 
 /* Demo pattern
 ------------------------- */
-.demo--pattern {
-  /*    DD {
-          display: inline-block;
-          }  */
-}
 .demo--pattern .demo__view {
-  /*width: 190px;*/
-  height: 200px;
+  height: 120px;
 }
 .demo--pattern .demo__code {
-  height: 463.0392px;
+  height: 313.2324px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(245.1384px, palegoldenrod), color-stop(272.376px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px), -webkit-linear-gradient(transparent 245.1384px, palegoldenrod 245.1384px, palegoldenrod 272.376px, transparent 272.376px);
+  background: linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px), linear-gradient(transparent 245.1384px, palegoldenrod 245.1384px, palegoldenrod 272.376px, transparent 272.376px);
+  background-position: 0 .2em;
+}
+
+#pt-text {
+  font: italic .6em/2 Georgia;
+  color: #000;
+}
+
+.demo--patterns {
+  height: 440px;
+}
+.demo--patterns svg {
+  float: left;
+  width: 32%;
+  height: 100%;
+}
+.demo--patterns svg:nth-child(n+2) {
+  margin-left: 2%;
 }
 
 /* Demo transform

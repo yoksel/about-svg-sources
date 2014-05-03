@@ -339,12 +339,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
                 vertical-align: middle;
                 }
         }
-/* Переложить на место */
-#pt-text {
-  font: italic .5em/1 Georgia;
-  color: #000;
-  }
-
 .demo--dasharray {
     PRE {
         display: inline-block;
@@ -387,6 +381,13 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 /* Demo stroke-dasharray Animation
 ------------------------- */
+
+.pre--demo-dasharray  {
+    code:nth-child(3),
+    code:nth-child(8) {
+        background: $hl-color;
+        }
+    }
 
 .demo--stroke-dasharr-anim {
     /*height: 320px;*/
@@ -511,15 +512,18 @@ $lights-color: lightseagreen;
         stroke-dashoffset: -32;
         }
 }
+
+$group-use-view-height: 120px;
+$group-use-texta-height: 11.5;
 /* Demo G
 ------------------------- */
 .demo--g {
     .demo__view {
-        height: 150px;
+        height: 210px;
         }
     .demo__code {
         $demo-code-lines: 2;
-        @include textarea-height (8.5);
+        @include textarea-height (7.5);
         @include highlight-lines($demo-code-lines);
         }
     }
@@ -527,46 +531,66 @@ $lights-color: lightseagreen;
 ------------------------- */
 .demo--use {
     .demo__view {
-        height: 180px;
+        height: 155px;
         }
     .demo__code {
-        @include textarea-height (14);
+        $demo-code-lines: 7,8;
+        @include textarea-height (10.5);
+        @include highlight-lines($demo-code-lines);
         }
     }
 /* Demo Defs
 ------------------------- */
 .demo--defs {
     .demo__view {
-        height: 180px;
+        height: $group-use-view-height;
         }
     .demo__code {
-        @include textarea-height (16);
+        $demo-code-lines: 2;
+        @include textarea-height ($group-use-texta-height);
+        @include highlight-lines($demo-code-lines);
         }
     }
+
 /* Demo Symbol
 ------------------------- */
 .demo--symbol {
     .demo__view {
-        height: 180px;
+        height: $group-use-view-height;
         }
     .demo__code {
-        @include textarea-height (16);
+        $demo-code-lines: 3;
+        @include textarea-height ($group-use-texta-height);
+        @include highlight-lines($demo-code-lines);
         }
     }
 /* Demo pattern
 ------------------------- */
 .demo--pattern {
     .demo__view {
-        /*width: 190px;*/
-        height: 200px;
+        height: $group-use-view-height;
         }
     .demo__code {
-        @include textarea-height (17);
+        $demo-code-lines: 3,10;
+        @include textarea-height ($group-use-texta-height);
+        @include highlight-lines($demo-code-lines);
         }
-/*    DD {
-        display: inline-block;
-        }  */
     }
+#pt-text {
+  font: italic .6em/2 Georgia;
+  color: #000;
+  }
+.demo--patterns {
+    height: 440px;
+    svg {
+        float: left;
+        width: 32%;
+        height: 100%;
+        &:nth-child(n+2){
+            margin-left: 2%;
+            }
+        }
+}
 /* Demo transform
 ------------------------- */
 .demo--transform {

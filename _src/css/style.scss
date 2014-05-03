@@ -83,8 +83,8 @@ PRE {
     }
 }
 
-$css-code-color: hsl(50, 80%, 75%);
-$svg-code-color: hsl(75, 70%, 75%);
+$css-code-color: hsl(75, 70%, 70%); /*hsl(50, 80%, 75%)*/
+$svg-code-color: hsl(190, 70%, 75%);
 
 .pre--css {
     &:before {

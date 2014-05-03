@@ -695,7 +695,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre class="pre--css"><code>path {</code>
+    <pre class="pre--css pre--demo-dasharray"><code>path {</code>
       <code>  stroke-width: 2;</code>
       <code>  stroke-dasharray: 530 0;</code>
       <code>  animation: dasharray 8s infinite alternate;</code>
@@ -778,14 +778,15 @@
   </div></section>
 
   <section class="slide"><div>
+    <!-- Живое демо
+    Добавляем обводку для группы, меняем заливки -->
     <div class="demo demo--g demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 100 100" width="190" height="190">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
   <g id="circles">
-    <circle fill="crimson" r="20" cx="25" cy="25"/>
-    <circle fill="gold" r="20" cx="70" cy="25"/>
-    <circle fill="orange" r="20" cx="25" cy="70"/>
-    <circle fill="yellowgreen" r="20" cx="70" cy="70"/>
+    <circle fill="orangered" r="50" cx="55" cy="55"/>
+    <circle fill="gold" r="32" cx="55" cy="55"/>
+    <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
   </g>
 </svg></textarea>
     </div></div>
@@ -796,24 +797,21 @@
   </div></section>
 
   <section class="slide"><div>
-      <div class="demo demo--use demo--live">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
-  <g id="rects--use">
-    <rect fill="gold" width="40" height="40" x="4" y="4"/>
-    <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
-    <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
-    <rect width="40" height="40" x="142" y="4" id="square--use"/>
+    <!-- Живое демо
+    Добавляем обводку группе и фигурам,
+    переиспользование фигуры -->
+    <div class="demo demo--use demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
+  <g id="circles">
+    <circle fill="orangered" r="50" cx="55" cy="55"/>
+    <circle fill="gold" r="32" cx="55" cy="55"/>
+    <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
   </g>
-
-  <use xlink:href="#rects--use" x="0" y="50"
-           fill="none" stroke="steelblue" stroke-width="3"/>
-
-  <use xlink:href="#square--use" x="-46" y="100"
-           fill="tomato" stroke="crimson" stroke-width="8"/>
-  </svg>
-</textarea>
-      </div></div>
+  <use xlink:href="#circles" x="-110"/>
+  <use xlink:href="#circles" x="110"/>
+</svg></textarea>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
@@ -821,25 +819,24 @@
   </div></section>
 
   <section class="slide"><div>
+    <!-- Живое демо
+    Добавляем обводку группе и символам -->
     <div class="demo demo--defs demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
-<defs>
-  <g id="rects--defs">
-    <rect fill="gold" width="40" height="40" x="4" y="4"/>
-    <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
-    <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
-    <rect width="40" height="40" x="142" y="4" id="square--defs"/>
-  </g>
-</defs>
-
-<use xlink:href="#rects--defs" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
-
-<use xlink:href="#square--defs" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
-</svg>
-</textarea>
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
+  <defs>
+    <g id="circles">
+      <circle fill="orangered" r="50" cx="55" cy="55"/>
+      <circle fill="gold" r="32" cx="55" cy="55"/>
+      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+    </g>
+  </defs>
+  <use xlink:href="#circles" x="-110"/>
+  <use xlink:href="#circles" x="110"/>
+</svg></textarea>
     </div></div>
   </div></section>
+
 
   <section class="slide"><div>
     <h2 class="free-fly">&lt;symbol></h2>
@@ -848,21 +845,17 @@
   <section class="slide"><div>
     <div class="demo demo--symbol demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 190 153">
-<defs>
-  <symbol id="rects--symbol">
-    <rect fill="gold" width="40" height="40" x="4" y="4"/>
-    <rect fill="yellowgreen" width="40" height="40" x="50" y="4"/>
-    <rect fill="skyblue" width="40" height="40" x="96" y="4"/>
-    <rect width="40" height="40" x="142" y="4" id="square--symbol"/>
-  </symbol>
-</defs>
-
-<use xlink:href="#rects--symbol" x="0" y="50" fill="none" stroke="steelblue" stroke-width="3"/>
-
-<use xlink:href="#square--symbol" x="-46" y="100" fill="tomato" stroke="crimson" stroke-width="8"/>
-</svg>
-</textarea>
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
+  <defs>
+    <symbol id="s-circles">
+      <circle fill="orangered" r="50" cx="55" cy="55"/>
+      <circle fill="gold" r="32" cx="55" cy="55"/>
+      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+    </symbol>
+  </defs>
+  <use xlink:href="#s-circles" x="-110"/>
+  <use xlink:href="#s-circles" x="110"/>
+</svg></textarea>
     </div></div>
   </div></section>
 
@@ -873,28 +866,32 @@
   <section class="slide"><div>
     <div class="demo demo--pattern demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox='0 0 100% 200'>
+        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 100% 100%">
   <defs>
-    <pattern id="pt--squares" viewBox="0 0 180 40" width="180" height="45" x="0" y="0" patternUnits="userSpaceOnUse">
-      <rect fill="gold" width="40" height="40" x="0" y="0"/>
-      <rect fill="yellowgreen" width="40" height="40" x="45" y="0"/>
-      <rect fill="skyblue" width="40" height="40" x="90" y="0"/>
-      <rect fill="orangered" width="40" height="40" x="135" y="0"/>
+    <pattern id="pt-circles" viewBox="0 0 110 110"
+       width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle fill="orangered" r="50" cx="55" cy="55"/>
+      <circle fill="gold" r="32" cx="55" cy="55"/>
+      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
     </pattern>
   </defs>
-  <g fill="url(#pt--squares)">
-    <rect width="100%" height="200" x="0" y="0"/>
-  </g>
-</svg>
-      </textarea>
-      <div class="demo-switch demo-switch--horizontal">
-          <dl data-attr="fill">
-            <dd data-val="url(#pt--squares)" class="switch--checked">Shapes</dd>
-            <dd data-val="url(#pt-rainbow-stripes)">Gradient</dd>
-            <dd data-val="url(#pt-wood)">Image</dd>
-          </dl>
-        </div>
+  <rect width="100%" height="100%" fill="url(#pt-circles)"/>
+</svg></textarea>
     </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo--patterns">
+      <svg viewbox="0 0 100% 100%" width="100%" height="150px">
+        <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
+      </svg>
+      <svg viewbox="0 0 100% 100%">
+        <rect width="100%" height="100%" fill="url(#pt-text)"/>
+      </svg>
+      <svg viewbox="0 0 100% 100%" width="100%" height="150px">
+        <rect width="100%" height="100%" fill="url(#pt-colored-circles)"/>
+      </svg>
+    </div>
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -1184,12 +1181,12 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre class="pre--svg"><code>&lt;clippath id="clip-star"></code>
+    <pre class="pre--svg"><code>&lt;<mark class="important">clippath</mark> id="clip-star"></code>
       <code>  &lt;polygon points="98.499..." /></code>
       <code>&lt;/clippath></code></pre>
 
 
-    <pre class="pre--css"><code> clip-path: url(#clip-star);</code></pre>
+    <pre class="pre--css"><code><mark class="important">clip-path</mark>: url(#clip-star);</code></pre>
   </div></section>
 
   <section class="slide"><div>
@@ -1218,7 +1215,7 @@
     <code>  }</code>
     </pre>
 
-    <pre class="pre--css"><code> clip-path: url(#clip-text);</code></pre>
+    <pre class="pre--css"><code>clip-path: url(#clip-text);</code></pre>
   </div></section>
 
   <section class="slide"><div>
@@ -1230,21 +1227,49 @@
     <h2 class="free-fly">&lt;mask></h2>
   </div></section>
 
+
+  <section class="slide"><div>
+    <div class="table-cell">
+      <svg width="200" height="300">
+          <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+      </svg>
+      <span class="sign">+</span>
+      <svg width="200" height="300"
+      maskunits="objectBoundingBox">
+        <rect y="0" width="100%" height="100%" fill="url(#mask-gradient)" />
+        <circle cx="50%" cy="50%" r="42%" fill="black" />
+        <circle cx="0" cy="50%" r="32%" fill="black" />
+        <circle cx="100%" cy="50%" r="32%" fill="black" />
+        <circle cx="0" cy="50%" r="30%" fill="gray" />
+        <circle cx="50%" cy="50%" r="40%" fill="gray" />
+        <circle cx="100%" cy="50%" r="30%" fill="gray" />
+        <circle cx="0" cy="50%" r="25%" fill="white" />
+        <circle cx="50%" cy="50%" r="35%" fill="white" />
+        <circle cx="100%" cy="50%" r="25%" fill="white" />
+      </svg>
+      <span class="sign">=</span>
+      <svg width="200" height="300">
+        <g mask="url(#mask)">
+            <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+        </g>
+      </svg>
+    </div>
+  </div></section>
   <section class="slide"><div>
 
     <div class="demo demo--mask demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-  <g mask="url(#masking)">
-      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"></image>
+  <g mask="url(#mask)">
+      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
   </g>
 </svg></textarea>
 
         <textarea class="demo__textfield demo__codepart"><mask id="masking" maskunits="objectBoundingBox"
           maskcontentunits="objectBoundingBox">
         <rect y="0" width="1" height="1" fill="url(#gradient)" />
-        <circle cx="0" cy=".5" r=".3" fill="gray" />
-        <circle cx="1" cy=".5" r=".25" fill="white" />
+        <circle cx="0" cy="50%" r=".3" fill="gray" />
+        <circle cx="1" cy="50%" r=".25" fill="white" />
         ...
       </mask></textarea>
     </div></div>
@@ -1255,7 +1280,7 @@
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg width="200" height="300">
   <g mask="url(#masking-soft)">
-      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"></image>
+      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
   </g>
 </svg></textarea>
         <b>Маска</b>
@@ -1450,11 +1475,14 @@ stroke-width="5" transform="translate(0,5)"></polygon>
           <li>добавить схлопывалку кода в полноэкранных демо</li>
           <li>dashoffset?</li>
           <li>матрица</li>
+          <li>при редактировании убирать подсветку линий</li>
+          <li>проверить размытие и обводку clip-path</li>
         </ul>
   </div></section>
 
   <section class="slide"><div>
-      <h2>Спасибо за внимание (I &hearts; SVG)</h2>
+      <h2>Спасибо за внимание</h2>
+      <h4>I &hearts; SVG</h4>
 
       <p>Тут ещё должна быть пара слайдов, а также разные ссылки куда копать дальше.</p>
 
