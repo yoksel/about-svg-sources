@@ -416,19 +416,20 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
     }
 
-.demo--stroke-dashofset-anim {
-    /*height: 320px;*/
+.demo--dashofset-anim {
 
     .g-circles circle {
       transform-origin: 120px 120px;
-      animation: rotation 6s infinite alternate;
       }
 
-    @for $i from 2 through 15 {
-      .g-circles circle:nth-child(#{$i}){
-        animation-delay: #{$i/4}s;
+        @for $i from 2 through 15 {
+          .g-circles circle:nth-child(#{$i}){
+            animation-delay: #{$i/4}s;
+            }
+          }
+    &.demo--run circle{
+      animation: rotation 6s infinite alternate;
         }
-      }
     }
 
 @keyframes rotation {

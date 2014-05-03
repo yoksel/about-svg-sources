@@ -807,71 +807,70 @@ PRE:before {
   background: palegoldenrod;
 }
 
-.demo--stroke-dashofset-anim {
-  /*height: 320px;*/
-}
-.demo--stroke-dashofset-anim .g-circles circle {
+.demo--dashofset-anim .g-circles circle {
   -webkit-transform-origin: 120px 120px;
   -ms-transform-origin: 120px 120px;
   transform-origin: 120px 120px;
-  -webkit-animation: rotation 6s infinite alternate;
-  animation: rotation 6s infinite alternate;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(2) {
+.demo--dashofset-anim .g-circles circle:nth-child(2) {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(3) {
+.demo--dashofset-anim .g-circles circle:nth-child(3) {
   -webkit-animation-delay: 0.75s;
   animation-delay: 0.75s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(4) {
+.demo--dashofset-anim .g-circles circle:nth-child(4) {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(5) {
+.demo--dashofset-anim .g-circles circle:nth-child(5) {
   -webkit-animation-delay: 1.25s;
   animation-delay: 1.25s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(6) {
+.demo--dashofset-anim .g-circles circle:nth-child(6) {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(7) {
+.demo--dashofset-anim .g-circles circle:nth-child(7) {
   -webkit-animation-delay: 1.75s;
   animation-delay: 1.75s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(8) {
+.demo--dashofset-anim .g-circles circle:nth-child(8) {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(9) {
+.demo--dashofset-anim .g-circles circle:nth-child(9) {
   -webkit-animation-delay: 2.25s;
   animation-delay: 2.25s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(10) {
+.demo--dashofset-anim .g-circles circle:nth-child(10) {
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(11) {
+.demo--dashofset-anim .g-circles circle:nth-child(11) {
   -webkit-animation-delay: 2.75s;
   animation-delay: 2.75s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(12) {
+.demo--dashofset-anim .g-circles circle:nth-child(12) {
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(13) {
+.demo--dashofset-anim .g-circles circle:nth-child(13) {
   -webkit-animation-delay: 3.25s;
   animation-delay: 3.25s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(14) {
+.demo--dashofset-anim .g-circles circle:nth-child(14) {
   -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
 }
-.demo--stroke-dashofset-anim .g-circles circle:nth-child(15) {
+.demo--dashofset-anim .g-circles circle:nth-child(15) {
   -webkit-animation-delay: 3.75s;
   animation-delay: 3.75s;
+}
+.demo--dashofset-anim.demo--run circle {
+  -webkit-animation: rotation 6s infinite alternate;
+  animation: rotation 6s infinite alternate;
 }
 
 @-webkit-keyframes rotation {

@@ -63,12 +63,14 @@
         </radialgradient>
         <!--  -->
         <lineargradient id="mask-ymc-gradient" x1="0" y1="0" x2="100%" y2="0%">
-          <stop stop-color="hsl(45,100%,65%)" offset="0" />
-          <stop stop-color="hsl(45,100%,65%)" offset="32%" />
-          <stop stop-color="hsl(320,100%,65%)" offset="32%" />
-          <stop stop-color="hsl(320,100%,65%)" offset="67%" />
-          <stop stop-color="hsl(200,100%,60%)" offset="67%" />
-          <stop stop-color="hsl(200,100%,60%)" offset="100%" />
+          <stop stop-color="hsl(45,100%,50%)" offset="0" />
+          <stop stop-color="hsl(45,100%,50%)" offset="25%" />
+          <stop stop-color="hsl(340,100%,50%)" offset="26%" />
+          <stop stop-color="hsl(340,100%,50%)" offset="49%" />
+          <stop stop-color="hsl(100,100%,45%)" offset="50%" />
+          <stop stop-color="hsl(100,100%,45%)" offset="75%" />
+          <stop stop-color="hsl(210,100%,55%)" offset="76%" />
+          <stop stop-color="hsl(210,100%,55%)" offset="100%" />
         </lineargradient>
         <!-- Masks -->
         <mask id="mask" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
@@ -90,6 +92,10 @@
         <!--  -->
         <mask id="masking-lum" maskunits="objectBoundingBox" x="0" y="0">
           <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300" />
+        </mask>
+        <!--  -->
+        <mask id="masking-lum-pattern" maskunits="objectBoundingBox" x="0" y="0">
+          <image xlink:href="./assets/img/parts/grayscale-pattern.png" width="200" height="300" />
         </mask>
         <!-- Patterns -->
         <pattern id="pattern" patternunits="userSpaceOnUse" width="199" height="300" viewbox="0 0 199 300">

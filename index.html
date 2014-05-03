@@ -713,7 +713,73 @@
   </div></section>
 
   <section class="slide slide--fillingdemo bg--dark"><div>
-    <div class="demo demo--stroke-dashofset-anim">
+    <div class="demo demo--dashofset-anim">
+      <svg viewbox="0 0 240 240">
+        <g transform="scale(.8) translate(30,14)">
+          <g class="g-circles" fill="gold" stroke-width="30"
+          transform="translate(24 24) scale(.8)">
+              <circle r="60" cx="120" cy="120" stroke="crimson" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim">
+      <svg viewbox="0 0 240 240">
+        <g transform="scale(.8) translate(30,14)">
+          <g class="g-circles" fill="gold" stroke-width="30" stroke-dasharray="8%"
+          transform="translate(24 24) scale(.8)">
+              <circle r="60" cx="120" cy="120" stroke="crimson" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim">
+      <svg viewbox="0 0 240 240">
+        <g transform="scale(.8) translate(30,14)">
+          <g class="g-circles" fill="gold" stroke-width="100" stroke-dasharray="8%"
+          transform="translate(24 24) scale(.8)">
+              <circle r="60" cx="120" cy="120" stroke="crimson" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div></section>
+
+  <!-- <section class="slide"><div>
+    <pre><code>&lt;g class="g-circles" fill="none" </code>
+    <code>  stroke-width="120"</code>
+    <code>  stroke-dasharray="8% 45%"></code>
+    <code>    &lt;circle r="60" cx="120" cy="120" stroke="crimson" /></code>
+<code>&lt;/g></code></pre>
+  </div></section> -->
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim">
+      <svg viewbox="0 0 240 240">
+        <g transform="scale(.8) translate(30,14)">
+          <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
+          transform="translate(24 24) scale(.8)">
+              <circle r="60" cx="120" cy="120" stroke="crimson" />
+              <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%"  class="next"/>
+          </g>
+        </g>
+    </svg>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim demo--run">
       <svg viewbox="0 0 240 240">
         <g transform="scale(.8) translate(30,14)">
           <g class="g-circles" fill="none" stroke-width="5" stroke-dasharray="8% 45%">
@@ -740,7 +806,7 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
     <pre class="pre--svg pre--demo-dashoffset"><code>&lt;g class="g-circles" fill="none" stroke-width="120" </code>
       <code>    stroke-dasharray="8% 45%"></code>
       <code>    &lt;circle r="60" cx="120" cy="120" stroke="yellowgreen"</code>
@@ -748,7 +814,7 @@
       <code>    ...</code>
       <code>&lt;/g></code>
     </pre>
-  </div></section>
+  </div></section> -->
 
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--lights">
@@ -783,7 +849,7 @@
     <div class="demo demo--g demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
-  <g id="circles">
+  <g id="g-circles">
     <circle fill="orangered" r="50" cx="55" cy="55"/>
     <circle fill="gold" r="32" cx="55" cy="55"/>
     <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
@@ -803,13 +869,13 @@
     <div class="demo demo--use demo--live">
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
-  <g id="circles">
+  <g id="g-circles">
     <circle fill="orangered" r="50" cx="55" cy="55"/>
     <circle fill="gold" r="32" cx="55" cy="55"/>
     <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
   </g>
-  <use xlink:href="#circles" x="-110"/>
-  <use xlink:href="#circles" x="110"/>
+  <use xlink:href="#g-circles" x="-110"/>
+  <use xlink:href="#g-circles" x="110"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -825,14 +891,14 @@
       <div class="demo__content">
         <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
   <defs>
-    <g id="circles">
+    <g id="g-circles">
       <circle fill="orangered" r="50" cx="55" cy="55"/>
       <circle fill="gold" r="32" cx="55" cy="55"/>
       <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
     </g>
   </defs>
-  <use xlink:href="#circles" x="-110"/>
-  <use xlink:href="#circles" x="110"/>
+  <use xlink:href="#g-circles" x="-110"/>
+  <use xlink:href="#g-circles" x="110"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -960,12 +1026,17 @@
 
   <section class="slide"><div>
     <h2>Редакторы</h2>
-    <p>дополнить</p>
     <ul>
-      <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a> - 599 руб./месяц в составе подписки на Creative Cloud</li>
-      <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a> - для Mac OS, $79.99</li>
-      <li class="next"><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">svg-edit.googlecode.com/.../svg-editor.html</a> - КОММЕНТАРИЙ</li>
-      <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a> - бесплатный</li>
+      <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a>   <!-- - 599 руб./месяц в составе подписки на Creative Cloud -->
+      </li>
+      <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a>
+         <!-- - для Mac OS, $79.99 -->
+      </li>
+      <li class="next"><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">svg-edit.googlecode.com/.../svg-editor.html</a>
+      </li>
+      <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a>
+        <!--  - бесплатный -->
+      </li>
     </ul>
   </div></section>
 
@@ -1054,7 +1125,7 @@
       -->
   </div></section>
 
-  <section class="slide bg--dark"><div>
+  <section class="slide"><div>
     <h2 class="free-fly">Проблемные места</h2>
   </div></section>
 
@@ -1062,7 +1133,7 @@
     <ul class="list--problems">
       <li>
         <dl class="browsers">
-          <dt>Font</dt>
+          <dt>Font <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></dt>
           <dd class="browser chrome"></dd>
           <dd class="browser opera-old opera-min"></dd>
         </dl>
@@ -1089,7 +1160,7 @@
       <li>инлайновый SVG<!--  - для оформления внешними стилями  и&nbsp;управления через JS --></li>
       <li class="next">SVG-спрайт<!--  - если нет необходимости управления через внешний&nbsp;CSS< --></li>
       <li class="next">иконочный шрифт<!--  - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами  -->
-      <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
+      </li>
     </ul>
   </div></section>
 
@@ -1267,8 +1338,7 @@
           <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
       </svg>
       <span class="sign">+</span>
-      <svg width="200" height="300"
-      maskunits="objectBoundingBox">
+      <svg width="200" height="300">
         <rect y="0" width="100%" height="100%" fill="url(#mask-gradient)" />
         <circle cx="50%" cy="50%" r="42%" fill="black" />
         <circle cx="0" cy="50%" r="32%" fill="black" />
@@ -1284,61 +1354,59 @@
       <svg width="200" height="300">
         <g mask="url(#mask)">
             <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+            <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
         </g>
       </svg>
     </div>
   </div></section>
+
+  <section class="slide"><div>
+    <div class="table-cell">
+      <svg width="200" height="300">
+        <g>
+            <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+        </g>
+      </svg>
+      <span class="sign">+</span>
+      <svg width="200" height="300">
+        <rect y="0" width="100%" height="100%" fill="url(#mask-radial-gradient)" />
+      </svg>
+      <span class="sign">=</span>
+      <svg width="200" height="300">
+        <g mask="url(#masking-soft)">
+            <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+            <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+        </g>
+      </svg>
+    </div>
+  </div></section>
+
+
   <section class="slide"><div>
 
     <div class="demo demo--mask demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-  <g mask="url(#mask)">
-      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
-  </g>
-</svg></textarea>
+      <div class="table-cell">
+        <svg width="200" height="300">
+          <g>
+            <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+          </g>
+        </svg>
+        <span class="sign">+</span>
+        <svg width="200" height="300">
+          <image xlink:href="./assets/img/parts/grayscale-pattern.png" width="200" height="300" />
+        </svg>
+        <span class="sign">=</span>
+        <svg width="200" height="300">
+            <g mask="url(#masking-lum-pattern)">
+              <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+            </g>
+        </svg>
 
-        <textarea class="demo__textfield demo__codepart"><mask id="masking" maskunits="objectBoundingBox"
-          maskcontentunits="objectBoundingBox">
-        <rect y="0" width="1" height="1" fill="url(#gradient)" />
-        <circle cx="0" cy="50%" r=".3" fill="gray" />
-        <circle cx="1" cy="50%" r=".25" fill="white" />
-        ...
-      </mask></textarea>
-    </div></div>
+    </div>
   </div></section>
 
   <section class="slide"><div>
-    <div class="demo demo--mask demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-  <g mask="url(#masking-soft)">
-      <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
-  </g>
-</svg></textarea>
-        <b>Маска</b>
-        <textarea class="demo__textfield demo__codepart"><mask id="masking-soft" maskunits="objectBoundingBox"
-              maskcontentunits="objectBoundingBox">
-        <rect y="0" width="1" height="1" fill="url(#r-gradient)" />
-      </mask></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-
-    <div class="demo demo--mask demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg width="200" height="300">
-  <g mask="url(#masking-lum)">
-    <rect y="0" width="200" height="300" fill="url(#ymc-gradient)"/>
-  </g>
-</svg></textarea>
-
-        <textarea class="demo__textfield demo__codepart"><mask id="masking-lum" maskunits="objectBoundingBox"
-          x="0" y="0">
-        <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300" />
-      </mask></textarea>
-    </div></div>
+    <pre><code>код</code></pre>
   </div></section>
 
 
@@ -1357,6 +1425,12 @@
     </pre>
 
   </div></section>
+
+  <section class="slide"><div>
+    <h2>сравнение масок</h2>
+    <p>с поддержкой</p>
+  </div></section>
+
 
 <section class="slide bg--dark"><div>
     <h2 class="free-fly">Оформление SVG</h2>
@@ -1402,11 +1476,6 @@ stroke-width="5" transform="translate(0,5)"></polygon>
         </dl>
       </div>
     </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2>сравнение масок</h2>
-    <p>с поддержкой</p>
   </div></section>
 
   <section class="slide bg--concrete"><div>
