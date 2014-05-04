@@ -272,6 +272,13 @@ PRE:before {
   color: #FFF;
 }
 
+.bg--dark-gray {
+  background: #555;
+}
+.bg--dark-gray H2 {
+  color: #FFF;
+}
+
 .bg--gray-wood {
   background: #444444 url(/assets/img/parts/dark-wood.jpg);
 }
@@ -1382,7 +1389,7 @@ PRE:before {
   bottom: 80px;
   right: 0;
   left: 0;
-  height: 19.8em;
+  height: 22em;
   width: 70%;
   margin: auto;
   text-align: center;
@@ -1393,13 +1400,12 @@ PRE:before {
   display: inline-block;
   position: relative;
   top: 0;
-  width: 9em;
-  height: 9em;
+  width: 10em;
+  height: 10em;
   margin: 0 1em 1em;
   text-indent: 0;
   -webkit-transition: .2s;
   transition: .2s;
-  cursor: pointer;
   /*border: 1px solid;*/
 }
 .wrapper--icons-stroke .icon use,
@@ -1413,13 +1419,14 @@ PRE:before {
   content: none;
 }
 
-.wrapper--icons-stroke {
+.wrapper--icons-stroke .icon {
   fill: none;
+  cursor: pointer;
 }
 
 .icon--stroke {
   stroke: rgba(0, 0, 0, 0.5);
-  stroke-width: 2;
+  stroke-width: 3;
 }
 .icon--stroke:hover {
   stroke: skyblue;
@@ -1427,20 +1434,20 @@ PRE:before {
 
 .icon--dasharray {
   stroke: rgba(0, 0, 0, 0.5);
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-dasharray: 10 5;
-  fill: rgba(0, 0, 0, 0.1);
+  fill: rgba(0, 0, 0, 0.2);
 }
 .icon--dasharray:hover {
+  fill: transparent;
   stroke-dasharray: 10 0;
 }
 
 .icon--gradient {
   stroke-width: 3;
-  stroke: url(#gr-hot-cold-soft);
-  -webkit-transform-origin: 4.5em 4.5em;
-  -ms-transform-origin: 4.5em 4.5em;
-  transform-origin: 4.5em 4.5em;
+  -webkit-transform-origin: 5em 5em;
+  -ms-transform-origin: 5em 5em;
+  transform-origin: 5em 5em;
   -webkit-animation: rotation 3s linear infinite;
   animation: rotation 3s linear infinite;
   -webkit-animation-play-state: paused;
@@ -1453,7 +1460,6 @@ PRE:before {
 
 .icon--gradient2 {
   stroke-width: 3;
-  stroke: url(#gr-gray-transp);
   -webkit-animation: ghost 1.5s linear infinite;
   animation: ghost 1.5s linear infinite;
   -webkit-animation-play-state: paused;
@@ -1478,26 +1484,14 @@ PRE:before {
     transform: translate(0, -0.5em);
   }
 }
-.icon--blur {
-  fill: url(#gr-hot-cold);
-  -webkit-filter: url(#fl-blur);
-  filter: url(#fl-blur);
-}
-
-.icon--shadow {
-  fill: url(#gr-hot-cold);
-  -webkit-filter: url(#fl-shadow);
-  filter: url(#fl-shadow);
-}
-
 .icon--multystrokes {
   position: relative;
   text-indent: -1em !important;
   fill: none;
-  stroke: #FFF;
+  stroke: #004358;
   stroke-width: 3;
-  -webkit-filter: url(#fl-striped-shadow);
-  filter: url(#fl-striped-shadow);
+  -webkit-filter: url(#fl-striped-shadow-kuler);
+  filter: url(#fl-striped-shadow-kuler);
 }
 
 .icon--innershadow {

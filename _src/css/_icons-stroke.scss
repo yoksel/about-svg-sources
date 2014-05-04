@@ -1,4 +1,4 @@
-$iconstroke-size: 9em;
+$iconstroke-size: 10em;
 
 .wrapper--icons-stroke,
 .wrapper--icons-filters {
@@ -22,7 +22,6 @@ $iconstroke-size: 9em;
     margin: 0 1em 1em;
     text-indent: 0;
     transition: .2s;
-    cursor: pointer;
     /*border: 1px solid;*/
 
     use {
@@ -34,13 +33,15 @@ $iconstroke-size: 9em;
       }
     }
 }
-.wrapper--icons-stroke {
+
+.wrapper--icons-stroke .icon {
   fill: none;
+  cursor: pointer;
   }
 
 .icon--stroke {
   stroke: rgba(0, 0, 0, .5);
-  stroke-width: 2;
+  stroke-width: 3;
     &:hover {
       stroke: skyblue;
     }
@@ -48,17 +49,17 @@ $iconstroke-size: 9em;
 
 .icon--dasharray {
   stroke: rgba(0, 0, 0, .5);
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-dasharray: 10 5;
-  fill: rgba(0, 0, 0, .1);
+  fill: rgba(0, 0, 0, .2);
   &:hover {
+    fill: rgba(0, 0, 0, 0);
     stroke-dasharray: 10 0;
     }
   }
 
 .icon--gradient {
   stroke-width: 3;
-  stroke: url(#gr-hot-cold-soft);
   transform-origin: $iconstroke-size/2 $iconstroke-size/2;
   animation: rotation 3s linear infinite;
   animation-play-state: paused;
@@ -69,7 +70,6 @@ $iconstroke-size: 9em;
 
 .icon--gradient2 {
   stroke-width: 3;
-  stroke: url(#gr-gray-transp);
   animation: ghost 1.5s linear infinite;
   animation-play-state: paused;
   &:hover {
@@ -83,21 +83,16 @@ $iconstroke-size: 9em;
         }
     }
 
-.icon--blur {
-  fill: url(#gr-hot-cold);
-  filter: url(#fl-blur);
-  }
+.icon--blur {}
 .icon--shadow {
-  fill: url(#gr-hot-cold);
-  filter: url(#fl-shadow);
   }
 .icon--multystrokes {
   position: relative;
   text-indent: -1em !important;
   fill: none;
-  stroke: #FFF;
+  stroke: #004358;
   stroke-width: 3;
-  filter: url(#fl-striped-shadow);
+  filter: url(#fl-striped-shadow-kuler);
   }
 .icon--innershadow {
   fill: url(#gr-hot-cold);
