@@ -46,7 +46,7 @@
       <stop stop-color="hsl(350,100%,45%)" offset="33%"/>
       <stop stop-color="hsl(50,100%,70%)" offset="33%"/>
       <stop stop-color="hsl(50,100%,70%)" offset="66%"/>
-      <stop stop-color="hsl(200,100%,40%)" offset="66%%"/>
+      <stop stop-color="hsl(200,100%,40%)" offset="66%"/>
       <stop stop-color="hsl(200,100%,40%)" offset="100%"/>
   </linearGradient>
 

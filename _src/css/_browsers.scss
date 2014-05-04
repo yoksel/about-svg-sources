@@ -38,6 +38,7 @@ $browser-size: 64px;
   margin-right: 20px;
   background: url(/assets/img/parts/sprite-browsers-64.png) 0 0 no-repeat;
   vertical-align: middle;
+  text-indent: 0;
   &:after {
     display: inline-block;
     margin: -.5em 0 0;

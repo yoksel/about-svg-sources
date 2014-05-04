@@ -121,12 +121,12 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     .demo__view {
         /*float: left;
         width: 35%;*/
-        /*border: 2px solid;*/
 
         svg {
             display: block;
+            width: 100%;
             margin: 0 auto;
-            border: 1px solid #555;
+            max-height: 100%;
             }
         }
     .demo__textfield {
@@ -714,8 +714,12 @@ $group-use-texta-height: 11.5;
   font: bold italic 3em/1 Georgia;
   }
 
-
+/* Demo Nth-child
+------------------------- */
 .demo--nth-child {
+  svg {
+
+  }
   g {
   transform: scale(.95) translate(4px,4px);
     }

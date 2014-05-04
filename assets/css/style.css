@@ -528,12 +528,12 @@ PRE:before {
 .demo--live .demo__view {
   /*float: left;
   width: 35%;*/
-  /*border: 2px solid;*/
 }
 .demo--live .demo__view svg {
   display: block;
+  width: 100%;
   margin: 0 auto;
-  border: 1px solid #555;
+  max-height: 100%;
 }
 .demo--live .demo__textfield {
   width: 100%;
@@ -1280,6 +1280,8 @@ PRE:before {
   font: bold italic 3em/1 Georgia;
 }
 
+/* Demo Nth-child
+------------------------- */
 .demo--nth-child g {
   -webkit-transform: scale(0.95) translate(4px, 4px);
   -ms-transform: scale(0.95) translate(4px, 4px);
@@ -1582,6 +1584,7 @@ PRE:before {
   margin-right: 20px;
   background: url(/assets/img/parts/sprite-browsers-64.png) 0 0 no-repeat;
   vertical-align: middle;
+  text-indent: 0;
 }
 .browser:after {
   display: inline-block;

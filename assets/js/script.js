@@ -30,6 +30,9 @@ $(function() {
 // -------------------------------
 var showShapeClass = "demo__view";
 
+function removeBackground(elem){
+    $(elem).css("background","none");
+}
 
 $(".demo--live").each ( function(){
     var svgCode = $(this).find(".demo__code");
@@ -41,11 +44,13 @@ $(".demo--live").each ( function(){
 
     $(svgCode).change ( function(){
         $(svgView).html( $(this).val() );
+        removeBackground(this);
     });
 
     svgCode.bind('keydown keyup', function(event){
         event.stopPropagation();
         $(svgView).html( $(this).val() );
+        $(this).css("background","none");
     });
 
 });
