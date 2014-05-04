@@ -49,23 +49,23 @@
       </filter>
 
       <filter id="fl-striped-shadow-kuler">
-        <feOffset dx="3" dy="3" in="SourceGraphic" result="offset"/>
+        <feOffset dx="2" dy="2" in="SourceGraphic" result="offset"/>
         <feFlood flood-color="#1F8A70"/>
         <feComposite operator="in" in2="offset" result="res"/>
 
-        <feOffset dx="6" dy="6" in="SourceGraphic" result="offset2"/>
+        <feOffset dx="4" dy="4" in="SourceGraphic" result="offset2"/>
         <feFlood flood-color="#BEDB39"/>
         <feComposite operator="in" in2="offset2" result="res2"/>
 
-        <feOffset dx="9" dy="9" in="SourceGraphic" result="offset3"/>
+        <feOffset dx="6" dy="6" in="SourceGraphic" result="offset3"/>
         <feFlood flood-color="#FFE11A"/>
         <feComposite operator="in" in2="offset3" result="res3"/>
 
-        <feOffset dx="12" dy="12" in="SourceGraphic" result="offset4"/>
+        <feOffset dx="8" dy="8" in="SourceGraphic" result="offset4"/>
         <feFlood flood-color="#FD7400"/>
         <feComposite operator="in" in2="offset4" result="res4"/>
 
-        <feOffset dx="15" dy="15" in="SourceGraphic" result="offset5"/>
+        <feOffset dx="10" dy="10" in="SourceGraphic" result="offset5"/>
         <feFlood flood-color="#004358"/>
         <feComposite operator="in" in2="offset5" result="res5"/>
 
@@ -82,7 +82,7 @@
       <!-- Shadow offset -->
       <filter id='fl-inner-shadow'>
         <feOffset dx='0' dy='0'/>
-        <feGaussianBlur stdDeviation='4' result='offset-blur'/>
+        <feGaussianBlur stdDeviation='5' result='offset-blur'/>
         <feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse'/>
         <feFlood flood-color='#000' flood-opacity='1' result='color'/>
         <feComposite operator='in' in='color' in2='inverse' result='shadow'/>

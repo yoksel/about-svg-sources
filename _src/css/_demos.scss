@@ -695,7 +695,7 @@ $group-use-texta-height: 11.5;
         transform: scale(.8);
         }
     }
-/* Demo Decirations
+/* Demo Decorations
 ------------------------- */
 .demo--fillstroke {
     .demo__view {
@@ -713,3 +713,50 @@ $group-use-texta-height: 11.5;
 .demo--svgtext {
   font: bold italic 3em/1 Georgia;
   }
+
+
+.demo--nth-child {
+  g {
+  transform: scale(.95) translate(4px,4px);
+    }
+    path {
+      fill: none;
+      stroke-width: 1;
+      stroke: rgba(0,0,0, .8);
+      stroke-dasharray: 550 0;
+      animation: nthchild-dasharray 5s infinite alternate;
+      }
+
+    path:nth-child(8n+3){
+      fill: #C24704;
+      animation-delay: .4s;
+      }
+    path:nth-child(8n+4){
+      fill: #D9CC3C;
+      animation-delay: 1s;
+      }
+    path:nth-child(8n+5){
+      fill: #FFEB79;
+      animation-delay: 1.6s;
+      }
+    path:nth-child(8n+6){
+      fill: #A0E0A9;
+      animation-delay: 2s;
+      }
+    path:nth-child(8n+7){
+      fill: #00ADA7;
+      animation-delay: 2.6s;
+      }
+    path:nth-child(8n){
+      fill: darken(#00ADA7, 15%);
+      animation-delay: 3s;
+      }
+}
+
+@keyframes nthchild-dasharray {
+  100% {
+    stroke: rgba(0,0,0, .5);
+    stroke-dasharray: 0 500;
+    fill-opacity: 0;
+  }
+}

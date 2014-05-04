@@ -84,17 +84,12 @@ $iconstroke-size: 10em;
     }
 
 .icon--blur {}
-.icon--shadow {
-  }
+.icon--shadow {}
 .icon--multystrokes {
   position: relative;
   text-indent: -1em !important;
   fill: none;
   stroke: #004358;
   stroke-width: 3;
-  filter: url(#fl-striped-shadow-kuler);
   }
-.icon--innershadow {
-  fill: url(#gr-hot-cold);
-  filter: url(#fl-inner-shadow);
-  }
+.icon--innershadow {}
