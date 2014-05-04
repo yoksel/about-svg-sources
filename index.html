@@ -658,12 +658,44 @@
       </div>
   </div></section>
 
+  <section class="slide"><div>
+    <!--   -->
+      <div class="table-cell">
+        <svg viewbox="0 0 700 300">
+          <g fill="none" stroke-width="100" transform="translate(0,0)">
+            <g class="g-circles">
+              <use xlink:href="#s-strokefill" stroke="gold"
+                clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-strokefill" stroke="url(#pt-mosaic-colored)" clip-path="url(#clip-rect-top)"
+                transform="translate(200)"/>
+              <use xlink:href="#s-strokefill" stroke="url(#pt-rainbow-stripes)"
+                clip-path="url(#clip-rect-top)"
+                transform="translate(400)"/>
+            </g>
+
+            <g class="g-circles" transform="rotate(180,350,150)">
+              <use xlink:href="#s-strokefill" stroke="url(#gr-radial-stripes-repeat)"
+                clip-path="url(#clip-rect-top)"
+                transform="translate(400)"/>
+              <use xlink:href="#s-strokefill" stroke="url(#pt-wood)" clip-path="url(#clip-rect-top)"
+                transform="translate(200)"/>
+              <use xlink:href="#s-strokefill" stroke="url(#gr-hot-cold-soft)"
+                clip-path="url(#clip-rect-top)"/>
+            </g>
+
+
+
+
+          </g>
+        </svg>
+      </div>
+  </div></section>
+
   <section class="slide slide--fillingdemo"><div>
       <div class="demo demo--stroke-opacity">
         <pre class="dashoffset__pre-1"><code>stroke-opacity=".4"</code></pre>
         <svg viewbox="0 0 700 500" style="border: 1px solid; ">
           <g class="g-circles" fill="none" stroke-width="60">
-
             <use xlink:href="#s-stroke-opacity" stroke="gold"
             x="-6%" y="0" transform="scale(1.5)"
             clip-path="url(#clip-rect-top)"/>
@@ -1335,7 +1367,7 @@
   <section class="slide"><div>
     <div class="table-cell">
       <svg width="200" height="300">
-          <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+          <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
       </svg>
       <span class="sign">+</span>
       <svg width="200" height="300">
@@ -1353,8 +1385,7 @@
       <span class="sign">=</span>
       <svg width="200" height="300">
         <g mask="url(#mask)">
-            <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
-            <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+            <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
         </g>
       </svg>
     </div>
@@ -1364,7 +1395,7 @@
     <div class="table-cell">
       <svg width="200" height="300">
         <g>
-            <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
+          <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
         </g>
       </svg>
       <span class="sign">+</span>
@@ -1373,9 +1404,8 @@
       </svg>
       <span class="sign">=</span>
       <svg width="200" height="300">
-        <g mask="url(#masking-soft)">
-            <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300"/>
-            <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+        <g mask="url(#mask-soft)">
+          <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
         </g>
       </svg>
     </div>
@@ -1388,17 +1418,17 @@
       <div class="table-cell">
         <svg width="200" height="300">
           <g>
-            <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+            <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
           </g>
         </svg>
         <span class="sign">+</span>
         <svg width="200" height="300">
-          <image xlink:href="./assets/img/parts/grayscale-pattern.png" width="200" height="300" />
+          <image xlink:href="./assets/img/parts/grayscale-scales-invert.png" width="200" height="300" />
         </svg>
         <span class="sign">=</span>
         <svg width="200" height="300">
-            <g mask="url(#masking-lum-pattern)">
-              <rect y="0" width="200" height="300" fill="url(#mask-ymc-gradient)"/>
+            <g mask="url(#mask-lum-pattern)">
+              <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
             </g>
         </svg>
 
@@ -1413,14 +1443,14 @@
   <section class="slide"><div>
     <h2>Используем</h2>
     <pre>
-      <code>&lt;g mask="url(#masking)"></code>
+      <code>&lt;g mask="url(#mask)"></code>
       <code>...</code>
       <code>&lt;/g></code>
     </pre>
 
     <pre>
       <code>g {</code>
-      <code>mask: url(#masking);</code>
+      <code>mask: url(#mask);</code>
       <code>}</code>
     </pre>
 

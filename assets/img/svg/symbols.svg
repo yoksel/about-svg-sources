@@ -3,7 +3,7 @@
       <symbol id="s-path">
         <path d="M 50,30 250,30" stroke-width="60"/>
       </symbol>
-      
+
       <symbol id="s-path-guide">
         <g transform="translate(0,20)">
         <circle r="9" cx="50" cy="10"/>
@@ -25,7 +25,7 @@
       </symbol>
 
       <symbol id="s-dasharray">
-          <path d="M 0,50 
+          <path d="M 0,50
                Q100,0 200,50
                300,100 400,50
                500,0 600,50
@@ -36,16 +36,20 @@
           <circle r="100" cx="135" cy="135"></circle>
       </symbol>
 
+      <symbol id="s-strokefill">
+          <circle r="100" cx="150" cy="150"></circle>
+      </symbol>
+
       <symbol id="s-stroke-opacity">
           <circle r="95" cx="150" cy="150"></circle>
       </symbol>
 
       <symbol id="s-transform-before">
-          <rect x="2" y="2" width="500" height="280" 
+          <rect x="2" y="2" width="500" height="280"
             class="rect-transform-before"></rect>
       </symbol>
       <symbol id="s-transform-after">
-          <rect x="2" y="2" width="500" height="280" 
+          <rect x="2" y="2" width="500" height="280"
             class="rect-transform-after"></rect>
       </symbol>
 
@@ -60,7 +64,7 @@
       <symbol id="s-batik">
         <image xlink:href="./assets/img/parts/batik.png" width="390" height="300"/>
       </symbol>
-      
+
       <symbol id="s-rainbow-mosaic">
         <image xlink:href="./assets/img/parts/rainbow-mosaic.png" width="800" height="600"/>
       </symbol>
@@ -68,6 +72,6 @@
       <symbol id="s-mosaic-colored">
         <image xlink:href="./assets/img/parts/mosaic-colored.png" width="800" height="600"/>
       </symbol>
-      
+
     </defs>
 </svg>

@@ -36,7 +36,7 @@
           <path  d="m99.19002,43.23778c40.05069,-100.72627 196.97231,0 0,129.5052c-196.97233,-129.5052 -40.05096,-230.23147 0,-129.5052z" class="path-heart"></path>
         </clippath>
 
-        d="m148.14168,58.274c61.07758,-143.06177 300.38411,0 0,183.93657c-300.38414,-183.93657 -61.07799,-326.99834 0,-183.93657z"
+        <!-- d="m148.14168,58.274c61.07758,-143.06177 300.38411,0 0,183.93657c-300.38414,-183.93657 -61.07799,-326.99834 0,-183.93657z" -->
         <!--  -->
         <clippath id="clip-rect-top" clipPathUnits="userSpaceOnUse">
           <rect width="400" height="150" x="0" y="0"/>
@@ -61,17 +61,6 @@
           <stop stop-color="#FFF" offset="50%" />
           <stop stop-color="#000" offset="100%" />
         </radialgradient>
-        <!--  -->
-        <lineargradient id="mask-ymc-gradient" x1="0" y1="0" x2="100%" y2="0%">
-          <stop stop-color="hsl(45,100%,50%)" offset="0" />
-          <stop stop-color="hsl(45,100%,50%)" offset="25%" />
-          <stop stop-color="hsl(340,100%,50%)" offset="26%" />
-          <stop stop-color="hsl(340,100%,50%)" offset="49%" />
-          <stop stop-color="hsl(100,100%,45%)" offset="50%" />
-          <stop stop-color="hsl(100,100%,45%)" offset="75%" />
-          <stop stop-color="hsl(210,100%,55%)" offset="76%" />
-          <stop stop-color="hsl(210,100%,55%)" offset="100%" />
-        </lineargradient>
         <!-- Masks -->
         <mask id="mask" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
           <rect y="0" width="1" height="1" fill="url(#mask-gradient)" />
@@ -86,16 +75,16 @@
           <circle cx="1" cy=".5" r=".25" fill="white" />
         </mask>
         <!--  -->
-        <mask id="masking-soft" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
+        <mask id="mask-soft" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
           <rect y="0" width="1" height="1" fill="url(#mask-radial-gradient)" />
         </mask>
         <!--  -->
-        <mask id="masking-lum" maskunits="objectBoundingBox" x="0" y="0">
+        <mask id="mask-lum" maskunits="objectBoundingBox" x="0" y="0">
           <image xlink:href="./assets/img/parts/flower-m.jpg" width="200" height="300" />
         </mask>
         <!--  -->
-        <mask id="masking-lum-pattern" maskunits="objectBoundingBox" x="0" y="0">
-          <image xlink:href="./assets/img/parts/grayscale-pattern.png" width="200" height="300" />
+        <mask id="mask-lum-pattern" maskunits="objectBoundingBox" x="0" y="0">
+          <image xlink:href="./assets/img/parts/grayscale-scales-invert.png" width="200" height="300" />
         </mask>
         <!-- Patterns -->
         <pattern id="pattern" patternunits="userSpaceOnUse" width="199" height="300" viewbox="0 0 199 300">
