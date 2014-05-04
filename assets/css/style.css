@@ -542,7 +542,7 @@ PRE:before {
   font-family: 'Anka Coder', monospace;
   font-size: 21.6px;
   line-height: 1.3;
-  color: #222;
+  color: #000;
 }
 .demo--live .demo__code {
   height: 149.8068px;

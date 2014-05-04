@@ -136,7 +136,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         font-family: 'Anka Coder', monospace;
         font-size: $textarea-fontsize;
         line-height: $textarea-lineheight;
-        color: #222;
+        color: #000;
     }
     .demo__code {
         @include textarea-height (5.5);
