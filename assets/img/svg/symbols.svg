@@ -57,8 +57,16 @@
         <polygon points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" />
       </symbol>
 
+      <symbol id="s-kuler-bg">
+        <rect y="0" width="200" height="300" fill="url(#kuler-gradient)"/>
+      </symbol>
+
+      <symbol id="s-flower-m">
+        <image xlink:href="./assets/img/parts/violet-flower-l.jpg" width="199" height="300"/>
+      </symbol>
+
       <symbol id="s-flower-l">
-        <image xlink:href="./assets/img/parts/flower-l.jpg" width="332" height="500" transform="translate(0,-30)"/>
+        <image xlink:href="./assets/img/parts/violet-flower-l.jpg" width="332" height="500" transform="translate(0,-30)"/>
       </symbol>
 
       <symbol id="s-batik">

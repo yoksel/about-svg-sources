@@ -29,7 +29,20 @@
         <!--  -->
 
         <clippath id="clip-heart">
-          <path d="m96.39165,39.69968c39.32919,-92.12057 193.42387,0 0,118.44076c-193.42389,-118.44076 -39.32944,-210.56134 0,-118.44076z" class="path-heart"></path>
+          <path d="m96.39165,39.69968c39.32919,-92.12057 193.42387,0 0,118.44076c-193.42389,-118.44076 -39.32944,-210.56134 0,-118.44076z" class="path-heart">
+            <!-- <animateTransform attributeName="transform"
+                type="scale"
+                values="1;.8; 1"
+                begin="0s" dur=".8s"
+                repeatCount="indefinite"
+                additive="sum"/>
+              <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 26,15; 0,0"
+                begin="0s" dur=".8s"
+                repeatCount="indefinite"
+                additive="sum"/> -->
+          </path>
         </clippath>
 
         <clippath id="clip-heart-big">
@@ -37,10 +50,11 @@
         </clippath>
 
         <!-- d="m148.14168,58.274c61.07758,-143.06177 300.38411,0 0,183.93657c-300.38414,-183.93657 -61.07799,-326.99834 0,-183.93657z" -->
+
         <!--  -->
+
         <clippath id="clip-rect-top" clipPathUnits="userSpaceOnUse">
           <rect width="400" height="150" x="0" y="0"/>
-          <!-- <polygon id="Star-1" points="98.4999978 153.75 38.2520165 185.424245 49.7583542 118.337123 1.01670635 70.8257603 68.3760155 61.037872 98.5000012 1.1379786e-14 128.624005 61.0378871 195.98331 70.8258091 147.241642 118.337136 158.747982 185.424247" /> -->
         </clippath>
 
         <!-- Gradients -->
@@ -61,7 +75,9 @@
           <stop stop-color="#FFF" offset="50%" />
           <stop stop-color="#000" offset="100%" />
         </radialgradient>
+
         <!-- Masks -->
+
         <mask id="mask" maskunits="objectBoundingBox" maskcontentunits="objectBoundingBox">
           <rect y="0" width="1" height="1" fill="url(#mask-gradient)" />
           <circle cx=".5" cy=".5" r=".42" fill="black" />
