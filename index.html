@@ -1128,7 +1128,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <ul class="list--support">
+    <ul class="list--browsers-inside list--support">
       <li>
         <dl class="browsers">
           <dt>Полная поддержка:</dt>
@@ -1164,7 +1164,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <ul class="list--problems">
+    <ul class="list--browsers-inside list--problems">
       <li>
         <dl class="browsers">
           <dt>Font <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></dt>
@@ -1226,7 +1226,7 @@
 
   <section class="slide slide--stacks-demo"><div>
     <h2>Ожидания</h2>
-    <ul class="list--stacks-demo">
+    <ul class="list--browsers-inside list--stacks-demo">
       <li>
         <div class="text">/assets/img/yes-no.svg</div>
         <iframe src="./assets/img/svg/yes-no.svg" width="250px" height="250px"></iframe>
@@ -1240,7 +1240,7 @@
 
   <section class="slide slide--stacks-demo"><div>
     <h2>Реальность</h2>
-    <ul class="list--stacks-demo">
+    <ul class="list--browsers-inside list--stacks-demo">
       <li>
         <div class="text">Iframe</div>
         <iframe src="./assets/img/svg/yes-no.svg#yes" width="250px" height="250px"></iframe>
@@ -1255,7 +1255,7 @@
   <section class="slide"><div>
     <h2>Поддержка</h2>
 
-    <ul class="list--support-stacks">
+    <ul class="list--browsers-inside list--support-stacks">
       <li>
         <dl class="browsers">
           <dt><code>embed</code> и <code>iframe</code>:</dt>
@@ -1386,11 +1386,23 @@
       </svg>
       <span class="sign">=</span>
       <svg width="200" height="300">
-        <g mask="url(#mask-usou)">
+        <g mask="url(#mask)">
           <use xlink:href="#s-flower-m"/>
         </g>
       </svg>
     </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre><code>&lt;mask id="mask" maskunits="userSpaceOnUse"</code>
+    <code>      maskcontentunits="userSpaceOnUse"></code>
+    <code>  &lt;rect y="0" width="100%" height="100%"</code>
+    <code>      fill="url(#mask-gradient)" /></code>
+    <code>  &lt;circle cx="50%" cy="50%" r="42%" fill="black" /></code>
+    <code>  &lt;circle cx="0" cy="50%" r="32%" fill="black" /></code>
+    <code>  ...</code>
+    <code>&lt;/mask></code>
+</pre>
   </div></section>
 
   <section class="slide"><div>
@@ -1411,6 +1423,14 @@
     </div>
   </div></section>
 
+  <section class="slide"><div>
+    <pre><code>&lt;mask id="mask-soft" maskunits="objectBoundingBox"</code>
+    <code>      maskcontentunits="objectBoundingBox"></code>
+    <code>  &lt;rect y="0" width="1" height="1" </code>
+    <code>      fill="url(#mask-radial-gradient)" /></code>
+    <code>&lt;/mask></code>
+  </pre>
+  </div></section>
 
   <section class="slide"><div>
     <div class="demo demo--mask demo--live">
@@ -1433,38 +1453,66 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre><code>код</code></pre>
-  </div></section>
-
-
-  <section class="slide"><div>
-    <h2>Используем</h2>
-    <pre>
-      <code>&lt;g mask="url(#mask)"></code>
-      <code>...</code>
-      <code>&lt;/g></code>
-    </pre>
+    <pre><code>&lt;mask id="mask-lum-pattern"></code>
+      <code>  &lt;image xlink:href="your-image.png" width="200" height="300" /></code>
+    <code>&lt;/mask></code></pre>
 
     <pre>
-      <code>g {</code>
       <code>mask: url(#mask);</code>
-      <code>}</code>
     </pre>
-
   </div></section>
 
   <section class="slide"><div>
-    <h2>сравнение масок</h2>
-    <p>с поддержкой</p>
+    <h2 class="free-fly">CSS-маски</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <ul class="list--browsers-inside list--cssmasks">
+      <li><dl class="browsers">
+          <dt>clip</dt>
+          <dd class="browser chrome"></dd>
+          <dd class="browser opera-13"></dd>
+          <dd class="browser safari"></dd>
+          <dd class="browser firefox"></dd>
+          <dd class="browser ie-9"></dd>
+          <dd class="browser opera-old"></dd>
+        </dl></li>
+      <li><dl class="browsers">
+          <dt>clip-path / mask-image /
+          background-clip: text;</dt>
+          <dd class="browser chrome "></dd>
+          <dd class="browser opera-13"></dd>
+          <dd class="browser safari"></dd>
+          <dd class="browser firefox no-support"></dd>
+          <dd class="browser ie-9 no-support"></dd>
+          <dd class="browser opera-old no-support"></dd>
+        </dl></li>
+      <li><dl class="browsers">
+          <dt>SVG clip-path для HTML / SVG-mask для HTML</dt>
+          <dd class="browser chrome no-support"></dd>
+          <dd class="browser opera-13 no-support"></dd>
+          <dd class="browser safari no-support"></dd>
+          <dd class="browser firefox"></dd>
+          <dd class="browser ie-9 no-support"></dd>
+          <dd class="browser opera-old no-support"></dd>
+        </dl></li>
+    </ul>
   </div></section>
 
 
-<section class="slide bg--dark"><div>
+  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Оформление SVG</h2>
   </div></section>
 
   <section class="slide"><div>
-    <h2>Используем шрифт</h2>
+    <h2 class="free-fly">Что выбрать?</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">Используем шрифт</h2>
+  </div></section>
+
+  <section class="slide"><div>
     <div class="wrapper wrapper--iconfont">
         <span class="iconfont__icon icon-alarm"></span>
         <span class="iconfont__icon icon-cool"></span>
@@ -1474,64 +1522,69 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2>Используем SVG: fill, stroke</h2>
-    <div class="demo demo--fill demo--live">
-      <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewbox='0 0 140 205'>
-<g fill="url(#pt-wood)" stroke="url(#gr-hot-cold)">
-<polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
-stroke-width="5" transform="translate(0,5)"></polygon>
-<text x="0" y="95%" stroke-width="2">Text</text>
-</g>
-</svg></textarea>
-      <div class="demo-switch">
+    <h2 class="free-fly">Используем SVG</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--fillstroke">
+      <div class="demo__view">
+        <svg viewbox='0 0 170 205'>
+          <g fill="url(#pt-wood)" stroke="url(#gr-kuler-diag)">
+            <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
+            stroke-width="5" transform="translate(15,0)"></polygon>
+
+            <text x="0" y="95%" stroke-width="3" class="demo--svgtext">Text</text>
+          </g>
+        </svg>
+      </div>
+      <div class="demo__switch">
         <dl data-attr="fill">
           <dt>Fill:</dt>
           <dd data-val="none">None</dd>
-          <dd data-val="orangered">Color</dd>
-          <dd data-val="url(#gr-hot-cold)">Gradient</dd>
+          <dd data-val="lightseagreen">Color</dd>
+          <dd data-val="url(#gr-kuler-diag)">Gradient</dd>
           <dd data-val="url(#pt-wood)" class="switch--checked">Pattern</dd>
           <dd data-val="url(#pt-text)">Text</dd>
         </dl>
         <dl data-attr="stroke">
           <dt>Stroke:</dt>
           <dd data-val="none">None</dd>
-          <dd data-val="lightseagreen">Color</dd>
-          <dd data-val="url(#gr-hot-cold)" class="switch--checked">Gradient</dd>
+          <dd data-val="#004358">Color</dd>
+          <dd data-val="url(#gr-kuler-diag)" class="switch--checked">Gradient</dd>
           <dd data-val="url(#pt-wood)">Pattern</dd>
           <dd data-val="url(#pt-text)">Text</dd>
         </dl>
       </div>
-    </div></div>
+    </div>
   </div></section>
 
-  <section class="slide bg--concrete"><div>
-    <h2>Эффекты с обводками</h2>
+  <section class="slide"><div>
+    <!-- <h2>Эффекты с обводками</h2> -->
 
     <div class="wrapper wrapper--icons-stroke">
       <ul class="icons">
 
         <li class="icon icon--stroke">
-          <svg viewbox="0 0 100 100">
+          <svg viewbox="0 0 95 95">
             <use xlink:href="#home"/>
           </svg>
         </li>
 
         <li class="icon icon--dasharray">
-          <svg viewbox="0 0 100 100">
+          <svg viewbox="0 0 95 95">
             <use xlink:href="#heart"/>
           </svg>
         </li>
 
         <li class="icon icon--gradient">
-          <svg viewbox="0 0 100 100">
+          <svg viewbox="0 0 93 93">
             <use xlink:href="#cog"/>
           </svg>
         </li>
 
         <li class="icon icon--gradient2">
-          <svg viewbox="0 0 100 100">
-            <use xlink:href="#camera"/>
+          <svg viewbox="0 0 95 95">
+            <use xlink:href="#camera" transform="translate(0,-10)"/>
           </svg>
         </li>
       </ul>
@@ -1570,7 +1623,11 @@ stroke-width="5" transform="translate(0,5)"></polygon>
         </li>
       </ul>
     </div>
+  </div></section>
 
+  <section class="slide"><div>
+    <h2>Nth-child</h2>
+    <p></p>
   </div></section>
 
   <section class="slide"><div>

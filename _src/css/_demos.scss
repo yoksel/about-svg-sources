@@ -166,9 +166,9 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Demo Switch
 ------------------------- */
-.demo-switch {
+.demo__switch {
     /*margin-top: 1em;*/
-    font-size: .6em;
+    font-size: .9em;
     line-height: 1.4;
         DL {
         display: inline-block;
@@ -695,3 +695,21 @@ $group-use-texta-height: 11.5;
         transform: scale(.8);
         }
     }
+/* Demo Decirations
+------------------------- */
+.demo--fillstroke {
+    .demo__view {
+        float: left;
+        width: 48%;
+        svg {
+            /*border: 1px solid green;*/
+            }
+        }
+    .demo__switch {
+        float: right;
+        width: 48%;
+        }
+}
+.demo--svgtext {
+  font: bold italic 3em/1 Georgia;
+  }

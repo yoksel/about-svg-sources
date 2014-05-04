@@ -34,18 +34,18 @@ var showShapeClass = "demo__view";
 $(".demo--live").each ( function(){
     var svgCode = $(this).find(".demo__code");
     var shape_code = svgCode.val();
-    
-    var demoContent = $(this).find(".demo__content");    
+
+    var demoContent = $(this).find(".demo__content");
     var svgViewCode = "<div class='" + showShapeClass + "'>" + shape_code + "</div>";
     var svgView = $(svgViewCode).insertBefore($(demoContent));
 
     $(svgCode).change ( function(){
-        $(svgView).html( $(this).val() ); 
+        $(svgView).html( $(this).val() );
     });
-    
+
     svgCode.bind('keydown keyup', function(event){
         event.stopPropagation();
-        $(svgView).html( $(this).val() ); 
+        $(svgView).html( $(this).val() );
     });
 
 });
@@ -53,7 +53,7 @@ $(".demo--live").each ( function(){
 // Show Demos
 // -------------------------------
 var switchCheckedClass = "switch--checked";
-$(".demo-switch dd").each( function(){
+$(".demo__switch dd").each( function(){
     $(this).click( function(){
         $("." + switchCheckedClass, $(this).parent()).removeClass(switchCheckedClass);
         $(this).addClass( switchCheckedClass );
@@ -63,8 +63,8 @@ $(".demo-switch dd").each( function(){
 
         var svgGroup = $(curSlideClass).find("g");
         svgGroup.attr(changeAttr,changeVal);
-        
-        var svgElem = $(curSlideClass).find("svg");   
+
+        var svgElem = $(curSlideClass).find("svg");
         var svgElem_n = document.querySelector(".active svg");
         var svgViewbox = svgElem_n.getAttribute("viewBox"); //svg.attr("viewBox");
         var svgContent = svgElem.html();
@@ -85,8 +85,8 @@ var popupImgClass = popupClass + "__img";
     $( "<div class='" + popupClass + "'>" + img + "</div>" ).insertBefore( this );
     var imgWidth = $("." + popupImgClass).width();
     $(".popup img").load(function() {
-        $(".popup").height( $(this).height() ); 
-        $(".popup").width( $(this).width() ); 
+        $(".popup").height( $(this).height() );
+        $(".popup").width( $(this).width() );
     });
 
     $(".popup").click ( function(event){

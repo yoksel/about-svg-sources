@@ -12,7 +12,7 @@
        }
       }
      }
-        
+
    @if $fadeout == true{
     @for $i from 1 to $length - 1 {
       @if $type == text or $skew == false{
@@ -34,6 +34,7 @@
   }
   $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
  }
+
  @if $fadeout == false{
    @if $skew == true and ( $type == box ){
      @for $i from 0 to $length - 1 {
@@ -48,17 +49,17 @@
 }
 
 @font-face {
-	font-family: 'svg-dec';
-	src:url('/assets/fonts/icomoon-svg-dec/svg-dec.eot?-824yne');
-	src:url('/assets/fonts/icomoon-svg-dec/svg-dec.eot?#iefix-824yne') format('embedded-opentype'),
-		url('data:application/octet-stream;base64, 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')  format('woff'), 
-		url('/assets/fonts/icomoon-svg-dec/svg-dec.ttf?-824yne') format('truetype'),
-		url('/assets/fonts/icomoon-svg-dec/svg-dec.svg?-824yne#svg-font-fullsize') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'svg-dec';
+  src:url('/assets/fonts/icomoon-svg-dec/svg-dec.eot?-824yne');
+  src:url('/assets/fonts/icomoon-svg-dec/svg-dec.eot?#iefix-824yne') format('embedded-opentype'),
+    url('data:application/octet-stream;base64, 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')  format('woff'),
+    url('/assets/fonts/icomoon-svg-dec/svg-dec.ttf?-824yne') format('truetype'),
+    url('/assets/fonts/icomoon-svg-dec/svg-dec.svg?-824yne#svg-font-fullsize') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-$iconfont-size: $base-size * 6;
+$iconfont-size: $base-size * 9;
 
 .wrapper--iconfont {
   position: absolute;
@@ -67,8 +68,8 @@ $iconfont-size: $base-size * 6;
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 100%;
-  height: $iconfont-size;
+  width: 80%;
+  height: $iconfont-size*2.5;
   text-align: center;
   color: #333;
   }
@@ -76,7 +77,7 @@ $iconfont-size: $base-size * 6;
       display: inline-block;
       width: $iconfont-size;
       height: $iconfont-size;
-      margin: 0 .2em;
+      margin: 0 .2em .2em;
       font-family: 'svg-dec';
       speak: none;
       font-style: normal;
@@ -86,6 +87,7 @@ $iconfont-size: $base-size * 6;
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      vertical-align: top;
       text-align: center;
       font-size: $iconfont-size;
       transition: .3s;
@@ -99,7 +101,7 @@ $iconfont-size: $base-size * 6;
   text-shadow: 1px 1px white,
                2px 2px white,
                3px 3px #333;
-	  content: "\e602";
+    content: "\e602";
   }
 .icon-cool:hover {
   transform: rotate(180deg);
@@ -121,25 +123,25 @@ $iconfont-size: $base-size * 6;
   }
 
 .icon-bubbles:before {
-	  content: "\e601";
+    content: "\e601";
   text-shadow: 5px 3px 0 rgba(0,0,0,.1);
   color: lightskyblue;
-  }  
+  }
 .icon-bubbles:hover:before {
   text-shadow: -5px -3px 0 rgba(0,0,0,.1);
   color: deepskyblue;
-  }  
+  }
 .icon-heart {
   overflow: hidden;
   background: hotpink;
-  @include long-shadow(text, lighten(mediumvioletred, 0), 45, false, false, right);
+  @include long-shadow(text, lighten(mediumvioletred, 0), 65, false, false, right);
   border-radius: .2em;
-  font-size: 4.8em;
+  font-size: 7em;
   line-height: 1.35em;
   color: #FFF;
   }
 .icon-heart:hover {
-  @include long-shadow(text, lighten(mediumvioletred, 0), 45, false, false, left);
+  @include long-shadow(text, lighten(mediumvioletred, 0), 65, false, false, left);
   }
 .icon-heart:before {
   content: "\68";

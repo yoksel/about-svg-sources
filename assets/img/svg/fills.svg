@@ -51,7 +51,7 @@
   </linearGradient>
 
   <linearGradient id="gr-gray-transp" x1="0" y1="0" x2="0" y2="100%">
-      <stop stop-color="rgba(0,0,0,.4)" class="color-1"/>
+      <stop stop-color="rgba(0,0,0,.6)" class="color-1"/>
       <stop stop-color="rgba(0,0,0,.2)" stop-opacity="0" offset="90" class="color-2"/>
   </linearGradient>
 
@@ -132,6 +132,21 @@
     <stop stop-color="#FD7400" offset="100%" />
   </lineargradient>
 
+  <lineargradient id="gr-kuler-diag"
+    x1="0" y1="0" x2="40" y2="40"
+    gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+    <stop stop-color="#004358" offset="0" />
+    <stop stop-color="#004358" offset="20%" />
+    <stop stop-color="#1F8A70" offset="21%" />
+    <stop stop-color="#1F8A70" offset="40%" />
+    <stop stop-color="#BEDB39" offset="41%" />
+    <stop stop-color="#BEDB39" offset="60%" />
+    <stop stop-color="#FFE11A" offset="61%" />
+    <stop stop-color="#FFE11A" offset="80%" />
+    <stop stop-color="#FD7400" offset="81%" />
+    <stop stop-color="#FD7400" offset="100%" />
+  </lineargradient>
+
   <radialGradient id="gr-radial-kuler"
       cx="50%" cy="50%" r="20%" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
     <stop stop-color="#004358" offset="0" />
@@ -147,7 +162,7 @@
   </radialGradient>
 
   <radialGradient id="gr-radial-kuler-bb"
-      cx="50%" cy="50%" r="32%" gradientUnits="objectBoundingBox" spreadMethod="repeat">
+      cx="50%" cy="50%" r="35%" gradientUnits="objectBoundingBox" spreadMethod="repeat">
     <stop stop-color="#004358" offset="0" />
     <stop stop-color="#004358" offset="20%" />
     <stop stop-color="#1F8A70" offset="21%" />
