@@ -108,7 +108,7 @@
 
   <!--  -->
 
-  <lineargradient id="ymc-gradient" x1="0" y1="0" x2="100%" y2="0%">
+  <lineargradient id="gr-ymc-gradient" x1="0" y1="0" x2="100%" y2="0%">
     <stop stop-color="hsl(40,100%,50%)" offset="0" />
     <stop stop-color="hsl(40,100%,50%)" offset="25%" />
     <stop stop-color="hsl(355,90%,50%)" offset="26%" />
@@ -119,7 +119,7 @@
     <stop stop-color="hsl(180,95%,35%)" offset="100%" />
   </lineargradient>
 
-  <lineargradient id="kuler-gradient" x1="0" y1="0" x2="100%" y2="0%">
+  <lineargradient id="gr-kuler" x1="0" y1="0" x2="100%" y2="0%">
     <stop stop-color="#004358" offset="0" />
     <stop stop-color="#004358" offset="20%" />
     <stop stop-color="#1F8A70" offset="21%" />
@@ -131,6 +131,34 @@
     <stop stop-color="#FD7400" offset="81%" />
     <stop stop-color="#FD7400" offset="100%" />
   </lineargradient>
+
+  <radialGradient id="gr-radial-kuler"
+      cx="50%" cy="50%" r="20%" gradientUnits="userSpaceOnUse" spreadMethod="repeat">
+    <stop stop-color="#004358" offset="0" />
+    <stop stop-color="#004358" offset="20%" />
+    <stop stop-color="#1F8A70" offset="21%" />
+    <stop stop-color="#1F8A70" offset="40%" />
+    <stop stop-color="#BEDB39" offset="41%" />
+    <stop stop-color="#BEDB39" offset="60%" />
+    <stop stop-color="#FFE11A" offset="61%" />
+    <stop stop-color="#FFE11A" offset="80%" />
+    <stop stop-color="#FD7400" offset="81%" />
+    <stop stop-color="#FD7400" offset="100%" />
+  </radialGradient>
+
+  <radialGradient id="gr-radial-kuler-bb"
+      cx="50%" cy="50%" r="32%" gradientUnits="objectBoundingBox" spreadMethod="repeat">
+    <stop stop-color="#004358" offset="0" />
+    <stop stop-color="#004358" offset="20%" />
+    <stop stop-color="#1F8A70" offset="21%" />
+    <stop stop-color="#1F8A70" offset="40%" />
+    <stop stop-color="#BEDB39" offset="41%" />
+    <stop stop-color="#BEDB39" offset="60%" />
+    <stop stop-color="#FFE11A" offset="61%" />
+    <stop stop-color="#FFE11A" offset="80%" />
+    <stop stop-color="#FD7400" offset="81%" />
+    <stop stop-color="#FD7400" offset="100%" />
+  </radialGradient>
 
   <!--  -->
 

@@ -664,28 +664,30 @@
         <svg viewbox="0 0 700 300">
           <g fill="none" stroke-width="100" transform="translate(0,0)">
             <g class="g-circles">
-              <use xlink:href="#s-strokefill" stroke="gold"
-                clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-strokefill" stroke="url(#pt-mosaic-colored)" clip-path="url(#clip-rect-top)"
-                transform="translate(200)"/>
-              <use xlink:href="#s-strokefill" stroke="url(#pt-rainbow-stripes)"
-                clip-path="url(#clip-rect-top)"
-                transform="translate(400)"/>
+              <g transform="rotate(-90, 150, 150)">
+                <use xlink:href="#s-strokefill" stroke="url(#pt-mosaic-colored)"
+                  clip-path="url(#clip-rect-top)"/>
+                <use xlink:href="#s-strokefill" stroke="gold"
+                  clip-path="url(#clip-rect-top)"
+                  transform="rotate(180, 150, 150)"/>
+              </g>
+
+              <g transform="translate(200) rotate(-90, 150, 150)">
+                <use xlink:href="#s-strokefill" stroke="url(#gr-radial-kuler-bb)"
+                  clip-path="url(#clip-rect-top)"/>
+                <use xlink:href="#s-strokefill" stroke="url(#pt-wood)"
+                  clip-path="url(#clip-rect-top)"
+                  transform="rotate(180, 150, 150)"/>
+              </g>
+
+              <g transform="translate(400) rotate(-90, 150, 150)">
+                <use xlink:href="#s-strokefill" stroke="url(#pt-rainbow-stripes)"
+                  clip-path="url(#clip-rect-top)"/>
+                <use xlink:href="#s-strokefill" stroke="url(#gr-hot-cold-soft)"
+                  clip-path="url(#clip-rect-top)"
+                  transform="rotate(180, 150, 150)"/>
+              </g>
             </g>
-
-            <g class="g-circles" transform="rotate(180,350,150)">
-              <use xlink:href="#s-strokefill" stroke="url(#gr-radial-stripes-repeat)"
-                clip-path="url(#clip-rect-top)"
-                transform="translate(400)"/>
-              <use xlink:href="#s-strokefill" stroke="url(#pt-wood)" clip-path="url(#clip-rect-top)"
-                transform="translate(200)"/>
-              <use xlink:href="#s-strokefill" stroke="url(#gr-hot-cold-soft)"
-                clip-path="url(#clip-rect-top)"/>
-            </g>
-
-
-
-
           </g>
         </svg>
       </div>
@@ -1384,7 +1386,7 @@
       </svg>
       <span class="sign">=</span>
       <svg width="200" height="300">
-        <g mask="url(#mask)">
+        <g mask="url(#mask-usou)">
           <use xlink:href="#s-flower-m"/>
         </g>
       </svg>
