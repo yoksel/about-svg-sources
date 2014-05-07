@@ -64,20 +64,15 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 .js-toggle-code {
-    display: block;
-    height: 20px;
-    /*CODE {
-        display: inline-block;
-        position: relative;
-        transition: 1s;
-        overflow: hidden;
-        }
+    overflow: hidden;
+    cursor: pointer;
+
     &:after {
-        content: "\2012";
+        content: "";
         position: absolute;
         display: block;
-        right: 10px;
-        top: 10px;
+        right: .6em;
+        top: .8em;
         width: 1em;
         height: 1em;
         border: 1px solid;
@@ -85,16 +80,15 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         text-align: center;
         font-size: 1em;
         font-family: Arial;
-        color:  #AAA;
+        color:  #999;
+        background-image: url(data:image/svg+xml;utf8,%3Csvg%20viewbox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20fill%3D%22%23999%22%20x%3D%221%22%20y%3D%229%22%20width%3D%2218%22%20height%3D%222%22/%3E%3C/svg%3E);
+        background-position: 2px 2px;
     }
     &.is--collapsed {
-        CODE {
-            height: 1.5em;
-            }
         &:after {
-            content: "+";
+            background-image: url(data:image/svg+xml;utf8,%3Csvg%20viewbox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20fill%3D%22%23999%22%20x%3D%229%22%20y%3D%221%22%20width%3D%222%22%20height%3D%2218%22/%3E%3Crect%20fill%3D%22%23999%22%20x%3D%221%22%20y%3D%229%22%20width%3D%2218%22%20height%3D%222%22/%3E%3C/svg%3E);
             }
-    }*/
+    }
 }
 /* Highlight
 ------------------------- */
