@@ -31,7 +31,8 @@ $(function() {
 var showShapeClass = "demo__view";
 
 function removeBackground(elem){
-    $(elem).css("background","none");
+    // $(elem).css("background","none");
+    $(elem).parent().addClass("no-highlight");
 }
 
 $(".demo--live").each ( function(){
@@ -50,7 +51,7 @@ $(".demo--live").each ( function(){
     svgCode.bind('keydown keyup', function(event){
         event.stopPropagation();
         $(svgView).html( $(this).val() );
-        $(this).css("background","none");
+        removeBackground(this);
     });
 
 });
@@ -75,9 +76,6 @@ $(".demo__switch dd").each( function(){
         var svgContent = svgElem.html();
         var demoCode = $(curSlideClass).find(".demo__code");
         demoCode.val("<svg viewbox='" + svgViewbox + "'>" + svgContent + "</svg>");
-        // console.log("demoCode");
-        // console.log(demoCode);
-        // demoCode.val("2233");
         });
     });
 
@@ -101,3 +99,9 @@ var popupImgClass = popupClass + "__img";
 
     return false;
  });
+
+$(".js-toggle-code").click( function(){
+    $(this).toggleClass("is--collapsed");
+});
+
+

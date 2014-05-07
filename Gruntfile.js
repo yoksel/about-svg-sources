@@ -113,18 +113,18 @@ module.exports = function (grunt) {
                 // ie: optimise img/src/branding/logo.svg and store it in img/branding/logo.min.svg
             }]
         }
-    },  
+    },
 
     imagemin: {
-      dynamic: {   
+      dynamic: {
         files: [{
           expand: true,
-          cwd: '_src/img',                   
-          src: ['**/*.{png,jpg,gif}'],   
-          dest: 'assets/img'             
+          cwd: '_src/img',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'assets/img'
         }]
       }
-    }, 
+    },
 
     sprite:{
       all: {
@@ -143,7 +143,7 @@ module.exports = function (grunt) {
         files: '<%= project.css_src %>{,*/}*.{scss,sass}',
         tasks: ['sass:dev', 'autoprefixer'],
         options: {
-          livereload: true,
+          livereload: 35731,
         },
       }
     },
@@ -167,7 +167,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          
+
           // includes files within path and its sub-directories
           {expand: true, src: ['assets/**'], dest: 'build/'},
           {expand: true, src: ['node_modules/shower-core/**'], dest: 'build/'},
@@ -209,7 +209,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('svg', [
     'svgstore'
-    // 'svgmin' 
+    // 'svgmin'
     ]);
 
   grunt.registerTask('build', [

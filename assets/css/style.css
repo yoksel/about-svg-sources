@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
@@ -458,6 +457,54 @@ PRE:before {
   font-size: .8em;
 }
 
+.js-toggle-code CODE {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden;
+  /*height: 300px;*/
+}
+.js-toggle-code:after {
+  content: "\2012";
+  position: absolute;
+  display: block;
+  right: 10px;
+  top: 10px;
+  width: 1em;
+  height: 1em;
+  border: 1px solid;
+  line-height: 1;
+  text-align: center;
+  font-size: 1em;
+  font-family: Arial;
+  color: #AAA;
+}
+.js-toggle-code.is--collapsed CODE {
+  height: 1.5em;
+}
+.js-toggle-code.is--collapsed:after {
+  content: "+";
+}
+
+/* Highlight
+------------------------- */
+.demo__content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+.no-highlight:before {
+  opacity: 0;
+}
+
 /* Cat
 ------------------------- */
 .preview--cat {
@@ -520,14 +567,7 @@ PRE:before {
   width: 100%;
 }
 .demo--live .demo__content {
-  /*float: right;*/
-  /*width: $textarea-width;*/
   margin-top: 2em;
-  /*line-height: 1;*/
-}
-.demo--live .demo__view {
-  /*float: left;
-  width: 35%;*/
 }
 .demo--live .demo__view svg {
   display: block;
@@ -557,22 +597,9 @@ PRE:before {
   font: bold .8em/1 Arial !important;
 }
 
-/*
-.demo--stacks {
-    .demo__view {
-        float: left;
-        width: 35%;
-        border: 2px solid;
-    }
-    .demo__content {
-        float: right;
-        width: $textarea-width;
-        }
-}*/
 /* Demo Switch
 ------------------------- */
 .demo__switch {
-  /*margin-top: 1em;*/
   font-size: .9em;
   line-height: 1.4;
 }
@@ -627,85 +654,162 @@ PRE:before {
 
 /* Demo Rect
 ------------------------- */
-.demo--rect-1 .demo__textfield {
+.demo--rect-1 .demo__content {
+  position: relative;
+}
+.demo--rect-1 .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
 }
-.demo--rect-2 .demo__textfield {
+.demo--rect-1 .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--rect-2 .demo__content {
+  position: relative;
+}
+.demo--rect-2 .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
   background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
   background-position: 0 .2em;
 }
-.demo--rect-3 .demo__textfield {
+.demo--rect-2 .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--rect-3 .demo__content {
+  position: relative;
+}
+.demo--rect-3 .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
   background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
   background-position: 0 .2em;
+}
+.demo--rect-3 .demo__content .demo__code {
+  position: relative;
+  background: transparent;
 }
 
 /* Demo Circle
 ------------------------- */
-.demo--circle .demo__code {
+.demo--circle .demo__content {
+  position: relative;
+}
+.demo--circle .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
+}
+.demo--circle .demo__content .demo__code {
+  position: relative;
+  background: transparent;
 }
 
 /* Demo Polygon
 ------------------------- */
 .demo--polygon .demo__code {
+  position: relative;
+}
+.demo--polygon .demo__code:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
 }
+.demo--polygon .demo__code .demo__code {
+  position: relative;
+  background: transparent;
+}
 
-.demo--polygon-star .demo__code {
+.demo--polygon-star .demo__content {
+  position: relative;
+}
+.demo--polygon-star .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background-position: 0 .2em;
+}
+.demo--polygon-star .demo__content .demo__code {
+  position: relative;
+  background: transparent;
 }
 
 /* Demo Lines
 ------------------------- */
-.demo--line .demo__code {
+.demo--line .demo__content {
+  position: relative;
+}
+.demo--line .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
 }
+.demo--line .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
 
-.demo--polyline .demo__code {
+.demo--polyline .demo__content {
+  position: relative;
+}
+.demo--polyline .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background-position: 0 .2em;
 }
+.demo--polyline .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
 
-.demo--path .demo__code {
+.demo--path .demo__content {
+  position: relative;
+}
+.demo--path .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
 }
+.demo--path .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
 
-.demo--path-abs-rel .demo__code {
+.demo--path-abs-rel .demo__content {
+  position: relative;
+}
+.demo--path-abs-rel .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(81.7128px, palegoldenrod), color-stop(108.9504px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
   background: linear-gradient(transparent 81.7128px, palegoldenrod 81.7128px, palegoldenrod 108.9504px, transparent 108.9504px);
   background-position: 0 .2em;
 }
+.demo--path-abs-rel .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
 
-.demo--path-circ .demo__code {
+.demo--path-circ .demo__content {
+  position: relative;
+}
+.demo--path-circ .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px), linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background-position: 0 .2em;
+}
+.demo--path-circ .demo__content .demo__code {
+  position: relative;
+  background: transparent;
 }
 
 /* Demo Fill
@@ -717,7 +821,7 @@ PRE:before {
 .demo--fill text {
   font: bold italic 60px/1 Georgia;
 }
-.demo--fill .demo__code {
+.demo--fill .demo__content {
   height: 217.9008px;
 }
 
@@ -1062,12 +1166,21 @@ PRE:before {
 .demo--g .demo__view {
   height: 210px;
 }
-.demo--g .demo__code {
-  height: 204.282px;
+.demo--g .demo__content {
+  position: relative;
+}
+.demo--g .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
+}
+.demo--g .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--g .demo__code {
+  height: 204.282px;
 }
 
 /* Demo Use
@@ -1075,12 +1188,21 @@ PRE:before {
 .demo--use .demo__view {
   height: 155px;
 }
-.demo--use .demo__code {
-  height: 285.9948px;
+.demo--use .demo__content {
+  position: relative;
+}
+.demo--use .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(163.4256px, palegoldenrod), color-stop(190.6632px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(190.6632px, palegoldenrod), color-stop(217.9008px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 163.4256px, palegoldenrod 163.4256px, palegoldenrod 190.6632px, transparent 190.6632px), -webkit-linear-gradient(transparent 190.6632px, palegoldenrod 190.6632px, palegoldenrod 217.9008px, transparent 217.9008px);
   background: linear-gradient(transparent 163.4256px, palegoldenrod 163.4256px, palegoldenrod 190.6632px, transparent 190.6632px), linear-gradient(transparent 190.6632px, palegoldenrod 190.6632px, palegoldenrod 217.9008px, transparent 217.9008px);
   background-position: 0 .2em;
+}
+.demo--use .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--use .demo__code {
+  height: 285.9948px;
 }
 
 /* Demo Defs
@@ -1088,12 +1210,21 @@ PRE:before {
 .demo--defs .demo__view {
   height: 120px;
 }
-.demo--defs .demo__code {
-  height: 313.2324px;
+.demo--defs .demo__content {
+  position: relative;
+}
+.demo--defs .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(27.2376px, palegoldenrod), color-stop(54.4752px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background: linear-gradient(transparent 27.2376px, palegoldenrod 27.2376px, palegoldenrod 54.4752px, transparent 54.4752px);
   background-position: 0 .2em;
+}
+.demo--defs .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--defs .demo__code {
+  height: 313.2324px;
 }
 
 /* Demo Symbol
@@ -1101,12 +1232,21 @@ PRE:before {
 .demo--symbol .demo__view {
   height: 120px;
 }
-.demo--symbol .demo__code {
-  height: 313.2324px;
+.demo--symbol .demo__content {
+  position: relative;
+}
+.demo--symbol .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background: linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px);
   background-position: 0 .2em;
+}
+.demo--symbol .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--symbol .demo__code {
+  height: 313.2324px;
 }
 
 /* Demo pattern
@@ -1114,12 +1254,21 @@ PRE:before {
 .demo--pattern .demo__view {
   height: 120px;
 }
-.demo--pattern .demo__code {
-  height: 313.2324px;
+.demo--pattern .demo__content {
+  position: relative;
+}
+.demo--pattern .demo__content:before {
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(54.4752px, palegoldenrod), color-stop(81.7128px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(245.1384px, palegoldenrod), color-stop(272.376px, palegoldenrod), to(transparent));
   background: -webkit-linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px), -webkit-linear-gradient(transparent 245.1384px, palegoldenrod 245.1384px, palegoldenrod 272.376px, transparent 272.376px);
   background: linear-gradient(transparent 54.4752px, palegoldenrod 54.4752px, palegoldenrod 81.7128px, transparent 81.7128px), linear-gradient(transparent 245.1384px, palegoldenrod 245.1384px, palegoldenrod 272.376px, transparent 272.376px);
   background-position: 0 .2em;
+}
+.demo--pattern .demo__content .demo__code {
+  position: relative;
+  background: transparent;
+}
+.demo--pattern .demo__code {
+  height: 313.2324px;
 }
 
 #pt-text {
@@ -1282,45 +1431,48 @@ PRE:before {
 
 /* Demo Nth-child
 ------------------------- */
-.demo--nth-child g {
+.demo--nth-child path {
+  -webkit-animation: nthchild-dasharray 5s infinite alternate;
+  animation: nthchild-dasharray 5s infinite alternate;
+}
+
+.g-icon--airballoon {
   -webkit-transform: scale(0.95) translate(4px, 4px);
   -ms-transform: scale(0.95) translate(4px, 4px);
   transform: scale(0.95) translate(4px, 4px);
 }
-.demo--nth-child path {
+.g-icon--airballoon path {
   fill: none;
   stroke-width: 1;
   stroke: rgba(0, 0, 0, 0.8);
   stroke-dasharray: 550 0;
-  -webkit-animation: nthchild-dasharray 5s infinite alternate;
-  animation: nthchild-dasharray 5s infinite alternate;
 }
-.demo--nth-child path:nth-child(8n+3) {
+.g-icon--airballoon path:nth-child(8n+3) {
   fill: #C24704;
   -webkit-animation-delay: .4s;
   animation-delay: .4s;
 }
-.demo--nth-child path:nth-child(8n+4) {
+.g-icon--airballoon path:nth-child(8n+4) {
   fill: #D9CC3C;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
-.demo--nth-child path:nth-child(8n+5) {
+.g-icon--airballoon path:nth-child(8n+5) {
   fill: #FFEB79;
   -webkit-animation-delay: 1.6s;
   animation-delay: 1.6s;
 }
-.demo--nth-child path:nth-child(8n+6) {
+.g-icon--airballoon path:nth-child(8n+6) {
   fill: #A0E0A9;
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
-.demo--nth-child path:nth-child(8n+7) {
+.g-icon--airballoon path:nth-child(8n+7) {
   fill: #00ADA7;
   -webkit-animation-delay: 2.6s;
   animation-delay: 2.6s;
 }
-.demo--nth-child path:nth-child(8n) {
+.g-icon--airballoon path:nth-child(8n) {
   fill: #00615d;
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
@@ -1341,6 +1493,18 @@ PRE:before {
     fill-opacity: 0;
   }
 }
+.demo--colorful-icon {
+  text-align: center;
+  font-size: 3em;
+}
+.demo--colorful-icon svg {
+  width: 280px;
+  height: 400px;
+  vertical-align: middle;
+  -webkit-animation: ghost 3s linear infinite;
+  animation: ghost 3s linear infinite;
+}
+
 @font-face {
   font-family: 'svg-dec';
   src: url("/assets/fonts/icomoon-svg-dec/svg-dec.eot?-824yne");
@@ -1575,6 +1739,15 @@ PRE:before {
 
 .list--support-stacks DT {
   width: 327px;
+}
+
+.list--cssmasks DL {
+  vertical-align: top;
+}
+.list--cssmasks DT {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .browser {

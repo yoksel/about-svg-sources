@@ -28,6 +28,17 @@
     }
 }
 
+.list--cssmasks {
+  DL {
+    vertical-align: top;
+  }
+  DT {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 
 $browser-size: 64px;
 

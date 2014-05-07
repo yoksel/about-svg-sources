@@ -29,8 +29,16 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
                 $hl-color $hl-begin, $hl-color $hl-end,
                 transparent $hl-end), comma);
         }
-    background: $gradients;
-    background-position: 0 .2em;
+
+    position: relative;
+    &:before {
+        background: $gradients;
+        background-position: 0 .2em;
+        }
+    .demo__code {
+        position: relative;
+        background: transparent;
+        }
 }
 
 @mixin demo-list ($margin-right: 2em){
@@ -53,6 +61,55 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         display: block;
         font-size: .8em;
         }
+    }
+
+.js-toggle-code {
+    CODE {
+        display: inline-block;
+        position: relative;
+        transition: 1s;
+        overflow: hidden;
+        /*height: 300px;*/
+        }
+    &:after {
+        content: "\2012";
+        position: absolute;
+        display: block;
+        right: 10px;
+        top: 10px;
+        width: 1em;
+        height: 1em;
+        border: 1px solid;
+        line-height: 1;
+        text-align: center;
+        font-size: 1em;
+        font-family: Arial;
+        color:  #AAA;
+    }
+    &.is--collapsed {
+        CODE {
+            height: 1.5em;
+            }
+        &:after {
+            content: "+";
+            }
+    }
+}
+/* Highlight
+------------------------- */
+.demo__content:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 1.5s;
+    }
+
+.no-highlight:before {
+    opacity: 0;
     }
 
 /* Cat
@@ -113,15 +170,9 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         @include clear;
         }
     .demo__content {
-        /*float: right;*/
-        /*width: $textarea-width;*/
         margin-top: 2em;
-        /*line-height: 1;*/
         }
     .demo__view {
-        /*float: left;
-        width: 35%;*/
-
         svg {
             display: block;
             width: 100%;
@@ -151,23 +202,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         font: bold .8em/1 Arial !important;
         }
     }
-/*
-.demo--stacks {
-    .demo__view {
-        float: left;
-        width: 35%;
-        border: 2px solid;
-    }
-    .demo__content {
-        float: right;
-        width: $textarea-width;
-        }
-}*/
 
 /* Demo Switch
 ------------------------- */
 .demo__switch {
-    /*margin-top: 1em;*/
     font-size: .9em;
     line-height: 1.4;
         DL {
@@ -224,17 +262,17 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 ------------------------- */
 .demo--rect {
     &-1 {
-        .demo__textfield {
+        .demo__content {
             @include highlight-lines(2);
             }
         }
     &-2 {
-        .demo__textfield {
+        .demo__content {
             @include highlight-lines(4);
             }
         }
     &-3 {
-        .demo__textfield {
+        .demo__content {
             @include highlight-lines(4);
             }
         }
@@ -244,7 +282,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 ------------------------- */
 
 .demo--circle {
-    .demo__code {
+    .demo__content {
         @include highlight-lines(2);
         }
     }
@@ -258,7 +296,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 .demo--polygon-star {
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 2, 3;
         @include highlight-lines($demo-code-lines);
         }
@@ -266,32 +304,32 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 /* Demo Lines
 ------------------------- */
 .demo--line {
-    .demo__code {
+    .demo__content {
         @include highlight-lines(2);
         }
 }
 .demo--polyline {
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 2, 3;
         @include highlight-lines($demo-code-lines);
         }
 }
 
 .demo--path {
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 2;
         @include highlight-lines($demo-code-lines);
         }
 }
 .demo--path-abs-rel {
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 4;
         @include highlight-lines($demo-code-lines);
         }
 }
 
 .demo--path-circ {
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 2, 3;
         @include highlight-lines($demo-code-lines);
         }
@@ -307,7 +345,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     text {
         font: bold italic 60px/1 Georgia;
         }
-    .demo__code {
+    .demo__content {
         @include textarea-height (8);
         }
     }
@@ -522,10 +560,12 @@ $group-use-texta-height: 11.5;
     .demo__view {
         height: 210px;
         }
-    .demo__code {
+     .demo__content {
         $demo-code-lines: 2;
-        @include textarea-height (7.5);
         @include highlight-lines($demo-code-lines);
+        }
+    .demo__code {
+        @include textarea-height (7.5);
         }
     }
 /* Demo Use
@@ -534,10 +574,12 @@ $group-use-texta-height: 11.5;
     .demo__view {
         height: 155px;
         }
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 7,8;
-        @include textarea-height (10.5);
         @include highlight-lines($demo-code-lines);
+        }
+    .demo__code {
+        @include textarea-height (10.5);
         }
     }
 /* Demo Defs
@@ -546,10 +588,12 @@ $group-use-texta-height: 11.5;
     .demo__view {
         height: $group-use-view-height;
         }
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 2;
-        @include textarea-height ($group-use-texta-height);
         @include highlight-lines($demo-code-lines);
+        }
+    .demo__code {
+        @include textarea-height ($group-use-texta-height);
         }
     }
 
@@ -559,10 +603,12 @@ $group-use-texta-height: 11.5;
     .demo__view {
         height: $group-use-view-height;
         }
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 3;
-        @include textarea-height ($group-use-texta-height);
         @include highlight-lines($demo-code-lines);
+        }
+    .demo__code {
+        @include textarea-height ($group-use-texta-height);
         }
     }
 /* Demo pattern
@@ -571,10 +617,12 @@ $group-use-texta-height: 11.5;
     .demo__view {
         height: $group-use-view-height;
         }
-    .demo__code {
+    .demo__content {
         $demo-code-lines: 3,10;
-        @include textarea-height ($group-use-texta-height);
         @include highlight-lines($demo-code-lines);
+        }
+    .demo__code {
+        @include textarea-height ($group-use-texta-height);
         }
     }
 #pt-text {
@@ -717,18 +765,22 @@ $group-use-texta-height: 11.5;
 /* Demo Nth-child
 ------------------------- */
 .demo--nth-child {
-  svg {
-
-  }
   g {
-  transform: scale(.95) translate(4px,4px);
+
     }
+  path {
+      animation: nthchild-dasharray 5s infinite alternate;
+      }
+}
+
+.g-icon--airballoon {
+    transform: scale(.95) translate(4px,4px);
+
     path {
       fill: none;
       stroke-width: 1;
       stroke: rgba(0,0,0, .8);
       stroke-dasharray: 550 0;
-      animation: nthchild-dasharray 5s infinite alternate;
       }
 
     path:nth-child(8n+3){
@@ -763,4 +815,15 @@ $group-use-texta-height: 11.5;
     stroke-dasharray: 0 500;
     fill-opacity: 0;
   }
+}
+
+.demo--colorful-icon {
+    text-align: center;
+    font-size:  3em;
+    svg {
+        width: 280px;
+        height: 400px;
+        vertical-align: middle;
+        animation: ghost 3s linear infinite;
+        }
 }
