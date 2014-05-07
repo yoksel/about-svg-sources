@@ -100,8 +100,29 @@ var popupImgClass = popupClass + "__img";
     return false;
  });
 
-$(".js-toggle-code").click( function(){
-    $(this).toggleClass("is--collapsed");
+// Toggle Codes
+// -------------------------------
+
+jQuery.fn.animateAuto = function(prop, speed, callback){
+    var elem, height, width;
+    return this.each(function(i, el){
+        el = jQuery(el), elem = el.clone().css({"height":"auto","width":"auto"}).appendTo("body");
+        height = elem.css("height"),
+        width = elem.css("width"),
+        elem.remove();
+
+        if(prop === "height")
+            el.animate({"height":height}, speed, callback);
+        else if(prop === "width")
+            el.animate({"width":width}, speed, callback);
+        else if(prop === "both")
+            el.animate({"width":width,"height":height}, speed, callback);
+    });
+}
+
+$(".js-toggle-code").bind("click", function(e){
+    $(this).animateAuto("height", 1000);
+    console.log("123")
 });
 
 
