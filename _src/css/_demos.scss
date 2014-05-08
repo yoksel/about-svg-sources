@@ -35,10 +35,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         background: $gradients;
         background-position: 0 .2em;
         }
-    .demo__code {
-        position: relative;
-        background: transparent;
-        }
 }
 
 @mixin demo-list ($margin-right: 2em){
@@ -90,6 +86,12 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             }
     }
 }
+
+.demo__code {
+    position: relative;
+    background: transparent;
+    }
+
 /* Highlight
 ------------------------- */
 .demo__content:before {
@@ -154,9 +156,25 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
     .slide--strokewidth PRE {
         width: 60%;
-        margin: 20.5% auto 0;
+        margin: 18.5% auto 0;
         }
-
+.demo--editproperty {
+    .demo__code {
+        width: 100%;
+        height: 1em;
+        margin: 0 0 45px;
+        padding: 3px;
+        border: 0;
+        outline: none;
+        line-height: 1;
+        font-family: 'Anka Coder',monospace;
+        font-size: 100%;
+        transition: .5s;
+        &:focus {
+            background: $hl-color;
+            }
+        }
+}
 /* Demo Live
 ------------------------- */
 .demo--live {
@@ -334,7 +352,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 ------------------------- */
 .demo--fill {
     .demo__view {
-        /*width: 250px;*/
         height: 310px;
         }
     text {

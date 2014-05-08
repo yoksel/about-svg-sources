@@ -20,12 +20,6 @@ $( "#svg-images" ).load( "/assets/img/svg/svg-lib.svg", function() {
 
 var curSlideClass = ".slide.active";
 
-// Resize div
-// -------------------------------
-$(function() {
-    $( ".resizable" ).resizable();
-  });
-
 // Show Shapes
 // -------------------------------
 var showShapeClass = "demo__view";
@@ -119,4 +113,36 @@ $(".js-toggle-code").click(function(){
     }
 });
 
+// Edit Property
+// -------------------------------
 
+function editProperty(elem) {
+    console.log(elem);
+    var editedCode = $(elem).find(".demo__code");
+    var svgElem = $(elem).find("svg");
+    var editedElem = $(elem).find("[transform]");
+
+    var propNameValue = editedCode.val().split("=");
+    var propName = propNameValue[0];
+    var propValue = propNameValue[1].replace(/"/g,"");
+    $(editedElem).attr("transform",propValue);
+}
+
+$(".demo--editproperty").each ( function(){
+    var editedCode = $(this).find(".demo__code");
+    var codeParent = this;
+
+    console.log(codeParent);
+
+    editedCode.change ( function(codeParent){
+        editProperty(codeParent);
+        console.log('change');
+    });
+
+    $(editedCode).bind('keydown keyup', function(event){
+        event.stopPropagation();
+        console.log('keydown keyup');
+        editProperty(codeParent);
+    });
+
+});

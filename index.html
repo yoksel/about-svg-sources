@@ -242,8 +242,8 @@
         <div class="demo demo--polygon demo--live">
           <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg viewbox="0 0 500 270" height="270">
-    <polygon points="5,265 250,5 495,265"
-      fill="violet" stroke="purple" stroke-width="5" />
+  <polygon points="5,265 250,5 495,265"
+    fill="violet" stroke="purple" stroke-width="5" />
 </svg></textarea>
     </div></div>
   </div></section>
@@ -252,8 +252,8 @@
     <div class="demo demo--polygon-star demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg viewbox="0 0 140 130" height="270">
-    <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
-      fill="turquoise" stroke="lightseagreen" stroke-width="3" />
+  <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
+    fill="turquoise" stroke="lightseagreen" stroke-width="3" />
 </svg></textarea>
     </div></div>
 
@@ -267,8 +267,8 @@
         <div class="demo demo--line demo--live">
           <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg viewbox="0 0 500 270" height="270">
-    <line x1="10" y1="260" x2="490" y2="10"
-           stroke="violet" stroke-width="5" />
+  <line x1="10" y1="260" x2="490" y2="10"
+    stroke="violet" stroke-width="5" />
 </svg></textarea>
     </div>
     </div>
@@ -282,8 +282,8 @@
     <div class="demo demo--polyline demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg height="270" viewbox="0 0 260 140">
-    <polyline points="5,135 30,5 55,135 80,5, 105,135 130,5, 155,135 180,5, 205,135 230,5, 255,135"
-                fill="none" stroke="orangered" stroke-width="3" />
+  <polyline points="5,135 30,5 55,135 80,5 105,135 130,5 155,135 180,5 205,135 230,5"
+    fill="none" stroke="orangered" stroke-width="3" />
 </svg></textarea>
     </div></div>
   </div></section>
@@ -320,7 +320,7 @@
       <textarea class="demo__textfield demo__code"><svg  viewbox="0 0 340 270" height="270">
   <path d="M 170,10 C 0,10 0,260 170,260
            M 170,10 C 340,10 340,260 170,260"
-        stroke="orange" stroke-width="5" fill="gold" />
+    stroke="orange" stroke-width="5" fill="gold" />
 </svg></textarea>
     </div></div>
   </div></section>
@@ -550,7 +550,7 @@
 
     <div class="demo">
       <svg>
-        <g transform="translate(20, 30) scale(1, .92)">
+        <g transform="translate(20, 30) scale(1, .85)">
           <rect width="90%" height="90%" x="3%" y="3%" fill="none" stroke="yellowgreen" stroke-width="5%"/>
           <rect width="80%" height="64.5%" x="8%" y="16%" fill="none" stroke="gold" stroke-width="2%"/>
           <rect width="72%" height="45%" x="12%" y="26%" fill="none" stroke="crimson" stroke-width="5"/>
@@ -1030,16 +1030,19 @@
     </svg></div>
   </div></section>
 
-  <section class="slide"><div>
-    <pre><code>transform="skewX(35)"</code></pre>
-    <div class="demo">
-      <svg width="700px" height="360px">
+  <section class="slide" class="slide"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">transform="skewX(35)"</textarea>
+      </div>
+      <div class="demo__view"><svg width="700px" height="360px">
         <g>
           <use xlink:href="#s-transform-before"/>
           <use xlink:href="#s-transform-after"
           fill="yellowgreen" transform="skewX(35)"/>
         </g>
-    </svg></div>
+      </svg></div>
+    </div>
   </div></section>
 
   <section class="slide"><div>
@@ -1116,17 +1119,17 @@
 
   <section class="slide"><div>
     <ul>
-      <li><span>Embed/object/iframe</span></li>
-      <li class="next"><span>Img</span></li>
-      <li class="next"><span>CSS backgrounds</span>
+      <li><span>&lt;embed>, &lt;object>, &lt;iframe></span></li>
+      <li class="next"><span>&lt;img></span></li>
+      <li class="next"><span>фоновой картинкой</span>
           <ul>
             <li class="next">url</li>
             <li class="next">base64 в data URI</li>
             <li class="next">SVG в data URI</li>
           </ul>
       </li>
-      <li class="next"><span>Inline SVG</span></li>
-      <li class="next"><span>Font</span></li>
+      <li class="next"><span>SVG в HTML</span></li>
+      <li class="next"><span>шрифт</span></li>
     </ul>
   </div></section>
 
@@ -1168,18 +1171,18 @@
 
   <section class="slide"><div>
     <ul class="list--browsers-inside list--problems">
-      <li><span class="browser opera-old opera-min"></span> &mdash; font, backgrounds, inline SVG
+      <li><span class="browser opera-old opera-min"></span> &mdash; шрифт, фон, SVG в HTML
       </li>
-      <li><span class="browser opera-old opera-12"></span> &mdash; backgrounds</li>
-      <li><span class="browser chrome"></span> &mdash; font <!-- <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a> --></li>
+      <li><span class="browser opera-old opera-12"></span> &mdash; фон</li>
+      <li><span class="browser chrome"></span> &mdash; шрифт <!-- <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a> --></li>
     </ul>
   </div></section>
 
   <section class="slide"><div>
     <h2>Какой способ лучше?</h2>
     <ul>
-      <li>инлайновый SVG<!--  - для оформления внешними стилями  и&nbsp;управления через JS --></li>
-      <li class="next">SVG-спрайт<!--  - если нет необходимости управления через внешний&nbsp;CSS< --></li>
+      <li>SVG в HTML<!--  - для оформления внешними стилями  и&nbsp;управления через JS --></li>
+      <li class="next">фон<!--  - если нет необходимости управления через внешний&nbsp;CSS< --></li>
       <li class="next">иконочный шрифт<!--  - удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами  -->
       </li>
     </ul>
@@ -1686,6 +1689,7 @@
           <li>матрица</li>
           <li>QR-код</li>
           <li>ссылки куда копать дальше</li>
+          <li>live demo для трансформов?</li>
         </ul>
   </div></section>
 
@@ -1707,7 +1711,7 @@
   <div class="progress"><div></div></div>
   <script src="node_modules/shower-core/shower.min.js"></script>
   <script src="./assets/js/jquery-2.1.0.min.js"></script>
-  <script src="./assets/js/jquery-ui.min.js"></script>
+  <!-- <script src="./assets/js/jquery-ui.min.js"></script> -->
 
   <script src="./assets/js/script.js"></script>
   <script src="//localhost:35731/livereload.js"></script>
