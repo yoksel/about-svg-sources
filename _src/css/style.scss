@@ -6,6 +6,12 @@
 svg {
     /*border: 1px dotted crimson;*/
     vertical-align: top;
+    overflow: visible;
+    }
+
+use {
+    transition: .5s;
+    /* breaks fill - why? */
     }
 
 .hidden-svg-defs {
@@ -24,7 +30,7 @@ svg {
         left: 0;
         width: auto;
         height: auto;
-        padding: 80px 80px 120px;
+        padding: 50px 80px 120px;
         }
     &:after {
         bottom: 30px;

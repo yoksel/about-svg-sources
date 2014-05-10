@@ -77,6 +77,13 @@
 svg {
   /*border: 1px dotted crimson;*/
   vertical-align: top;
+  overflow: visible;
+}
+
+use {
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* breaks fill - why? */
 }
 
 .hidden-svg-defs {
@@ -95,7 +102,7 @@ svg {
   left: 0;
   width: auto;
   height: auto;
-  padding: 80px 80px 120px;
+  padding: 50px 80px 120px;
 }
 .slide:after {
   bottom: 30px;
@@ -522,10 +529,14 @@ PRE:before {
 
 /* Demo Filling
 ------------------------- */
-.slide--fillingdemo PRE {
+.slide--fillingdemo {
+  /*.demo,*/
+}
+.slide--fillingdemo PRE,
+.slide--fillingdemo TEXTAREA {
   position: relative;
   z-index: 2;
-  padding: .5em;
+  padding: .2em .5em;
   background: #FFF;
   -webkit-transition: .2s;
   transition: .2s;
@@ -539,7 +550,7 @@ PRE:before {
   bottom: 27%;
   font-size: 90px;
 }
-.slide--fillingdemo .demo {
+.slide--fillingdemo .demo__view {
   position: absolute;
   top: 0;
   right: 0;
@@ -551,17 +562,22 @@ PRE:before {
   height: 100%;
   /*border: 1px solid green;*/
 }
+.slide--fillingdemo .demo__content {
+  position: relative;
+  z-index: 2;
+}
 
 .slide--strokewidth PRE {
   width: 60%;
   margin: 18.5% auto 0;
 }
 
+/* Demo Edit Properties
+------------------------- */
 .demo--editproperty .demo__code {
   width: 100%;
   height: 2em;
   margin: 0 0 45px;
-  padding: 3px 0;
   border: 0;
   outline: none;
   line-height: 2;
@@ -572,6 +588,9 @@ PRE:before {
 }
 .demo--editproperty .demo__code:focus {
   background: palegoldenrod;
+}
+.demo--editproperty .code--two-lines {
+  height: 4em;
 }
 
 /* Demo Live
@@ -788,8 +807,24 @@ PRE:before {
 
 /* Demo Sizes
 ------------------------- */
+.demo--sizes .demo__view {
+  max-height: 380px;
+}
 .demo--sizes svg {
   border: 2px dashed orangered;
+}
+
+.gr--star-viewbox rect {
+  fill: gold;
+}
+.gr--star-viewbox circle {
+  fill: orangered;
+}
+.gr--star-viewbox .star {
+  -webkit-transform: scale(0.8) translate(25px, 25px);
+  -ms-transform: scale(0.8) translate(25px, 25px);
+  transform: scale(0.8) translate(25px, 25px);
+  fill: gold;
 }
 
 /* Demo Fill
@@ -835,15 +870,23 @@ PRE:before {
   margin-bottom: 25px;
 }
 
-.demo--dashoffset PRE {
+.demo--dashoffset .demo__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.demo--dashoffset .demo__code {
   position: absolute;
   background: transparent;
 }
-.demo--dashoffset .dashoffset__pre-1 {
+.demo--dashoffset .demo__code--1 {
   left: 54%;
   top: 76px;
 }
-.demo--dashoffset .dashoffset__pre-2 {
+.demo--dashoffset .demo__code--2 {
   left: 60%;
   top: 305px;
 }
@@ -851,7 +894,15 @@ PRE:before {
   width: 65%;
 }
 
-.demo--stroke-opacity PRE {
+.demo--stroke-opacity .demo__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.demo--stroke-opacity .demo__code {
   position: absolute;
   top: 255px;
   right: 0;
@@ -978,6 +1029,12 @@ PRE:before {
   }
 }
 .demo--lights {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   background: lightseagreen;
   color: lightseagreen;
 }
@@ -1259,7 +1316,7 @@ PRE:before {
 
 .rect-transform-before {
   fill: none;
-  stroke: #777;
+  stroke: #333;
   stroke-width: 1px;
   stroke-dasharray: 10 5;
 }

@@ -125,10 +125,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 /* Demo Filling
 ------------------------- */
 .slide--fillingdemo {
-    PRE {
+    PRE,
+    TEXTAREA {
         position: relative;
         z-index: 2;
-        padding: .5em;
+        padding: .2em .5em;
         background: #FFF;
         transition: .2s;
         }
@@ -141,7 +142,8 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         bottom: 27%;
         font-size: 90px;
         }
-    .demo {
+    /*.demo,*/
+    .demo__view {
         position: absolute;
         top: 0;
         right: 0;
@@ -153,17 +155,23 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             height: 100%;
             /*border: 1px solid green;*/
         }
+    .demo__content {
+        position: relative;
+        z-index: 2;
+        }
     }
+
     .slide--strokewidth PRE {
         width: 60%;
         margin: 18.5% auto 0;
         }
+/* Demo Edit Properties
+------------------------- */
 .demo--editproperty {
     .demo__code {
         width: 100%;
         height: 2em;
         margin: 0 0 45px;
-        padding: 3px 0;
         border: 0;
         outline: none;
         line-height: 2;
@@ -174,7 +182,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             background: $hl-color;
             }
         }
-}
+    .code--two-lines {
+        height: 4em;
+        }
+    }
 /* Demo Live
 ------------------------- */
 .demo--live {
@@ -351,10 +362,26 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 /* Demo Sizes
 ------------------------- */
 .demo--sizes {
+    .demo__view {
+        max-height: 380px;
+        }
     svg {
         border: 2px dashed orangered;
-    }
+        }
+
 }
+.gr--star-viewbox {
+    rect {
+        fill: gold;
+        }
+    circle {
+        fill: orangered;
+        }
+    .star {
+        transform: scale(.8) translate(25px, 25px);
+        fill: gold;
+        }
+    }
 
 /* Demo Fill
 ------------------------- */
@@ -409,25 +436,32 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 .demo--dashoffset{
-    PRE {
+    .demo__content {
+        @include posabs;
+        }
+    .demo__code {
         position: absolute;
         background: transparent;
-        }
-        .dashoffset__pre-1 {
+        &--1 {
             left: 54%;
             top: 76px;
             }
-        .dashoffset__pre-2 {
+        &--2 {
             left: 60%;
             top: 305px;
             }
+        }
+
     svg {
         width: 65%;
         }
 
     }
 .demo--stroke-opacity {
-    PRE {
+    .demo__content {
+        @include posabs;
+        }
+    .demo__code {
         position: absolute;
         top: 255px;
         right: 0;
@@ -500,7 +534,8 @@ $trans-hor: 97px;
 $trans-vert: 96px;
 $lights-color: lightseagreen;
 
-.demo--lights{
+.demo--lights {
+    @include posabs;
     background: $lights-color;
     color: $lights-color;
     }
@@ -674,7 +709,7 @@ $group-use-texta-height: 11.5;
 
 .rect-transform-before {
     fill: none;
-    stroke: #777;
+    stroke: #333;
     stroke-width: 1px;
     stroke-dasharray: 10 5;
     }

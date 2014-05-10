@@ -45,12 +45,20 @@
       </symbol>
 
       <symbol id="s-transform-before">
-          <rect x="2" y="2" width="500" height="280"
+          <rect x="2" y="2" width="496" height="276"
             class="rect-transform-before"></rect>
       </symbol>
       <symbol id="s-transform-after">
-          <rect x="2" y="2" width="500" height="280"
+          <rect x="2" y="2" width="496" height="276"
             class="rect-transform-after"></rect>
+      </symbol>
+
+      <symbol id="s-viewbox">
+          <g class="gr--star-viewbox">
+            <rect width="100%" height="100%"/>
+            <circle r="100" cx="100" cy="100"/>
+            <use xlink:href="#s-star" class="star"/>
+          </g>
       </symbol>
 
       <symbol id="s-star">
