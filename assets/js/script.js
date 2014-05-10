@@ -120,28 +120,28 @@ function editProperty(elem) {
     console.log(elem);
     var editedCode = $(elem).find(".demo__code");
     var svgElem = $(elem).find("svg");
-    var editedElem = $(elem).find("[transform]");
+    var editedElem = $(elem).find(".demo__live-edit");
 
-    var propNameValue = editedCode.val().split("=");
-    var propName = propNameValue[0];
-    var propValue = propNameValue[1].replace(/"/g,"");
-    $(editedElem).attr("transform",propValue);
+    var propsValues = editedCode.val().split(" ");
+
+    for (var i = 0; i < propsValues.length; i++) {
+        var propNameValue = propsValues[i].split("=");
+        var propName = propNameValue[0];
+        var propValue = propNameValue[1].replace(/"/g,"");
+        $(editedElem).attr(propName,propValue);
+    }
 }
 
 $(".demo--editproperty").each ( function(){
     var editedCode = $(this).find(".demo__code");
     var codeParent = this;
 
-    console.log(codeParent);
-
     editedCode.change ( function(codeParent){
         editProperty(codeParent);
-        console.log('change');
     });
 
     $(editedCode).bind('keydown keyup', function(event){
         event.stopPropagation();
-        console.log('keydown keyup');
         editProperty(codeParent);
     });
 

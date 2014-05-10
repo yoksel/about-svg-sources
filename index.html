@@ -1039,7 +1039,7 @@
         <g>
           <use xlink:href="#s-transform-before"/>
           <use xlink:href="#s-transform-after"
-          fill="yellowgreen" transform="skewX(35)"/>
+          fill="yellowgreen" transform="skewX(35)" class="demo__live-edit"/>
         </g>
       </svg></div>
     </div>
@@ -1139,9 +1139,9 @@
         <dl class="browsers">
           <dt>Полная поддержка:</dt>
           <dd class="browser chrome"></dd>
-          <dd class="browser firefox"></dd>
           <dd class="browser opera-13"></dd>
           <dd class="browser safari"></dd>
+          <dd class="browser firefox"></dd>
           <dd class="browser ie-9"></dd>
         </dl>
       </li>
@@ -1232,11 +1232,11 @@
     <h2>Реальность</h2>
     <ul class="list--browsers-inside list--stacks-demo">
       <li>
-        <div class="text">Iframe</div>
+        <div class="text">&lt;iframe></div>
         <iframe src="./assets/img/svg/yes-no.svg#yes" width="250px" height="250px"></iframe>
       </li>
       <li class="next">
-        <div class="text">Background-image</div>
+        <div class="text">background-image</div>
         <div class="bg--test-stacks"></div>
       </li>
     </ul>
@@ -1248,22 +1248,22 @@
     <ul class="list--browsers-inside list--support-stacks">
       <li>
         <dl class="browsers">
-          <dt><code>embed</code> и <code>iframe</code>:</dt>
+          <dt>&lt;embed> и &lt;iframe>:</dt>
           <dd class="browser chrome"></dd>
-          <dd class="browser firefox"></dd>
           <dd class="browser opera-13"></dd>
           <dd class="browser safari"></dd>
+          <dd class="browser firefox"></dd>
           <dd class="browser ie-9"></dd>
           <dd class="browser opera-old"></dd>
         </dl>
       </li>
       <li class="next">
         <dl class="browsers">
-          <dt><code>img</code> и <code>background-image</code>:</dt>
+          <dt>&lt;img> и background-image:</dt>
           <dd class="browser chrome no-support"></dd>
-          <dd class="browser firefox"></dd>
           <dd class="browser opera-13 no-support"></dd>
           <dd class="browser safari no-support"></dd>
+          <dd class="browser firefox"></dd>
           <dd class="browser ie-9"></dd>
           <dd class="browser opera-old"></dd>
         </dl>
@@ -1657,6 +1657,51 @@
     </div>
   </div></section>
 
+
+  <section class="slide bg--dark"><div>
+    <h2 class="free-fly">Размеры</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">Viewbox</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--sizes">
+      <svg>
+        <circle r="100" cx="100" cy="100" fill="yellowgreen"/>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--sizes">
+      <svg width="200" height="200">
+        <circle r="100" cx="100" cy="100" fill="yellowgreen"/>
+      </svg>
+      <svg width="300" height="300">
+        <circle r="100" cx="100" cy="100" fill="yellowgreen"/>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--sizes">
+      <svg viewbox="0 0 200 200">
+        <circle r="100" cx="100" cy="100" fill="yellowgreen"/>
+      </svg>
+
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--sizes">
+      <svg viewbox="0 0 200 200" width="300" height="300">
+        <circle r="100" cx="100" cy="100" fill="yellowgreen"/>
+      </svg>
+    </div>
+  </div></section>
+
   <section class="slide"><div>
     <h2>Размеры</h2>
     <ul>
@@ -1689,7 +1734,7 @@
           <li>матрица</li>
           <li>QR-код</li>
           <li>ссылки куда копать дальше</li>
-          <li>live demo для трансформов?</li>
+          <li>live demo для трансформов + full-size размеры демок, чтобы не ограничиваться полем вставки</li>
         </ul>
   </div></section>
 
@@ -1704,7 +1749,6 @@
         </ul>
 
       <p>Иконки: <a href="http://icomoon.io/">icomoon.io</a></p>
-
 
   </div></section>
 
