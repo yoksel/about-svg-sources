@@ -1155,10 +1155,10 @@
   <section class="slide"><div>
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
-        <textarea class="demo__code">width="300" height="300"</textarea>
+        <textarea class="demo__code">width="600" height="300"</textarea>
       </div>
       <div class="demo__view">
-        <svg width="300" height="300" class="demo__live-edit">
+        <svg width="600" height="300" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
       </svg>
       </div>
@@ -1271,21 +1271,44 @@
     <h2>Сайты с SVG-графикой</h2>
     <ul>
       <li>
-        <a href="http://iconmelon.com/">iconmelon.com</a><!--  - монохромные и цветные иконки, вставка через <code>use</code> -->
+        <a href="http://iconmelon.com/">iconmelon.com</a><!--  - монохромные и цветные иконки, вставка через <code>use</code>
+        делает библиотеку -->
         <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
       <li class="next">
-        <a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт -->
+        <a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
+        делает спрайт -->
         <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
       <li class="next">
-        <a href="http://www.flaticon.com/">flaticon.com</a> <!-- - большой выбор на разные темы. На выходе SVG, PNG или шрифт. -->
+        <a href="http://www.flaticon.com/">flaticon.com</a> <!-- - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
+        не склеивает -->
         <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
       <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a> - КОММЕНТАРИЙ</li>
+      <li class="next">и многие другие</li>
     </ul>
 
   </div></section>
+
+  <section class="slide"><div>
+    <h2>Сборка</h2>
+    <ul>
+      <li><a href="https://www.npmjs.org/package/grunt-iconizr">npmjs.org/package/grunt-iconizr</a> &mdash; grunt<br>
+        <a href="http://iconizr.com/">iconizr.com</a> &mdash; web
+        <!-- Png, SVG / data,sprite
+        has grunt -->
+        </li>
+        <li class="next">
+          <a href="https://github.com/filamentgroup/grunticon">github.com/filamentgroup/grunticon</a> &mdash; grunt<br>
+          <a href="http://www.grumpicon.com/">grumpicon.com</a> - web
+          <!-- Svg-data, Png-data + fallback Png -->
+        </li>
+        <li class="next"><a href="https://www.npmjs.org/package/grunt-svg-sprite">npmjs.org/package/grunt-svg-sprite</a></li>
+        <li class="next"><a href="https://www.npmjs.org/package/grunt-webfont">npmjs.org/package/grunt-webfont</a></li>
+      </ul>
+  </div></section>
+
 
   <section class="slide"><div>
     <h2>Оптимизация</h2>
@@ -1851,7 +1874,7 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+ <!--  <section class="slide"><div>
     <h2>Подводные камни</h2>
     <ul>
       <li>Размеры? (проверить)</li>
@@ -1859,36 +1882,38 @@
       <li>urls (проблема с get в FF)</li>
     </ul>
   </div></section>
-  <!--
 
-  <section class="slide"><div>
-      <h2>Анимация</h2>
-      <p></p>
-  </div></section>
--->
   <section class="slide"><div>
         <h2>To Do</h2>
         <ul>
-          <li>причесать форматирование кода</li>
-          <li>дописать про viewbox и animation</li>
-          <li>добавить схлопывалку кода в полноэкранных демо</li>
+          <li>text? animation?</li>
           <li>матрица</li>
           <li>QR-код</li>
-          <li>ссылки куда копать дальше</li>
         </ul>
+  </div></section> -->
+
+  <section class="slide"><div>
+    <h2 class="free-fly">Спасибо за внимание</h2>
   </div></section>
 
   <section class="slide"><div>
-      <h2>Спасибо за внимание</h2>
-
+    <h3>Иконки</h3>
       <ul>
-          <li><a href="http://www.w3.org/TR/SVG/">http://www.w3.org/TR/SVG/</a></li>
-          <li><a href="http://css.yoksel.ru/"> больше про SVG на css.yoksel.ru</a></li>
-          <li><a href="https://twitter.com/yoksel">@yoksel</a></li>
-          <li><a href="http://codepen.io/yoksel/public/">codepen.io/yoksel/public</a></li>
-        </ul>
+        <li><a href="http://icomoon.io/">icomoon.io</a></li>
+        <li><a href="http://www.flaticon.com/free-icon/drawing-pencil-outline_23187">flaticon.com</a></li>
+      </ul>
+  </div></section>
 
-      <p>Иконки: <a href="http://icomoon.io/">icomoon.io</a></p>
+  <section class="slide"><div>
+
+      <h3>Me</h3>
+      <ul>
+        <li><a href="http://css.yoksel.ru/">css.yoksel.ru</a></li>
+        <li><a href="https://twitter.com/yoksel">@yoksel</a></li>
+        <li><a href="http://codepen.io/yoksel/public/">codepen.io/yoksel/public</a></li>
+      </ul>
+
+
 
   </div></section>
 

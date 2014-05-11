@@ -102,7 +102,7 @@ use {
   left: 0;
   width: auto;
   height: auto;
-  padding: 50px 80px 120px;
+  padding: 80px 80px 120px;
 }
 .slide:after {
   bottom: 30px;
@@ -474,14 +474,10 @@ PRE:before {
   position: absolute;
   display: block;
   right: .6em;
-  top: .8em;
+  top: .6em;
   width: 1em;
   height: 1em;
   border: 1px solid;
-  line-height: 1;
-  text-align: center;
-  font-size: 1em;
-  font-family: Arial;
   color: #999;
   background-image: url(data:image/svg+xml;utf8,%3Csvg%20viewbox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20fill%3D%22%23999%22%20x%3D%221%22%20y%3D%229%22%20width%3D%2218%22%20height%3D%222%22/%3E%3C/svg%3E);
   background-position: 2px 2px;
@@ -491,6 +487,7 @@ PRE:before {
 }
 
 .demo__code {
+  display: block;
   position: relative;
   background: transparent;
 }
@@ -529,9 +526,6 @@ PRE:before {
 
 /* Demo Filling
 ------------------------- */
-.slide--fillingdemo {
-  /*.demo,*/
-}
 .slide--fillingdemo PRE,
 .slide--fillingdemo TEXTAREA {
   position: relative;
@@ -831,9 +825,9 @@ PRE:before {
   fill: orangered;
 }
 .gr--star-viewbox .star {
-  -webkit-transform: scale(0.8) translate(25px, 25px);
-  -ms-transform: scale(0.8) translate(25px, 25px);
-  transform: scale(0.8) translate(25px, 25px);
+  -webkit-transform: scale(0.8) translate(27px, 25px);
+  -ms-transform: scale(0.8) translate(27px, 25px);
+  transform: scale(0.8) translate(27px, 25px);
   fill: gold;
 }
 
@@ -865,6 +859,8 @@ PRE:before {
   height: 217.9008px;
 }
 
+/* Demo Stroke
+------------------------- */
 .demo--stroke-dec PRE {
   display: inline-block;
   width: 322px;
@@ -906,15 +902,16 @@ PRE:before {
 }
 .demo--dashoffset .demo__code {
   position: absolute;
-  background: transparent;
 }
 .demo--dashoffset .demo__code--1 {
   left: 54%;
   top: 76px;
+  width: 380px;
 }
 .demo--dashoffset .demo__code--2 {
   left: 60%;
   top: 305px;
+  width: 370px;
 }
 .demo--dashoffset svg {
   width: 65%;
@@ -933,8 +930,9 @@ PRE:before {
   top: 255px;
   right: 0;
   left: 0;
-  width: 304px;
+  width: 300px;
   margin: auto;
+  padding-right: 35px;
   text-align: center;
 }
 
@@ -945,9 +943,6 @@ PRE:before {
   background: palegoldenrod;
 }
 
-.demo--stroke-dasharr-anim {
-  /*height: 320px;*/
-}
 .demo--stroke-dasharr-anim path {
   fill: none;
   stroke-width: 2;
@@ -1319,7 +1314,7 @@ PRE:before {
 }
 
 .demo--patterns {
-  height: 440px;
+  height: 500px;
 }
 .demo--patterns svg {
   float: left;

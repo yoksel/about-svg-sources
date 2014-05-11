@@ -56,6 +56,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Common
 ------------------------- */
+
 .list--columns LI {
     @include demo-list;
     text-align: center;
@@ -75,14 +76,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         position: absolute;
         display: block;
         right: .6em;
-        top: .8em;
+        top: .6em;
         width: 1em;
         height: 1em;
         border: 1px solid;
-        line-height: 1;
-        text-align: center;
-        font-size: 1em;
-        font-family: Arial;
         color:  #999;
         background-image: url(data:image/svg+xml;utf8,%3Csvg%20viewbox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Crect%20fill%3D%22%23999%22%20x%3D%221%22%20y%3D%229%22%20width%3D%2218%22%20height%3D%222%22/%3E%3C/svg%3E);
         background-position: 2px 2px;
@@ -95,12 +92,14 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 }
 
 .demo__code {
+    display: block;
     position: relative;
     background: transparent;
     }
 
 /* Highlight
 ------------------------- */
+
 .demo__content:before {
     content: "";
     display: block;
@@ -118,6 +117,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Cat
 ------------------------- */
+
 .preview--cat {
     display: table-cell;
     width: 864px;
@@ -129,8 +129,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         width: auto;
         }
     }
+
 /* Demo Filling
 ------------------------- */
+
 .slide--fillingdemo {
     PRE,
     TEXTAREA {
@@ -149,7 +151,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         bottom: 27%;
         font-size: 90px;
         }
-    /*.demo,*/
     .demo__view {
         position: absolute;
         top: 0;
@@ -172,8 +173,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         width: 60%;
         margin: 18.5% auto 0;
         }
+
 /* Demo Edit Properties
 ------------------------- */
+
 .demo--editproperty {
     .demo__code {
         width: 100%;
@@ -194,8 +197,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         height: 4em;
         }
     }
+
 /* Demo Live
 ------------------------- */
+
 .demo--live {
     margin-bottom: $base-size;
     &:after {
@@ -238,6 +243,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Demo Switch
 ------------------------- */
+
 .demo__switch {
     font-size: .9em;
     line-height: 1.4;
@@ -293,6 +299,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Demo Rect
 ------------------------- */
+
 .demo--rect {
     &-1 {
         .demo__content {
@@ -309,7 +316,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             @include highlight-lines(4);
             }
         }
-}
+    }
 
 /* Demo Circle
 ------------------------- */
@@ -322,6 +329,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Demo Polygon
 ------------------------- */
+
 .demo--polygon {
     .demo__code {
         @include highlight-lines(2);
@@ -334,8 +342,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         @include highlight-lines($demo-code-lines);
         }
     }
+
 /* Demo Lines
 ------------------------- */
+
 .demo--line {
     .demo__content {
         @include highlight-lines(2);
@@ -359,17 +369,18 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         $demo-code-lines: 4;
         @include highlight-lines($demo-code-lines);
         }
-}
+    }
 
 .demo--path-circ {
     .demo__content {
         $demo-code-lines: 2, 3;
         @include highlight-lines($demo-code-lines);
         }
-}
+    }
 
 /* Demo Sizes
 ------------------------- */
+
 .demo--sizes {
     .demo__view {
         max-height: 380px;
@@ -386,12 +397,14 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         fill: orangered;
         }
     .star {
-        transform: scale(.8) translate(25px, 25px);
+        transform: scale(.8) translate(27px, 25px);
         fill: gold;
         }
     }
+
 /* Demo preserveAspectRatio
 ------------------------- */
+
 .demo--par {
     .demo__view {
         max-height: 350px;
@@ -406,9 +419,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     svg {
         border: 2px dashed orangered;
         }
-}
+    }
+
 /* Demo Fill
 ------------------------- */
+
 .demo--fill {
     .demo__view {
         height: 310px;
@@ -421,6 +436,8 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
     }
 
+/* Demo Stroke
+------------------------- */
 .demo--stroke-dec {
     LI {
         }
@@ -448,6 +465,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
                 vertical-align: middle;
                 }
         }
+
 .demo--dasharray {
     PRE {
         display: inline-block;
@@ -465,22 +483,23 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         }
     .demo__code {
         position: absolute;
-        background: transparent;
         &--1 {
             left: 54%;
             top: 76px;
+            width: 380px;
             }
         &--2 {
             left: 60%;
             top: 305px;
+            width: 370px;
             }
         }
 
     svg {
         width: 65%;
         }
-
     }
+
 .demo--stroke-opacity {
     .demo__content {
         @include posabs;
@@ -490,11 +509,13 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         top: 255px;
         right: 0;
         left: 0;
-        width: 304px;
+        width: 300px;
         margin: auto;
+        padding-right: 35px;
         text-align: center;
         }
     }
+
 /* Demo stroke-dasharray Animation
 ------------------------- */
 
@@ -506,8 +527,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 .demo--stroke-dasharr-anim {
-    /*height: 320px;*/
-
     path {
       fill: none;
       stroke-width: 2;
@@ -516,6 +535,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
       animation: dasharray 8s infinite alternate;
       }
     }
+
 @keyframes dasharray {
   100% {
     stroke-dasharray: 0 530;
@@ -533,7 +553,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 .demo--dashofset-anim {
-
     .g-circles circle {
       transform-origin: 120px 120px;
       }
@@ -709,7 +728,7 @@ $group-use-texta-height: 11.5;
   color: #000;
   }
 .demo--patterns {
-    height: 440px;
+    height: 500px;
     svg {
         float: left;
         width: 32%;
