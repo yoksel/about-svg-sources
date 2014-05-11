@@ -387,7 +387,7 @@
   </div></section>
 
   <section class="slide slide--fillingdemo"><div>
-    <pre><code>fill: url(#gr-hot-cold-soft);</code></pre>
+    <pre><code>fill="url(#gr-hot-cold-soft)"</code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -399,7 +399,7 @@
   </div></section>
 
   <section class="slide slide--fillingdemo"><div>
-    <pre><code>fill: url(#pt-mosaic-colored);</code></pre>
+    <pre><code>fill="url(#pt-mosaic-colored)"</code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -411,16 +411,19 @@
   </div></section>
 
   <section class="slide slide--fillingdemo"><div>
-    <pre><code>fill-opacity: .5;</code></pre>
-
     <h2 class="lower-level">Всё видно!</h2>
 
-    <div class="demo">
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">fill-opacity=".7"</textarea>
+      </div>
       <div class="demo__view">
         <svg>
-          <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)" fill-opacity=".7"/>
-          <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)" fill-opacity=".7"/>
-          <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)" fill-opacity=".7"/>
+          <g fill-opacity=".7" class="demo__live-edit">
+            <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)"/>
+            <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)"/>
+            <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)"/>
+          </g>
         </svg>
       </div>
     </div>
@@ -1217,28 +1220,25 @@
   <section class="slide"><div>
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
-        <div class="demo__switch">
-        <dl data-attr="preserveAspectRatio" data-dest=".demo__live-edit">
-          <dt>meet:</dt>
-          <dd data-val="xMinYMin meet">xMinYMin meet</dd>
-          <dd data-val="xMinYMid meet">xMinYMid meet</dd>
-          <dd data-val="xMinYMax meet">xMinYMax meet</dd>
-        </dl>
-        <dl data-attr="preserveAspectRatio" data-dest=".demo__live-edit">
-          <dd data-val="xMidYMin meet">xMidYMin meet</dd>
-          <dd data-val="xMidYMid meet">xMidYMid meet</dd>
-          <dd data-val="xMidYMax meet">xMidYMax meet</dd>
-        </dl>
-        <dl data-attr="preserveAspectRatio" data-dest=".demo__live-edit">
-          <dd data-val="xMaxYMin meet">xMaxYMin meet</dd>
-          <dd data-val="xMaxYMid meet">xMaxYMid meet</dd>
-          <dd data-val="xMaxYMax meet">xMaxYMax meet</dd>
-        </dl>
-      </div>
-        <!-- <textarea class="demo__code">viewbox="0 0 200 200" width="600" height="300" preserveAspectRatio="none"</textarea> -->
+
+        <textarea class="demo__code">viewbox="0 0 200 200" preserveAspectRatio="xMidYMid meet"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 300 100"  heigt="250" preserveAspectRatio="" class="demo__live-edit">
+        <svg viewbox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="demo__live-edit">
+          <use xlink:href="#s-viewbox"/>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--sizes demo--editproperty">
+      <div class="demo__content">
+
+        <textarea class="demo__code">viewbox="0 0 200 200" preserveAspectRatio="xMidYMid slice"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg viewbox="0 0 200 200" preserveAspectRatio="xMidYMid slice" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
         </svg>
       </div>

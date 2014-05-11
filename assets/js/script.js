@@ -78,9 +78,11 @@ $(".demo__switch dd").each( function(){
         $("." + switchCheckedClass, $(this).parent()).removeClass(switchCheckedClass);
         $(this).addClass( switchCheckedClass );
 
-        console.log("**");
+        // console.log("**");
         var changeAttr = $(this).parent().attr("data-attr");
         var changeDest = $(this).parent().attr("data-dest");
+        var changeCodeDest = $(this).parent().attr("data-codedest");
+
         if( !changeDest ){
             changeDest = "g";
             }
@@ -92,6 +94,11 @@ $(".demo__switch dd").each( function(){
         console.log(svgDest);
         //svgDest.attr(changeAttr,changeVal);
         setAttr(changeAttr, changeVal, svgDest);
+
+        if (changeCodeDest){
+            var codeDest = $(curSlideClass).find(changeCodeDest);
+            codeDest.text(changeAttr + "=\"" + changeVal + "\"");
+        }
 
         // var svgElem = $(curSlideClass).find("svg");
         // var svgElem_n = document.querySelector(".active svg");
