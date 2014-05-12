@@ -2,7 +2,7 @@
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url(/assets/fonts/Ubuntu-Condensed/uc.woff) format('woff');
+  src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url(../../assets/fonts/Ubuntu-Condensed/uc.woff) format('woff');
 }
 
 $font-headers: "Ubuntu Condensed",sans-serif;

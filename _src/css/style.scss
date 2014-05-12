@@ -88,6 +88,10 @@ use {
         }
   }
 
+.slide--horcenter {
+    text-align: center;
+    }
+
 PRE {
     position: relative;
     &:before {
@@ -244,4 +248,5 @@ $svg-code-color: hsl(190, 70%, 75%);
 @import '_demos';
 @import '_iconfont';
 @import '_icons-stroke';
+@import '_icons-currentcolor';
 @import '_browsers';

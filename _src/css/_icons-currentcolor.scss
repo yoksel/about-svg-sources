@@ -1,0 +1,77 @@
+$iconstroke-size: 8rem;
+
+.wrapper--icons-currentcolor {
+  position: absolute;
+  top: 0;
+  bottom: 80px;
+  right: 0;
+  left: 0;
+  height: $iconstroke-size * 2.2;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 2.7em;
+  font-family: "Ubuntu Condensed",sans-serif;
+
+  .icon {
+    display: inline-block;
+    position: relative;
+    width: 42%;
+    margin: 0 1rem 2rem;
+    text-indent: 0;
+    text-align: left;
+    cursor: pointer;
+    transition: .2s;
+
+    &:nth-child(5n+1) {
+      color: crimson;
+      &:hover {
+          color: yellowgreen;
+        }
+      }
+    &:nth-child(5n+2) {
+      color: orangered;
+      &:hover {
+          color: crimson;
+        }
+      }
+    &:nth-child(5n+3) {
+      color: gold;
+      &:hover {
+          color: orangered;
+        }
+      }
+    &:nth-child(5n+4) {
+      color: yellowgreen;
+      &:hover {
+          color: gold;
+      }
+      }
+    &:nth-child(5n) {
+      color: skyblue;
+      }
+
+    svg {
+        display: inline-block;
+        width: $iconstroke-size;
+        height: $iconstroke-size;
+        vertical-align: middle;
+        }
+
+    use {
+      fill: currentColor;
+      stroke: currentColor;
+      transform: scale(.85) translate(.2em, .2em);
+      }
+
+    &:hover use {
+        fill-opacity: 0;
+        stroke-width: 5;
+        }
+
+    &:before {
+      content: none
+      }
+    }
+}
+

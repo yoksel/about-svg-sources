@@ -20,7 +20,7 @@
 
   <header class="caption">
     <h1>Позвольте представить: SVG</h1>
-    <p>@yoksel</p>
+    <p><a href="http://twitter.com/yoksel">@yoksel</a></p>
   </header>
 
   <section class="slide bg--dark" id="Cover"><div>
@@ -159,7 +159,8 @@
   </div></section>
 
   <section class="slide"><div>
-    <div class="free-fly"><a href="./assets/demo/clown-car/index.html">Демо</a></div>
+    <div class="free-fly"><a href="./assets/demo/clown-car/index.html">Демо</a>
+    <span class="tooltip">(изменяйте размер окна браузера)</span></div>
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -297,7 +298,7 @@
       <li><b>M, m</b> - moveto</li>
       <li><b>Z</b> - closepath</li>
     </ul>
-    <ul>
+    <ul class="next">
       <li><b>L, l</b> - lineto</li>
       <li><b>H, h</b> - horizontal lineto</li>
       <li><b>V, v</b> - vertical lineto</li>
@@ -561,8 +562,8 @@
   <section class="slide"><div>
     <ul>
       <li>Не работают в FF, нужны ли тут?</li>
-      <li><a href="/assets/demo/gr-reflect.svg">spreadMethod="reflect"</a></li>
-      <li><a href="/assets/demo/gr-reflect-fy.svg">spreadMethod="reflect" fy="0%"</a></li>
+      <li><a href="./assets/demo/gr-reflect.svg">spreadMethod="reflect"</a></li>
+      <li><a href="./assets/demo/gr-reflect-fy.svg">spreadMethod="reflect" fy="0%"</a></li>
     </ul>
   </div></section>
 
@@ -644,54 +645,6 @@
   </div></section>
 
   <section class="slide"><div>
-        <div class="demo demo--dasharray">
-          <ul>
-            <li>
-              <pre><code>stroke-dasharray: 1%;</code></pre>
-              <svg width="800" height="100">
-                <use xlink:href="#s-dasharray"
-                stroke="olivedrab" stroke-width="1%" stroke-dasharray="1%"/>
-              </svg>
-            </li>
-
-            <li class="next">
-              <pre><code>stroke-dasharray: 2 5;</code></pre>
-              <svg width="800" height="100">
-                <use xlink:href="#s-dasharray"
-                stroke="steelblue" stroke-width="35" stroke-dasharray="2 5"/>
-              </svg>
-            </li>
-
-            <li class="next">
-              <pre><code>stroke-dasharray: 80 20 5 20;</code></pre>
-              <svg width="800" height="100">
-                <use xlink:href="#s-dasharray"
-                stroke="orangered" stroke-width="10" stroke-dasharray="80 20 5 20"/>
-              </svg>
-            </li>
-          </ul>
-        </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-      <div class="demo demo--dashoffset demo--editproperty">
-        <div class="demo__content">
-          <textarea class="demo__code demo__code--1  next" data-dest="demo__live-edit--1">stroke-dashoffset="-33%"</textarea>
-
-          <textarea class="demo__code demo__code--2  next" data-dest="demo__live-edit--2">stroke-dashoffset="-177"</textarea>
-        </div>
-        <div class="demo__view">
-          <svg viewbox="0 0 270 270">
-            <g class="g-circles" fill="none" stroke-width="60" stroke-dasharray="26% 90%" transform="translate(20,10) scale(.85) rotate(70 135 135)">
-            <use xlink:href="#s-dashoffset" stroke="crimson"/>
-            <use xlink:href="#s-dashoffset" stroke="orangered" stroke-dashoffset="-33%" class="demo__live-edit demo__live-edit--1"/>
-            <use xlink:href="#s-dashoffset" stroke="gold" stroke-dashoffset="-177" class="demo__live-edit demo__live-edit--2"/>
-          </g></svg>
-        </div>
-      </div>
-  </div></section>
-
-  <section class="slide"><div>
     <!--   -->
       <div class="table-cell">
         <svg viewbox="0 0 700 300">
@@ -748,6 +701,69 @@
               <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)" stroke-opacity=".4" transform="scale(1.5)" class="demo__live-edit"/>
             </g>
           </svg>
+        </div>
+      </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo "><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">stroke-dasharray="10"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg>
+          <g stroke-dasharray="10" stroke-width="10" fill="none" class="demo__live-edit"  stroke="steelblue">
+            <circle r="30%" cx="50%" cy="47%"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- <section class="slide"><div>
+    <div class="demo demo--dasharray">
+      <ul>
+        <li>
+          <pre><code>stroke-dasharray: 1%;</code></pre>
+          <svg width="800" height="100">
+            <use xlink:href="#s-dasharray"
+            stroke="olivedrab" stroke-width="1%" stroke-dasharray="1%"/>
+          </svg>
+        </li>
+
+        <li class="next">
+          <pre><code>stroke-dasharray: 2 5;</code></pre>
+          <svg width="800" height="100">
+            <use xlink:href="#s-dasharray"
+            stroke="steelblue" stroke-width="35" stroke-dasharray="2 5"/>
+          </svg>
+        </li>
+
+        <li class="next">
+          <pre><code>stroke-dasharray: 80 20 5 20;</code></pre>
+          <svg width="800" height="100">
+            <use xlink:href="#s-dasharray"
+            stroke="orangered" stroke-width="10" stroke-dasharray="80 20 5 20"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div></section> -->
+
+  <section class="slide slide--fillingdemo"><div>
+      <div class="demo demo--dashoffset demo--editproperty">
+        <div class="demo__content">
+          <textarea class="demo__code demo__code--1  next" data-dest="demo__live-edit--1">stroke-dashoffset="-33%"</textarea>
+
+          <textarea class="demo__code demo__code--2  next" data-dest="demo__live-edit--2">stroke-dashoffset="-177"</textarea>
+        </div>
+        <div class="demo__view">
+          <svg viewbox="0 0 270 270">
+            <g class="g-circles" fill="none" stroke-width="60" stroke-dasharray="26% 90%" transform="translate(20,10) scale(.85) rotate(70 135 135)">
+            <use xlink:href="#s-dashoffset" stroke="crimson"/>
+            <use xlink:href="#s-dashoffset" stroke="orangered" stroke-dashoffset="-33%" class="demo__live-edit demo__live-edit--1"/>
+            <use xlink:href="#s-dashoffset" stroke="gold" stroke-dashoffset="-177" class="demo__live-edit demo__live-edit--2"/>
+          </g></svg>
         </div>
       </div>
   </div></section>
@@ -1285,8 +1301,9 @@
         не склеивает -->
         <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
-      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a> - КОММЕНТАРИЙ</li>
-      <li class="next">и многие другие</li>
+      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+        <!--  - КОММЕНТАРИЙ -->
+      </li>
     </ul>
 
   </div></section>
@@ -1503,7 +1520,7 @@
           <dd class="browser ie-9"></dd>
           <dd class="browser opera-old"></dd>
         </dl></li>
-      <li><dl class="browsers">
+      <li class="next"><dl class="browsers">
           <dt>clip-path / mask-image /
           background-clip: text</dt>
           <dd class="browser chrome "></dd>
@@ -1513,7 +1530,7 @@
           <dd class="browser ie-9 no-support"></dd>
           <dd class="browser opera-old no-support"></dd>
         </dl></li>
-      <li><dl class="browsers">
+      <li class="next"><dl class="browsers">
           <dt>SVG clip-path для HTML / SVG mask для HTML</dt>
           <dd class="browser chrome no-support"></dd>
           <dd class="browser opera-13 no-support"></dd>
@@ -1559,7 +1576,7 @@
       <code>&lt;/clippath></code></pre>
 
 
-    <pre class="pre--css"><code><mark class="important">clip-path</mark>: url(#clip-star);</code></pre>
+    <pre class="pre--css next"><code><mark class="important">clip-path</mark>: url(#clip-star);</code></pre>
   </div></section>
 
   <section class="slide"><div>
@@ -1583,12 +1600,12 @@
     <code>  &lt;text x="0" y=".88em" class="clip-text">Text&lt;/text></code>
     <code>&lt;/clippath></code></pre>
 
-    <pre class="pre--css"><code>.clip-text {</code>
+    <pre class="pre--css next"><code>.clip-text {</code>
     <code>  font: bold italic 6.5em/1 Georgia;</code>
     <code>  }</code>
     </pre>
 
-    <pre class="pre--css"><code>clip-path: url(#clip-text);</code></pre>
+    <pre class="pre--css next"><code>clip-path: url(#clip-text);</code></pre>
   </div></section>
 
   <section class="slide slide--heart"><div>
@@ -1636,7 +1653,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre><code>&lt;mask id="mask" maskunits="userSpaceOnUse"</code>
+    <pre class="pre--svg"><code>&lt;mask id="mask" maskunits="userSpaceOnUse"</code>
     <code>      maskcontentunits="userSpaceOnUse"></code>
     <code>  &lt;rect y="0" width="100%" height="100%"</code>
     <code>      fill="url(#mask-gradient)" /></code>
@@ -1666,7 +1683,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre><code>&lt;mask id="mask-soft" maskunits="objectBoundingBox"</code>
+    <pre class="pre--svg"><code>&lt;mask id="mask-soft" maskunits="objectBoundingBox"</code>
     <code>      maskcontentunits="objectBoundingBox"></code>
     <code>  &lt;rect y="0" width="1" height="1" </code>
     <code>      fill="url(#mask-radial-gradient)" /></code>
@@ -1695,17 +1712,29 @@
   </div></section>
 
   <section class="slide"><div>
-    <pre><code>&lt;mask id="mask-lum-pattern"></code>
+    <pre class="pre--svg"><code>&lt;mask id="mask-lum-pattern"></code>
       <code>  &lt;image xlink:href="your-image.png" width="200" height="300" /></code>
     <code>&lt;/mask></code></pre>
 
-    <pre>
+    <pre class="pre--css next">
       <code>mask: url(#mask);</code>
     </pre>
   </div></section>
 
   <section class="slide"><div>
-        <h2 class="free-fly"><a href="http://codepen.io/yoksel/full/fsdbu">Все маски</a></h2>
+    <h2>Поддержка</h2>
+      <dl class="browsers">
+          <dd class="browser chrome"></dd>
+          <dd class="browser opera-13"></dd>
+          <dd class="browser safari"></dd>
+          <dd class="browser firefox"></dd>
+          <dd class="browser ie-9"></dd>
+          <dd class="browser opera-old opera-12"></dd>
+        </dl>
+  </div></section>
+
+  <section class="slide"><div>
+        <h2 class="free-fly"><a href="http://codepen.io/yoksel/full/fsdbu">Демо со всеми масками</a></h2>
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -1874,21 +1903,73 @@
     </div>
   </div></section>
 
- <!--  <section class="slide"><div>
+  <section class="slide"><div>
+    <h2 class="free-fly">currentColor</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="wrapper wrapper--icons-currentcolor">
+      <ul class="icons icons--currentColor">
+
+        <li class="icon">
+          <svg viewbox="0 7 100 100">
+            <use xlink:href="#home"/>
+          </svg>
+           Home
+        </li>
+
+        <li class="icon">
+          <svg viewbox="0 7 100 100">
+            <use xlink:href="#heart"/>
+          </svg>
+          Favorites
+        </li>
+
+        <li class="icon">
+          <svg viewbox="0 7 100 100">
+            <use xlink:href="#cog"/>
+          </svg>
+          Options
+        </li>
+
+        <li class="icon">
+          <svg viewbox="0 15 100 100">
+            <use xlink:href="#camera"/>
+          </svg>
+          Gallery
+        </li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre class="pre--css"><code>.icon use {</code>
+    <code>  fill: currentColor;</code>
+    <code>  }</code>
+    </pre>
+
+    <pre class="pre--css next"><code>.icon {</code>
+    <code>  color: orangered;</code>
+    <code>  }</code>
+    </pre>
+  </div></section>
+
+  <!-- <section class="slide"><div>
     <h2>Подводные камни</h2>
     <ul>
       <li>Размеры? (проверить)</li>
       <li>gradients repeat/reflect</li>
       <li>urls (проблема с get в FF)</li>
     </ul>
-  </div></section>
+  </div></section> -->
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
         <h2>To Do</h2>
         <ul>
-          <li>text? animation?</li>
+          <li>object в stacks?</li>
           <li>матрица</li>
-          <li>QR-код</li>
+          <li>text? - если будет время</li>
+          <li>animation?</li>
         </ul>
   </div></section> -->
 
@@ -1912,9 +1993,11 @@
         <li><a href="https://twitter.com/yoksel">@yoksel</a></li>
         <li><a href="http://codepen.io/yoksel/public/">codepen.io/yoksel/public</a></li>
       </ul>
+  </div></section>
 
-
-
+  <section class="slide slide--horcenter"><div>
+    <h2><a href="http://yoksel.github.io/about-svg/">yoksel.github.io/about-svg/</a></h2>
+    <img src="./assets/img/qr-code.gif"/>
   </div></section>
 
   <div class="progress"><div></div></div>
