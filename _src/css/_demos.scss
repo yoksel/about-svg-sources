@@ -115,9 +115,20 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     opacity: 0;
     }
 
-/* Cat
+/* Demo Cat
 ------------------------- */
-
+.demo--cat {
+    text-align: center;
+    }
+:target .obj-cat  {
+    animation: 7s cat-width infinite linear alternate;
+    }
+@keyframes cat-width {
+    100% {
+        width: 400px;
+        height: 400px;
+    }
+}
 .preview--cat {
     display: table-cell;
     width: 864px;
@@ -129,6 +140,24 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         width: auto;
         }
     }
+
+/* Demo Clowns Car
+------------------------- */
+.demo--clownscar {
+    text-align: center;
+    min-height: 100%;
+    overflow: hidden;
+    }
+:target .obj-clownscar  {
+    height: 540px;
+    overflow: hidden;
+    animation: 15s clownscar-width infinite linear alternate;
+    }
+@keyframes clownscar-width {
+    100% {
+        width: 500px;
+    }
+}
 
 /* Demo Filling
 ------------------------- */
@@ -158,7 +187,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         bottom: 0;
         left: 0;
         }
-        svg {
+        svg, object {
             width: 100%;
             height: 100%;
             /*border: 1px solid green;*/
@@ -530,16 +559,17 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 .demo--stroke-dasharr-anim {
     path {
       fill: none;
-      stroke-width: 2;
-      stroke-dasharray: 530;
-
-      animation: dasharray 8s infinite alternate;
+      stroke-width: 1;
+      stroke-dasharray: 0 530;
+      }
+      :target & path {
+          animation: dasharray 8s infinite alternate;
       }
     }
 
 @keyframes dasharray {
   100% {
-    stroke-dasharray: 0 530;
+    stroke-dasharray: 530 0;
   }
 }
 
@@ -557,15 +587,14 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     .g-circles circle {
       transform-origin: 120px 120px;
       }
-
+    :target &.demo--run circle{
+      animation: rotation 6s infinite alternate;
+        }
         @for $i from 2 through 15 {
           .g-circles circle:nth-child(#{$i}){
             animation-delay: #{$i/4}s;
             }
           }
-    &.demo--run circle{
-      animation: rotation 6s infinite alternate;
-        }
     }
 
 @keyframes rotation {
@@ -590,12 +619,13 @@ $lights-color: lightseagreen;
         stroke: white;
         stroke-width: 2;
         stroke-dasharray: 4;
-        animation: stardashoffset 1s infinite linear;
+        :target & {
+            animation: stardashoffset 1s infinite linear;
+            }
         }
     .group--stars {
         use {
             transform-origin: $trans-hor $trans-vert*.75;
-            /*animation:  starmove 3s infinite linear;*/
             }
         @for $item from 2 through 4 {
             use:nth-child(#{$item}) {
@@ -606,7 +636,9 @@ $lights-color: lightseagreen;
     .c-lights {
         fill: none;
         transform-origin: 512px 320px;
-        animation: rotation 20s infinite linear;
+        :target & {
+            animation: rotation 20s infinite linear;
+            }
         }
 
 @keyframes starmove {

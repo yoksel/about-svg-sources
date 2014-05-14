@@ -2,15 +2,14 @@ $iconsize-unit: 1.32em;  /*16px*/
 
 .wrapper--icons-16-64 {
   /*width: 580px;*/
-  margin: 0;
-  
+  margin: -2.2em 0 0;
+
     .icons {
       margin-bottom: 1.6rem;
       line-height: 1;
       text-align: center;
       }
       .icons:before {
-        /*content: attr(data-size);*/
         display: inline-block;
         width: 72px;
         line-height: 1.5em;
@@ -36,9 +35,9 @@ $iconsize-unit: 1.32em;  /*16px*/
 
     .icon {
       display: inline-block;
-      width: $iconsize-unit;
+      width: 1.02em; /* $iconsize-unit */
       height: 1em;
-      margin: 0 -.1em;
+      margin: 0 0 0 1.6rem;
       background: url() 0 0 no-repeat;
       background-image: url(../../assets/img/svg/sprite-showsizes.svg);
       background-size: auto 100%;
@@ -47,14 +46,25 @@ $iconsize-unit: 1.32em;  /*16px*/
       &:before {
         content: none;
         }
+      &:first-child {
+        margin: 0;
+        }
       }
+
+     .icon--xl {
+        font-size: $iconsize-unit*8;
+        }
+    .icon--xxl {
+        font-size: $iconsize-unit*16;
+        }
+
 
     .icon--cloud {
       display: none;
       background-position: -1.5em 0;
       }
     .icon--star {
-      background-position: -3em 0;
+      background-position: -2.99em 0;
       }
     .icon--airplane {
       background-position: -4.5em 0;
@@ -65,4 +75,4 @@ $iconsize-unit: 1.32em;  /*16px*/
     .icon--flask {
       background-position: -7.45em 0;
       }
-}  
+}
