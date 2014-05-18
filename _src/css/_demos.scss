@@ -120,7 +120,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 .demo--cat {
     text-align: center;
     }
-:target .obj-cat  {
+:target .resize-cat  {
+    /*height: auto;
+    width: 100%;*/
+    @include will-be-animate;
     animation: 7s cat-width infinite linear alternate;
     }
 @keyframes cat-width {
@@ -129,17 +132,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         height: 400px;
     }
 }
-.preview--cat {
-    display: table-cell;
-    width: 864px;
-    height: 440px;
-    text-align: center;
-    vertical-align: middle;
-    IMG {
-        max-height: 100%;
-        width: auto;
-        }
-    }
 
 /* Demo Clowns Car
 ------------------------- */
@@ -150,7 +142,8 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 :target .obj-clownscar  {
     height: 540px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+    @include will-be-animate;
     animation: 15s clownscar-width infinite linear alternate;
     }
 @keyframes clownscar-width {
@@ -413,9 +406,13 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 .demo--sizes {
     .demo__view {
-        max-height: 380px;
+        height: 380px;
+        /*border: 3px solid green;*/
         }
     svg {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
         border: 2px dashed orangered;
         }
 }
@@ -560,16 +557,17 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     path {
       fill: none;
       stroke-width: 1;
-      stroke-dasharray: 0 530;
+      stroke-dasharray: 550;
+      stroke-dashoffset: 570;
       }
       :target & path {
-          animation: dasharray 8s infinite alternate;
+          animation: dasharray 8s linear infinite alternate;
       }
     }
 
 @keyframes dasharray {
   100% {
-    stroke-dasharray: 530 0;
+    stroke-dashoffset: 0;
   }
 }
 
@@ -614,14 +612,8 @@ $lights-color: lightseagreen;
     }
     .star--outline {
         transform-origin: $trans-hor $trans-vert;
-        transform: scale(1.2);
-        fill: none;
-        stroke: white;
-        stroke-width: 2;
-        stroke-dasharray: 4;
-        :target & {
-            animation: stardashoffset 1s infinite linear;
-            }
+        transform: scale(1.1);
+        fill: white;
         }
     .group--stars {
         use {
@@ -855,7 +847,11 @@ $group-use-texta-height: 11.5;
     .demo__codepart {
         @include textarea-height (5);
         }
+    svg {
+        overflow: hidden;
+        }
     }
+
 .clip-text {
   font: bold italic 6.5em/1 Georgia;
   }
@@ -864,9 +860,10 @@ $group-use-texta-height: 11.5;
   }
 
 .path-heart {
-    /*transform-origin: 150px 130px;*/
     transform-origin: 87px 90px;
-    animation: scale .7s infinite;
+    :target & {
+        animation: scale .7s infinite;
+        }
     }
 
 @keyframes scale {
@@ -888,7 +885,7 @@ $group-use-texta-height: 11.5;
         float: right;
         width: 48%;
         }
-}
+    }
 .demo--svgtext {
   font: bold italic 3em/1 Georgia;
   }
@@ -896,10 +893,7 @@ $group-use-texta-height: 11.5;
 /* Demo Nth-child
 ------------------------- */
 .demo--nth-child {
-  g {
-
-    }
-  path {
+  :target & path {
       animation: nthchild-dasharray 5s infinite alternate;
       }
 }
@@ -956,6 +950,8 @@ $group-use-texta-height: 11.5;
         height: 400px;
         margin-top: 170px;
         vertical-align: middle;
+        }
+    :target & svg {
         animation: ghost 3s linear infinite;
         }
 }

@@ -17,8 +17,8 @@
 }
 
 .list--problems {
-  DT {
-    width: 200px;
+  LI {
+    margin-bottom: 30px;
     }
   }
 
@@ -116,7 +116,7 @@ $browser-size: 64px;
 .opera-13 {
   background-position: 0 -#{$browser-size*5};
   &:after {
-    content: "13";
+    content: "13+";
     }
   }
 .safari {

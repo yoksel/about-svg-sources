@@ -8,6 +8,9 @@ svg {
     vertical-align: top;
     overflow: visible;
     }
+    .svg--ovh {
+        overflow: hidden;
+        }
 
 use {
     transition: .5s;
@@ -16,10 +19,18 @@ use {
 
 .hidden-svg-defs {
     position: absolute;
-    width: 0;
-    height: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     }
+    .svg-defs {
+        @include posabs;
+        svg {
+            @include posabs;
+            /*border: 1px solid green;*/
+            }
+        }
+
 /* Slides
 ------------------------- */
 .slide {
@@ -30,10 +41,12 @@ use {
         left: 0;
         width: auto;
         height: auto;
-        padding: 80px 80px 120px;
+        padding: 60px 80px;
         }
     &:after {
-        bottom: 30px;
+        right: 1em;
+        left: auto;
+        bottom: 1em;
         }
     }
 .slide--imgcenter {
@@ -90,6 +103,10 @@ use {
 
 .slide--horcenter {
     text-align: center;
+    }
+
+.slide--gradients-bugs IMG:first-of-type {
+    margin-right: 55px;
     }
 
 PRE {
@@ -152,13 +169,6 @@ $svg-code-color: hsl(190, 70%, 75%);
         font-size: 14.5em;
         letter-spacing: -0.05em;
         }
-        .cover-text__fill {
-            /*fill: url(..#pt-rainbow-stripes);*/
-            /*fill: url(/#gr-rainbow-stripes);*/
-            /*filter: url(/#fl-shadow);*/
-            /*stroke: orange;
-            stroke-width: 5;*/
-            }
 /* Popup
 ------------------------- */
 .img-preview {
@@ -170,6 +180,7 @@ $svg-code-color: hsl(190, 70%, 75%);
     }
 .popup {
     @include posabs;
+    margin: auto;
     border: 35px solid #FFF;
     box-shadow: 0 0 80px rgba(0,0,0,.3),
                 0 0 50px 300px rgba(0,0,0,.3),
@@ -214,23 +225,6 @@ $svg-code-color: hsl(190, 70%, 75%);
         }
     }
 
-.bg--gray-wood {
-    background: #444 url(/assets/img/parts/dark-wood.jpg);
-    H2 {
-        color: #FFF;
-        }
-    }
-.bg--concrete {
-    background: #DDD url(/assets/img/parts/concrete.png);
-    }
-.bg--dark-triangles {
-    /*background: #222 url(/assets/img/parts/triangles.png);*/
-    background: #050505 url(/assets/img/parts/swirl.png);
-    H2 {
-        color: #FFF;
-        }
-    }
-
 /* Columns
 ------------------------- */
 .column {
@@ -243,10 +237,10 @@ $svg-code-color: hsl(190, 70%, 75%);
         }
     }
 
-@import '_resize';
 @import '_icons-16-64';
 @import '_demos';
 @import '_iconfont';
 @import '_icons-stroke';
 @import '_icons-currentcolor';
 @import '_browsers';
+@import '_svg-bugs';

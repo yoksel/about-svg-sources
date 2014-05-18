@@ -5,15 +5,20 @@ $trans-dur: .3s;
     content: "";
     display: table;
     width: 100%;
-    }  
+    }
 
 @mixin posabs {
-    position: absolute; 
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
+    }
+
+@mixin will-be-animate {
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translateZ(0);
     }
 
 @function shadows($max: 5, $color: white){

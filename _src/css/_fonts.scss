@@ -25,7 +25,7 @@ $map-headers: (h2: 2.4, h3: 2.3, h4: 1.7, h5: 1.2);
     @each $header in map-keys($map-headers) {/* map-keys($map-headers) */
         $header-fsize: $base-size * map-get($map-headers, $header);
         .slide #{$header} {
-            margin: 0 0 $header-fsize/2;
+            margin: 0 0 $header-fsize/1.5;
             font-size: #{$header-fsize};
             }
     }
