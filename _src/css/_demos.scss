@@ -138,11 +138,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 .demo--clownscar {
     text-align: center;
     min-height: 100%;
-    overflow: hidden;
     }
 :target .obj-clownscar  {
-    height: 540px;
-    /*overflow: hidden;*/
+    height: 620px;
+    border: 1px solid transparent;
     @include will-be-animate;
     animation: 15s clownscar-width infinite linear alternate;
     }
@@ -547,8 +546,8 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 ------------------------- */
 
 .pre--demo-dasharray  {
-    code:nth-child(3),
-    code:nth-child(8) {
+    code:nth-child(4),
+    code:nth-child(9) {
         background: $hl-color;
         }
     }
@@ -561,11 +560,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
       stroke-dashoffset: 570;
       }
       :target & path {
-          animation: dasharray 8s linear infinite alternate;
+          animation: dashoffset 8s linear infinite alternate;
       }
     }
 
-@keyframes dasharray {
+@keyframes dashoffset {
   100% {
     stroke-dashoffset: 0;
   }

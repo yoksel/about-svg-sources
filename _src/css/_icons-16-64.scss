@@ -1,8 +1,7 @@
 $iconsize-unit: 1.32em;  /*16px*/
 
 .wrapper--icons-16-64 {
-  /*width: 580px;*/
-  margin: -2.2em 0 0;
+  margin: -1em 0 0;
 
     .icons {
       margin-bottom: 1.6rem;
@@ -38,8 +37,7 @@ $iconsize-unit: 1.32em;  /*16px*/
       width: 1.02em; /* $iconsize-unit */
       height: 1em;
       margin: 0 0 0 1.6rem;
-      background: url() 0 0 no-repeat;
-      background-image: url(../../assets/img/svg/sprite-showsizes.svg);
+      background: url(../../assets/img/svg/sprite-showsizes.svg) 0 0 no-repeat;
       background-size: auto 100%;
       vertical-align: middle;
       list-style: none;
@@ -64,7 +62,7 @@ $iconsize-unit: 1.32em;  /*16px*/
       background-position: -1.5em 0;
       }
     .icon--star {
-      background-position: -2.99em 0;
+      background-position: -2.99em -.01em;
       }
     .icon--airplane {
       background-position: -4.5em 0;

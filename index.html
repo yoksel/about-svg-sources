@@ -51,15 +51,11 @@
       <p><b>Scalable Vector Graphics</b> - формат векторных изображений, основанный на XML.</p>
   </div></section>
 
-  <section class="slide bg--dark"><div>
-      <h2 class="free-fly">Преимущества формата</h2>
-  </div></section>
-
   <section class="slide"><div>
     <ul>
       <li>Масштабируется</li>
       <li class="next">Четкий на ретине
-        <a href="assets/img/preview/retina.jpg" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
+        <a href="assets/img/preview/retina.jpg" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a></li>
       <li class="next">Человекопонятный код</li>
       <li class="next">Можно написать руками</li> <!-- хорошо для экспериментов -->
       <li class="next">Исходник</li>
@@ -107,7 +103,7 @@
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--clownscar">
       <div class="demo__view">
-        <object data="./assets/demo/clown-car/index.html" type="image/svg+xml" class="obj-clownscar"></object>
+        <object data="./assets/demo/clown-car/index.html#body" type="image/svg+xml" class="obj-clownscar"></object>
       </div>
     </div>
   </div></section>
@@ -128,7 +124,7 @@
   <section class="slide"><div>
     <div class="demo demo--rect demo--rect-1 demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 510 270" height="270">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 510 270" height="270">
   <rect width="500" height="260" x="5" y="5"
     fill="skyblue" stroke="steelblue" stroke-width="5" />
 </svg></textarea>
@@ -138,7 +134,7 @@
   <section class="slide"><div>
     <div class="demo demo--rect demo--rect-2 demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 510 270" height="270">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 510 270" height="270">
   <rect width="500" height="260" x="5" y="5"
     fill="orange" stroke="orangered" stroke-width="5"
     rx="7%"/>
@@ -149,7 +145,7 @@
   <section class="slide"><div>
     <div class="demo demo--rect demo--rect-3 demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 510 270" height="270">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 510 270" height="270">
   <rect width="500" height="260" x="5" y="5"
     fill="yellowgreen" stroke="green" stroke-width="5"
     rx="50%" ry="20%"/>
@@ -164,7 +160,7 @@
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
           <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox="0 0 270 270" height="270">
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
   <circle r="130"
     cx="135" cy="135"
     fill="orangered" stroke="crimson" stroke-width="5" />
@@ -180,7 +176,7 @@
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
           <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox="0 0 500 270" height="270">
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
   <ellipse rx="240" ry="130"
     cx="250" cy="135"
     fill="gold" stroke="orange" stroke-width="5" />
@@ -196,7 +192,7 @@
   <section class="slide"><div>
         <div class="demo demo--polygon demo--live">
           <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewbox="0 0 500 270" height="270">
+      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
   <polygon points="5,265 250,5 495,265"
     fill="violet" stroke="purple" stroke-width="5" />
 </svg></textarea>
@@ -206,7 +202,7 @@
   <section class="slide"><div>
     <div class="demo demo--polygon-star demo--live">
       <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewbox="0 0 140 130" height="270">
+      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 140 130" height="270">
   <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
     fill="turquoise" stroke="lightseagreen" stroke-width="3" />
 </svg></textarea>
@@ -221,7 +217,7 @@
   <section class="slide"><div>
         <div class="demo demo--line demo--live">
           <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewbox="0 0 500 270" height="270">
+      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
   <line x1="10" y1="260" x2="490" y2="10"
     stroke="violet" stroke-width="10" />
 </svg></textarea>
@@ -236,7 +232,7 @@
   <section class="slide"><div>
     <div class="demo demo--polyline demo--live">
       <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg height="270" viewbox="0 0 260 140">
+      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 260 140">
   <polyline points="5,135 30,5 55,135 80,5 105,135 130,5 155,135 180,5 205,135 230,5"
     fill="none" stroke="orangered" stroke-width="3" />
 </svg></textarea>
@@ -276,7 +272,7 @@
     абсолютные/относительные координаты -->
     <div class="demo demo--path-abs-rel demo--live">
       <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewbox="0 0 270 270" height="270">
+      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
   <path stroke="crimson" stroke-width="10"
         d="M 20,20 L 180,150
            M 20,20 L 120,250"/>
@@ -289,7 +285,7 @@
     Clothepath -->
       <div class="demo demo--path demo--live">
         <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewbox="0 0 500 270" height="270">
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
   <path d="M30,250 250,30 470,250"
         stroke="orange" stroke-width="20" fill="gold" />
   </svg></textarea>
@@ -300,7 +296,7 @@
     <!-- Прямоугольники? -->
     <div class="demo demo--path-circ demo--live">
       <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg  viewbox="0 0 340 270" height="270">
+      <textarea class="demo__textfield demo__code"><svg  viewBox="0 0 340 270" height="270">
   <path d="M 170,10 C 0,10 0,260 170,260
            M 170,10 C 340,10 340,260 170,260"
     stroke="orange" stroke-width="5" fill="gold" />
@@ -316,7 +312,7 @@
     Арка, подумать! -->
     <div class="demo demo--path demo--live">
       <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg height="270" viewbox="0 0 200 140">
+      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
   <path d="M 10,30 A 20,31 320 0 0 190,30 Z"
         stroke="purple" stroke-width="3" fill="violet"/>
 </svg></textarea>
@@ -398,7 +394,7 @@
   <section class="slide"><div>
     <div class="column column--left">
       <pre><code>fill-rule="nonzero"</code></pre>
-      <svg width="350" height="350" viewbox="0 0 200 200">
+      <svg width="350" height="350" viewBox="0 0 200 200">
         <path stroke="orange" stroke-width="5"
                   fill="gold" fill-rule="nonzero"
                   d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
@@ -406,7 +402,7 @@
     </div>
     <div class="column column--right">
       <pre><code>fill-rule="evenodd"</code></pre>
-      <svg width="350" height="350" viewbox="0 0 200 200">
+      <svg width="350" height="350" viewBox="0 0 200 200">
         <path stroke="orange" stroke-width="5"
                   fill="gold" fill-rule="evenodd"
                   d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
@@ -605,7 +601,7 @@
   <section class="slide"><div>
     <!--   -->
       <div class="table-cell">
-        <svg viewbox="0 0 700 300">
+        <svg viewBox="0 0 700 300">
           <g fill="none" stroke-width="100" transform="translate(0,0)">
             <g class="g-circles">
               <g transform="rotate(-90, 150, 150)">
@@ -643,7 +639,7 @@
           <textarea class="demo__code demo__code--1">stroke-opacity=".4"</textarea>
         </div>
         <div class="demo__view">
-          <svg viewbox="0 0 700 500" style="border: 1px solid; ">
+          <svg viewBox="0 0 700 500" style="border: 1px solid; ">
             <g class="g-circles" fill="none" stroke-width="60">
               <use xlink:href="#s-stroke-opacity" stroke="gold"
               x="-6%" y="0" transform="scale(1.5)"
@@ -714,7 +710,7 @@
           <textarea class="demo__code demo__code--1" data-dest="demo__live-edit--1">stroke-dashoffset="-33%"</textarea>
         </div>
         <div class="demo__view">
-          <svg viewbox="0 0 270 270">
+          <svg viewBox="0 0 270 270">
             <g class="g-circles" fill="none" stroke-width="60" stroke-dasharray="26% 90%" transform="translate(20,10) scale(.85) rotate(70 135 135)">
             <use xlink:href="#s-dashoffset" stroke="crimson"/>
             <use xlink:href="#s-dashoffset" stroke="gold" stroke-dashoffset="-33%" class="demo__live-edit demo__live-edit--1"/>
@@ -741,12 +737,13 @@
   <section class="slide"><div>
     <pre class="pre--css pre--demo-dasharray"><code>path {</code>
       <code>  stroke-width: 2;</code>
-      <code>  stroke-dasharray: 530 0;</code>
-      <code>  animation: dasharray 8s infinite alternate;</code>
+      <code>  stroke-dasharray: 550 0;</code>
+      <code>  stroke-dashoffset: 570;</code>
+      <code>  animation: dashoffset 8s infinite alternate;</code>
       <code>  }</code>
-      <code>@keyframes dasharray {</code>
+      <code>@keyframes dashoffset {</code>
         <code>  100% {</code>
-          <code>    stroke-dasharray: 0 530;</code>
+          <code>    stroke-dashoffset: 0;</code>
         <code>  }</code>
       <code>}</code>
     </pre>
@@ -760,9 +757,9 @@
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--dashofset-anim">
       <div class="demo__view">
-        <svg viewbox="0 0 240 240">
+        <svg viewBox="0 0 240 240">
           <g transform="scale(.8) translate(30,14)">
-            <g class="g-circles" fill="none" stroke-width="100" stroke-dasharray="8%"
+            <g class="g-circles" fill="gold" stroke-width="100" stroke-dasharray="8%"
             transform="translate(24 24) scale(.8)">
                 <circle r="60" cx="120" cy="120" stroke="crimson" />
             </g>
@@ -772,18 +769,10 @@
     </div>
   </div></section>
 
-  <!-- <section class="slide"><div>
-    <pre><code>&lt;g class="g-circles" fill="none" </code>
-    <code>  stroke-width="120"</code>
-    <code>  stroke-dasharray="8% 45%"></code>
-    <code>    &lt;circle r="60" cx="120" cy="120" stroke="crimson" /></code>
-<code>&lt;/g></code></pre>
-  </div></section> -->
-
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--dashofset-anim">
       <div class="demo__view">
-        <svg viewbox="0 0 240 240">
+        <svg viewBox="0 0 240 240">
         <g transform="scale(.8) translate(30,14)">
           <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
           transform="translate(24 24) scale(.8)">
@@ -804,7 +793,7 @@
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--dashofset-anim demo--run">
       <div class="demo__view">
-        <svg viewbox="0 0 240 240">
+        <svg viewBox="0 0 240 240">
           <g transform="scale(.8) translate(30,14)">
             <g class="g-circles" fill="none" stroke-width="5" stroke-dasharray="8% 45%">
                 <circle r="115" cx="120" cy="120" stroke="crimson" />
@@ -830,16 +819,6 @@
       </div>
     </div>
   </div></section>
-
-  <!-- <section class="slide"><div>
-    <pre class="pre--svg pre--demo-dashoffset"><code>&lt;g class="g-circles" fill="none" stroke-width="120" </code>
-      <code>    stroke-dasharray="8% 45%"></code>
-      <code>    &lt;circle r="60" cx="120" cy="120" stroke="yellowgreen"</code>
-      <code>         stroke-dashoffset="32%" /></code>
-      <code>    ...</code>
-      <code>&lt;/g></code>
-    </pre>
-  </div></section> -->
 
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--lights">
@@ -874,7 +853,7 @@
     Добавляем обводку для группы, меняем заливки -->
     <div class="demo demo--g demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
   <g id="g-circles">
     <circle fill="orangered" r="50" cx="55" cy="55"/>
     <circle fill="gold" r="32" cx="55" cy="55"/>
@@ -894,14 +873,14 @@
     переиспользование фигуры -->
     <div class="demo demo--use demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
-  <g id="g-circles">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
+  <g id="g-circles--u">
     <circle fill="orangered" r="50" cx="55" cy="55"/>
     <circle fill="gold" r="32" cx="55" cy="55"/>
     <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
   </g>
-  <use xlink:href="#g-circles" x="-110"/>
-  <use xlink:href="#g-circles" x="110"/>
+  <use xlink:href="#g-circles--u" x="-110"/>
+  <use xlink:href="#g-circles--u" x="110"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -915,16 +894,16 @@
     Добавляем обводку группе и символам -->
     <div class="demo demo--defs demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
   <defs>
-    <g id="g-circles">
+    <g id="g-circles--d">
       <circle fill="orangered" r="50" cx="55" cy="55"/>
       <circle fill="gold" r="32" cx="55" cy="55"/>
       <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
     </g>
   </defs>
-  <use xlink:href="#g-circles" x="-110"/>
-  <use xlink:href="#g-circles" x="110"/>
+  <use xlink:href="#g-circles--d" x="-110"/>
+  <use xlink:href="#g-circles--d" x="110"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -937,7 +916,7 @@
   <section class="slide"><div>
     <div class="demo demo--symbol demo--live">
       <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewbox="0 0 110 110">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
   <defs>
     <symbol id="s-circles">
       <circle fill="orangered" r="50" cx="55" cy="55"/>
@@ -996,8 +975,8 @@
         <textarea class="demo__code">transform="translate(100, 80)"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 1024 1200">
-          <svg viewbox="0 0 500 280">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
             <g>
               <use xlink:href="#s-transform-before"/>
               <use xlink:href="#s-transform-after"
@@ -1015,8 +994,8 @@
         <textarea class="demo__code">transform="scale(1.2, .8)"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 1024 1200">
-          <svg viewbox="0 0 500 280">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
             <g>
               <use xlink:href="#s-transform-before"/>
               <use xlink:href="#s-transform-after"
@@ -1034,8 +1013,8 @@
         <textarea class="demo__code">transform="rotate(15, 252, 140)"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 1024 1200">
-          <svg viewbox="0 0 500 280">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
             <g>
               <use xlink:href="#s-transform-before"/>
               <use xlink:href="#s-transform-after"
@@ -1053,8 +1032,8 @@
         <textarea class="demo__code">transform="skewX(15)"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 1024 1200">
-          <svg viewbox="0 0 500 280">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
             <g>
               <use xlink:href="#s-transform-before"/>
               <use xlink:href="#s-transform-after"
@@ -1073,8 +1052,8 @@
         <textarea class="demo__code">transform="matrix(.3 0 0 1.18 55 25)"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 1024 1200">
-          <svg viewbox="0 0 500 280">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
             <g>
               <use xlink:href="#s-transform-before"/>
               <use xlink:href="#s-transform-after"
@@ -1108,16 +1087,16 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2 class="free-fly">viewbox</h2>
+    <h2 class="free-fly">viewBox</h2>
   </div></section>
 
   <section class="slide"><div>
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
-        <textarea class="demo__code">viewbox="0 0 200 200"</textarea>
+        <textarea class="demo__code">viewBox="0 0 200 200"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 200 200" class="demo__live-edit">
+        <svg viewBox="0 0 200 200" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
         </svg>
       </div>
@@ -1125,16 +1104,16 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2 class="free-fly">viewbox + width & height</h2>
+    <h2 class="free-fly">viewBox + width & height</h2>
   </div></section>
 
   <section class="slide"><div>
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
-        <textarea class="demo__code">viewbox="0 0 200 200" width="600" height="300"</textarea>
+        <textarea class="demo__code">viewBox="0 0 200 200" width="600" height="300"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 200 200" width="600" height="300" class="demo__live-edit">
+        <svg viewBox="0 0 200 200" width="600" height="300" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
         </svg>
       </div>
@@ -1149,10 +1128,10 @@
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
 
-        <textarea class="demo__code">viewbox="0 0 200 200" preserveAspectRatio="none"</textarea>
+        <textarea class="demo__code">viewBox="0 0 200 200" preserveAspectRatio="none"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 200 200" preserveAspectRatio="none" class="demo__live-edit">
+        <svg viewBox="0 0 200 200" preserveAspectRatio="none" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
         </svg>
       </div>
@@ -1163,10 +1142,10 @@
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
 
-        <textarea class="demo__code">viewbox="0 0 200 200" preserveAspectRatio="xMidYMid meet"</textarea>
+        <textarea class="demo__code">viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="demo__live-edit">
+        <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
         </svg>
       </div>
@@ -1177,10 +1156,10 @@
     <div class="demo demo--sizes demo--editproperty">
       <div class="demo__content">
 
-        <textarea class="demo__code">viewbox="0 0 200 200" preserveAspectRatio="xMidYMid slice"</textarea>
+        <textarea class="demo__code">viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice"</textarea>
       </div>
       <div class="demo__view">
-        <svg viewbox="0 0 200 200" preserveAspectRatio="xMidYMid slice" class="demo__live-edit">
+        <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" class="demo__live-edit">
           <use xlink:href="#s-viewbox"/>
         </svg>
       </div>
@@ -1215,19 +1194,19 @@
       <li>
         <a href="http://iconmelon.com/">iconmelon.com</a><!--  - монохромные и цветные иконки, вставка через <code>use</code>
         делает библиотеку -->
-        <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+        <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
       <li class="next">
         <a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  - монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
         делает спрайт -->
-        <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+        <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
       <li class="next">
         <a href="http://www.flaticon.com/">flaticon.com</a> <!-- - большой выбор на разные темы. На выходе SVG, PNG или шрифт.
         не склеивает -->
-        <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+        <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
-      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
         <!--  - КОММЕНТАРИЙ -->
       </li>
     </ul>
@@ -1302,7 +1281,7 @@
       <li>
         <dl class="browsers">
           <dt>Частичная поддержка:</dt>
-          <dd class="browser opera-old opera-12-mb-min"></dd>
+          <dd class="browser opera-old opera-min"></dd>
         </dl>
       </li>
       <li>
@@ -1328,7 +1307,7 @@
       <li><span class="browser opera-old opera-min"></span> &mdash; шрифт, фон, SVG в HTML
       </li>
       <li><span class="browser opera-old opera-12"></span> &mdash; фон</li>
-      <li><span class="browser chrome"></span> &mdash; шрифт <!-- <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewbox="0 0 24 22"><use xlink:href="#image"/></svg></a> --></li>
+      <li><span class="browser chrome"></span> &mdash; шрифт <!-- <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a> --></li>
       <li><span class="browser safari"></span> &mdash; повторяющиеся градиенты</li>
       <li><span class="browser ie-9"></span> &mdash; фильтры, анимации</li>
       <li>Общая проблема: градиенты</li>
@@ -1694,7 +1673,7 @@
   <section class="slide"><div>
     <div class="demo demo--fillstroke">
       <div class="demo__view">
-        <svg viewbox='0 0 170 205'>
+        <svg viewBox='0 0 170 205'>
           <g fill="url(#pt-wood)" stroke="url(#gr-kuler-diag)">
             <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
             stroke-width="5" transform="translate(15,0)"></polygon>
@@ -1733,25 +1712,25 @@
       <ul class="icons">
 
         <li class="icon icon--stroke">
-          <svg viewbox="0 0 95 95">
+          <svg viewBox="0 0 95 95">
             <use xlink:href="#home"/>
           </svg>
         </li>
 
         <li class="icon icon--dasharray">
-          <svg viewbox="0 0 95 95">
+          <svg viewBox="0 0 95 95">
             <use xlink:href="#heart"/>
           </svg>
         </li>
 
         <li class="icon icon--gradient">
-          <svg viewbox="0 0 93 93">
+          <svg viewBox="0 0 93 93">
             <use xlink:href="#cog" stroke="url(#gr-hot-cold-soft)"/>
           </svg>
         </li>
 
         <li class="icon icon--gradient2">
-          <svg viewbox="0 7 95 95">
+          <svg viewBox="0 7 95 95">
             <use xlink:href="#camera" transform="translate(0,-10)" stroke="url(#gr-gray-transp)"/>
           </svg>
         </li>
@@ -1770,27 +1749,27 @@
       <ul class="icons">
 
         <li class="icon icon--blur">
-          <svg viewbox="0 0 100 100">
+          <svg viewBox="0 0 100 100">
             <use xlink:href="#home" fill="url(#gr-kuler-diag)" filter="url(#fl-blur)"/>
           </svg>
         </li>
 
         <li class="icon icon--shadow">
-          <svg viewbox="0 0 100 100">
+          <svg viewBox="0 0 100 100">
             <use xlink:href="#heart" fill="url(#gr-kuler-diag)"
             filter="url(#fl-shadow)"/>
           </svg>
         </li>
 
         <li class="icon icon--multystrokes">
-          <svg viewbox="0 0 100 100">
+          <svg viewBox="0 0 100 100">
             <use xlink:href="#cog"
             filter="url(#fl-striped-shadow-kuler)"/>
           </svg>
         </li>
 
         <li class="icon icon--innershadow">
-          <svg viewbox="0 0 100 100">
+          <svg viewBox="0 0 100 100">
             <use xlink:href="#camera" fill="url(#gr-kuler-diag)" filter="url(#fl-inner-shadow)"/>
           </svg>
         </li>
@@ -1841,28 +1820,28 @@
       <ul class="icons icons--currentColor">
 
         <li class="icon">
-          <svg viewbox="0 7 100 100">
+          <svg viewBox="0 7 100 100">
             <use xlink:href="#home"/>
           </svg>
            Home
         </li>
 
         <li class="icon">
-          <svg viewbox="0 7 100 100">
+          <svg viewBox="0 7 100 100">
             <use xlink:href="#heart"/>
           </svg>
           Favorites
         </li>
 
         <li class="icon">
-          <svg viewbox="0 7 100 100">
+          <svg viewBox="0 7 100 100">
             <use xlink:href="#cog"/>
           </svg>
           Options
         </li>
 
         <li class="icon">
-          <svg viewbox="0 15 100 100">
+          <svg viewBox="0 15 100 100">
             <use xlink:href="#camera"/>
           </svg>
           Gallery
