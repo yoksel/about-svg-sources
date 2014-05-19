@@ -33,7 +33,7 @@
                 }
           }
 
-        @media (min-width: 600px) {
+        @media (min-width: 550px) {
             #hair {
                 stroke-opacity: 1;
                 fill-opacity: 1;
@@ -42,22 +42,22 @@
               fill-opacity: 1;
               }
             }
-        @media (min-width: 700px) {
+        @media (min-width: 650px) {
             #head {
                 stroke-opacity: 1;
                 }
             }
-        @media (min-width: 800px) {
+        @media (min-width: 700px) {
             #forepaws {
                 stroke-opacity: 1;
                 }
             }
-        @media (min-width: 900px) {
+        @media (min-width: 750px) {
             #body {
                 stroke-opacity: 1;
                 }
         }
-        @media (min-width: 950px) {
+        @media (min-width: 850px) {
             #tail {
                 stroke-opacity: 1;
                 }

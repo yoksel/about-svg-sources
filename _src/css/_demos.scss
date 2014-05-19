@@ -117,9 +117,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     opacity: 0;
     }
 
-/* Demo Cat
-------------------------- */
-.demo--cat {
+.demo--has-slider {
     text-align: center;
     .demo__content {
         position: absolute !important;
@@ -131,13 +129,19 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
             }
         }
     .demo__slider {
-        width: 300px;
+        width: 350px;
         margin: auto;
         }
     }
+
+/* Demo Cat
+------------------------- */
+
 :target .resize-cat  {
-    border: 2px solid silver;
-    height: 550px;
+    /*border: 2px solid silver;*/
+    height: 500px;
+    margin-top: 1em;
+
     /*height: auto;
     width: 100%;*/
     /*animation: 7s cat-width infinite linear alternate;*/
@@ -155,11 +159,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     text-align: center;
     min-height: 100%;
     }
-.full :target .obj-clownscar  {
+.full :target .resize-clownscar {
     height: 620px;
     border: 1px solid transparent;
     @include will-be-animate;
-    animation: 15s clownscar-width infinite linear alternate;
+    /*animation: 15s clownscar-width infinite linear alternate;*/
     }
 @keyframes clownscar-width {
     100% {

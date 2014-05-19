@@ -80,13 +80,14 @@
     <h2 class="free-fly">Media Queries</h2>
   </div></section>
 
-  <section class="slide slide--fillingdemo"><div>
+  <section class="slide slide--fillingdemo demo--has-slider"><div>
     <div class="demo demo--cat">
       <div class="demo__view">
         <object data="./assets/demo/cat2.svg" type="image/svg+xml" class="resize-cat"></object>
       </div>
       <div class="demo__content">
-        <input class="demo__slider" type="range" min="45" max="100" value="100" step="10" />
+        <input class="demo__slider" type="range" min="40" max="100" value="100" step="5"
+        data-target=".resize-cat"/>
       </div>
     </div>
   </div></section>
@@ -95,10 +96,14 @@
       <h2 class="free-fly">&laquo;Машина с клоунами&raquo;</h2>
   </div></section>
 
-  <section class="slide slide--fillingdemo"><div>
+  <section class="slide slide--fillingdemo demo--has-slider"><div>
     <div class="demo demo--clownscar">
       <div class="demo__view">
-        <object data="./assets/demo/clown-car/index.html#body" type="image/svg+xml" class="obj-clownscar"></object>
+        <object data="./assets/demo/clown-car/index.html#body" type="image/svg+xml" class="resize-clownscar"></object>
+      </div>
+      <div class="demo__content">
+        <input class="demo__slider" type="range" min="50" max="100" value="100" step="10"
+        data-target=".resize-clownscar"/>
       </div>
     </div>
   </div></section>
@@ -501,13 +506,13 @@
   </div></section>
 
   <section class="slide slide--gradients-bugs"><div>
-    <h2>Проблемы</h2>
+    <h2>Поддержка браузерами</h2>
     <img src="./assets/img/bugs/lingrad-reflect.jpg" alt="reflect"/>
     <img src="./assets/img/bugs/lingrad-repeat-obb.jpg" alt="repeat"/>
   </div></section>
 
   <section class="slide slide--gradients-bugs"><div>
-    <h2>Проблемы</h2>
+    <h2>Поддержка браузерами</h2>
     <img src="./assets/img/bugs/radgrad-repeat-obb.jpg" alt="objectBoundingBox"/>
     <img src="./assets/img/bugs/radgrad-repeat-usou.jpg" alt="userSpaceOnUse"/>
   </div></section>
@@ -535,6 +540,10 @@
         </svg>
       </div>
     </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">stroke-linecap</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -567,6 +576,10 @@
     </div>
   </div></section>
 
+  <section class="slide"><div>
+      <h2 class="free-fly">stroke-linejoin</h2>
+  </div></section>
+
    <section class="slide demo--stroke-dec demo--linejoin"><div>
     <ul>
       <li>
@@ -592,6 +605,10 @@
       </li>
     </ul>
   </div></section>
+
+  <!-- <section class="slide"><div>
+      <h2 class="free-fly">Варианты обводки</h2>
+  </div></section> -->
 
   <section class="slide"><div>
     <!--   -->
