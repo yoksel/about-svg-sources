@@ -83,11 +83,11 @@ $(".demo--live").each ( function(){
 // Resize Objects
 // -------------------------------
 
-$(".demo__slider").change(function(){
-  console.log("hello");
-  console.log($(this).val());
-  $(".resize-cat").css("width",$(this).val() + "%");
-});
+// $(".demo__slider").change(function(){
+//   console.log("hello");
+//   console.log($(this).val());
+//   $(".resize-cat").css("width",$(this).val() + "%");
+// });
 
 // Switch Demos
 // -------------------------------

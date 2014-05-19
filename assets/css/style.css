@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
@@ -122,10 +123,12 @@ use {
   width: auto;
   height: auto;
   padding: 60px 80px;
+  /*border: 2px solid red;*/
 }
 .slide:after {
   right: 1em;
   bottom: 1em;
+  /*border: 2px solid green;*/
 }
 .full .slide:after {
   left: auto;
@@ -440,6 +443,9 @@ PRE:before {
 
 /* Highlight
 ------------------------- */
+.demo__content {
+  /*border: 3px solid orange;*/
+}
 .demo__content:before {
   content: "";
   display: block;
