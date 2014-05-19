@@ -121,15 +121,15 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     text-align: center;
     .demo__content {
         position: absolute !important;
-        z-index: 20;
-        bottom: 2em;
+        bottom: 1.5em;
         left: 0;
-        width: 100%;
-        background: gold;
+        right: 0;
+        &:before {
+            content: none;
+            }
         }
     .demo__slider {
-        /*position: absolute;*/
-
+        width: 300px;
         margin: auto;
         }
     }

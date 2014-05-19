@@ -463,14 +463,15 @@ PRE:before {
 }
 .demo--cat .demo__content {
   position: absolute !important;
-  z-index: 20;
-  bottom: 2em;
+  bottom: 1.5em;
   left: 0;
-  width: 100%;
-  background: gold;
+  right: 0;
+}
+.demo--cat .demo__content:before {
+  content: none;
 }
 .demo--cat .demo__slider {
-  /*position: absolute;*/
+  width: 300px;
   margin: auto;
 }
 
