@@ -3,7 +3,7 @@ $textarea-fontsize: $base-size * .9;
 $textarea-lineheight: 1.4;
 $hl-color: palegoldenrod;
 
-$textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
+$textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
 
 @mixin textarea-height ( $lines ){
     height: $textarea-oneline * $lines;
@@ -48,7 +48,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
     }
 
 @mixin editable ($pgpos: 99.5% top){
-    background-image: url(data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%0A%3Cpath%20fill%3D%22steelblue%22%20d%3D%22M30.277%2C1.722C29.168%2C0.611%2C27.691%2C0%2C26.121%2C0c-1.569%2C0-3.045%2C0.61-4.154%2C1.72L4.295%2C19.291%0AC4.19%2C19.395%2C4.11%2C19.52%2C4.06%2C19.658l-4%2C11c-0.129%2C0.355-0.046%2C0.756%2C0.215%2C1.031C0.467%2C31.891%2C0.73%2C32%2C1%2C32%0Ac0.098%2C0%2C0.196-0.014%2C0.293-0.044l9.949-3.052c0.156-0.047%2C0.298-0.133%2C0.414-0.248l18.621-18.621C31.389%2C8.926%2C32%2C7.448%2C32%2C5.878%0AC31.999%2C4.309%2C31.389%2C2.832%2C30.277%2C1.722z%20M10.093%2C27.165l-3.724%2C1.144c-0.217-0.637-0.555-1.201-1.016-1.662%0Ac-0.401-0.4-0.866-0.709-1.356-0.961L5.7%2C21H8v2c0%2C0.553%2C0.447%2C1%2C1%2C1h1.765L10.093%2C27.165z%20M24.812%2C12.671L12.629%2C24.855%0Al0.35-1.647c0.062-0.296-0.012-0.603-0.202-0.837C12.587%2C22.136%2C12.302%2C22%2C12%2C22h-2v-2c0-0.552-0.448-1-1-1H7.423L19.316%2C7.175%0Al0.011%2C0.011c0.733-0.733%2C1.707-1.136%2C2.743-1.136c1.035%2C0%2C2.01%2C0.403%2C2.742%2C1.136c0.731%2C0.733%2C1.137%2C1.707%2C1.137%2C2.743%0AC25.949%2C10.965%2C25.546%2C11.938%2C24.812%2C12.671z%20M28.863%2C8.621L27.93%2C9.554c-0.09-1.429-0.683-2.761-1.703-3.782%0Ac-1.021-1.022-2.355-1.614-3.787-1.703l0.937-0.931l0.002-0.002C24.111%2C2.403%2C25.085%2C2%2C26.121%2C2s2.01%2C0.403%2C2.742%2C1.136%0AC29.596%2C3.869%2C30%2C4.843%2C30%2C5.878C30%2C6.915%2C29.598%2C7.889%2C28.863%2C8.621z%20M22.293%2C8.293l-10%2C10c-0.391%2C0.391-0.391%2C1.023%2C0%2C1.414%0AC12.488%2C19.902%2C12.744%2C20%2C13%2C20s0.511-0.098%2C0.707-0.293l10-10c0.391-0.391%2C0.391-1.023%2C0-1.414S22.684%2C7.902%2C22.293%2C8.293z%22/%3E%0A%3C/svg%3E%0A);
+    /*background-image: url(data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%0A%3Cpath%20fill%3D%22steelblue%22%20d%3D%22M30.277%2C1.722C29.168%2C0.611%2C27.691%2C0%2C26.121%2C0c-1.569%2C0-3.045%2C0.61-4.154%2C1.72L4.295%2C19.291%0AC4.19%2C19.395%2C4.11%2C19.52%2C4.06%2C19.658l-4%2C11c-0.129%2C0.355-0.046%2C0.756%2C0.215%2C1.031C0.467%2C31.891%2C0.73%2C32%2C1%2C32%0Ac0.098%2C0%2C0.196-0.014%2C0.293-0.044l9.949-3.052c0.156-0.047%2C0.298-0.133%2C0.414-0.248l18.621-18.621C31.389%2C8.926%2C32%2C7.448%2C32%2C5.878%0AC31.999%2C4.309%2C31.389%2C2.832%2C30.277%2C1.722z%20M10.093%2C27.165l-3.724%2C1.144c-0.217-0.637-0.555-1.201-1.016-1.662%0Ac-0.401-0.4-0.866-0.709-1.356-0.961L5.7%2C21H8v2c0%2C0.553%2C0.447%2C1%2C1%2C1h1.765L10.093%2C27.165z%20M24.812%2C12.671L12.629%2C24.855%0Al0.35-1.647c0.062-0.296-0.012-0.603-0.202-0.837C12.587%2C22.136%2C12.302%2C22%2C12%2C22h-2v-2c0-0.552-0.448-1-1-1H7.423L19.316%2C7.175%0Al0.011%2C0.011c0.733-0.733%2C1.707-1.136%2C2.743-1.136c1.035%2C0%2C2.01%2C0.403%2C2.742%2C1.136c0.731%2C0.733%2C1.137%2C1.707%2C1.137%2C2.743%0AC25.949%2C10.965%2C25.546%2C11.938%2C24.812%2C12.671z%20M28.863%2C8.621L27.93%2C9.554c-0.09-1.429-0.683-2.761-1.703-3.782%0Ac-1.021-1.022-2.355-1.614-3.787-1.703l0.937-0.931l0.002-0.002C24.111%2C2.403%2C25.085%2C2%2C26.121%2C2s2.01%2C0.403%2C2.742%2C1.136%0AC29.596%2C3.869%2C30%2C4.843%2C30%2C5.878C30%2C6.915%2C29.598%2C7.889%2C28.863%2C8.621z%20M22.293%2C8.293l-10%2C10c-0.391%2C0.391-0.391%2C1.023%2C0%2C1.414%0AC12.488%2C19.902%2C12.744%2C20%2C13%2C20s0.511-0.098%2C0.707-0.293l10-10c0.391-0.391%2C0.391-1.023%2C0-1.414S22.684%2C7.902%2C22.293%2C8.293z%22/%3E%0A%3C/svg%3E%0A);*/
     background-size: 30px 30px;
     background-repeat: no-repeat;
     background-position: $pgpos;
@@ -94,7 +94,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 .demo__code {
     display: block;
     position: relative;
+    box-sizing: border-box;
+    padding: 5px;
     background: transparent;
+    box-shadow: inset 0 0 10px rgba(0,0,0, .5);
+    border-radius: 5px;
     }
 
 /* Highlight
@@ -144,7 +148,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 }
 
 :target .resize-cat  {
-    border: 2px solid silver;
+    border: 1px solid #CCC;
     height: 500px;
     margin-top: 1em;
     transition: .5s;
@@ -161,9 +165,13 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 .demo--clownscar {
     text-align: center;
     min-height: 100%;
+    .demo__view {
+        width: 850px;
+        height: 550px;
+        margin: 0 auto;
+        }
     }
 .full :target .resize-clownscar {
-    height: 620px;
     border: 1px solid transparent;
     @include will-be-animate;
     /*animation: 15s clownscar-width infinite linear alternate;*/
@@ -228,7 +236,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         margin: 0 0 45px;
         border: 0;
         outline: none;
-        line-height: 2;
+        line-height: 1.7;
         font-family: 'Anka Coder',monospace;
         font-size: 100%;
         transition: .5s;
@@ -376,7 +384,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 ------------------------- */
 
 .demo--polygon {
-    .demo__code {
+    .demo__content {
         @include highlight-lines(2);
         }
     }
@@ -558,9 +566,9 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
         top: 255px;
         right: 0;
         left: 0;
-        width: 300px;
+        width: 350px;
         margin: auto;
-        padding-right: 35px;
+        /*padding-right: 35px;*/
         text-align: center;
         }
     }

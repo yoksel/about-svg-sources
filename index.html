@@ -542,6 +542,71 @@
   </div></section>
 
   <section class="slide"><div>
+      <h2 class="free-fly">stroke как fill</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <!--   -->
+      <div class="table-cell">
+        <svg viewBox="0 0 700 300">
+          <g fill="none" stroke-width="100" transform="translate(0,0)">
+            <g class="g-circles">
+              <g transform="rotate(-90, 150, 150)">
+                <use xlink:href="#s-strokefill" stroke="url(#pt-mosaic-colored)"
+                  clip-path="url(#clip-rect-top)"/>
+                <use xlink:href="#s-strokefill" stroke="gold"
+                  clip-path="url(#clip-rect-top)"
+                  transform="rotate(180, 150, 150)"/>
+              </g>
+
+              <g transform="translate(200) rotate(-90, 150, 150)" class="next">
+                <use xlink:href="#s-strokefill" stroke="url(#gr-radial-kuler-bb)"
+                  clip-path="url(#clip-rect-top)"/>
+                <use xlink:href="#s-strokefill" stroke="url(#pt-wood)"
+                  clip-path="url(#clip-rect-top)"
+                  transform="rotate(180, 150, 150)"/>
+              </g>
+
+              <g transform="translate(400) rotate(-90, 150, 150)" class="next">
+                <use xlink:href="#s-strokefill" stroke="url(#pt-rainbow-stripes)"
+                  clip-path="url(#clip-rect-top)"/>
+                <use xlink:href="#s-strokefill" stroke="url(#gr-hot-cold-soft)"
+                  clip-path="url(#clip-rect-top)"
+                  transform="rotate(180, 150, 150)"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+      <div class="demo demo--stroke-opacity  demo--editproperty">
+        <div class="demo__content">
+          <textarea class="demo__code demo__code--1">stroke-opacity=".4"</textarea>
+        </div>
+        <div class="demo__view">
+          <svg viewBox="0 0 700 500" style="border: 1px solid; ">
+            <g class="g-circles" fill="none" stroke-width="60">
+              <use xlink:href="#s-stroke-opacity" stroke="gold"
+              x="-6%" y="0" transform="scale(1.5)"
+              clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-stroke-opacity" stroke="gold" stroke-opacity=".4"
+              x="-6%" y="0" transform="scale(1.5)" class="demo__live-edit"/>
+
+              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" stroke-opacity=".4"
+              transform="scale(1.5)" class="demo__live-edit"/>
+
+              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)"  transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)" stroke-opacity=".4" transform="scale(1.5)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
       <h2 class="free-fly">stroke-linecap</h2>
   </div></section>
 
@@ -603,71 +668,6 @@
         </svg>
       </li>
     </ul>
-  </div></section>
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">Варианты обводки</h2>
-  </div></section> -->
-
-  <section class="slide"><div>
-    <!--   -->
-      <div class="table-cell">
-        <svg viewBox="0 0 700 300">
-          <g fill="none" stroke-width="100" transform="translate(0,0)">
-            <g class="g-circles">
-              <g transform="rotate(-90, 150, 150)">
-                <use xlink:href="#s-strokefill" stroke="url(#pt-mosaic-colored)"
-                  clip-path="url(#clip-rect-top)"/>
-                <use xlink:href="#s-strokefill" stroke="gold"
-                  clip-path="url(#clip-rect-top)"
-                  transform="rotate(180, 150, 150)"/>
-              </g>
-
-              <g transform="translate(200) rotate(-90, 150, 150)" class="next">
-                <use xlink:href="#s-strokefill" stroke="url(#gr-radial-kuler-bb)"
-                  clip-path="url(#clip-rect-top)"/>
-                <use xlink:href="#s-strokefill" stroke="url(#pt-wood)"
-                  clip-path="url(#clip-rect-top)"
-                  transform="rotate(180, 150, 150)"/>
-              </g>
-
-              <g transform="translate(400) rotate(-90, 150, 150)" class="next">
-                <use xlink:href="#s-strokefill" stroke="url(#pt-rainbow-stripes)"
-                  clip-path="url(#clip-rect-top)"/>
-                <use xlink:href="#s-strokefill" stroke="url(#gr-hot-cold-soft)"
-                  clip-path="url(#clip-rect-top)"
-                  transform="rotate(180, 150, 150)"/>
-              </g>
-            </g>
-          </g>
-        </svg>
-      </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-      <div class="demo demo--stroke-opacity  demo--editproperty">
-        <div class="demo__content">
-          <textarea class="demo__code demo__code--1">stroke-opacity=".4"</textarea>
-        </div>
-        <div class="demo__view">
-          <svg viewBox="0 0 700 500" style="border: 1px solid; ">
-            <g class="g-circles" fill="none" stroke-width="60">
-              <use xlink:href="#s-stroke-opacity" stroke="gold"
-              x="-6%" y="0" transform="scale(1.5)"
-              clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-stroke-opacity" stroke="gold" stroke-opacity=".4"
-              x="-6%" y="0" transform="scale(1.5)" class="demo__live-edit"/>
-
-              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" stroke-opacity=".4"
-              transform="scale(1.5)" class="demo__live-edit"/>
-
-              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)"  transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)" stroke-opacity=".4" transform="scale(1.5)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </div>
-      </div>
   </div></section>
 
   <section class="slide slide--fillingdemo "><div>
@@ -1228,18 +1228,18 @@
   <section class="slide"><div>
     <h2>Сборка</h2>
     <ul>
-      <li><b>Iconizr</b> &mdash;
+      <li>Iconizr:
         <a href="http://iconizr.com/">web</a>, <a href="https://www.npmjs.org/package/grunt-iconizr">grunt</a>
         <!-- Png, SVG / data,sprite
         -->
         </li>
         <li class="next">
-          <b>Grumpicon</b> &mdash; <a href="http://www.grumpicon.com/">web</a>,
+          Grumpicon: <a href="http://www.grumpicon.com/">web</a>,
           <a href="https://github.com/filamentgroup/grunticon">grunt</a><br>
           <!-- Svg-data, Png-data + fallback Png -->
         </li>
-        <li class="next"><b><a href="https://www.npmjs.org/package/grunt-svg-sprite">grunt-svg-sprite</a></b></li>
-        <li class="next"><b><a href="https://www.npmjs.org/package/grunt-webfont">grunt-webfont</a></b></li>
+        <li class="next"><a href="https://www.npmjs.org/package/grunt-svg-sprite">grunt-svg-sprite</a></li>
+        <li class="next"><a href="https://www.npmjs.org/package/grunt-webfont">grunt-webfont</a></li>
       </ul>
   </div></section>
 
@@ -1248,12 +1248,8 @@
     <h2>Оптимизация</h2>
 
     <ul>
-      <li><a href="http://petercollingridge.appspot.com/svg-optimiser">petercollingridge.appspot.com/svg-optimiser</a></li>
-      <li class="next"><a href="https://github.com/svg/svgo">github.com/svg/svgo</a>
-          <ul>
-            <li class="next"><a href="https://github.com/svg/svgo-gui">github.com/svg/svgo-gui</a></li>
-            <li class="next"><a href="https://github.com/sindresorhus/grunt-svgmin">github.com/sindresorhus/grunt-svgmin</a></li>
-          </ul>
+      <li><a href="http://petercollingridge.appspot.com/svg-optimiser">SVG Optimiser</a></li>
+      <li class="next">SVGO: <a href="https://github.com/svg/svgo">консоль</a>, <a href="https://github.com/svg/svgo-gui">gui</a>, <a href="https://github.com/sindresorhus/grunt-svgmin">grunt</a>
       </li>
     </ul>
   </div></section>
@@ -1877,7 +1873,7 @@
   <!-- <section class="slide"><div>
     <h2>Подводные камни</h2>
     <ul>
-      <li>urls (проблема с get в FF) проверить урлы fbug-ом</li>
+      <li>urls (проблема с get в FF) проверить урлы</li>
     </ul>
   </div></section> -->
 
@@ -1885,7 +1881,6 @@
         <h2>To Do</h2>
         <ul>
           <li>object в stacks?</li>
-          <li>матрица</li>
           <li>добавить про title и desc</li>
           <li>text? - если будет время</li>
           <li>animation?</li>
