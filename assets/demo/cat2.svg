@@ -20,20 +20,20 @@
             transition: all 2s;
             }
 
-        @media (min-width: 400px) {
+        @media (min-width: 550px) {
             #mouth {
                 stroke-opacity: 1;
                 }
             }
 
-        @media (min-width: 500px) {
+        @media (min-width: 600px) {
             #face {
                 stroke-opacity: 1;
                 fill-opacity: 1;
                 }
           }
 
-        @media (min-width: 550px) {
+        @media (min-width: 650px) {
             #hair {
                 stroke-opacity: 1;
                 fill-opacity: 1;
@@ -42,17 +42,17 @@
               fill-opacity: 1;
               }
             }
-        @media (min-width: 650px) {
+        @media (min-width: 700px) {
             #head {
                 stroke-opacity: 1;
                 }
             }
-        @media (min-width: 700px) {
+        @media (min-width: 750px) {
             #forepaws {
                 stroke-opacity: 1;
                 }
             }
-        @media (min-width: 750px) {
+        @media (min-width: 800px) {
             #body {
                 stroke-opacity: 1;
                 }

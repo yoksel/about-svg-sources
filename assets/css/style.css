@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
@@ -481,13 +480,17 @@ PRE:before {
 
 /* Demo Cat
 ------------------------- */
+.demo--cat .demo__view {
+  width: 850px;
+  margin: auto;
+}
+
 :target .resize-cat {
-  /*border: 2px solid silver;*/
+  border: 2px solid silver;
   height: 500px;
   margin-top: 1em;
-  /*height: auto;
-  width: 100%;*/
-  /*animation: 7s cat-width infinite linear alternate;*/
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @-webkit-keyframes cat-width {

@@ -136,15 +136,18 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .97;
 
 /* Demo Cat
 ------------------------- */
+.demo--cat {
+    .demo__view {
+        width: 850px;
+        margin: auto;
+        }
+}
 
 :target .resize-cat  {
-    /*border: 2px solid silver;*/
+    border: 2px solid silver;
     height: 500px;
     margin-top: 1em;
-
-    /*height: auto;
-    width: 100%;*/
-    /*animation: 7s cat-width infinite linear alternate;*/
+    transition: .5s;
     }
 @keyframes cat-width {
     100% {
