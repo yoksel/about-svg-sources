@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="1024px"
+  height="640px">
 
  <linearGradient id="gr-rainbow-stripes"
     x1="0" y1="0" x2="200" y2="0%"

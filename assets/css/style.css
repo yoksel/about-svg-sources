@@ -888,9 +888,6 @@ PRE:before {
 .demo--fill text {
   font: bold italic 60px/1 Georgia;
 }
-.demo--fill .demo__content {
-  height: 239.5008px;
-}
 
 /* Demo Stroke
 ------------------------- */
@@ -1319,7 +1316,7 @@ PRE:before {
   height: 344.2824px;
 }
 
-/* Demo pattern
+/* Demo Pattern
 ------------------------- */
 .demo--pattern .demo__view {
   height: 120px;
@@ -1373,6 +1370,34 @@ PRE:before {
 
 .rect-transform-after {
   fill-opacity: .7;
+}
+
+/* Demo title & desc
+------------------------- */
+.demo--tit-desc .demo__view {
+  height: 230px;
+}
+.demo--tit-desc .demo__content {
+  position: relative;
+}
+.demo--tit-desc .demo__content:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(29.9376px, palegoldenrod), color-stop(59.8752px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(59.8752px, palegoldenrod), color-stop(89.8128px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 29.9376px, palegoldenrod 29.9376px, palegoldenrod 59.8752px, transparent 59.8752px), -webkit-linear-gradient(transparent 59.8752px, palegoldenrod 59.8752px, palegoldenrod 89.8128px, transparent 89.8128px);
+  background: linear-gradient(transparent 29.9376px, palegoldenrod 29.9376px, palegoldenrod 59.8752px, transparent 59.8752px), linear-gradient(transparent 59.8752px, palegoldenrod 59.8752px, palegoldenrod 89.8128px, transparent 89.8128px);
+  background-position: 0 .2em;
+}
+.demo--tit-desc .demo__code {
+  height: 224.532px;
+}
+
+.demo--tit-desc-elem .demo__content {
+  position: relative;
+}
+.demo--tit-desc-elem .demo__content:before {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(89.8128px, palegoldenrod), color-stop(119.7504px, palegoldenrod), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(119.7504px, palegoldenrod), color-stop(149.688px, palegoldenrod), to(transparent));
+  background: -webkit-linear-gradient(transparent 89.8128px, palegoldenrod 89.8128px, palegoldenrod 119.7504px, transparent 119.7504px), -webkit-linear-gradient(transparent 119.7504px, palegoldenrod 119.7504px, palegoldenrod 149.688px, transparent 149.688px);
+  background: linear-gradient(transparent 89.8128px, palegoldenrod 89.8128px, palegoldenrod 119.7504px, transparent 119.7504px), linear-gradient(transparent 119.7504px, palegoldenrod 119.7504px, palegoldenrod 149.688px, transparent 149.688px);
+  background-position: 0 .2em;
 }
 
 /* Demo stacks

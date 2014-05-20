@@ -303,8 +303,6 @@
     </div></div>
   </div></section>
 
-
-
   <section class="slide"><div>
     <!-- Живое демо
     показать прямоугольники?
@@ -314,6 +312,60 @@
       <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
   <path d="M 10,30 A 20,31 320 0 0 190,30 Z"
         stroke="purple" stroke-width="3" fill="violet"/>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">&lt;text></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--path demo--live">
+      <div class="demo__content">
+      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 50 50">
+  <text x="25" y="30" text-anchor="middle">Я текст</text>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__view">
+        <svg viewBox="0 0 460 380">
+       <defs>
+            <path id="p-text-path" d="m231.06494,94.11014c93.77408,-222.47369 461.17261,0 0,286.03769c-461.17242,-286.03769 -93.77441,-508.51138 0,-286.03769z" stroke-width="5" stroke="#000000" fill="#FF0000" transform="scale(.85) translate(40, 30)"></path>
+        </defs>
+  <text x="0" dy="10"><textPath xlink:href="#p-text-path">All you need is love All you need is love All you need is love, love Love is all you need All you need is love All you need is love All you need is love, love Love is all you need Nothing you can know that isn't known Nothing you can see that isn't shown Nowhere you can be that isn't where you're meant to be It's easy All you need is love All you need is love All you need is love, love Love is all you need <br></textPath></text>
+</svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre class="pre--svg"><code>&lt;path id="p-text-path" </code>
+    <code>    d="m231.06494,94.11014c93.77408,..."/></code>
+    <code>&lt;/path></code>
+</pre>
+
+    <pre class="pre--svg"><code>&lt;text x="0" dy="10"></code>
+      <code>  &lt;textPath xlink:href="#p-text-path"></code>
+      <code>    Текст</code>
+      <code> &lt;/textPath></code>
+    <code>&lt;/text></code>
+</pre>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">&lt;image></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--path demo--live">
+      <div class="demo__content">
+      <textarea class="demo__textfield demo__code"><svg height="296" viewBox="0 0 800 296">
+  <image xlink:href="./assets/img/parts/flower-xl-hor.jpg"
+    width="800" height="296"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -360,52 +412,6 @@
           <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
         </svg>
       </div>
-    </div>
-  </div></section>
-
-  <section class="slide"><div>
-      <h2 class="free-fly">fill-opacity</h2>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <h2 class="lower-level">Всё видно!</h2>
-
-    <div class="demo demo--editproperty">
-      <div class="demo__content">
-        <textarea class="demo__code">fill-opacity=".7"</textarea>
-      </div>
-      <div class="demo__view">
-        <svg>
-          <g fill-opacity=".7" class="demo__live-edit">
-            <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)"/>
-            <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)"/>
-            <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide"><div>
-      <h2 class="free-fly">fill-rule</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="column column--left">
-      <pre><code>fill-rule="nonzero"</code></pre>
-      <svg width="350" height="350" viewBox="0 0 200 200">
-        <path stroke="orange" stroke-width="5"
-                  fill="gold" fill-rule="nonzero"
-                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
-        </svg>
-    </div>
-    <div class="column column--right">
-      <pre><code>fill-rule="evenodd"</code></pre>
-      <svg width="350" height="350" viewBox="0 0 200 200">
-        <path stroke="orange" stroke-width="5"
-                  fill="gold" fill-rule="evenodd"
-                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
-        </svg>
     </div>
   </div></section>
 
@@ -517,6 +523,52 @@
   </div></section>
 
   <section class="slide"><div>
+      <h2 class="free-fly">fill-opacity</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <h2 class="lower-level">Всё видно!</h2>
+
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">fill-opacity=".7"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg>
+          <g fill-opacity=".7" class="demo__live-edit">
+            <rect width="33.3%" height="100%" fill="hsl(50, 100%, 50%)"/>
+            <rect width="33.3%" height="100%" x="33.3%" fill="url(#gr-hot-cold-soft)"/>
+            <rect width="33.3%" height="100%" x="66.6%" fill="url(#pt-wood)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">fill-rule</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="column column--left">
+      <pre><code>fill-rule="nonzero"</code></pre>
+      <svg width="350" height="350" viewBox="0 0 200 200">
+        <path stroke="orange" stroke-width="5"
+                  fill="gold" fill-rule="nonzero"
+                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
+        </svg>
+    </div>
+    <div class="column column--right">
+      <pre><code>fill-rule="evenodd"</code></pre>
+      <svg width="350" height="350" viewBox="0 0 200 200">
+        <path stroke="orange" stroke-width="5"
+                  fill="gold" fill-rule="evenodd"
+                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
+        </svg>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
       <h2 class="free-fly">Обводки</h2>
   </div></section>
 
@@ -586,7 +638,7 @@
           <textarea class="demo__code demo__code--1">stroke-opacity=".4"</textarea>
         </div>
         <div class="demo__view">
-          <svg viewBox="0 0 700 500" style="border: 1px solid; ">
+          <svg viewBox="0 0 700 500">
             <g class="g-circles" fill="none" stroke-width="60">
               <use xlink:href="#s-stroke-opacity" stroke="gold"
               x="-6%" y="0" transform="scale(1.5)"
@@ -1178,6 +1230,37 @@
     </div>
   </div></section>
 
+  <section class="slide"><div>
+      <h2 class="free-fly">&lt;title>, &lt;desc></h2>
+  </div></section>
+
+  <section class="slide"><div>
+        <div class="demo demo--tit-desc demo--live">
+          <div class="demo__content">
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
+  <title>Кружок</title>
+  <desc>Тут нарисован желтый кружок</desc>
+  <circle r="130" cx="135" cy="135"
+    fill="gold" stroke="orange" stroke-width="5" />
+</svg></textarea>
+        </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+        <div class="demo demo--tit-desc demo--tit-desc-elem demo--live">
+          <div class="demo__content">
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
+  <circle r="130" cx="135" cy="135"
+    fill="gold" stroke="orange" stroke-width="5">
+    <title>Кружок</title>
+    <desc>Это желтый кружок</desc>
+  </circle>
+</svg></textarea>
+        </div>
+    </div>
+  </div></section>
+
   <section class="slide bg--dark"><div>
     <h2 class="free-fly">Рисуем SVG</h2>
   </div></section>
@@ -1238,17 +1321,15 @@
           <a href="https://github.com/filamentgroup/grunticon">grunt</a><br>
           <!-- Svg-data, Png-data + fallback Png -->
         </li>
-        <li class="next"><a href="https://www.npmjs.org/package/grunt-svg-sprite">grunt-svg-sprite</a></li>
-        <li class="next"><a href="https://www.npmjs.org/package/grunt-webfont">grunt-webfont</a></li>
+        <!-- Need phantomjs -->
+        <!-- <li class="next"><a href="https://www.npmjs.org/package/grunt-svg-sprite">grunt-svg-sprite</a></li> -->
+        <!-- <li class="next"><a href="https://www.npmjs.org/package/grunt-webfont">grunt-webfont</a></li> -->
       </ul>
-  </div></section>
 
-
-  <section class="slide"><div>
-    <h2>Оптимизация</h2>
+    <h2 class="next">Оптимизация</h2>
 
     <ul>
-      <li><a href="http://petercollingridge.appspot.com/svg-optimiser">SVG Optimiser</a></li>
+      <li class="next"><a href="http://petercollingridge.appspot.com/svg-optimiser">SVG Optimiser</a></li>
       <li class="next">SVGO: <a href="https://github.com/svg/svgo">консоль</a>, <a href="https://github.com/svg/svgo-gui">gui</a>, <a href="https://github.com/sindresorhus/grunt-svgmin">grunt</a>
       </li>
     </ul>

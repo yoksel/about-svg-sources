@@ -488,9 +488,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
     text {
         font: bold italic 60px/1 Georgia;
         }
-    .demo__content {
-        @include textarea-height (8);
-        }
     }
 
 /* Demo Stroke
@@ -764,7 +761,7 @@ $group-use-texta-height: 11.5;
         @include textarea-height ($group-use-texta-height);
         }
     }
-/* Demo pattern
+/* Demo Pattern
 ------------------------- */
 .demo--pattern {
     .demo__view {
@@ -814,6 +811,27 @@ $group-use-texta-height: 11.5;
 .rect-transform-after {
     fill-opacity: .7;
     }
+
+/* Demo title & desc
+------------------------- */
+.demo--tit-desc {
+    .demo__view {
+        height: 230px;
+        }
+    .demo__content {
+        $demo-code-lines: 2,3;
+        @include highlight-lines($demo-code-lines);
+        }
+        .demo__code {
+            @include textarea-height (7.5);
+            }
+    }
+.demo--tit-desc-elem {
+    .demo__content {
+        $demo-code-lines: 4,5;
+        @include highlight-lines($demo-code-lines);
+        }
+}
 /* Demo stacks
 ------------------------- */
 .pre--stacks {
