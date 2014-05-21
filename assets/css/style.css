@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
@@ -450,9 +449,6 @@ PRE:before {
 
 /* Highlight
 ------------------------- */
-.demo__content {
-  /*border: 3px solid orange;*/
-}
 .demo__content:before {
   content: "";
   display: block;
@@ -548,7 +544,6 @@ PRE:before {
 .slide--fillingdemo svg, .slide--fillingdemo object {
   width: 100%;
   height: 100%;
-  /*border: 1px solid green;*/
 }
 .slide--fillingdemo .demo__content {
   position: relative;
@@ -806,6 +801,10 @@ PRE:before {
   background-position: 0 .2em;
 }
 
+.demo--textpath text {
+  font-size: 1.2em;
+}
+
 /* Demo Sizes
 ------------------------- */
 .demo--sizes .demo__view {
@@ -889,6 +888,9 @@ PRE:before {
 .demo--dasharray LI {
   margin-bottom: 25px;
 }
+.demo--dasharray use {
+  fill: none;
+}
 
 .demo--dashoffset .demo__content {
   position: absolute;
@@ -941,7 +943,7 @@ PRE:before {
 
 .demo--stroke-dasharr-anim path {
   fill: none;
-  stroke-width: 1;
+  stroke-width: 2;
   stroke-dasharray: 550;
   stroke-dashoffset: 570;
 }

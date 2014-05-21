@@ -141,7 +141,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: '<%= project.css_src %>{,*/}*.{scss,sass}',
-        tasks: ['sass:dev', 'autoprefixer'],
+        tasks: ['sass:dev', 'autoprefixer','includereplace:dev'],
         options: {
           livereload: 35731,
         },
@@ -158,7 +158,7 @@ module.exports = function (grunt) {
             // Task-specific options go here.
           },
           // Files to perform replacements and includes with
-          src: 'index.html',
+          src: 'index-src.html',
           // Destination directory to copy files to
           dest: 'index.html'
         },
@@ -207,7 +207,6 @@ module.exports = function (grunt) {
   // grunt.registerTask('default', ['bump']);
 
   grunt.registerTask('default', [
-    'includereplace:dev',
     'connect:server:open',
     'watch'
     ]);

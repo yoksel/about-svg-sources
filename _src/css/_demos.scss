@@ -105,7 +105,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
 ------------------------- */
 
 .demo__content {
-    /*border: 3px solid orange;*/
     &:before {
         content: "";
         display: block;
@@ -201,7 +200,6 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
         svg, object {
             width: 100%;
             height: 100%;
-            /*border: 1px solid green;*/
         }
     .demo__content {
         position: relative;
@@ -419,6 +417,10 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
         }
     }
 
+.demo--textpath text {
+    font-size: 1.2em;
+}
+
 /* Demo Sizes
 ------------------------- */
 
@@ -517,6 +519,9 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
     LI {
         margin-bottom: 25px;
         }
+    use {
+        fill: none;
+        }
     }
 
 .demo--dashoffset{
@@ -571,7 +576,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
 .demo--stroke-dasharr-anim {
     path {
       fill: none;
-      stroke-width: 1;
+      stroke-width: 2;
       stroke-dasharray: 550;
       stroke-dashoffset: 570;
       }
