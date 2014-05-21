@@ -148,17 +148,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
 }
 
 :target .resize-cat  {
-    border: 1px solid #CCC;
+    border: 1px solid #333;
     height: 500px;
     margin-top: 1em;
     transition: .5s;
     }
-@keyframes cat-width {
-    100% {
-        width: 400px;
-        /*height: 400px;*/
-    }
-}
 
 /* Demo Clowns Car
 ------------------------- */
@@ -167,20 +161,14 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
     min-height: 100%;
     .demo__view {
         width: 850px;
-        height: 550px;
+        height: 500px;
         margin: 0 auto;
         }
     }
 .full :target .resize-clownscar {
-    border: 1px solid transparent;
-    @include will-be-animate;
-    /*animation: 15s clownscar-width infinite linear alternate;*/
+    margin-top: 1em;
+    border: 1px solid #333;
     }
-@keyframes clownscar-width {
-    100% {
-        width: 500px;
-    }
-}
 
 /* Demo Filling
 ------------------------- */

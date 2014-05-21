@@ -153,7 +153,16 @@ module.exports = function (grunt) {
      * Include files for build version
      */
     includereplace: {
-        your_target: {
+        dev: {
+          options: {
+            // Task-specific options go here.
+          },
+          // Files to perform replacements and includes with
+          src: 'index.html',
+          // Destination directory to copy files to
+          dest: 'index.html'
+        },
+        build: {
           options: {
             // Task-specific options go here.
           },
@@ -198,6 +207,7 @@ module.exports = function (grunt) {
   // grunt.registerTask('default', ['bump']);
 
   grunt.registerTask('default', [
+    'includereplace:dev',
     'connect:server:open',
     'watch'
     ]);
@@ -216,7 +226,7 @@ module.exports = function (grunt) {
     'sass:dist',
     'autoprefixer',
     'copy',
-    'includereplace'
+    'includereplace:build'
     ]);
 
 };
