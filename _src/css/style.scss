@@ -42,7 +42,6 @@ use {
         width: auto;
         height: auto;
         padding: 60px 80px;
-        /*border: 2px solid red;*/
         }
     &:after {
         right: 1em;
@@ -249,3 +248,4 @@ $svg-code-color: hsl(190, 70%, 75%);
 @import '_icons-currentcolor';
 @import '_browsers';
 @import '_svg-bugs';
+/*@import '_print';*/
