@@ -141,7 +141,7 @@ module.exports = function (grunt) {
     watch: {
       css: {
         files: '<%= project.css_src %>{,*/}*.{scss,sass}',
-        tasks: ['sass:dev', 'autoprefixer','includereplace:dev'],
+        tasks: ['includereplace:dev','sass:dev', 'autoprefixer'],
         options: {
           livereload: 35731,
         },
