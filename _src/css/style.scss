@@ -241,6 +241,13 @@ $svg-code-color: hsl(190, 70%, 75%);
         }
     }
 
+.photo {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 2.5em;
+    }
+
 @import '_icons-16-64';
 @import '_demos';
 @import '_iconfont';
