@@ -211,10 +211,9 @@ module.exports = function (grunt) {
     'watch'
     ]);
 
-  // grunt.registerTask('build', [
-  //   'copy',
-  //   'includereplace'
-  //   ]);
+  grunt.registerTask('replace', [
+    'includereplace:dev'
+    ]);
 
   grunt.registerTask('svg', [
     'svgstore'
