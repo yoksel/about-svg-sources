@@ -3,8 +3,8 @@
 
 /* SVG
 ------------------------- */
+
 svg {
-    /*border: 1px dotted crimson;*/
     vertical-align: top;
     overflow: visible;
     }
@@ -25,12 +25,12 @@ use {
         @include posabs;
         svg {
             @include posabs;
-            /*border: 1px solid green;*/
             }
         }
 
 /* Slides
 ------------------------- */
+
 .slide {
     &>DIV {
         top: 0;
@@ -44,7 +44,6 @@ use {
     &:after {
         right: 1em;
         bottom: 1em;
-        /*border: 2px solid green;*/
         }
         .full &:after {
             left: auto;
@@ -140,6 +139,7 @@ $svg-code-color: hsl(190, 70%, 75%);
 
 /* Cover
 ------------------------- */
+
 #Cover {
     text-align: center;
     }
@@ -171,8 +171,10 @@ $svg-code-color: hsl(190, 70%, 75%);
         font-size: 15.5em;
         letter-spacing: -0.05em;
         }
+
 /* Popup
 ------------------------- */
+
 .img-preview {
     display: inline-block;
     width: 24px;
@@ -190,11 +192,8 @@ $svg-code-color: hsl(190, 70%, 75%);
     text-indent: 0;
     cursor: pointer;
 
-    IMG {
-        /*border: 1px solid orange;*/
-        }
     &:before {
-            content: "\2573"; /* \2715 */
+            content: "\2573";
             position: absolute;
             display: block;
             right: -2.1em;
@@ -211,6 +210,7 @@ $svg-code-color: hsl(190, 70%, 75%);
             color: #FFF;
             }
     }
+
 /* Backgrounds
 ------------------------- */
 
@@ -229,6 +229,7 @@ $svg-code-color: hsl(190, 70%, 75%);
 
 /* Columns
 ------------------------- */
+
 .column {
     width: 49%;
     &--left {

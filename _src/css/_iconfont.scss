@@ -74,27 +74,27 @@ $iconfont-size: $base-size * 9;
   color: #333;
   }
   .iconfont__icon {
-      display: inline-block;
-      width: $iconfont-size;
-      height: $iconfont-size;
-      margin: 0 .2em .2em;
-      font-family: 'svg-dec';
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      vertical-align: top;
-      text-align: center;
-      font-size: $iconfont-size;
-      transition: .3s;
-      cursor: pointer;
-      }
+    display: inline-block;
+    width: $iconfont-size;
+    height: $iconfont-size;
+    margin: 0 .2em .2em;
+    font-family: 'svg-dec';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: top;
+    text-align: center;
+    font-size: $iconfont-size;
+    transition: .3s;
+    cursor: pointer;
+    }
     .iconfont__icon:before {
-        transition: .3s;
+      transition: .3s;
       }
 
 .icon-cool:before {
@@ -103,12 +103,12 @@ $iconfont-size: $base-size * 9;
                3px 3px #333;
     content: "\e602";
   }
-.icon-cool:hover {
-  transform: rotate(180deg);
-  }
-.icon-cool:hover:before {
-  color: crimson;
-  }
+  .icon-cool:hover {
+    transform: rotate(180deg);
+    }
+  .icon-cool:hover:before {
+    color: crimson;
+    }
 
 .icon-alarm:before {
   content: "\e600";
@@ -117,20 +117,21 @@ $iconfont-size: $base-size * 9;
              0 0 5px #AAA,
              0 0 7px #AAA;
   }
-.icon-alarm:hover:before {
-  color: orangered;
-  text-shadow: 0 0 0 transparent;
-  }
+  .icon-alarm:hover:before {
+    color: orangered;
+    text-shadow: 0 0 0 transparent;
+    }
 
 .icon-bubbles:before {
-    content: "\e601";
+  content: "\e601";
   text-shadow: 5px 3px 0 rgba(0,0,0,.1);
   color: lightskyblue;
   }
-.icon-bubbles:hover:before {
-  text-shadow: -5px -3px 0 rgba(0,0,0,.1);
-  color: deepskyblue;
-  }
+  .icon-bubbles:hover:before {
+    text-shadow: -5px -3px 0 rgba(0,0,0,.1);
+    color: deepskyblue;
+    }
+
 .icon-heart {
   overflow: hidden;
   background: hotpink;
@@ -140,10 +141,10 @@ $iconfont-size: $base-size * 9;
   line-height: 1.35em;
   color: #FFF;
   }
-.icon-heart:hover {
-  @include long-shadow(text, lighten(mediumvioletred, 0), 65, false, false, left);
-  }
-.icon-heart:before {
-  content: "\68";
-  }
+  .icon-heart:hover {
+    @include long-shadow(text, lighten(mediumvioletred, 0), 65, false, false, left);
+    }
+  .icon-heart:before {
+    content: "\68";
+    }
 

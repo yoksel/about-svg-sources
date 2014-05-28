@@ -11,7 +11,6 @@ $iconstroke-size: 10em;
   width: 70%;
   margin: auto;
   text-align: center;
-  /*border: 1px solid;*/
 
   .icon {
     display: inline-block;
@@ -22,7 +21,6 @@ $iconstroke-size: 10em;
     margin: 0 1em 1em;
     text-indent: 0;
     transition: .2s;
-    /*border: 1px solid;*/
 
     use {
       transform: scale(.85) translate(.2em, .2em);
@@ -92,4 +90,3 @@ $iconstroke-size: 10em;
   stroke: #004358;
   stroke-width: 3;
   }
-.icon--innershadow {}

@@ -52,11 +52,11 @@ $iconstroke-size: 8rem;
       }
 
     svg {
-        display: inline-block;
-        width: $iconstroke-size;
-        height: $iconstroke-size;
-        vertical-align: middle;
-        }
+      display: inline-block;
+      width: $iconstroke-size;
+      height: $iconstroke-size;
+      vertical-align: middle;
+      }
 
     use {
       fill: currentColor;
@@ -65,9 +65,9 @@ $iconstroke-size: 8rem;
       }
 
     &:hover use {
-        fill-opacity: 0;
-        stroke-width: 5;
-        }
+      fill-opacity: 0;
+      stroke-width: 5;
+      }
 
     &:before {
       content: none
