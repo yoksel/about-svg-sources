@@ -1,0 +1,32 @@
+$iconstroke-size: 10em;
+
+.wrapper--icons-colored {
+  position: absolute;
+  top: 0;
+  bottom: 80px;
+  right: 0;
+  left: 0;
+  height: $iconstroke-size * 2.2;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+
+  .icon {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    width: $iconstroke-size;
+    height: $iconstroke-size;
+    margin: 0 1em 1em;
+    text-indent: 0;
+    transition: .2s;
+
+    use {
+      transform: scale(.85) translate(.2em, .2em);
+      }
+
+    &:before {
+      content: none
+      }
+    }
+}

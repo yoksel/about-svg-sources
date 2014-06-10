@@ -84,9 +84,10 @@
     <div class="demo demo--cat">
       <div class="demo__view">
         <object data="./assets/demo/cat2.svg" type="image/svg+xml" class="resize-cat"></object>
-      <div class="demo__content">
-        <input class="demo__slider" type="range" min="65" max="100" value="100" step="5"
-        data-target=".resize-cat"/>
+        <div class="demo__content">
+          <input class="demo__slider" type="range" min="65" max="100" value="100" step="5"
+          data-target=".resize-cat"/>
+        </div>
       </div>
     </div>
   </div></section>
@@ -267,30 +268,15 @@
   </div></section>
 
   <section class="slide"><div>
-    <!-- Живое демо
-    абсолютные/относительные координаты -->
-    <div class="demo demo--path-abs-rel demo--live">
+    <!-- Живое демо -->
+    <div class="demo demo--path demo--live">
       <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
-  <path stroke="crimson" stroke-width="10"
-        d="M 20,20 L 180,150
-           M 20,20 L 120,250"/>
+      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
+  <path d="M 10,30 A 20,31 320 0 0 190,30 Z"
+        stroke="purple" stroke-width="3" fill="violet"/>
 </svg></textarea>
     </div></div>
   </div></section>
-
-  <!-- Живое демо
-    Clothepath -->
-
-  <!-- <section class="slide"><div>
-      <div class="demo demo--path demo--live">
-        <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
-  <path d="M30,250 250,30 470,250"
-        stroke="orange" stroke-width="20" fill="gold" />
-  </svg></textarea>
-    </div></div>
-  </div></section> -->
 
   <section class="slide"><div>
     <!-- Прямоугольники? -->
@@ -300,19 +286,6 @@
   <path d="M 170,10 C 0,10 0,260 170,260
            M 170,10 C 340,10 340,260 170,260"
     stroke="orange" stroke-width="5" fill="gold" />
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <!-- Живое демо
-    показать прямоугольники?
-    Арка, подумать! -->
-    <div class="demo demo--path demo--live">
-      <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
-  <path d="M 10,30 A 20,31 320 0 0 190,30 Z"
-        stroke="purple" stroke-width="3" fill="violet"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -337,7 +310,7 @@
        <defs>
             <path id="p-text-path" d="m231.06494,94.11014c93.77408,-222.47369 461.17261,0 0,286.03769c-461.17242,-286.03769 -93.77441,-508.51138 0,-286.03769z" stroke-width="5" stroke="#000000" fill="#FF0000" transform="scale(.85) translate(40, 30)"></path>
         </defs>
-  <text x="0" dy="10"><textPath xlink:href="#p-text-path" startOffset="10">All you need is love All you need is love All you need is love, love Love is all you need <br></textPath></text>
+  <text x="0" dy="10"><textPath xlink:href="#p-text-path" startOffset="10">All you need is love All you need is love All you need is love, love Love is all you need</textPath></text>
 </svg>
       </div>
     </div>
@@ -471,27 +444,6 @@
         <svg>
           <rect width="100%" height="100%" fill="url(#gr-simple-stripes)"/>
         </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <pre class="js-toggle-code"><code>&lt;radialGradient id="gr-radial-stripes-repeat"
-      r="10%"
-      gradientUnits="userSpaceOnUse" spreadMethod="repeat">
-      &lt;stop stop-color="hsl(200,100%,40%)" offset="0%"/>
-      &lt;stop stop-color="hsl(200,100%,40%)" offset="25%"/>
-      &lt;stop stop-color="hsl(45,100%,75%)" offset="27%"/>
-      &lt;stop stop-color="hsl(45,100%,75%)" offset="70%"/>
-      &lt;stop stop-color="hsl(350,100%,45%)" offset="72%"/>
-      &lt;stop stop-color="hsl(350,100%,45%)" offset="98%"/>
-  &lt;/radialGradient></code></pre>
-
-    <div class="demo">
-      <div class="demo__view">
-        <svg>
-        <rect width="100%" height="100%" fill="url(#gr-radial-stripes-repeat)"/>
-      </svg>
       </div>
     </div>
   </div></section>
@@ -1691,7 +1643,7 @@
         </svg>
         <span class="sign">+</span>
         <svg width="200" height="300">
-          <image xlink:href="./assets/img/parts/grayscale-scales-invert.png" width="200" height="300" />
+          <image xlink:href="./assets/img/parts/grayscale-hands.png" width="200" height="300" />
         </svg>
         <span class="sign">=</span>
         <svg width="200" height="300">
@@ -1699,7 +1651,7 @@
             <use xlink:href="#s-flower-m"/>
           </g>
         </svg>
-
+      </div>
     </div>
   </div></section>
 
@@ -1746,34 +1698,36 @@
     <h2 class="free-fly">Разноцветные иконки</h2>
   </div></section>
 
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--nth-child demo--nth-child--anim">
-      <div class="demo__view">
-        <svg viewBox="0 -10 175 240">
-          <g id="airballoon" class="g-icon--airballoon">
-            <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137z" />
-            <path d="M71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25z"/>
-            <path d="M6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831z"/>
-            <path d="M56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825z"/>
-            <path d="M112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506z"/>
-            <path d="M118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725z"/>
-            <path d="M113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831z"/>
-            <path d="M100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
   <section class="slide"><div>
-    <div class="demo demo--colorful-icon">
-      <h2 class="free-fly">
-        <svg viewBox="0 -10 175 240">
-          <use xlink:href="#s-airballoon"/>
-        </svg> Полетели!
-    </h2>
+    <div class="wrapper wrapper--icons-colored">
+      <ul class="icons">
 
+        <li class="icon">
+          <svg viewBox="0 0 32 32">
+            <use xlink:href="#eye"/>
+          </svg>
+        </li>
+
+        <li class="icon">
+          <svg viewBox="0 0 32 32">
+            <use xlink:href="#flag"/>
+          </svg>
+        </li>
+
+        <li class="icon">
+          <svg viewBox="0 0 32 32">
+            <use xlink:href="#hamburger"/>
+          </svg>
+        </li>
+
+        <li class="icon">
+          <svg viewBox="0 0 32 32">
+            <use xlink:href="#umbrella"/>
+          </svg>
+        </li>
+      </ul>
     </div>
+
   </div></section>
 
   <section class="slide"><div>
@@ -1842,7 +1796,6 @@
         </li>
       </ul>
     </div>
-
   </div></section>
 
   <section class="slide"><div>
@@ -1944,6 +1897,7 @@
     <h3>Используемые ресурсы</h3>
       <ul>
         <li><a href="http://icomoon.io/">icomoon.io</a></li>
+        <li><a href="http://iconmelon.com/">iconmelon.com</a></li>
         <li><a href="https://github.com/shower/shower">Shower</a></li>
       </ul>
   </div></section>
@@ -1959,7 +1913,7 @@
   </div></section>
 
   <section class="slide slide--horcenter"><div>
-    <h2><a href="http://yoksel.github.io/about-svg/">yoksel.github.io/about-svg/</a></h2>
+    <h4>Он-лайн версия: <a href="http://yoksel.github.io/about-svg/">yoksel.github.io/about-svg/</a></h4>
     <img src="./assets/img/qr-code.gif"/>
   </div></section>
 
