@@ -650,6 +650,52 @@ $lights-color: orange; /*lightseagreen*/
             animation: rotation 20s infinite linear;
             }
         }
+     .text--win {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-shadow: shadows($max: 4, $color: orange, $backshadow: orangered);
+        letter-spacing: .05em;
+        font-family: 'Russo One';
+        font-size:  5em;
+        color: #FFF;
+
+        $wave-length: 5;
+
+        :target & SPAN {
+            animation: letters 1.5s linear infinite;
+            }
+
+        SPAN {
+            display: inline-block;
+            @for $item from 1 through $wave-length {
+                &:nth-of-type(#{$wave-length}n + #{$item}){
+                    animation-delay: #{$item/3}s;
+                    }
+                }
+            }
+        }
+
+@keyframes letters {
+    0% {
+       transform: translateY(0);
+        }
+    25% {
+        transform: translateY(-.08em);
+        }
+     50% {
+       transform: translateY(0);
+        }
+     75% {
+        transform: translateY(.08em);
+        }
+     100% {
+       transform: translateY(0);
+        }
+    }
 
 @keyframes starmove {
     $trans-min: .8;

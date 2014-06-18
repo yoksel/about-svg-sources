@@ -5,6 +5,13 @@
   src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url(../../assets/fonts/Ubuntu-Condensed/uc.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Russo One'), local('RussoOne-Regular'), url(../../assets/fonts/Russo-One/font.woff) format('woff');
+}
+
 $font-headers: "Ubuntu Condensed",sans-serif;
 
 .slide H1,

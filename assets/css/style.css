@@ -1,8 +1,15 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu Condensed';
   font-style: normal;
   font-weight: 400;
   src: local("Ubuntu Condensed"), local("UbuntuCondensed-Regular"), url(../../assets/fonts/Ubuntu-Condensed/uc.woff) format("woff");
+}
+@font-face {
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Russo One"), local("RussoOne-Regular"), url(../../assets/fonts/Russo-One/font.woff) format("woff");
 }
 .slide H1,
 .slide H2,
@@ -1091,6 +1098,107 @@ PRE:before {
   animation: rotation 20s infinite linear;
 }
 
+.text--win {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: -0px -0px 0 orange, 0px -0px 0 orange, 0px 0px 0 orange, -0px 0px 0 orange, -1px -1px 0 orange, 1px -1px 0 orange, 1px 1px 0 orange, -1px 1px 0 orange, -2px -2px 0 orange, 2px -2px 0 orange, 2px 2px 0 orange, -2px 2px 0 orange, -3px -3px 0 orange, 3px -3px 0 orange, 3px 3px 0 orange, -3px 3px 0 orange, -4px -4px 0 orange, 4px -4px 0 orange, 4px 4px 0 orange, -4px 4px 0 orange, 0 5px 10px orangered;
+  letter-spacing: .05em;
+  font-family: 'Russo One';
+  font-size: 5em;
+  color: #FFF;
+}
+:target .text--win SPAN {
+  -webkit-animation: letters 1.5s linear infinite;
+  animation: letters 1.5s linear infinite;
+}
+.text--win SPAN {
+  display: inline-block;
+}
+.text--win SPAN:nth-of-type(5n + 1) {
+  -webkit-animation-delay: 0.33333s;
+  animation-delay: 0.33333s;
+}
+.text--win SPAN:nth-of-type(5n + 2) {
+  -webkit-animation-delay: 0.66667s;
+  animation-delay: 0.66667s;
+}
+.text--win SPAN:nth-of-type(5n + 3) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.text--win SPAN:nth-of-type(5n + 4) {
+  -webkit-animation-delay: 1.33333s;
+  animation-delay: 1.33333s;
+}
+.text--win SPAN:nth-of-type(5n + 5) {
+  -webkit-animation-delay: 1.66667s;
+  animation-delay: 1.66667s;
+}
+
+@-webkit-keyframes letters {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -webkit-transform: translateY(-0.08em);
+    transform: translateY(-0.08em);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -webkit-transform: translateY(0.08em);
+    transform: translateY(0.08em);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes letters {
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25% {
+    -webkit-transform: translateY(-0.08em);
+    -ms-transform: translateY(-0.08em);
+    transform: translateY(-0.08em);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  75% {
+    -webkit-transform: translateY(0.08em);
+    -ms-transform: translateY(0.08em);
+    transform: translateY(0.08em);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 @-webkit-keyframes starmove {
   0% {
     -webkit-transform-origin: 62.08px 76.8px;
@@ -1137,7 +1245,6 @@ PRE:before {
     transform-origin: 62.08px 76.8px;
   }
 }
-
 @keyframes starmove {
   0% {
     -webkit-transform-origin: 62.08px 76.8px;
