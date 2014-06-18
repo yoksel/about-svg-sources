@@ -621,7 +621,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
 
 $trans-hor: 97px;
 $trans-vert: 96px;
-$lights-color: lightseagreen;
+$lights-color: orange; /*lightseagreen*/
 
 .demo--lights {
     @include posabs;

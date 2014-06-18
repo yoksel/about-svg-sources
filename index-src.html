@@ -339,7 +339,7 @@
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg height="296" viewBox="0 0 800 296">
   <image xlink:href="./assets/img/parts/flower-xl-hor.jpg"
-    width="800" height="296"/>
+    width="800" height="296" alt="Image in SVG"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -509,34 +509,11 @@
   </div></section>
 
   <section class="slide"><div>
-      <h2 class="free-fly">fill-rule</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="column column--left">
-      <pre><code>fill-rule="nonzero"</code></pre>
-      <svg width="350" height="350" viewBox="0 0 200 200">
-        <path stroke="orange" stroke-width="5"
-                  fill="gold" fill-rule="nonzero"
-                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
-        </svg>
-    </div>
-    <div class="column column--right">
-      <pre><code>fill-rule="evenodd"</code></pre>
-      <svg width="350" height="350" viewBox="0 0 200 200">
-        <path stroke="orange" stroke-width="5"
-                  fill="gold" fill-rule="evenodd"
-                  d="M 100,20 L 50,180 180,80 20,80 150,180 z"></path>
-        </svg>
-    </div>
-  </div></section>
-
-  <section class="slide"><div>
       <h2 class="free-fly">Обводки</h2>
   </div></section>
 
   <section class="slide"><div>
-      <h2 class="free-fly">stroke, stroke-width</h2>
+      <h2 class="free-fly">Цвет, толщина</h2>
   </div></section>
 
   <section class="slide slide--fillingdemo slide--strokewidth"><div>
@@ -554,6 +531,96 @@
         </svg>
       </div>
     </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+      <div class="demo demo--stroke-opacity  demo--editproperty">
+        <div class="demo__content">
+          <textarea class="demo__code demo__code--1">stroke-opacity=".4"</textarea>
+        </div>
+        <div class="demo__view">
+          <svg viewBox="0 0 700 500">
+            <g class="g-circles" fill="none" stroke-width="60">
+              <use xlink:href="#s-stroke-opacity" stroke="gold"
+              x="-6%" y="0" transform="scale(1.5)"
+              clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-stroke-opacity" stroke="gold" stroke-opacity=".4"
+              x="-6%" y="0" transform="scale(1.5)" class="demo__live-edit"/>
+
+              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" stroke-opacity=".4"
+              transform="scale(1.5)" class="demo__live-edit"/>
+
+              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)"  transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
+              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)" stroke-opacity=".4" transform="scale(1.5)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Концы линий</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--stroke-dec demo--linecap">
+      <ul>
+        <li>
+          <pre><code>stroke-linecap: butt</code></pre>
+          <svg width="300" height="60">
+            <use xlink:href="#s-path" stroke="orangered"  stroke-linecap="butt"/>
+            <use xlink:href="#s-path-guide" stroke="orange" fill="orange"/>
+          </svg>
+
+        </li>
+        <li class="next">
+          <pre><code>stroke-linecap: round</code></pre>
+          <svg width="300" height="60">
+            <use xlink:href="#s-path" stroke="olivedrab"  stroke-linecap="round"/>
+            <use xlink:href="#s-path-guide" stroke="yellowgreen" fill="yellowgreen"/>
+          </svg>
+
+        </li>
+        <li class="next">
+          <pre><code>stroke-linecap: square</code></pre>
+          <svg width="300" height="60">
+            <use xlink:href="#s-path" stroke="steelblue" stroke-linecap="square"/>
+            <use xlink:href="#s-path-guide" stroke="skyblue" fill="skyblue"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Соединение линий</h2>
+  </div></section>
+
+   <section class="slide demo--stroke-dec demo--linejoin"><div>
+    <ul>
+      <li>
+        <pre><code>stroke-linejoin: miter</code></pre>
+        <svg width="155" height="120">
+          <use xlink:href="#s-corner" stroke="orangered" stroke-linejoin="miter"/>
+          <use xlink:href="#s-corner-guide" y="0" stroke="orange" fill="orange"/>
+        </svg>
+      </li>
+      <li class="next">
+        <pre><code>stroke-linejoin: round</code></pre>
+        <svg width="155" height="120">
+          <use xlink:href="#s-corner" stroke="olivedrab" stroke-linejoin="round"/>
+          <use xlink:href="#s-corner-guide" y="0" stroke="yellowgreen" fill="yellowgreen"/>
+        </svg>
+      </li>
+      <li class="next">
+        <pre><code>stroke-linecap: square</code></pre>
+        <svg width="155" height="120">
+         <use xlink:href="#s-corner" stroke="steelblue" stroke-linejoin="bevel"/>
+          <use xlink:href="#s-corner-guide" stroke="skyblue" fill="skyblue"/>
+        </svg>
+      </li>
+    </ul>
   </div></section>
 
   <section class="slide"><div>
@@ -593,96 +660,6 @@
           </g>
         </svg>
       </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-      <div class="demo demo--stroke-opacity  demo--editproperty">
-        <div class="demo__content">
-          <textarea class="demo__code demo__code--1">stroke-opacity=".4"</textarea>
-        </div>
-        <div class="demo__view">
-          <svg viewBox="0 0 700 500">
-            <g class="g-circles" fill="none" stroke-width="60">
-              <use xlink:href="#s-stroke-opacity" stroke="gold"
-              x="-6%" y="0" transform="scale(1.5)"
-              clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-stroke-opacity" stroke="gold" stroke-opacity=".4"
-              x="-6%" y="0" transform="scale(1.5)" class="demo__live-edit"/>
-
-              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-stroke-opacity" x="12%" y="0" stroke="url(#gr-hot-cold-soft)" stroke-opacity=".4"
-              transform="scale(1.5)" class="demo__live-edit"/>
-
-              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)"  transform="scale(1.5)" clip-path="url(#clip-rect-top)"/>
-              <use xlink:href="#s-stroke-opacity" x="30%" y="0" stroke="url(#pt-wood)" stroke-opacity=".4" transform="scale(1.5)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-  </div></section>
-
-  <section class="slide"><div>
-      <h2 class="free-fly">stroke-linecap</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="demo demo--stroke-dec demo--linecap">
-      <ul>
-        <li>
-          <pre><code>stroke-linecap: butt</code></pre>
-          <svg width="300" height="60">
-            <use xlink:href="#s-path" stroke="orangered"  stroke-linecap="butt"/>
-            <use xlink:href="#s-path-guide" stroke="orange" fill="orange"/>
-          </svg>
-
-        </li>
-        <li class="next">
-          <pre><code>stroke-linecap: round</code></pre>
-          <svg width="300" height="60">
-            <use xlink:href="#s-path" stroke="olivedrab"  stroke-linecap="round"/>
-            <use xlink:href="#s-path-guide" stroke="yellowgreen" fill="yellowgreen"/>
-          </svg>
-
-        </li>
-        <li class="next">
-          <pre><code>stroke-linecap: square</code></pre>
-          <svg width="300" height="60">
-            <use xlink:href="#s-path" stroke="steelblue" stroke-linecap="square"/>
-            <use xlink:href="#s-path-guide" stroke="skyblue" fill="skyblue"/>
-          </svg>
-        </li>
-      </ul>
-    </div>
-  </div></section>
-
-  <section class="slide"><div>
-      <h2 class="free-fly">stroke-linejoin</h2>
-  </div></section>
-
-   <section class="slide demo--stroke-dec demo--linejoin"><div>
-    <ul>
-      <li>
-        <pre><code>stroke-linejoin: miter</code></pre>
-        <svg width="155" height="120">
-          <use xlink:href="#s-corner" stroke="orangered" stroke-linejoin="miter"/>
-          <use xlink:href="#s-corner-guide" y="0" stroke="orange" fill="orange"/>
-        </svg>
-      </li>
-      <li class="next">
-        <pre><code>stroke-linejoin: round</code></pre>
-        <svg width="155" height="120">
-          <use xlink:href="#s-corner" stroke="olivedrab" stroke-linejoin="round"/>
-          <use xlink:href="#s-corner-guide" y="0" stroke="yellowgreen" fill="yellowgreen"/>
-        </svg>
-      </li>
-      <li class="next">
-        <pre><code>stroke-linecap: square</code></pre>
-        <svg width="155" height="120">
-         <use xlink:href="#s-corner" stroke="steelblue" stroke-linejoin="bevel"/>
-          <use xlink:href="#s-corner-guide" stroke="skyblue" fill="skyblue"/>
-        </svg>
-      </li>
-    </ul>
   </div></section>
 
   <section class="slide slide--fillingdemo "><div>
@@ -776,9 +753,8 @@
   </div></section>
 
   <section class="slide"><div>
-      <h2 class="free-fly">dasharray + dashoffset</h2>
+      <h2 class="free-fly">Вертушка</h2>
   </div></section>
-
 
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--dashofset-anim">
@@ -852,15 +828,7 @@
         <svg>
           <circle class="c-lights" r="44%" cx="50%" cy="50%"
           stroke="url(#gr-radial-lights)" stroke-width="88.5%" stroke-dasharray="10%"/>
-          <g transform="translate(410, 220)">
-            <use xlink:href="#s-star" class="star--outline"/>
-            <g class="group--stars">
-              <use xlink:href="#s-star" fill="currentColor"/>
-              <use xlink:href="#s-star" fill="white"/>
-              <use xlink:href="#s-star" fill="currentColor"/>
-              <use xlink:href="#s-star" fill="white"/>
-            </g>
-          </g>
+          <text class="t--win" x="50%" y="50%" text-anchor="middle">Вы выиграли!</text>
         </svg>
       </div>
     </div>
@@ -1904,12 +1872,12 @@
 
   <section class="slide slide--horcenter"><div>
     <h4>Он-лайн версия: <a href="http://yoksel.github.io/about-svg/">yoksel.github.io/about-svg/</a></h4>
-    <img src="./assets/img/qr-code.gif"/>
+    <img src="./assets/img/qr-code.gif" alt="Qr-код со ссылкой на он-лайн версию"/>
   </div></section>
 
   <section class="slide"><div>
       <img src="./assets/img/me.jpeg" class="photo"/>
-      <h3>Me</h3>
+      <h3>Бухвалова Юлия, Livejournal</h3>
       <ul>
         <li><a href="http://css.yoksel.ru/">css.yoksel.ru</a></li>
         <li><a href="https://twitter.com/yoksel">@yoksel</a></li>
