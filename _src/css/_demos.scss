@@ -561,6 +561,50 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
         }
     }
 
+/* Demo text decoration
+------------------------- */
+.demo--textdec {
+    text {
+        font-family: 'Russo One';
+        font-size:  4em;
+        }
+    }
+
+.demo--textdec-stroke {
+    text {
+        fill: none;
+        stroke: orangered;
+        }
+    }
+
+.demo--textdec-dashstroke {
+    text {
+        fill: none;
+        stroke: steelblue;
+        stroke-dasharray: 10 3;
+        stroke-width: 2;
+        }
+    }
+
+.demo--textdec-patterns {
+    text {
+        font-size:  3em;
+        }
+}
+
+.t--anim {
+    stroke-width: 5;
+    stroke-opacity: .5;
+    }
+.t--water {
+  stroke: darken(dodgerblue, 30%);
+}
+
+.t--fire {
+  stroke: darken(red, 35%);
+}
+
+
 /* Demo stroke-dasharray Animation
 ------------------------- */
 

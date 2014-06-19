@@ -362,6 +362,230 @@
   </div></section>
 
   <section class="slide bg--dark"><div>
+    <h2 class="free-fly">Группировка и&nbsp;переиспользование</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">&lt;g></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <!-- Живое демо
+    Добавляем обводку для группы, меняем заливки -->
+    <div class="demo demo--g demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
+  <g id="g-circles">
+    <circle fill="orangered" r="50" cx="55" cy="55"/>
+    <circle fill="gold" r="32" cx="55" cy="55"/>
+    <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+  </g>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">&lt;use></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <!-- Живое демо
+    Добавляем обводку группе и фигурам,
+    переиспользование фигуры -->
+    <div class="demo demo--use demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
+  <g id="g-circles--u">
+    <circle fill="orangered" r="50" cx="55" cy="55"/>
+    <circle fill="gold" r="32" cx="55" cy="55"/>
+    <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+  </g>
+  <use xlink:href="#g-circles--u" x="-110"/>
+  <use xlink:href="#g-circles--u" x="110"/>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">&lt;defs></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <!-- Живое демо
+    Добавляем обводку группе и символам -->
+    <div class="demo demo--defs demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
+  <defs>
+    <g id="g-circles--d">
+      <circle fill="orangered" r="50" cx="55" cy="55"/>
+      <circle fill="gold" r="32" cx="55" cy="55"/>
+      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+    </g>
+  </defs>
+  <use xlink:href="#g-circles--d" x="-110"/>
+  <use xlink:href="#g-circles--d" x="110"/>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+
+  <section class="slide"><div>
+    <h2 class="free-fly">&lt;symbol></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--symbol demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
+  <defs>
+    <symbol id="s-circles">
+      <circle fill="orangered" r="50" cx="55" cy="55"/>
+      <circle fill="gold" r="32" cx="55" cy="55"/>
+      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+    </symbol>
+  </defs>
+  <use xlink:href="#s-circles" x="-110"/>
+  <use xlink:href="#s-circles" x="110"/>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">&lt;pattern></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--pattern demo--live">
+      <div class="demo__content">
+        <textarea class="demo__textfield demo__code"><svg>
+  <defs>
+    <pattern id="pt-circles" viewBox="0 0 110 110"
+       width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle fill="orangered" r="50" cx="55" cy="55"/>
+      <circle fill="gold" r="32" cx="55" cy="55"/>
+      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#pt-circles)"/>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo--patterns">
+      <svg>
+        <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
+      </svg>
+      <svg>
+        <rect width="100%" height="100%" fill="url(#pt-text)"/>
+      </svg>
+      <svg>
+        <rect width="100%" height="100%" fill="url(#pt-colored-circles)"/>
+      </svg>
+    </div>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Трансформации</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">transform="translate(100, 80)"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
+            <g>
+              <use xlink:href="#s-transform-before"/>
+              <use xlink:href="#s-transform-after"
+        fill="crimson" transform="translate(100, 80)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">transform="scale(1.2, .8)"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
+            <g>
+              <use xlink:href="#s-transform-before"/>
+              <use xlink:href="#s-transform-after"
+        fill="orangered" transform="scale(1.2, .8)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">transform="rotate(15, 252, 140)"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
+            <g>
+              <use xlink:href="#s-transform-before"/>
+              <use xlink:href="#s-transform-after"
+          fill="gold" transform="rotate(15, 252, 140)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">transform="skewX(15)"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
+            <g>
+              <use xlink:href="#s-transform-before"/>
+              <use xlink:href="#s-transform-after"
+              fill="yellowgreen" transform="skewX(15)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--editproperty">
+      <div class="demo__content">
+        <textarea class="demo__code">transform="matrix(.3 0 0 1.18 55 25)"</textarea>
+      </div>
+      <div class="demo__view">
+        <svg viewBox="0 0 1024 1200">
+          <svg viewBox="0 0 500 280">
+            <g>
+              <use xlink:href="#s-transform-before"/>
+              <use xlink:href="#s-transform-after"
+          fill="steelblue" transform="matrix(.3 0 0 1.18 55 25)" class="demo__live-edit"/>
+            </g>
+          </svg>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
       <h2 class="free-fly">Оформление элементов</h2>
   </div></section>
 
@@ -723,17 +947,97 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2 class="free-fly">Оформление текста</h2>
+    <h2 class="free-fly">Фильтры</h2>
   </div></section>
 
   <section class="slide"><div>
-    <div class="demo demo--path demo--live">
+    <div class="wrapper wrapper--icons-filters">
+      <ul class="icons">
+
+        <li class="icon icon--blur">
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#home" fill="url(#gr-kuler-diag)" filter="url(#fl-blur)"/>
+          </svg>
+        </li>
+
+        <li class="icon icon--shadow">
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#heart" fill="url(#gr-kuler-diag)"
+            filter="url(#fl-shadow)"/>
+          </svg>
+        </li>
+
+        <li class="icon icon--multystrokes">
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#cog"
+            filter="url(#fl-striped-shadow-kuler)"/>
+          </svg>
+        </li>
+
+        <li class="icon icon--innershadow">
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#camera" fill="url(#gr-kuler-diag)" filter="url(#fl-inner-shadow)"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2 class="free-fly">Оформление текста</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--textdec demo--textdec-stroke demo--live">
       <div class="demo__view">
-      <svg viewBox="0 0 50 50">
-  <text x="50%" y="50%" text-anchor="middle">Я текст</text>
-</svg>
+      <svg viewBox="0 0 300 150">
+        <text x="50%" y="60%" text-anchor="middle" class="text">Tекст</text>
+      </svg>
     </div></div>
   </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--textdec demo--textdec-dashstroke demo--live">
+      <div class="demo__view">
+      <svg viewBox="0 0 300 150">
+        <text x="50%" y="60%" text-anchor="middle" class="text">Tекст</text>
+      </svg>
+    </div></div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--textdec demo--textdec-grad demo--live">
+      <div class="demo__view">
+      <svg viewBox="0 0 300 150">
+        <text x="50%" y="60%" text-anchor="middle" class="text"
+        fill="url(#gr-kuler-diag)">Tекст</text>
+      </svg>
+    </div></div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--textdec demo--textdec-patterns demo--live">
+      <div class="demo__view">
+      <svg viewBox="0 0 300 150">
+        <text x="50%" y="40%" text-anchor="middle" class="text"
+        fill="url(#pt-wood)">Дрова</text>
+        <text x="50%" y="90%" text-anchor="middle" class="text"
+        fill="url(#pt-grass)">Трава</text>
+      </svg>
+    </div></div>
+  </div></section>
+
+  <section class="slide  bg--dark slide--fillingdemo"><div>
+    <div class="demo demo--textdec demo--textdec-patterns demo--live">
+      <div class="demo__view">
+      <svg viewBox="0 0 300 200">
+        <text x="50%" y="40%" class="t--water t--anim" fill="url(#pt-water)" text-anchor="middle">Вода</text>
+        <text x="50%" y="80%" class="t--fire t--anim"  fill="url(#pt-fire)" text-anchor="middle">Огонь</text>
+      </svg>
+    </div></div>
+  </div></section>
+
+
 
   <section class="slide bg--dark"><div>
     <h2 class="free-fly">Маски</h2>
@@ -982,358 +1286,6 @@
   </div></section>
 
   <section class="slide bg--dark"><div>
-    <h2 class="free-fly">Группировка и&nbsp;переиспользование</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2 class="free-fly">&lt;g></h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <!-- Живое демо
-    Добавляем обводку для группы, меняем заливки -->
-    <div class="demo demo--g demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
-  <g id="g-circles">
-    <circle fill="orangered" r="50" cx="55" cy="55"/>
-    <circle fill="gold" r="32" cx="55" cy="55"/>
-    <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
-  </g>
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2 class="free-fly">&lt;use></h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <!-- Живое демо
-    Добавляем обводку группе и фигурам,
-    переиспользование фигуры -->
-    <div class="demo demo--use demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
-  <g id="g-circles--u">
-    <circle fill="orangered" r="50" cx="55" cy="55"/>
-    <circle fill="gold" r="32" cx="55" cy="55"/>
-    <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
-  </g>
-  <use xlink:href="#g-circles--u" x="-110"/>
-  <use xlink:href="#g-circles--u" x="110"/>
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2 class="free-fly">&lt;defs></h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <!-- Живое демо
-    Добавляем обводку группе и символам -->
-    <div class="demo demo--defs demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
-  <defs>
-    <g id="g-circles--d">
-      <circle fill="orangered" r="50" cx="55" cy="55"/>
-      <circle fill="gold" r="32" cx="55" cy="55"/>
-      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
-    </g>
-  </defs>
-  <use xlink:href="#g-circles--d" x="-110"/>
-  <use xlink:href="#g-circles--d" x="110"/>
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-
-  <section class="slide"><div>
-    <h2 class="free-fly">&lt;symbol></h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="demo demo--symbol demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg viewBox="0 0 110 110">
-  <defs>
-    <symbol id="s-circles">
-      <circle fill="orangered" r="50" cx="55" cy="55"/>
-      <circle fill="gold" r="32" cx="55" cy="55"/>
-      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
-    </symbol>
-  </defs>
-  <use xlink:href="#s-circles" x="-110"/>
-  <use xlink:href="#s-circles" x="110"/>
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2 class="free-fly">&lt;pattern></h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="demo demo--pattern demo--live">
-      <div class="demo__content">
-        <textarea class="demo__textfield demo__code"><svg>
-  <defs>
-    <pattern id="pt-circles" viewBox="0 0 110 110"
-       width="40" height="40" patternUnits="userSpaceOnUse">
-      <circle fill="orangered" r="50" cx="55" cy="55"/>
-      <circle fill="gold" r="32" cx="55" cy="55"/>
-      <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
-    </pattern>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#pt-circles)"/>
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="demo--patterns">
-      <svg>
-        <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
-      </svg>
-      <svg>
-        <rect width="100%" height="100%" fill="url(#pt-text)"/>
-      </svg>
-      <svg>
-        <rect width="100%" height="100%" fill="url(#pt-colored-circles)"/>
-      </svg>
-    </div>
-  </div></section>
-
-  <section class="slide bg--dark"><div>
-      <h2 class="free-fly">Трансформации</h2>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--editproperty">
-      <div class="demo__content">
-        <textarea class="demo__code">transform="translate(100, 80)"</textarea>
-      </div>
-      <div class="demo__view">
-        <svg viewBox="0 0 1024 1200">
-          <svg viewBox="0 0 500 280">
-            <g>
-              <use xlink:href="#s-transform-before"/>
-              <use xlink:href="#s-transform-after"
-        fill="crimson" transform="translate(100, 80)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--editproperty">
-      <div class="demo__content">
-        <textarea class="demo__code">transform="scale(1.2, .8)"</textarea>
-      </div>
-      <div class="demo__view">
-        <svg viewBox="0 0 1024 1200">
-          <svg viewBox="0 0 500 280">
-            <g>
-              <use xlink:href="#s-transform-before"/>
-              <use xlink:href="#s-transform-after"
-        fill="orangered" transform="scale(1.2, .8)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--editproperty">
-      <div class="demo__content">
-        <textarea class="demo__code">transform="rotate(15, 252, 140)"</textarea>
-      </div>
-      <div class="demo__view">
-        <svg viewBox="0 0 1024 1200">
-          <svg viewBox="0 0 500 280">
-            <g>
-              <use xlink:href="#s-transform-before"/>
-              <use xlink:href="#s-transform-after"
-          fill="gold" transform="rotate(15, 252, 140)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--editproperty">
-      <div class="demo__content">
-        <textarea class="demo__code">transform="skewX(15)"</textarea>
-      </div>
-      <div class="demo__view">
-        <svg viewBox="0 0 1024 1200">
-          <svg viewBox="0 0 500 280">
-            <g>
-              <use xlink:href="#s-transform-before"/>
-              <use xlink:href="#s-transform-after"
-              fill="yellowgreen" transform="skewX(15)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--editproperty">
-      <div class="demo__content">
-        <textarea class="demo__code">transform="matrix(.3 0 0 1.18 55 25)"</textarea>
-      </div>
-      <div class="demo__view">
-        <svg viewBox="0 0 1024 1200">
-          <svg viewBox="0 0 500 280">
-            <g>
-              <use xlink:href="#s-transform-before"/>
-              <use xlink:href="#s-transform-after"
-          fill="steelblue" transform="matrix(.3 0 0 1.18 55 25)" class="demo__live-edit"/>
-            </g>
-          </svg>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-<!-- ******** -->
-
-
-  <section class="slide"><div>
-      <h2 class="free-fly">Анимация stroke</h2>
-  </div></section>
-
-  <section class="slide slide--fillingdemo bg--dark"><div>
-    <div class="demo demo--stroke-dasharr-anim">
-      <div class="demo__view">
-        <svg viewBox="0 0 130 200">
-          <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137zM112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506zM56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825zM118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725zM6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831zM113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831zM71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25zM100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z" fill="#000000" transform="scale(.75) translate(0,20)"
-          stroke="url(#gr-hot-cold-soft)"/>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide"><div>
-    <pre class="pre--css pre--demo-dasharray"><code>path {</code>
-      <code>    stroke-width: 2;</code>
-      <code>    stroke-dasharray: 550 0;</code>
-      <code>    stroke-dashoffset: 570;</code>
-      <code>    animation: dashoffset 8s infinite alternate;</code>
-      <code>    }</code>
-      <code>@keyframes dashoffset {</code>
-        <code>    100% {</code>
-          <code>      stroke-dashoffset: 0;</code>
-        <code>    }</code>
-      <code>}</code>
-    </pre>
-  </div></section>
-
-  <section class="slide"><div>
-      <h2 class="free-fly">Вертушка</h2>
-  </div></section>
-
-  <section class="slide slide--fillingdemo bg--dark"><div>
-    <div class="demo demo--dashofset-anim">
-      <div class="demo__view">
-        <svg viewBox="0 0 240 240">
-          <g transform="scale(.8) translate(30,14)">
-            <g class="g-circles" fill="gold" stroke-width="100" stroke-dasharray="8%"
-            transform="translate(24 24) scale(.8)">
-                <circle r="60" cx="120" cy="120" stroke="crimson" />
-            </g>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo bg--dark"><div>
-    <div class="demo demo--dashofset-anim">
-      <div class="demo__view">
-        <svg viewBox="0 0 240 240">
-        <g transform="scale(.8) translate(30,14)">
-          <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
-          transform="translate(24 24) scale(.8)">
-              <circle r="60" cx="120" cy="120" stroke="crimson" />
-              <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" class="next"/>
-              <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%"  class="next"/>
-              <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%"  class="next"/>
-              <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%"  class="next"/>
-              <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%"  class="next"/>
-              <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%"  class="next"/>
-          </g>
-        </g>
-      </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo bg--dark"><div>
-    <div class="demo demo--dashofset-anim demo--run">
-      <div class="demo__view">
-        <svg viewBox="0 0 240 240">
-          <g transform="scale(.8) translate(30,14)">
-            <g class="g-circles" fill="none" stroke-width="5" stroke-dasharray="8% 45%">
-                <circle r="115" cx="120" cy="120" stroke="crimson" />
-                <circle r="115" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
-                <circle r="115" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
-                <circle r="115" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
-                <circle r="115" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
-                <circle r="115" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
-                <circle r="115" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
-            </g>
-            <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
-            transform="translate(24 24) scale(.8)">
-                <circle r="60" cx="120" cy="120" stroke="crimson" />
-                <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%"/>
-                <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
-                <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
-                <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
-                <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
-                <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
-            </g>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div></section>
-
-  <section class="slide slide--fillingdemo"><div>
-    <div class="demo demo--lights">
-      <div class="demo__view">
-        <svg>
-          <circle class="" r="50%" cx="50%" cy="50%"
-          fill="url(#gr-radial-lights-small)"/>
-          <circle class="c-lights" r="44%" cx="50%" cy="50%"
-          stroke="url(#gr-radial-lights)" stroke-width="88.5%" stroke-dasharray="10%"/>
-        </svg>
-        <div class="text--win">
-                        <span>Y</span><!--
-                  --><span>o</span><!--
-                  --><span>u</span><!--
-                  --><span>&nbsp;</span><!--
-                  --><span>w</span><!--
-                  --><span>i</span><!--
-                  --><span>n</span><!--
-                  --><span>!</span>
-           </div>
-      </div>
-    </div>
-  </div></section>
-
-
-
-  <section class="slide bg--dark"><div>
     <h2 class="free-fly">Размеры</h2>
   </div></section>
 
@@ -1570,16 +1522,6 @@
     </ul>
   </div></section>
 
-  <section class="slide"><div>
-    <h2>Какой способ лучше?</h2>
-    <ul>
-      <li>SVG в HTML<!--  — для оформления внешними стилями  и&nbsp;управления через JS --></li>
-      <li class="next">фон<!--  — если нет необходимости управления через внешний&nbsp;CSS< --></li>
-      <li class="next">иконочный шрифт<!--  — удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами  -->
-      </li>
-    </ul>
-  </div></section>
-
   <section class="slide bg--dark"><div>
     <h2 class="free-fly">SVG-стеки</h2>
   </div></section>
@@ -1665,12 +1607,14 @@
 
   </div></section>
 
-  <section class="slide bg--dark"><div>
-    <h2 class="free-fly">Оформление SVG</h2>
-  </div></section>
-
   <section class="slide"><div>
-    <h2 class="free-fly">Что выбрать?</h2>
+    <h2>Какой способ лучше?</h2>
+    <ul>
+      <li>SVG в HTML<!--  — для оформления внешними стилями  и&nbsp;управления через JS --></li>
+      <li class="next">фон<!--  — если нет необходимости управления через внешний&nbsp;CSS< --></li>
+      <li class="next">иконочный шрифт<!--  — удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами  -->
+      </li>
+    </ul>
   </div></section>
 
   <section class="slide"><div>
@@ -1795,43 +1739,6 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2 class="free-fly">Фильтры</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <div class="wrapper wrapper--icons-filters">
-      <ul class="icons">
-
-        <li class="icon icon--blur">
-          <svg viewBox="0 0 100 100">
-            <use xlink:href="#home" fill="url(#gr-kuler-diag)" filter="url(#fl-blur)"/>
-          </svg>
-        </li>
-
-        <li class="icon icon--shadow">
-          <svg viewBox="0 0 100 100">
-            <use xlink:href="#heart" fill="url(#gr-kuler-diag)"
-            filter="url(#fl-shadow)"/>
-          </svg>
-        </li>
-
-        <li class="icon icon--multystrokes">
-          <svg viewBox="0 0 100 100">
-            <use xlink:href="#cog"
-            filter="url(#fl-striped-shadow-kuler)"/>
-          </svg>
-        </li>
-
-        <li class="icon icon--innershadow">
-          <svg viewBox="0 0 100 100">
-            <use xlink:href="#camera" fill="url(#gr-kuler-diag)" filter="url(#fl-inner-shadow)"/>
-          </svg>
-        </li>
-      </ul>
-    </div>
-  </div></section>
-
-  <section class="slide"><div>
     <h2 class="free-fly">currentColor</h2>
   </div></section>
 
@@ -1883,6 +1790,218 @@
     <code>      color: yellowgreen;</code>
     <code>      }</code>
     </pre>
+  </div></section>
+
+  <!-- ******** -->
+
+  <section class="slide bg--dark"><div>
+    <h2 class="free-fly">Спецэффекты</h2>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Анимация stroke</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--stroke-dasharr-anim">
+      <div class="demo__view">
+        <svg viewBox="0 0 130 200">
+          <path d="M175 58.756c0-39.538-28.619-58.756-87.5-58.756s-87.5 19.219-87.5 58.756c0 45.469 82.331 97.925 85.831 100.131 0.006 0.006 0.019 0 0.031 0.006 0.069 0.044 0.144 0.044 0.219 0.081 0.45 0.238 0.925 0.4 1.419 0.4s0.969-0.162 1.419-0.394c0.069-0.037 0.15-0.037 0.219-0.081 0.006-0.006 0.019 0 0.031-0.006 3.5-2.213 85.831-54.663 85.831-100.137zM112.5 58.756c0 34.75-17.975 75.756-25 90.456-7.025-14.694-25-55.681-25-90.456 0-47.063 14.269-52.506 25-52.506s25 5.444 25 52.506zM56.25 58.756c0 29.981 12.369 63.381 20.819 82.725-17.138-18.106-45.819-52.85-45.819-82.725 0-29.313 11.988-45.794 37.356-50.825-8.275 9.050-12.356 25.888-12.356 50.825zM118.75 58.756c0-24.938-4.075-41.775-12.356-50.825 25.369 5.031 37.356 21.519 37.356 50.825 0 29.875-28.681 64.612-45.819 82.725 8.45-19.337 20.819-52.744 20.819-82.725zM6.25 58.756c0-24.819 12.419-40.438 38.475-47.7-13.213 9.575-19.725 25.4-19.725 47.7 0 26.269 19.594 54.95 36.487 74.831-24.113-19.175-55.237-48.937-55.237-74.831zM113.512 133.588c16.894-19.881 36.488-48.556 36.488-74.831 0-22.3-6.513-38.131-19.725-47.7 26.056 7.263 38.475 22.881 38.475 47.7 0 25.894-31.125 55.656-55.238 74.831zM71.875 168.75c-1.725 0-3.125 1.4-3.125 3.125v18.75c0 5.256 4.119 9.375 9.375 9.375h18.75c5.256 0 9.375-4.119 9.375-9.375v-18.75c0-1.725-1.4-3.125-3.125-3.125h-31.25zM100 190.625c0 1.838-1.287 3.125-3.125 3.125h-18.75c-1.838 0-3.125-1.287-3.125-3.125v-15.625h25v15.625z" fill="#000000" transform="scale(.75) translate(0,20)"
+          stroke="url(#gr-hot-cold-soft)"/>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre class="pre--css pre--demo-dasharray"><code>path {</code>
+      <code>    stroke-width: 2;</code>
+      <code>    stroke-dasharray: 550 0;</code>
+      <code>    stroke-dashoffset: 570;</code>
+      <code>    animation: dashoffset 8s infinite alternate;</code>
+      <code>    }</code>
+      <code>@keyframes dashoffset {</code>
+        <code>    100% {</code>
+          <code>      stroke-dashoffset: 0;</code>
+        <code>    }</code>
+      <code>}</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Вертушка</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim">
+      <div class="demo__view">
+        <svg viewBox="0 0 240 240">
+          <g transform="scale(.8) translate(30,14)">
+            <g class="g-circles" fill="gold" stroke-width="100" stroke-dasharray="8%"
+            transform="translate(24 24) scale(.8)">
+                <circle r="60" cx="120" cy="120" stroke="crimson" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim">
+      <div class="demo__view">
+        <svg viewBox="0 0 240 240">
+        <g transform="scale(.8) translate(30,14)">
+          <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
+          transform="translate(24 24) scale(.8)">
+              <circle r="60" cx="120" cy="120" stroke="crimson" />
+              <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%"  class="next"/>
+              <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%"  class="next"/>
+          </g>
+        </g>
+      </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide slide--fillingdemo bg--dark"><div>
+    <div class="demo demo--dashofset-anim demo--run">
+      <div class="demo__view">
+        <svg viewBox="0 0 240 240">
+          <g transform="scale(.8) translate(30,14)">
+            <g class="g-circles" fill="none" stroke-width="5" stroke-dasharray="8% 45%">
+                <circle r="115" cx="120" cy="120" stroke="crimson" />
+                <circle r="115" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%" />
+                <circle r="115" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
+                <circle r="115" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
+                <circle r="115" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
+                <circle r="115" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
+                <circle r="115" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
+            </g>
+            <g class="g-circles" fill="none" stroke-width="120" stroke-dasharray="8% 45%"
+            transform="translate(24 24) scale(.8)">
+                <circle r="60" cx="120" cy="120" stroke="crimson" />
+                <circle r="60" cx="120" cy="120" stroke="orangered" stroke-dashoffset="8%"/>
+                <circle r="60" cx="120" cy="120" stroke="orange" stroke-dashoffset="16%" />
+                <circle r="60" cx="120" cy="120" stroke="gold" stroke-dashoffset="24%" />
+                <circle r="60" cx="120" cy="120" stroke="yellowgreen" stroke-dashoffset="32%" />
+                <circle r="60" cx="120" cy="120" stroke="steelblue" stroke-dashoffset="40%" />
+                <circle r="60" cx="120" cy="120" stroke="blueviolet" stroke-dashoffset="48%" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Лучи</h2>
+  </div></section>
+
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--lights">
+      <div class="demo__view">
+        <svg>
+          <circle class="" r="50%" cx="50%" cy="50%"
+          fill="url(#gr-radial-lights-small)"/>
+          <circle class="c-lights" r="44%" cx="50%" cy="50%"
+          stroke="url(#gr-radial-lights)" stroke-width="88.5%" stroke-dasharray="10%"/>
+        </svg>
+        <div class="text--win">
+                        <span>Y</span><!--
+                  --><span>o</span><!--
+                  --><span>u</span><!--
+                  --><span>&nbsp;</span><!--
+                  --><span>w</span><!--
+                  --><span>i</span><!--
+                  --><span>n</span><!--
+                  --><span>!</span>
+           </div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="slide"><div>
+      <h2 class="free-fly">Прелоадеры</h2>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+    <div class="demo demo--preloaders">
+      <div class="demo__view">
+          <svg viewBox="0 0 120 120" class="svg--preloader">
+            <g class="g-preloader g-preloader--v1">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+
+            <use xlink:href="#circle" class="use"/>
+        </svg>
+        <svg viewBox="0 0 120 120" class="svg--preloader">
+            <g class="g-preloader g-preloader--v2">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+        </svg>
+
+        <svg viewBox="0 0 120 120" class="svg--preloader">
+            <g class="g-preloader g-preloader--v3">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+        </svg>
+
+        <svg viewBox="0 0 120 120" class="svg--preloader">
+            <g class="g-preloader g-preloader--v4">
+                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
+                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
+                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
+                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
+                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
+                <circle id="7" cx="60" cy="110" r="10"></circle>
+                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
+                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
+                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
+                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
+                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
+                <circle id="1" cx="60" cy="10" r="10"></circle>
+            </g>
+        </svg>
+      </div>
+    </div>
   </div></section>
 
   <section class="slide"><div>
