@@ -701,7 +701,7 @@ $lights-color: orange; /*lightseagreen*/
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        text-shadow: shadows($max: 4, $color: orange, $backshadow: orangered);
+        text-shadow: shadows-multilayers($max: 6, $color: lighten(orange, 5%), $backshadow: orangered);
         letter-spacing: .05em;
         font-family: 'Russo One';
         font-size:  5em;
