@@ -1,52 +1,90 @@
 $max: 12;
-$size: 220px;
-$preloader-fill: dodgerblue;
+$angle: 360/$max;
+$size: 120px;
+$wh: 200px;
+$fill: dodgerblue;
 
 .demo--preloaders {
   text-align: center;
   }
+
 .svg--preloader {
-  height: $size;
-  width: $size;
+  height: $wh;
+  width: $wh;
   margin: 0 2em 2em;
   overflow: visible;
-   /*border: 1px solid red;*/
   }
 
-.g-preloader {
-  transform: scale(.9) translate(7px, 7px);
 
-  circle {
-    fill: $preloader-fill;
-    fill-opacity: 0;
-    animation: opacity 1.2s linear infinite;
+@function transform($item: 1){
+  $base: rotate(#{-$angle*$item}deg) translate(5px, 5px);
+  @return $base;
+}
 
-    @for $item from 1 through $max {
-      &:nth-child(#{$max}n + #{$item}){
-        animation-delay: -#{$item/10}s;
-      }
+.g--preloader-circle {
+  transform-origin: $size/2 $size/2;
+
+  fill: $fill;
+  animation: opacity 1.2s linear infinite;
+
+  @for $item from 1 through $max {
+    &:nth-child(#{$max}n + #{$item}){
+      animation-delay: -#{$item/10}s;
+      transform: transform($item) scale(.9);
     }
   }
 }
-.g-preloader--v2 circle {
+
+.g--preloader--v1 .g--preloader-circle {
+  /*fill-opacity: 0;*/
+  animation-name: opacity;
+  }
+
+.g--preloader--v2 .g--preloader-circle {
   fill-opacity: 0;
   stroke-opacity: 0;
   stroke-width: 1;
   stroke: yellowgreen;
-  animation-name: opacity-stroke, colors, colors-stroke, transform-2;
+  animation-name: opacity-stroke, colors, colors-stroke;
+  .u--circle {
+    //transform: scale(.6) translate(10px,10px);
+    //transform-origin: 10px 10px;
+    animation: transform-2 1.2s linear infinite;
+  }
 }
 
-.g-preloader--v3 circle {
+.g--preloader--v2 .g--preloader-circle {
+  @for $item from 1 through $max {
+    &:nth-child(#{$max}n + #{$item}) .u--circle{
+      animation-delay: -#{$item/10}s;
+    }
+  }
+}
+
+.g--preloader--v3 .g--preloader-circle {
   fill-opacity: 1;
   animation-name: opacity, colors;
+  }
+
+.g--preloader--v4 {
+  .g--preloader-circle {
+    fill-opacity: 1;
+    fill: orange;
+    animation-name: opacity, colors-3;
+  }
+  .u--circle {
+    animation: transform 1.2s linear infinite;
+  }
 }
 
-.g-preloader--v4 circle {
-  fill-opacity: 1;
-  fill: orange;
-  transform-origin: 60px 60px;
-  animation-name: opacity, colors-3, transform;
+.g--preloader--v4 .g--preloader-circle {
+  @for $item from 1 through $max {
+    &:nth-child(#{$max}n + #{$item}) .u--circle{
+      animation-delay: -#{$item/10}s;
+    }
+  }
 }
+
 
 @keyframes opacity {
   3% {
@@ -124,13 +162,14 @@ $preloader-fill: dodgerblue;
 
 @keyframes transform {
   10% {
+    transform-origin: 70px 70px;
     transform: scale(.75);
     }
 }
 
 @keyframes transform-2 {
   40% {
-    transform: scale(.85);
+    transform: scale(.85) translate(10px,10px);
     }
   60% {
     stroke-width: 20;

@@ -1625,7 +1625,7 @@
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--textdec demo--textdec-stroke demo--live">
       <div class="demo__view">
-      <svg viewBox="0 0 300 150">
+      <svg>
         <text x="50%" y="60%" text-anchor="middle" class="text">Tекст</text>
       </svg>
     </div></div>
@@ -1634,7 +1634,7 @@
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--textdec demo--textdec-dashstroke demo--live">
       <div class="demo__view">
-      <svg viewBox="0 0 300 150">
+      <svg>
         <text x="50%" y="60%" text-anchor="middle" class="text">Tекст</text>
       </svg>
     </div></div>
@@ -1643,7 +1643,7 @@
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--textdec demo--textdec-grad demo--live">
       <div class="demo__view">
-      <svg viewBox="0 0 300 150">
+      <svg>
         <text x="50%" y="60%" text-anchor="middle" class="text"
         fill="url(#gr-kuler-diag)">Tекст</text>
       </svg>
@@ -1653,10 +1653,10 @@
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--textdec demo--textdec-patterns demo--live">
       <div class="demo__view">
-      <svg viewBox="0 0 300 150">
-        <text x="50%" y="40%" text-anchor="middle" class="text"
+      <svg>
+        <text x="50%" y="38%" text-anchor="middle" class="text"
         fill="url(#pt-wood)">Дрова</text>
-        <text x="50%" y="90%" text-anchor="middle" class="text"
+        <text x="50%" y="85%" text-anchor="middle" class="text"
         fill="url(#pt-grass)">Трава</text>
       </svg>
     </div></div>
@@ -1665,7 +1665,7 @@
   <section class="slide  bg--dark slide--fillingdemo"><div>
     <div class="demo demo--textdec demo--textdec-patterns demo--live">
       <div class="demo__view">
-      <svg viewBox="0 0 300 200">
+      <svg>
         <text x="50%" y="40%" class="t--water t--anim" fill="url(#pt-water)" text-anchor="middle">Вода</text>
         <text x="50%" y="80%" class="t--fire t--anim"  fill="url(#pt-fire)" text-anchor="middle">Огонь</text>
       </svg>
@@ -1925,7 +1925,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2 class="free-fly">width & height</h2>
+    <h2 class="free-fly">Ширина и высота</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -1959,7 +1959,7 @@
   </div></section>
 
   <section class="slide"><div>
-    <h2 class="free-fly">viewBox + width & height</h2>
+    <h2 class="free-fly">viewBox + ширина & высота</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -2242,18 +2242,22 @@
 
   </div></section>
 
-  <section class="slide"><div>
-    <h2>Какой способ лучше?</h2>
-    <ul>
-      <li>SVG в HTML<!--  — для оформления внешними стилями  и&nbsp;управления через JS --></li>
-      <li class="next">фон<!--  — если нет необходимости управления через внешний&nbsp;CSS< --></li>
-      <li class="next">иконочный шрифт<!--  — удобно подключать и использовать, но проблемы с&nbsp;поддержкой браузерами  -->
-      </li>
-    </ul>
+  <section class="slide bg--dark"><div>
+    <h2 class="free-fly">SVG в дизайне</h2>
   </div></section>
 
+  <!-- <section class="slide"><div>
+    <h2>Какой способ лучше?</h2>
+    <ul>
+      <li>SVG в HTML</li>
+      <li class="next">фон</li>
+      <li class="next">иконочный шрифт
+      </li>
+    </ul>
+  </div></section> -->
+
   <section class="slide"><div>
-    <h2 class="free-fly">Используем шрифт</h2>
+    <h2 class="free-fly">Шрифт</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -2265,13 +2269,26 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
-    <h2 class="free-fly">Используем SVG</h2>
-  </div></section>
+  <!-- <section class="slide"><div>
+    <h2>Плюсы</h2>
+    <ul>
+      <li>Поддержка IE8+</li>
+      <li>Красится в цвет текста</li>
+    </ul>
+    <h2>Минусы</h2>
+    <ul>
+      <li>Сглаживание</li>
+      <li>Мало возможностей оформления</li>
+    </ul>
+  </div></section> -->
 
   <section class="slide"><div>
-    <h2 class="free-fly">Разноцветные иконки</h2>
+    <h2 class="free-fly">SVG</h2>
   </div></section>
+
+  <!-- <section class="slide"><div>
+    <h2 class="free-fly">Разноцветные иконки</h2>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="wrapper wrapper--icons-colored">
@@ -2338,9 +2355,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
     <h2 class="free-fly">Эффекты с обводками</h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="wrapper wrapper--icons-stroke">
@@ -2430,12 +2447,12 @@
   <!-- ******** -->
 
   <section class="slide bg--dark"><div>
-    <h2 class="free-fly">Спецэффекты</h2>
+    <h2 class="free-fly">Разные штуки</h2>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">Анимация stroke</h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--stroke-dasharr-anim">
@@ -2463,9 +2480,9 @@
     </pre>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">Вертушка</h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--dashofset-anim">
@@ -2533,9 +2550,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">Лучи</h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--lights">
@@ -2560,79 +2577,177 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">Прелоадеры</h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide bg--dark"><div>
     <div class="demo demo--preloaders">
       <div class="demo__view">
           <svg viewBox="0 0 120 120" class="svg--preloader">
-            <g class="g-preloader g-preloader--v1">
-                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
-                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
-                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
-                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
-                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
-                <circle id="7" cx="60" cy="110" r="10"></circle>
-                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
-                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
-                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
-                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
-                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
-                <circle id="1" cx="60" cy="10" r="10"></circle>
-            </g>
+            <symbol id="s--preloader-circle">
+              <circle r="10" cx="20" cy="20"></circle>
+            </symbol>
 
-            <use xlink:href="#circle" class="use"/>
-        </svg>
-        <svg viewBox="0 0 120 120" class="svg--preloader">
-            <g class="g-preloader g-preloader--v2">
-                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
-                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
-                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
-                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
-                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
-                <circle id="7" cx="60" cy="110" r="10"></circle>
-                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
-                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
-                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
-                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
-                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
-                <circle id="1" cx="60" cy="10" r="10"></circle>
-            </g>
-        </svg>
-
-        <svg viewBox="0 0 120 120" class="svg--preloader">
-            <g class="g-preloader g-preloader--v3">
-                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
-                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
-                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
-                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
-                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
-                <circle id="7" cx="60" cy="110" r="10"></circle>
-                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
-                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
-                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
-                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
-                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
-                <circle id="1" cx="60" cy="10" r="10"></circle>
+            <g class="g--preloader g--preloader--v1">
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
             </g>
         </svg>
+        <svg viewBox="0 0 120 120" class="svg--preloader">
+            <g class="g--preloader g--preloader--v2">
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+            </g>
+        </svg>
 
         <svg viewBox="0 0 120 120" class="svg--preloader">
-            <g class="g-preloader g-preloader--v4">
-                <circle id="12" transform="translate(35, 16.698730) rotate(-30) translate(-35, -16.698730) " cx="35" cy="16.6987298" r="10"></circle>
-                <circle id="11" transform="translate(16.698730, 35) rotate(-60) translate(-16.698730, -35) " cx="16.6987298" cy="35" r="10"></circle>
-                <circle id="10" transform="translate(10, 60) rotate(-90) translate(-10, -60) " cx="10" cy="60" r="10"></circle>
-                <circle id="9" transform="translate(16.698730, 85) rotate(-120) translate(-16.698730, -85) " cx="16.6987298" cy="85" r="10"></circle>
-                <circle id="8" transform="translate(35, 103.301270) rotate(-150) translate(-35, -103.301270) " cx="35" cy="103.30127" r="10"></circle>
-                <circle id="7" cx="60" cy="110" r="10"></circle>
-                <circle id="6" transform="translate(85, 103.301270) rotate(-30) translate(-85, -103.301270) " cx="85" cy="103.30127" r="10"></circle>
-                <circle id="5" transform="translate(103.301270, 85) rotate(-60) translate(-103.301270, -85) " cx="103.30127" cy="85" r="10"></circle>
-                <circle id="4" transform="translate(110, 60) rotate(-90) translate(-110, -60) " cx="110" cy="60" r="10"></circle>
-                <circle id="3" transform="translate(103.301270, 35) rotate(-120) translate(-103.301270, -35) " cx="103.30127" cy="35" r="10"></circle>
-                <circle id="2" transform="translate(85, 16.698730) rotate(-150) translate(-85, -16.698730) " cx="85" cy="16.6987298" r="10"></circle>
-                <circle id="1" cx="60" cy="10" r="10"></circle>
+            <g class="g--preloader g--preloader--v3">
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+            </g>
+        </svg>
+
+        <svg viewBox="0 0 120 120" class="svg--preloader">
+            <g class="g--preloader g--preloader--v4">
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
+              <g class="g--preloader-circle">
+                <use xlink:href="#s--preloader-circle" class="u--circle"/>
+              </g>
             </g>
         </svg>
       </div>
