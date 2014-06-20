@@ -2815,6 +2815,182 @@ PRE:before {
     stroke-width: 20;
   }
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003180}}
+.g--preloader--ams .g--preloader-circle {
+  fill-opacity: 0;
+  -webkit-animation-name: opacity;
+  animation-name: opacity;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003185}}
+.g--preloader--hc .g--preloader-circle {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+  stroke-width: 1;
+  stroke: yellowgreen;
+  -webkit-animation-name: opacity-stroke, colors, colors-stroke;
+  animation-name: opacity-stroke, colors, colors-stroke;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003191}}
+.g--preloader--hc .g--preloader-circle .u--circle {
+  -webkit-animation: transform-2 1.2s linear infinite;
+  animation: transform-2 1.2s linear infinite;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003196}}
+.g--preloader--hc {
+  -webkit-transform: scale(0.85) translate(12px, 12px);
+  -ms-transform: scale(0.85) translate(12px, 12px);
+  transform: scale(0.85) translate(12px, 12px);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 1) .u--circle {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 2) .u--circle {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 3) .u--circle {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 4) .u--circle {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 5) .u--circle {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 6) .u--circle {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 7) .u--circle {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 8) .u--circle {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 9) .u--circle {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 10) .u--circle {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 11) .u--circle {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003200}}
+.g--preloader--hc .g--preloader-circle:nth-child(12n + 12) .u--circle {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003207}}
+.g--preloader--trapez .g--preloader-circle {
+  fill-opacity: 1;
+  -webkit-animation-name: opacity, colors;
+  animation-name: opacity, colors;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003212}}
+.g--preloader--stars {
+  -webkit-transform: scale(0.9) translate(12px, 12px);
+  -ms-transform: scale(0.9) translate(12px, 12px);
+  transform: scale(0.9) translate(12px, 12px);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003214}}
+.g--preloader--stars .g--preloader-circle {
+  fill-opacity: 1;
+  fill: orange;
+  -webkit-animation-name: opacity, colors-3;
+  animation-name: opacity, colors-3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003219}}
+.g--preloader--stars .u--circle {
+  -webkit-animation: transform 1.2s linear infinite;
+  animation: transform 1.2s linear infinite;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 1) .u--circle {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 2) .u--circle {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 3) .u--circle {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 4) .u--circle {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 5) .u--circle {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 6) .u--circle {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 7) .u--circle {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 8) .u--circle {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 9) .u--circle {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 10) .u--circle {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 11) .u--circle {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_preloaders\.scss}line{font-family:\00003226}}
+.g--preloader--stars .g--preloader-circle:nth-child(12n + 12) .u--circle {
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ybuhvalova\/Playground\/shower\/_src\/css\/_browsers\.scss}line{font-family:\000032}}
 .list--browsers-inside LI {
   margin-bottom: 50px;
