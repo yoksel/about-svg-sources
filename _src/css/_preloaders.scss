@@ -1,23 +1,29 @@
 $max: 12;
 $angle: 360/$max;
 $size: 120px;
-$wh: 200px;
+$wh: 250px;
 $fill: dodgerblue;
 
 .demo--preloaders {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: $wh + 10;
+  margin: auto;
   text-align: center;
   }
 
 .svg--preloader {
   height: $wh;
   width: $wh;
-  margin: 0 2em 2em;
   overflow: visible;
   }
 
 
-@function transform($item: 1){
-  $base: rotate(#{-$angle*$item}deg) translate(5px, 5px);
+@function transform($item: 1, $translate: "5px, 5px"){
+  $base: rotate(#{-$angle*$item}deg) translate($translate) scale(.9);
   @return $base;
 }
 
@@ -30,7 +36,7 @@ $fill: dodgerblue;
   @for $item from 1 through $max {
     &:nth-child(#{$max}n + #{$item}){
       animation-delay: -#{$item/10}s;
-      transform: transform($item) scale(.9);
+      transform: transform($item, $translate: 0);
     }
   }
 }
@@ -40,7 +46,7 @@ $fill: dodgerblue;
   }
 
 .g--preloader--v1 .g--preloader-circle {
-  /*fill-opacity: 0;*/
+  fill-opacity: 0;
   animation-name: opacity;
   }
 
@@ -65,9 +71,14 @@ $fill: dodgerblue;
   }
 }
 
+#shadow-root circle {
+stroke: green;
+}
+
 .g--preloader--v3 .g--preloader-circle {
   fill-opacity: 1;
   animation-name: opacity, colors;
+  /*stroke: red;*/
   }
 
 .g--preloader--v4 {
@@ -180,6 +191,13 @@ $fill: dodgerblue;
     }
 }
 
+@keyframes transform-3 {
+  10% {
+    transform-origin: 50px 50px;
+    transform: scale(.85);
+    }
+}
+
 
 .g--preloader--ams .g--preloader-circle {
   fill-opacity: 0;
@@ -214,14 +232,13 @@ $fill: dodgerblue;
   }
 
 .g--preloader--stars {
-  transform: scale(.9) translate(12px, 12px);
   .g--preloader-circle {
     fill-opacity: 1;
     fill: orange;
     animation-name: opacity, colors-3;
   }
   .u--circle {
-    animation: transform 1.2s linear infinite;
+    animation: transform-3 1.2s linear infinite;
   }
 }
 

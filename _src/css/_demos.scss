@@ -566,7 +566,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
 .demo--textdec {
     text {
         font-family: 'Russo One';
-        font-size:  12em;
+        font-size:  10em;
         }
     }
 
@@ -574,7 +574,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
     text {
         fill: none;
         stroke: orangered;
-        stroke-width: 2;
+        stroke-width: 4;
         }
     }
 
@@ -583,7 +583,7 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
         fill: none;
         stroke: steelblue;
         stroke-dasharray: 30 10;
-        stroke-width: 2;
+        stroke-width: 4;
         }
     }
 

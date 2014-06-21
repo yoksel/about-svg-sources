@@ -137,7 +137,8 @@
       </symbol>
 
       <symbol id="s--preloader-circle">
-        <circle r="10" cx="20" cy="20"></circle>
+        <circle r="10" cx="20" cy="20"
+           transform="translate(5,5) scale(.9)"/>
       </symbol>
 
       <symbol id="s--preloader-heart" viewBox="0 0 140 140">
@@ -151,7 +152,7 @@
 
       <symbol id="s--preloader-star">
         <path  d="m0,17.31586l17.31594,0l5.35075,-17.31586l5.35077,17.31586l17.31586,0l-14.00877,10.70167l5.351,17.31581l-14.00886,-10.7019l-14.00889,10.7019l5.35102,-17.31581l-14.00883,-10.70167l0,0z"
-              transform="scale(.8) translate(7,2) rotate(-220, 20,20)"/>
+              transform="translate(8,8) scale(.6)  rotate(-40, 20,20)"/>
       </symbol>
 
       <symbol id="s--preloader-plus">
