@@ -114,12 +114,16 @@
   </div></section>
 
   <section class="slide bg--dark"><div>
-      <h2 class="free-fly">Пишем SVG</h2>
+      <h2 class="free-fly">Фигуры</h2>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Пишем SVG</h2>
+  </div></section> -->
+
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;rect></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--rect demo--rect-1 demo--live">
@@ -153,9 +157,9 @@
     </div></div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;circle></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
@@ -169,9 +173,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;ellipse></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
@@ -185,9 +189,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;polygon></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--polygon demo--live">
@@ -210,9 +214,9 @@
 
   </div></section>
 
-  <section class="slide"><div>
+ <!--  <section class="slide"><div>
       <h2 class="free-fly">&lt;line></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--line demo--live">
@@ -225,9 +229,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;polyline></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--polyline demo--live">
@@ -272,7 +276,7 @@
     <div class="demo demo--path demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
-  <path d="M 10,30 A 20,31 320 0 0 190,30 Z"
+  <path d="M 10,30 A 20,31 320 0 0 190,30"
         stroke="purple" stroke-width="3" fill="violet"/>
 </svg></textarea>
     </div></div>
@@ -285,9 +289,13 @@
       <textarea class="demo__textfield demo__code"><svg viewBox="0 0 340 270" height="270">
   <path d="M 170,10 C 0,10 0,260 170,260
            M 170,10 C 340,10 340,260 170,260"
-    stroke="orange" stroke-width="5" fill="gold" />
+    fill="turquoise" stroke="lightseagreen" stroke-width="5" />
 </svg></textarea>
     </div></div>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Доступность</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -297,19 +305,24 @@
   <section class="slide"><div>
         <div class="demo demo--tit-desc demo--live">
           <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
-  <title>Кружок</title>
-  <desc>Тут нарисован желтый кружок</desc>
-  <circle r="130" cx="135" cy="135"
-    fill="gold" stroke="orange" stroke-width="5" />
-</svg></textarea>
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
+  <title>Треугольник</title>
+  <desc>Тут нарисован зеленый треугольник</desc>
+  <polygon points="5,265 250,5 495,265"
+    fill="yellowgreen" stroke="green" stroke-width="5" />
+</svg>
+</textarea>
         </div>
     </div>
   </div></section>
 
-  <section class="slide"><div>
-      <h2 class="free-fly">&lt;image></h2>
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Картинки и текст</h2>
   </div></section>
+
+  <!-- <section class="slide"><div>
+      <h2 class="free-fly">&lt;image></h2>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--path demo--live">
@@ -321,9 +334,9 @@
     </div></div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;text></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--path demo--live">
@@ -461,7 +474,7 @@
         <textarea class="demo__textfield demo__code"><svg>
   <defs>
     <pattern id="pt-circles" viewBox="0 0 110 110"
-       width="40" height="40" patternUnits="userSpaceOnUse">
+       width="43.2" height="40" patternUnits="userSpaceOnUse">
       <circle fill="orangered" r="50" cx="55" cy="55"/>
       <circle fill="gold" r="32" cx="55" cy="55"/>
       <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
@@ -640,7 +653,7 @@
       &lt;stop stop-color="hsl(350,100%,45%)" offset="0"/>
       &lt;stop stop-color="hsl(45,100%,75%)" offset="50%"/>
       &lt;stop stop-color="hsl(200,100%,40%)" offset="100%"/>
-  &lt;/linearGradient></code></pre>
+&lt;/linearGradient></code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -661,7 +674,7 @@
       &lt;stop stop-color="hsl(50,100%,70%)" offset="66%"/>
       &lt;stop stop-color="hsl(200,100%,40%)" offset="66%%"/>
       &lt;stop stop-color="hsl(200,100%,40%)" offset="100%"/>
-  &lt;/linearGradient></code></pre>
+&lt;/linearGradient></code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -678,7 +691,7 @@
       &lt;stop stop-color="hsl(200,100%,40%)" offset="0"/>
       &lt;stop stop-color="hsl(45,100%,75%)" offset="50%"/>
       &lt;stop stop-color="hsl(350,100%,45%)" offset="100%"/>
-  &lt;/radialGradient></code></pre>
+&lt;/radialGradient></code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -1037,8 +1050,6 @@
     </div></div>
   </div></section>
 
-
-
   <section class="slide bg--dark"><div>
     <h2 class="free-fly">Маски</h2>
   </div></section>
@@ -1385,73 +1396,6 @@
         </svg>
       </div>
     </div>
-  </div></section>
-
-  <section class="slide bg--dark"><div>
-    <h2 class="free-fly">Рисуем SVG</h2>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2>Редакторы</h2>
-    <ul>
-      <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a>   <!-- — 599 руб./месяц в составе подписки на Creative Cloud -->
-      </li>
-      <li class="next"><a href="http://www.bohemiancoding.com/sketch/">Sketch</a>
-         <!-- — для Mac OS, $79.99 -->
-      </li>
-      <li class="next"><a href="https://code.google.com/p/svg-edit/">SVG-edit</a>
-        <ul><li class="next"><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">Онлайн-демо</a></li></ul>
-      </li>
-      <li class="next"><a href="http://www.inkscape.org/en/">Inkscape</a>
-        <!--  — бесплатный -->
-      </li>
-    </ul>
-  </div></section>
-
-  <section class="slide"><div>
-    <h2>Сайты с SVG-графикой</h2>
-    <ul>
-      <li><a href="http://iconmelon.com/">iconmelon.com</a><!--  — монохромные и цветные иконки, вставка через <code>use</code>
-        делает библиотеку -->
-        <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-      </li>
-      <li class="next"><a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  — монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
-        делает спрайт -->
-        <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-      </li>
-      <li class="next"><a href="http://www.flaticon.com/">flaticon.com</a> <!-- — большой выбор на разные темы. На выходе SVG, PNG или шрифт.
-        не склеивает -->
-        <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-      </li>
-      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
-      </li>
-    </ul>
-
-  </div></section>
-
-  <section class="slide"><div>
-    <h2>Сборка</h2>
-    <ul>
-      <li>Iconizr: <a href="http://iconizr.com/">web</a>, <a href="https://www.npmjs.org/package/grunt-iconizr">grunt</a>
-        <!-- Png, SVG / data,sprite
-        -->
-        </li>
-        <li class="next">Grumpicon: <a href="http://www.grumpicon.com/">web</a>,
-          <a href="https://github.com/filamentgroup/grunticon">grunt</a><br>
-          <!-- Svg-data, Png-data + fallback Png -->
-        </li>
-        <!-- Need phantomjs -->
-        <!-- <li class="next"><a href="https://www.npmjs.org/package/grunt-svg-sprite">grunt-svg-sprite</a></li> -->
-        <!-- <li class="next"><a href="https://www.npmjs.org/package/grunt-webfont">grunt-webfont</a></li> -->
-      </ul>
-
-    <h2 class="next">Оптимизация</h2>
-
-    <ul>
-      <li class="next"><a href="http://petercollingridge.appspot.com/svg-optimiser">SVG Optimiser</a></li>
-      <li class="next">SVGO: <a href="https://github.com/svg/svgo">консоль</a>, <a href="https://github.com/svg/svgo-gui">gui</a>, <a href="https://github.com/sindresorhus/grunt-svgmin">grunt</a>
-      </li>
-    </ul>
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -1952,40 +1896,40 @@
           <svg viewBox="0 0 120 120" class="svg--preloader">
 
             <g class="g--preloader g--preloader--v3">
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
             </g>
@@ -2002,40 +1946,40 @@
           <!-- <use xlink:href="#s--preloader-star" fill="red"/> -->
 
             <g class="g--preloader g--preloader--stars">
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
             </g>
@@ -2043,6 +1987,85 @@
       </div>
     </div>
   </div></section>
+
+  <section class="slide bg--dark"><div>
+    <h2 class="free-fly">Полезные ссылки</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Векторные редакторы</h2>
+    <ul>
+      <li><a href="http://www.adobe.com/ru/products/illustrator.html">Adobe Illustrator</a>   <!-- — 599 руб./месяц в составе подписки на Creative Cloud -->
+      </li>
+      <li><a href="http://www.bohemiancoding.com/sketch/">Sketch</a>
+         <!-- — для Mac OS, $79.99 -->
+      </li>
+      <li><a href="https://code.google.com/p/svg-edit/">SVG-edit</a>
+        <ul><li><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">Онлайн-демо</a></li></ul>
+      </li>
+      <li><a href="http://www.inkscape.org/en/">Inkscape</a>
+        <!--  — бесплатный -->
+      </li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Сайты с SVG-графикой</h2>
+    <ul>
+      <li><a href="http://iconmelon.com/">iconmelon.com</a><!--  — монохромные и цветные иконки, вставка через <code>use</code>
+        делает библиотеку -->
+        <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+      <li class="next"><a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  — монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
+        делает спрайт -->
+        <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+      <li class="next"><a href="http://www.flaticon.com/">flaticon.com</a> <!-- — большой выбор на разные темы. На выходе SVG, PNG или шрифт.
+        не склеивает -->
+        <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      </li>
+    </ul>
+
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Сборка</h2>
+    <ul>
+      <li>Iconizr: <a href="http://iconizr.com/">web</a>, <a href="https://www.npmjs.org/package/grunt-iconizr">grunt</a>
+        <!-- Png, SVG / data,sprite
+        -->
+        </li>
+        <li>Grumpicon: <a href="http://www.grumpicon.com/">web</a>,
+          <a href="https://github.com/filamentgroup/grunticon">grunt</a><br>
+          <!-- Svg-data, Png-data + fallback Png -->
+        </li>
+        <!-- Need phantomjs -->
+        <!-- <li class="next"><a href="https://www.npmjs.org/package/grunt-svg-sprite">grunt-svg-sprite</a></li> -->
+        <!-- <li class="next"><a href="https://www.npmjs.org/package/grunt-webfont">grunt-webfont</a></li> -->
+      </ul>
+
+    <h2>Оптимизация</h2>
+
+    <ul>
+      <li><a href="http://petercollingridge.appspot.com/svg-optimiser">SVG Optimiser</a></li>
+      <li>SVGO: <a href="https://github.com/svg/svgo">консоль</a>, <a href="https://github.com/svg/svgo-gui">gui</a>, <a href="https://github.com/sindresorhus/grunt-svgmin">grunt</a>
+      </li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Презентации</h2>
+    <ul>
+      <li><a href="https://docs.google.com/presentation/d/1CNQLbqC0krocy_fZrM5fZ-YmQ2JgEADRh3qR6RbOOGk/present#slide=id.p">Leaving Pixels Behind - Todd Parker</a>
+      </li>
+      <li><a href="https://docs.google.com/presentation/d/1Iuvf3saPCJepVJBDNNDSmSsA0_rwtRYehSmmSSLYFVQ/present#slide=id.p">Styling & Animating Scalable Vector Graphics with CSS - Sara Soueidan</a>
+      </li>
+    </ul>
+  </div></section>
+
+
 
   <section class="slide"><div>
     <h2 class="free-fly">Спасибо за внимание</h2>
@@ -2058,7 +2081,7 @@
   </div></section>
 
   <section class="slide slide--horcenter"><div>
-    <h4>Он-лайн версия: <a href="http://yoksel.github.io/about-svg/">yoksel.github.io/about-svg/</a></h4>
+    <h4>Онлайн версия: <a href="http://yoksel.github.io/about-svg/">yoksel.github.io/about-svg/</a></h4>
     <img src="./assets/img/qr-code.gif" alt="Qr-код со ссылкой на он-лайн версию"/>
   </div></section>
 

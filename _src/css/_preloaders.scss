@@ -1,7 +1,7 @@
 $max: 12;
 $angle: 360/$max;
 $size: 120px;
-$wh: 250px;
+$wh: 400px;
 $fill: dodgerblue;
 
 .demo--preloaders {
@@ -19,6 +19,9 @@ $fill: dodgerblue;
   height: $wh;
   width: $wh;
   overflow: visible;
+  use {
+    transition: none;
+    }
   }
 
 
@@ -27,11 +30,12 @@ $fill: dodgerblue;
   @return $base;
 }
 
-.g--preloader-circle {
+.g--preloader-shape {
   transform-origin: $size/2 $size/2;
 
   fill: $fill;
   animation: opacity 1.2s linear infinite;
+  /*animation-play-state: paused;*/
 
   @for $item from 1 through $max {
     &:nth-child(#{$max}n + #{$item}){
@@ -41,64 +45,51 @@ $fill: dodgerblue;
   }
 }
 
-.demo--preloaders-mod .g--preloader-circle {
+
+.demo--preloaders-mod .g--preloader-shape {
   fill: crimson;
   }
 
-.g--preloader--v1 .g--preloader-circle {
+.g--preloader--v3 .g--preloader-shape {
+  fill-opacity: 1;
+  animation-name: opacity, colors;
+  animation-play-state: paused;
+  :target & {
+    animation-play-state: running;
+    }
+  }
+
+.g--preloader--ams .g--preloader-shape {
   fill-opacity: 0;
   animation-name: opacity;
   }
 
-.g--preloader--v2 .g--preloader-circle {
-  fill-opacity: 0;
-  stroke-opacity: 0;
-  stroke-width: 1;
-  stroke: yellowgreen;
-  animation-name: opacity-stroke, colors, colors-stroke;
-  .u--circle {
-    //transform: scale(.6) translate(10px,10px);
-    //transform-origin: 10px 10px;
-    animation: transform-2 1.2s linear infinite;
-  }
-}
-
-.g--preloader--v2 .g--preloader-circle {
-  @for $item from 1 through $max {
-    &:nth-child(#{$max}n + #{$item}) .u--circle{
-      animation-delay: -#{$item/10}s;
-    }
-  }
-}
-
-#shadow-root circle {
-stroke: green;
-}
-
-.g--preloader--v3 .g--preloader-circle {
-  fill-opacity: 1;
-  animation-name: opacity, colors;
-  /*stroke: red;*/
-  }
-
-.g--preloader--v4 {
-  .g--preloader-circle {
+.g--preloader--stars {
+  .g--preloader-shape {
     fill-opacity: 1;
     fill: orange;
     animation-name: opacity, colors-3;
   }
   .u--circle {
-    animation: transform 1.2s linear infinite;
+    animation: transform-3 1.2s linear infinite;
   }
 }
 
-.g--preloader--v4 .g--preloader-circle {
+.g--preloader--stars .g--preloader-shape {
   @for $item from 1 through $max {
-    &:nth-child(#{$max}n + #{$item}) .u--circle{
+    &:nth-child(#{$max}n + #{$item}) .u--circle {
       animation-delay: -#{$item/10}s;
     }
   }
 }
+
+.g--preloader--stars .g--preloader-shape,
+.g--preloader--stars .g--preloader-shape .u--circle {
+  animation-play-state: paused;
+  :target & {
+    animation-play-state: running;
+    }
+  }
 
 
 @keyframes opacity {
@@ -198,54 +189,3 @@ stroke: green;
     }
 }
 
-
-.g--preloader--ams .g--preloader-circle {
-  fill-opacity: 0;
-  animation-name: opacity;
-  }
-
-.g--preloader--hc .g--preloader-circle {
-  fill-opacity: 0;
-  stroke-opacity: 0;
-  stroke-width: 1;
-  stroke: yellowgreen;
-  animation-name: opacity-stroke, colors, colors-stroke;
-  .u--circle {
-    animation: transform-2 1.2s linear infinite;
-  }
-}
-
-.g--preloader--hc {
-  transform: scale(.85) translate(12px, 12px);
-  .g--preloader-circle {
-    @for $item from 1 through $max {
-      &:nth-child(#{$max}n + #{$item}) .u--circle{
-        animation-delay: -#{$item/10}s;
-      }
-    }
-  }
-}
-
-.g--preloader--trapez .g--preloader-circle {
-  fill-opacity: 1;
-  animation-name: opacity, colors;
-  }
-
-.g--preloader--stars {
-  .g--preloader-circle {
-    fill-opacity: 1;
-    fill: orange;
-    animation-name: opacity, colors-3;
-  }
-  .u--circle {
-    animation: transform-3 1.2s linear infinite;
-  }
-}
-
-.g--preloader--stars .g--preloader-circle {
-  @for $item from 1 through $max {
-    &:nth-child(#{$max}n + #{$item}) .u--circle{
-      animation-delay: -#{$item/10}s;
-    }
-  }
-}

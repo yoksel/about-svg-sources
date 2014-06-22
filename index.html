@@ -171,7 +171,7 @@
   </linearGradient>
 
   <linearGradient id="gr-gray-transp" x1="0" y1="0" x2="0" y2="100%">
-      <stop stop-color="black" stop-opacity=".5" offset="0" class="color-1"/>
+      <stop stop-color="black" stop-opacity=".7" offset="0" class="color-1"/>
       <stop stop-color="black" stop-opacity="0" offset="90" class="color-2"/>
   </linearGradient>
 
@@ -773,12 +773,16 @@
   </div></section>
 
   <section class="slide bg--dark"><div>
-      <h2 class="free-fly">Пишем SVG</h2>
+      <h2 class="free-fly">Фигуры</h2>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Пишем SVG</h2>
+  </div></section> -->
+
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;rect></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--rect demo--rect-1 demo--live">
@@ -812,9 +816,9 @@
     </div></div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;circle></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
@@ -828,9 +832,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;ellipse></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
@@ -844,9 +848,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;polygon></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--polygon demo--live">
@@ -869,9 +873,9 @@
 
   </div></section>
 
-  <section class="slide"><div>
+ <!--  <section class="slide"><div>
       <h2 class="free-fly">&lt;line></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--line demo--live">
@@ -884,9 +888,9 @@
     </div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;polyline></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--polyline demo--live">
@@ -931,7 +935,7 @@
     <div class="demo demo--path demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
-  <path d="M 10,30 A 20,31 320 0 0 190,30 Z"
+  <path d="M 10,30 A 20,31 320 0 0 190,30"
         stroke="purple" stroke-width="3" fill="violet"/>
 </svg></textarea>
     </div></div>
@@ -944,9 +948,13 @@
       <textarea class="demo__textfield demo__code"><svg viewBox="0 0 340 270" height="270">
   <path d="M 170,10 C 0,10 0,260 170,260
            M 170,10 C 340,10 340,260 170,260"
-    stroke="orange" stroke-width="5" fill="gold" />
+    fill="turquoise" stroke="lightseagreen" stroke-width="5" />
 </svg></textarea>
     </div></div>
+  </div></section>
+
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Доступность</h2>
   </div></section>
 
   <section class="slide"><div>
@@ -956,19 +964,24 @@
   <section class="slide"><div>
         <div class="demo demo--tit-desc demo--live">
           <div class="demo__content">
-          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 270 270" height="270">
-  <title>Кружок</title>
-  <desc>Тут нарисован желтый кружок</desc>
-  <circle r="130" cx="135" cy="135"
-    fill="gold" stroke="orange" stroke-width="5" />
-</svg></textarea>
+          <textarea class="demo__textfield demo__code"><svg viewBox="0 0 500 270" height="270">
+  <title>Треугольник</title>
+  <desc>Тут нарисован зеленый треугольник</desc>
+  <polygon points="5,265 250,5 495,265"
+    fill="yellowgreen" stroke="green" stroke-width="5" />
+</svg>
+</textarea>
         </div>
     </div>
   </div></section>
 
-  <section class="slide"><div>
-      <h2 class="free-fly">&lt;image></h2>
+  <section class="slide bg--dark"><div>
+      <h2 class="free-fly">Картинки и текст</h2>
   </div></section>
+
+  <!-- <section class="slide"><div>
+      <h2 class="free-fly">&lt;image></h2>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--path demo--live">
@@ -980,9 +993,9 @@
     </div></div>
   </div></section>
 
-  <section class="slide"><div>
+  <!-- <section class="slide"><div>
       <h2 class="free-fly">&lt;text></h2>
-  </div></section>
+  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--path demo--live">
@@ -1120,7 +1133,7 @@
         <textarea class="demo__textfield demo__code"><svg>
   <defs>
     <pattern id="pt-circles" viewBox="0 0 110 110"
-       width="40" height="40" patternUnits="userSpaceOnUse">
+       width="43.2" height="40" patternUnits="userSpaceOnUse">
       <circle fill="orangered" r="50" cx="55" cy="55"/>
       <circle fill="gold" r="32" cx="55" cy="55"/>
       <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
@@ -1299,7 +1312,7 @@
       &lt;stop stop-color="hsl(350,100%,45%)" offset="0"/>
       &lt;stop stop-color="hsl(45,100%,75%)" offset="50%"/>
       &lt;stop stop-color="hsl(200,100%,40%)" offset="100%"/>
-  &lt;/linearGradient></code></pre>
+&lt;/linearGradient></code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -1320,7 +1333,7 @@
       &lt;stop stop-color="hsl(50,100%,70%)" offset="66%"/>
       &lt;stop stop-color="hsl(200,100%,40%)" offset="66%%"/>
       &lt;stop stop-color="hsl(200,100%,40%)" offset="100%"/>
-  &lt;/linearGradient></code></pre>
+&lt;/linearGradient></code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -1337,7 +1350,7 @@
       &lt;stop stop-color="hsl(200,100%,40%)" offset="0"/>
       &lt;stop stop-color="hsl(45,100%,75%)" offset="50%"/>
       &lt;stop stop-color="hsl(350,100%,45%)" offset="100%"/>
-  &lt;/radialGradient></code></pre>
+&lt;/radialGradient></code></pre>
 
     <div class="demo">
       <div class="demo__view">
@@ -2611,40 +2624,40 @@
           <svg viewBox="0 0 120 120" class="svg--preloader">
 
             <g class="g--preloader g--preloader--v3">
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-circle" class="u--circle"/>
               </g>
             </g>
@@ -2661,40 +2674,40 @@
           <!-- <use xlink:href="#s--preloader-star" fill="red"/> -->
 
             <g class="g--preloader g--preloader--stars">
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
-              <g class="g--preloader-circle">
+              <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
               </g>
             </g>

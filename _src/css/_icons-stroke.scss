@@ -1,4 +1,6 @@
 $iconstroke-size: 10em;
+$stroke-width: 5;
+$stroke-color: rgb(100, 100, 100);
 
 .wrapper--icons-stroke,
 .wrapper--icons-filters {
@@ -38,16 +40,16 @@ $iconstroke-size: 10em;
   }
 
 .icon--stroke {
-  stroke: rgba(0, 0, 0, .5);
-  stroke-width: 3;
+  stroke: $stroke-color;
+  stroke-width: $stroke-width;
     &:hover {
       stroke: skyblue;
     }
   }
 
 .icon--dasharray {
-  stroke: rgba(0, 0, 0, .5);
-  stroke-width: 3;
+  stroke: $stroke-color;
+  stroke-width: $stroke-width;
   stroke-dasharray: 10 5;
   fill: rgba(0, 0, 0, .2);
   &:hover {
@@ -57,7 +59,7 @@ $iconstroke-size: 10em;
   }
 
 .icon--gradient {
-  stroke-width: 3;
+  stroke-width: $stroke-width;
   transform-origin: $iconstroke-size/2 $iconstroke-size/2;
   animation: rotation 3s linear infinite;
   animation-play-state: paused;
@@ -67,7 +69,7 @@ $iconstroke-size: 10em;
   }
 
 .icon--gradient2 {
-  stroke-width: 3;
+  stroke-width: $stroke-width;
   animation: ghost 1.5s linear infinite;
   animation-play-state: paused;
   &:hover {

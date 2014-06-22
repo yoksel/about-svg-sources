@@ -52,7 +52,7 @@
   </linearGradient>
 
   <linearGradient id="gr-gray-transp" x1="0" y1="0" x2="0" y2="100%">
-      <stop stop-color="black" stop-opacity=".5" offset="0" class="color-1"/>
+      <stop stop-color="black" stop-opacity=".7" offset="0" class="color-1"/>
       <stop stop-color="black" stop-opacity="0" offset="90" class="color-2"/>
   </linearGradient>
 
