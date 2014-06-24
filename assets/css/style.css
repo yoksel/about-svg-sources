@@ -2599,28 +2599,4 @@ PRE:before {
   color: tomato;
 }
 
-@page {
-  margin: 0;
-  size: 900px 1200px;
-}
-@media print {
-  .list {
-    position: absolute;
-    clip: rect(0, auto, auto, 0);
-    padding: 50px 0 50px 50px;
-  }
-
-  .slide {
-    display: inline-block;
-    border: 1px solid silver;
-    left: 0;
-    top: 540px;
-    margin: -540px -850px 0 0;
-    -webkit-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: scale(0.165);
-    -ms-transform: scale(0.165);
-    transform: scale(0.165);
-  }
-}
+/*@import '_print';*/
