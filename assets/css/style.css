@@ -77,6 +77,15 @@
   font-size: 3em;
 }
 
+.pos-abs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
 /* SVG
 ------------------------- */
 svg {
@@ -972,6 +981,10 @@ PRE:before {
   stroke: #4d0000;
 }
 
+.demo--textdec-textfill text {
+  font-size: 18em;
+}
+
 /* Demo stroke-dasharray Animation
 ------------------------- */
 .pre--demo-dasharray code:nth-child(4),
@@ -1806,7 +1819,7 @@ PRE:before {
 
 .wrapper--icons-colored {
   position: absolute;
-  top: 0;
+  top: 2em;
   bottom: 80px;
   right: 0;
   left: 0;
@@ -1821,18 +1834,27 @@ PRE:before {
   top: 0;
   width: 10em;
   height: 10em;
-  margin: 0 1em 1em;
+  margin: 0 2.1em 2.1em;
   text-indent: 0;
   -webkit-transition: .2s;
   transition: .2s;
 }
-.wrapper--icons-colored .icon use {
-  -webkit-transform: scale(0.85) translate(0.2em, 0.2em);
-  -ms-transform: scale(0.85) translate(0.2em, 0.2em);
-  transform: scale(0.85) translate(0.2em, 0.2em);
+.wrapper--icons-colored .icon svg {
+  width: 10em;
+  height: 10em;
+  /*border: 1px solid red;*/
 }
 .wrapper--icons-colored .icon:before {
   content: none;
+}
+
+.dev--bounds {
+  fill: none;
+  stroke: green;
+  stroke-width: 5;
+}
+svg > .dev--bounds {
+  stroke: orange;
 }
 
 .wrapper--icons-stroke,

@@ -117,14 +117,6 @@
       <h2 class="free-fly">Фигуры</h2>
   </div></section>
 
-  <!-- <section class="slide bg--dark"><div>
-      <h2 class="free-fly">Пишем SVG</h2>
-  </div></section> -->
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">&lt;rect></h2>
-  </div></section> -->
-
   <section class="slide"><div>
     <div class="demo demo--rect demo--rect-1 demo--live">
       <div class="demo__content">
@@ -157,10 +149,6 @@
     </div></div>
   </div></section>
 
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">&lt;circle></h2>
-  </div></section> -->
-
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
           <div class="demo__content">
@@ -173,10 +161,6 @@
     </div>
   </div></section>
 
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">&lt;ellipse></h2>
-  </div></section> -->
-
   <section class="slide"><div>
         <div class="demo demo--circle demo--live">
           <div class="demo__content">
@@ -188,10 +172,6 @@
         </div>
     </div>
   </div></section>
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">&lt;polygon></h2>
-  </div></section> -->
 
   <section class="slide"><div>
         <div class="demo demo--polygon demo--live">
@@ -214,10 +194,6 @@
 
   </div></section>
 
- <!--  <section class="slide"><div>
-      <h2 class="free-fly">&lt;line></h2>
-  </div></section> -->
-
   <section class="slide"><div>
         <div class="demo demo--line demo--live">
           <div class="demo__content">
@@ -228,10 +204,6 @@
     </div>
     </div>
   </div></section>
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">&lt;polyline></h2>
-  </div></section> -->
 
   <section class="slide"><div>
     <div class="demo demo--polyline demo--live">
@@ -245,6 +217,27 @@
 
   <section class="slide"><div>
       <h2 class="free-fly">&lt;path></h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--path demo--live">
+      <div class="demo__content">
+      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
+  <path d="M 10,30 A 20,31 320 0 0 190,30"
+        stroke="purple" stroke-width="3" fill="violet"/>
+</svg></textarea>
+    </div></div>
+  </div></section>
+
+  <section class="slide"><div>
+    <div class="demo demo--path-circ demo--live">
+      <div class="demo__content">
+      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 340 270" height="270">
+  <path d="M 170,10 C 0,10 0,260 170,260
+           M 170,10 C 340,10 340,260 170,260"
+    fill="turquoise" stroke="lightseagreen" stroke-width="5" />
+</svg></textarea>
+    </div></div>
   </div></section>
 
   <section class="slide"><div>
@@ -269,29 +262,6 @@
       </ul>
     </div>
 
-  </div></section>
-
-  <section class="slide"><div>
-    <!-- Живое демо -->
-    <div class="demo demo--path demo--live">
-      <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
-  <path d="M 10,30 A 20,31 320 0 0 190,30"
-        stroke="purple" stroke-width="3" fill="violet"/>
-</svg></textarea>
-    </div></div>
-  </div></section>
-
-  <section class="slide"><div>
-    <!-- Прямоугольники? -->
-    <div class="demo demo--path-circ demo--live">
-      <div class="demo__content">
-      <textarea class="demo__textfield demo__code"><svg viewBox="0 0 340 270" height="270">
-  <path d="M 170,10 C 0,10 0,260 170,260
-           M 170,10 C 340,10 340,260 170,260"
-    fill="turquoise" stroke="lightseagreen" stroke-width="5" />
-</svg></textarea>
-    </div></div>
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -1050,6 +1020,16 @@
     </div></div>
   </div></section>
 
+  <section class="slide slide--fillingdemo"><div>
+    <div class="demo demo--textdec demo--textdec-textfill demo--live">
+      <div class="demo__view">
+      <svg>
+        <text x="50%" y="70%" text-anchor="middle" class="text"
+        fill="url(#pt-text)">Yo!</text>
+      </svg>
+    </div></div>
+  </div></section>
+
   <section class="slide bg--dark"><div>
     <h2 class="free-fly">Маски</h2>
   </div></section>
@@ -1443,11 +1423,7 @@
         </dl>
       </li>
     </ul>
-    <!-- &mdash;  svg-use, font. It supports SVG in sprites and base64, but resizes images bad.
 
-      Mobile &mdash; svg-use, font.
-      Mini &mdash; no support.
-      -->
   </div></section>
 
   <section class="slide"><div>
@@ -1459,11 +1435,15 @@
       <li><span class="browser opera-old opera-min"></span> &mdash; шрифт, SVG в HTML, фон
       </li>
       <li><span class="browser opera-old opera-12"></span> &mdash; фон</li>
-      <li><span class="browser chrome"></span> &mdash; шрифт <!-- <a href="assets/img/preview/svg-stacks.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a> --></li>
+      <li><span class="browser chrome"></span> &mdash; шрифт</li>
       <li><span class="browser safari"></span> &mdash; повторяющиеся градиенты</li>
       <li><span class="browser ie-9"></span> &mdash; фильтры, анимации</li>
       <li>Общая проблема: градиенты</li>
     </ul>
+  </div></section>
+
+   <section class="slide"><div>
+    <img src="./assets/img/bugs/font-opera-mini.png" class="pos-abs">
   </div></section>
 
   <section class="slide bg--dark"><div>
@@ -1481,15 +1461,14 @@
     <code>      &lt;text x="28" y="130">No.&lt;/text></code>
     <code>  &lt;/g></code>
     <code>  &lt;g id="yes" class="hidden"></code>
-    <code>    &lt;rect fill="#a2d529" width="200" height="200" rx="8"/></code>
+    <code>    &lt;rect fill="#A2D529" width="200" height="200" rx="8"/></code>
     <code>      &lt;text x="18" y="130">Yes!&lt;/text></code>
     <code>  &lt;/g></code>
     <code>&lt;/svg></code></pre>
   </div></section>
 
   <section class="slide"><div>
-    <pre class="pre--css"><code>.hidden { display: none; }</code>
-      <code class="next">:target { display: block; }</code></pre>
+    <img src="./assets/img/preview/stacks-scheme.svg" class="pos-abs">
   </div></section>
 
   <section class="slide slide--stacks-demo"><div>
@@ -1604,25 +1583,25 @@
       <ul class="icons">
 
         <li class="icon">
-          <svg viewBox="0 0 32 32">
+          <svg>
             <use xlink:href="#eye"/>
           </svg>
         </li>
 
         <li class="icon">
-          <svg viewBox="0 0 32 32">
+          <svg>
             <use xlink:href="#flag"/>
           </svg>
         </li>
 
         <li class="icon">
-          <svg viewBox="0 0 32 32">
+          <svg>
             <use xlink:href="#hamburger"/>
           </svg>
         </li>
 
         <li class="icon">
-          <svg viewBox="0 0 32 32">
+          <svg>
             <use xlink:href="#umbrella"/>
           </svg>
         </li>

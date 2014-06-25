@@ -2,7 +2,7 @@ $iconstroke-size: 10em;
 
 .wrapper--icons-colored {
   position: absolute;
-  top: 0;
+  top: 2em;
   bottom: 80px;
   right: 0;
   left: 0;
@@ -17,16 +17,27 @@ $iconstroke-size: 10em;
     top: 0;
     width: $iconstroke-size;
     height: $iconstroke-size;
-    margin: 0 1em 1em;
+    margin: 0 2.1em 2.1em;
     text-indent: 0;
     transition: .2s;
 
-    use {
-      transform: scale(.85) translate(.2em, .2em);
+    svg {
+      width: $iconstroke-size;
+      height: $iconstroke-size;
+      /*border: 1px solid red;*/
       }
 
     &:before {
       content: none
       }
     }
+}
+
+.dev--bounds {
+  fill: none;
+  stroke: green;
+  stroke-width: 5;
+  svg>& {
+    stroke: orange;
+  }
 }

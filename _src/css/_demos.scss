@@ -605,6 +605,11 @@ $textarea-oneline: $textarea-fontsize * $textarea-lineheight * .99;
   stroke: darken(red, 35%);
 }
 
+.demo--textdec-textfill {
+    text {
+        font-size: 18em;
+        }
+}
 
 /* Demo stroke-dasharray Animation
 ------------------------- */

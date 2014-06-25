@@ -249,7 +249,7 @@
 
   <!--  -->
 
-  <pattern id="pt-text" patternunits="userSpaceOnUse" width="350" height="112">
+  <pattern id="pt-text" patternunits="userSpaceOnUse" width="480" height="112" y="5">
     <text x="0" y="0">
       <tspan x="0" y="1em">Nam tristique vestibulum nulla nec accumsan. Nullam commodo eget dolor et ultricies.
       </tspan>
