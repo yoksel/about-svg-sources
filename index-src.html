@@ -187,7 +187,8 @@
     <div class="demo demo--polygon-star demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg viewBox="0 0 140 130" height="270">
-  <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41"
+  <polygon points="70,5 90,41 136,48 103,80 111,126
+                   70,105 29,126 36,80 5,48 48,41"
     fill="turquoise" stroke="lightseagreen" stroke-width="3" />
 </svg></textarea>
     </div></div>
@@ -209,7 +210,8 @@
     <div class="demo demo--polyline demo--live">
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 260 140">
-  <polyline points="5,135 30,5 55,135 80,5 105,135 130,5 155,135 180,5 205,135 230,5"
+  <polyline points="5,135 30,5 55,135 80,5 105,135 130,5
+                    155,135 180,5 205,135 230,5"
     fill="none" stroke="orangered" stroke-width="3" />
 </svg></textarea>
     </div></div>
@@ -224,7 +226,7 @@
       <div class="demo__content">
       <textarea class="demo__textfield demo__code"><svg height="270" viewBox="0 0 200 140">
   <path d="M 10,30 A 20,31 320 0 0 190,30"
-        stroke="purple" stroke-width="3" fill="violet"/>
+    stroke="purple" stroke-width="3" fill="violet"/>
 </svg></textarea>
     </div></div>
   </div></section>
@@ -332,14 +334,14 @@
 
   <section class="slide"><div>
     <pre class="pre--svg"><code>&lt;path id="p-text-path" </code>
-    <code>    d="m231.06494,94.11014c93.77408,..."/></code>
+    <code>  d="m231.06494,94.11014c93.77408,..."/></code>
     <code>&lt;/path></code>
 </pre>
 
     <pre class="pre--svg"><code>&lt;text x="0" dy="10"></code>
       <code>  &lt;textPath xlink:href="#p-text-path"></code>
       <code>    Текст</code>
-      <code> &lt;/textPath></code>
+      <code>  &lt;/textPath></code>
     <code>&lt;/text></code>
 </pre>
   </div></section>
@@ -444,7 +446,7 @@
         <textarea class="demo__textfield demo__code"><svg>
   <defs>
     <pattern id="pt-circles" viewBox="0 0 110 110"
-       width="43.2" height="40" patternUnits="userSpaceOnUse">
+      width="43.2" height="40" patternUnits="userSpaceOnUse">
       <circle fill="orangered" r="50" cx="55" cy="55"/>
       <circle fill="gold" r="32" cx="55" cy="55"/>
       <circle fill="dodgerblue" r="15" cx="55" cy="55"/>
@@ -458,13 +460,13 @@
   <section class="slide"><div>
     <div class="demo--patterns">
       <svg>
-        <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
+          <rect width="100%" height="100%" fill="url(#pt-mosaic-colored)"/>
       </svg>
       <svg>
-        <rect width="100%" height="100%" fill="url(#pt-text)"/>
+          <rect width="100%" height="100%" fill="url(#pt-text)"/>
       </svg>
       <svg>
-        <rect width="100%" height="100%" fill="url(#pt-colored-circles)"/>
+          <rect width="100%" height="100%" fill="url(#pt-colored-circles)"/>
       </svg>
     </div>
   </div></section>
@@ -1197,9 +1199,9 @@
 
   <section class="slide"><div>
     <pre class="pre--svg"><code>&lt;mask id="mask" maskunits="userSpaceOnUse"</code>
-    <code>      maskcontentunits="userSpaceOnUse"></code>
+    <code>  maskcontentunits="userSpaceOnUse"></code>
     <code>  &lt;rect y="0" width="100%" height="100%"</code>
-    <code>      fill="url(#mask-gradient)" /></code>
+    <code>    fill="url(#mask-gradient)" /></code>
     <code>  &lt;circle cx="50%" cy="50%" r="42%" fill="black" /></code>
     <code>  &lt;circle cx="0" cy="50%" r="32%" fill="black" /></code>
     <code>  ...</code>
@@ -1227,9 +1229,9 @@
 
   <section class="slide"><div>
     <pre class="pre--svg"><code>&lt;mask id="mask-soft" maskunits="objectBoundingBox"</code>
-    <code>      maskcontentunits="objectBoundingBox"></code>
+    <code>  maskcontentunits="objectBoundingBox"></code>
     <code>  &lt;rect y="0" width="1" height="1" </code>
-    <code>      fill="url(#mask-radial-gradient)" /></code>
+    <code>    fill="url(#mask-radial-gradient)" /></code>
     <code>&lt;/mask></code>
   </pre>
   </div></section>
@@ -1578,9 +1580,18 @@
     <h2 class="free-fly">SVG</h2>
   </div></section>
 
-  <!-- <section class="slide"><div>
-    <h2 class="free-fly">Разноцветные иконки</h2>
-  </div></section> -->
+  <section class="slide"><div>
+    <pre class="pre--css"><code>background: url(sprite.svg);</code>
+
+      <code>background: url(data:image/svg+xml;base64,PHN2Zy...);</code>
+
+      <code>background: url(data:image/svg+xml;utf8,&lt;svg xmlns=...);</code></pre>
+
+    <pre class="pre--svg"><code>&lt;svg></code>
+    <code>  &lt;use xlink:href="#umbrella"/></code>
+    <code>&lt;/svg></code>
+
+  </div></section>
 
   <section class="slide"><div>
     <div class="wrapper wrapper--icons-colored">
@@ -1646,10 +1657,6 @@
       </div>
     </div>
   </div></section>
-
-  <!-- <section class="slide"><div>
-    <h2 class="free-fly">Эффекты с обводками</h2>
-  </div></section> -->
 
   <section class="slide"><div>
     <div class="wrapper wrapper--icons-stroke">
@@ -1722,17 +1729,17 @@
   </div></section>
 
   <section class="slide"><div>
+    <pre class="pre--css next"><code>.icon {</code>
+    <code>  color: orangered;</code>
+    <code>  }</code>
+    <code>  .icon:hover {</code>
+    <code>    color: yellowgreen;</code>
+    <code>    }</code>
+    </pre>
+
     <pre class="pre--css"><code>.icon use {</code>
     <code>  fill: currentColor;</code>
     <code>  }</code>
-    </pre>
-
-    <pre class="pre--css next"><code>.icon {</code>
-    <code>    color: orangered;</code>
-    <code>    }</code>
-    <code>    .icon:hover {</code>
-    <code>      color: yellowgreen;</code>
-    <code>      }</code>
     </pre>
   </div></section>
 
@@ -1741,10 +1748,6 @@
   <section class="slide bg--dark"><div>
     <h2 class="free-fly">Разные штуки</h2>
   </div></section>
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">Анимация stroke</h2>
-  </div></section> -->
 
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--stroke-dasharr-anim">
@@ -1759,22 +1762,18 @@
 
   <section class="slide"><div>
     <pre class="pre--css pre--demo-dasharray"><code>path {</code>
-      <code>    stroke-width: 2;</code>
-      <code>    stroke-dasharray: 550 0;</code>
-      <code>    stroke-dashoffset: 570;</code>
-      <code>    animation: dashoffset 8s infinite alternate;</code>
-      <code>    }</code>
+      <code>  stroke-width: 2;</code>
+      <code>  stroke-dasharray: 550 0;</code>
+      <code>  stroke-dashoffset: 570;</code>
+      <code>  animation: dashoffset 8s infinite alternate;</code>
+      <code>  }</code>
       <code>@keyframes dashoffset {</code>
-        <code>    100% {</code>
-          <code>      stroke-dashoffset: 0;</code>
-        <code>    }</code>
+      <code>  100% {</code>
+      <code>    stroke-dashoffset: 0;</code>
+      <code>  }</code>
       <code>}</code>
     </pre>
   </div></section>
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">Вертушка</h2>
-  </div></section> -->
 
   <section class="slide slide--fillingdemo bg--dark"><div>
     <div class="demo demo--dashofset-anim">
@@ -1842,10 +1841,6 @@
     </div>
   </div></section>
 
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">Лучи</h2>
-  </div></section> -->
-
   <section class="slide slide--fillingdemo"><div>
     <div class="demo demo--lights">
       <div class="demo__view">
@@ -1868,10 +1863,6 @@
       </div>
     </div>
   </div></section>
-
-  <!-- <section class="slide"><div>
-      <h2 class="free-fly">Прелоадеры</h2>
-  </div></section> -->
 
   <section class="slide bg--dark"><div>
     <div class="demo demo--preloaders">
@@ -1926,8 +1917,6 @@
     <div class="demo demo--preloaders demo--preloaders-mod">
       <div class="demo__view">
         <svg viewBox="0 0 120 120" class="svg--preloader">
-          <!-- <use xlink:href="#s--preloader-star" fill="red"/> -->
-
             <g class="g--preloader g--preloader--stars">
               <g class="g--preloader-shape">
                 <use xlink:href="#s--preloader-star" class="u--circle"/>
@@ -1984,7 +1973,7 @@
          <!-- — для Mac OS, $79.99 -->
       </li>
       <li><a href="https://code.google.com/p/svg-edit/">SVG-edit</a>
-        <ul><li><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">Онлайн-демо</a></li></ul>
+        <ul><li><a href="http://svg-edit.googlecode.com/svn/branches/stable/editor/svg-editor.html">Онлайн демо</a></li></ul>
       </li>
       <li><a href="http://www.inkscape.org/en/">Inkscape</a>
         <!--  — бесплатный -->
@@ -1999,15 +1988,15 @@
         делает библиотеку -->
         <a href="assets/img/preview/iconmelon.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
-      <li class="next"><a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  — монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
+      <li><a href="http://icomoon.io/app/#/select">icomoon.io</a><!--  — монохромные, на выходе шрифт или SVG. Можно загрузить свои иконки и сделать шрифт
         делает спрайт -->
         <a href="assets/img/preview/icomoon-generator.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
-      <li class="next"><a href="http://www.flaticon.com/">flaticon.com</a> <!-- — большой выбор на разные темы. На выходе SVG, PNG или шрифт.
+      <li><a href="http://www.flaticon.com/">flaticon.com</a> <!-- — большой выбор на разные темы. На выходе SVG, PNG или шрифт.
         не склеивает -->
         <a href="assets/img/preview/flaticons-large.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
-      <li class="next"><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
+      <li><a href="http://thenounproject.com/">thenounproject.com</a> <a href="assets/img/preview/nounproject.png" class="img-preview"><svg viewBox="0 0 24 22"><use xlink:href="#image"/></svg></a>
       </li>
     </ul>
 
@@ -2046,6 +2035,8 @@
       <li><a href="https://docs.google.com/presentation/d/1Iuvf3saPCJepVJBDNNDSmSsA0_rwtRYehSmmSSLYFVQ/present#slide=id.p">Styling & Animating Scalable Vector Graphics with CSS - Sara Soueidan</a>
       </li>
       <li><a href="https://speakerdeck.com/pukhalski/next-level-svg">Next Level SVG - Ilya Pukhalski</a></li>
+      <li><a href="http://pepelsbey.net/pres/web-in-curves/">Веб в кривых.
+Второе рождение SVG - Вадим Макеев</a> (<a href="http://www.youtube.com/watch?v=XPseFBICcVU">видео</a>)</li>
     </ul>
   </div></section>
 
