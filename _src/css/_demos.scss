@@ -941,10 +941,28 @@ $group-use-texta-height: 11.5;
         @include highlight-lines($demo-code-lines);
         }
         .demo__code {
-            @include textarea-height (7.5);
+            @include textarea-height (6.5);
             }
     }
 
+.demo--image,
+.demo--text {
+    .demo__code {
+            @include textarea-height (5.5);
+            }
+    }
+.demo--image {
+    .demo__content {
+        $demo-code-lines: 2,3;
+        @include highlight-lines($demo-code-lines);
+        }
+    }
+.demo--text {
+    .demo__content {
+        $demo-code-lines: 2;
+        @include highlight-lines($demo-code-lines);
+        }
+    }
 .demo--tit-desc-elem {
     .demo__content {
         $demo-code-lines: 4,5;
