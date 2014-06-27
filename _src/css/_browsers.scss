@@ -112,10 +112,10 @@ $browser-size: 64px;
     content: "Mobile";
     }
   }
-.opera-13 {
+.opera-15 {
   background-position: 0 -#{$browser-size*5};
   &:after {
-    content: "13+";
+    content: "15+";
     }
   }
 .safari {
