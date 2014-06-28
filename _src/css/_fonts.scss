@@ -55,6 +55,10 @@ $map-headers: (h2: 2.4, h3: 2.3, h4: 1.7, h5: 1.2);
     font: 90px/1 'Ubuntu Condensed', sans-serif;
     transform: translateY(-50%);
 
+    &--small {
+        font-size: 85px
+        }
+
     .tooltip {
         position: absolute;
         left: 0;
